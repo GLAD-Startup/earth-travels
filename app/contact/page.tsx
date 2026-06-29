@@ -1,0 +1,425 @@
+"use client";
+
+import React, { useState } from "react";
+import { GlassCard, RevealWrapper } from "@/components/ui";
+import { useIsOpen } from "@/lib/hooks";
+
+const DESTINATIONS = [
+  "Kashmir",
+  "Maldives",
+  "Malaysia",
+  "Dubai",
+  "Thailand",
+  "Bali",
+  "Europe",
+  "Kerala",
+  "Rajasthan",
+  "Sri Lanka",
+  "Singapore",
+  "Custom/Not Sure",
+];
+
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+  "Flexible",
+];
+
+export default function ContactPage() {
+  const { isOpen, statusText } = useIsOpen();
+
+  // Form State
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [destination, setDestination] = useState("Custom/Not Sure");
+  const [month, setMonth] = useState("Flexible");
+  const [message, setMessage] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // FAQ states
+  const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({
+    0: false,
+    1: false,
+    2: false,
+  });
+
+  const toggleFaq = (idx: number) => {
+    setFaqOpen((prev) => ({
+      ...prev,
+      [idx]: !prev[idx],
+    }));
+  };
+
+  const handleInquirySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const finalInquiry = {
+      name,
+      phone: `+91 ${phone}`,
+      email,
+      destination,
+      month,
+      message,
+    };
+    console.log("Earth Travels - Tour Inquiry Received:", finalInquiry);
+    setIsSubmitted(true);
+  };
+
+  const faqs = [
+    {
+      q: "Do I need to pay anything to get a quote?",
+      a: "No. Our consultation and itinerary planning is completely free. You only pay once you're happy with the plan and proceed to book.",
+    },
+    {
+      q: "How quickly do you respond to inquiries?",
+      a: "Within 2 hours during business hours (Mon–Sat, 10AM–7:30PM IST). For urgent travel assistance, contacting us directly via WhatsApp is the fastest way.",
+    },
+    {
+      q: "Can you handle international visa applications?",
+      a: "Yes. We assist with visa applications for all countries we cover — including UAE, Thailand, Malaysia, Singapore, Sri Lanka, Schengen states, and more.",
+    },
+  ];
+
+  return (
+    <div className="bg-[#080C14] min-h-screen text-white select-none">
+      <title>Contact Us — Office Details & Map | Earth Travels</title>
+      <meta name="description" content="Get in touch with Earth Travels in Mathura. View our office address, phone numbers, WhatsApp links, Google maps, and FAQ guides." />
+      
+      {/* 1. Page Header */}
+      <section className="pt-28 pb-10 text-center px-6">
+        <RevealWrapper delay={0.1}>
+          <h1 className="font-display text-4xl md:text-[64px] font-bold text-white tracking-tight leading-tight">
+            Let&apos;s Plan Your Journey
+          </h1>
+        </RevealWrapper>
+      </section>
+
+      {/* 2. Two-Column Split Layout */}
+      <section className="max-w-7xl mx-auto px-6 py-10 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          {/* LEFT: Contact details & Map (60% width equivalent) */}
+          <div className="lg:col-span-7 flex flex-col gap-8 w-full">
+            <GlassCard hover={false} className="p-8 bg-[#080C14]/40 border border-white/10 rounded-[20px] flex flex-col gap-6">
+              <h2 className="font-display text-2xl md:text-3xl font-normal text-white pl-4 border-l-2 border-[#D4A017] leading-none mb-2">
+                Get in Touch
+              </h2>
+
+              <div className="flex flex-col gap-5 text-sm text-white/80">
+                {/* Phone */}
+                <div className="flex items-start gap-4">
+                  <span className="text-xl select-none shrink-0 mt-0.5">📞</span>
+                  <div>
+                    <span className="font-mono text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Phone</span>
+                    <a
+                      href="tel:08941881111"
+                      className="font-mono text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors"
+                    >
+                      089418 81111
+                    </a>
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
+                <div className="flex items-start gap-4">
+                  <span className="text-xl select-none shrink-0 mt-0.5">💬</span>
+                  <div>
+                    <span className="font-mono text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">WhatsApp</span>
+                    <a
+                      href="https://wa.me/918941881111"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-base font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                    >
+                      +91 89418 81111
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <span className="text-xl select-none shrink-0 mt-0.5">📧</span>
+                  <div>
+                    <span className="font-mono text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Email</span>
+                    <a
+                      href="mailto:info@earthtravelsindia.in"
+                      className="font-mono text-sm hover:text-[#D4A017] transition-colors"
+                    >
+                      info@earthtravelsindia.in
+                    </a>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-4">
+                  <span className="text-xl select-none shrink-0 mt-0.5">📍</span>
+                  <div>
+                    <span className="font-mono text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Address</span>
+                    <p className="font-sans leading-relaxed">
+                      Shop No.138, 1st Floor Krishna Plaza, Krishna Market, Mathura, UP 281001
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="flex items-start gap-4">
+                  <span className="text-xl select-none shrink-0 mt-0.5">🕐</span>
+                  <div>
+                    <span className="font-mono text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Business Hours</span>
+                    <p className="font-mono text-xs text-white/70">
+                      Mon–Sat 10:00 AM – 7:30 PM IST (Sunday Closed)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Status Badge */}
+              <div className="flex items-center gap-2 pt-4 border-t border-white/5 text-xs font-sans">
+                <span
+                  className={`w-2.5 h-2.5 rounded-full inline-block ${
+                    isOpen ? "bg-green-500 animate-pulse" : "bg-red-500"
+                  }`}
+                />
+                <span className="font-mono text-white/80 font-medium">
+                  {isOpen
+                    ? `Open Now · We&apos;ll respond within 2 hours`
+                    : `Closed · We&apos;ll respond first thing Monday 10 AM`}
+                </span>
+              </div>
+            </GlassCard>
+
+            {/* Google Map iframe */}
+            <div className="w-full h-[280px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
+              {/* NOTE: Google Maps embed placeholder queries are populated securely */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.8872242130383!2d77.68884947545041!3d27.20695027647209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973715ffea226db%3A0xe54b9d0ab0fa000b!2sKrishna%20Plaza!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Earth Travels Office Location, Krishna Market Mathura"
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT: Inquiry Form Card (40% width equivalent) */}
+          <div className="lg:col-span-5 w-full">
+            <GlassCard hover={false} className="p-8 bg-[#080C14]/40 border border-white/10 rounded-[20px] shadow-2xl">
+              {!isSubmitted ? (
+                <form onSubmit={handleInquirySubmit} className="flex flex-col gap-5">
+                  <h2 className="font-display text-2xl md:text-3xl font-normal text-white pl-4 border-l-2 border-[#D4A017] leading-none mb-2">
+                    Inquire About a Journey
+                  </h2>
+
+                  {/* Name */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Enter full name"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
+                      required
+                    />
+                  </div>
+
+                  {/* WhatsApp Number with prefix */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      WhatsApp Number
+                    </label>
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 font-mono text-sm select-none">
+                        +91
+                      </span>
+                      <input
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))}
+                        placeholder="XXXXX XXXXX"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-14 pr-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-mono h-[46px]"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="name@domain.com"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
+                      required
+                    />
+                  </div>
+
+                  {/* Destination */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      Destination Interest
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={destination}
+                        onChange={(e) => setDestination(e.target.value)}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                      >
+                        {DESTINATIONS.map((dest) => (
+                          <option key={dest} value={dest} className="bg-[#080C14]">
+                            {dest}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/40 text-xs">
+                        ▼
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Month */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      Travel Month
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={month}
+                        onChange={(e) => setMonth(e.target.value)}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                      >
+                        {MONTHS.map((m) => (
+                          <option key={m} value={m} className="bg-[#080C14]">
+                            {m}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/40 text-xs">
+                        ▼
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Message */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      Your Message
+                    </label>
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder="Tell us about your dream trip — destination, group size, budget, any special requirements..."
+                      rows={5}
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] font-sans resize-none"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full h-[46px] font-sans text-xs font-bold text-midnight rounded-xl flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,160,23,0.35)] gold-glow uppercase"
+                    style={{
+                      background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
+                    }}
+                  >
+                    Send Inquiry
+                  </button>
+                </form>
+              ) : (
+                <div className="text-center py-16 flex flex-col items-center animate-fade-in select-none">
+                  <div className="w-16 h-16 bg-[#D4A017]/10 border border-[#D4A017] rounded-full flex items-center justify-center text-[#D4A017] text-3xl mb-6 shadow-2xl shadow-gold/5">
+                    ✓
+                  </div>
+                  <h3 className="font-display text-2xl font-bold text-white mb-2 leading-none">
+                    Inquiry Received!
+                  </h3>
+                  <p className="font-sans text-xs text-white/60 max-w-xs mb-6 leading-relaxed">
+                    Thank you, <span className="font-bold text-[#D4A017]">{name}</span>. Our Mathura team has registered your interest in {destination} and will reach out to you within 2 hours.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setName("");
+                      setPhone("");
+                      setEmail("");
+                      setDestination("Custom/Not Sure");
+                      setMonth("Flexible");
+                      setMessage("");
+                    }}
+                    className="btn-outline font-sans text-xs font-semibold py-2.5 px-6"
+                  >
+                    Send Another Inquiry
+                  </button>
+                </div>
+              )}
+            </GlassCard>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. Bottom Section: Walk-in Welcomes */}
+      <section className="max-w-7xl mx-auto px-6 py-12 relative z-10 text-center select-none border-t border-white/5">
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">
+          Find Us in Mathura
+        </h3>
+        <p className="font-sans text-xs md:text-sm text-white/60 max-w-xl mx-auto leading-relaxed">
+          Shop No.138, 1st Floor Krishna Plaza, Krishna Market, Mathura, UP 281001. <br className="hidden sm:inline" />
+          <span className="text-[#D4A017] font-semibold">Walk-in welcome during business hours.</span> We&apos;re on the 1st floor of Krishna Plaza, above the Krishna Market entrance.
+        </p>
+      </section>
+
+      {/* 4. FAQ Accordions */}
+      <section className="max-w-3xl mx-auto px-6 py-16 relative z-10 flex flex-col gap-6">
+        <h3 className="font-display text-2xl font-bold text-white mb-2 pl-4 border-l-2 border-[#D4A017]">
+          Frequently Asked Questions
+        </h3>
+
+        <div className="flex flex-col gap-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = faqOpen[idx];
+            return (
+              <GlassCard
+                key={idx}
+                hover={false}
+                className="p-5 bg-[#080C14]/40 border border-white/8 rounded-xl flex flex-col gap-3 transition-colors cursor-pointer"
+                onClick={() => toggleFaq(idx)}
+              >
+                <div className="flex items-center justify-between font-sans text-sm font-bold text-white">
+                  <span>{faq.q}</span>
+                  <span className="text-[10px] text-white/40">{isOpen ? "▲" : "▼"}</span>
+                </div>
+                {isOpen && (
+                  <p className="font-sans text-xs text-white/60 leading-relaxed pt-2 border-t border-white/5 animate-fade-in">
+                    {faq.a}
+                  </p>
+                )}
+              </GlassCard>
+            );
+          })}
+        </div>
+      </section>
+
+    </div>
+  );
+}
