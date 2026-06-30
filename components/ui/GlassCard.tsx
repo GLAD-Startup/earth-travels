@@ -6,6 +6,7 @@ type GlassCardProps = {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
+  allowOverflow?: boolean;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -13,6 +14,7 @@ export default function GlassCard({
   children,
   className = "",
   hover = true,
+  allowOverflow = false,
   onClick,
   ...props
 }: GlassCardProps) {
@@ -63,7 +65,7 @@ export default function GlassCard({
   return (
     <div
       ref={cardRef}
-      className={`glass relative overflow-hidden transition-all duration-300 ${
+      className={`glass relative transition-all duration-300 ${!allowOverflow ? "overflow-hidden" : ""} ${
         hover ? "hover:border-gold/30 hover:shadow-gold" : ""
       } ${className}`}
       onMouseMove={handleMouseMove}
@@ -74,14 +76,16 @@ export default function GlassCard({
     >
       {/* Gold shine overlay */}
       {hover && (
-        <div
-          ref={shineRef}
-          className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-10"
-          style={{
-            opacity: isHovered ? 1 : 0,
-            background: "radial-gradient(circle 180px at 50% 50%, rgba(212, 160, 23, 0.15), transparent 80%)",
-          }}
-        />
+        <div className="absolute inset-0 overflow-hidden rounded-[inherit] pointer-events-none z-10">
+          <div
+            ref={shineRef}
+            className="absolute inset-0 transition-opacity duration-300"
+            style={{
+              opacity: isHovered ? 1 : 0,
+              background: "radial-gradient(circle 180px at 50% 50%, rgba(212, 160, 23, 0.15), transparent 80%)",
+            }}
+          />
+        </div>
       )}
       <div className="relative z-20 h-full w-full">{children}</div>
     </div>

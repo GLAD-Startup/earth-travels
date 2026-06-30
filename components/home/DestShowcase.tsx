@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { DESTINATIONS } from "@/lib/data/destinations";
 
 import "swiper/css";
@@ -49,7 +49,11 @@ export default function DestShowcase() {
         <div className="w-full overflow-hidden">
           {mounted ? (
             <Swiper
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
               navigation={{
                 prevEl: prevRef.current,
                 nextEl: nextRef.current,
@@ -64,7 +68,8 @@ export default function DestShowcase() {
               slidesPerView={1.1}
               spaceBetween={16}
               grabCursor={true}
-              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              loop={true}
+              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
               breakpoints={{
                 640: {
                   slidesPerView: 2,
