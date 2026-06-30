@@ -79,10 +79,10 @@ const TESTIMONIALS = [
 ];
 
 export default function AboutPage() {
-  const [count1, ref1] = useCountUp({ target: 127, duration: 1500 });
-  const [count2, ref2] = useCountUp({ target: 50, duration: 1500 });
-  const [count3, ref3] = useCountUp({ target: 10, duration: 1500 });
-  const [count4, ref4] = useCountUp({ target: 4.7, duration: 1500, decimals: 1 });
+  const [count1, ref1] = useCountUp<HTMLSpanElement>({ target: 127, duration: 1500 });
+  const [count2, ref2] = useCountUp<HTMLSpanElement>({ target: 50, duration: 1500 });
+  const [count3, ref3] = useCountUp<HTMLSpanElement>({ target: 10, duration: 1500 });
+  const [count4, ref4] = useCountUp<HTMLSpanElement>({ target: 4.7, duration: 1500, decimals: 1 });
 
   return (
     <div className="bg-[#080C14] min-h-screen text-white select-none">

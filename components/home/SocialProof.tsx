@@ -12,7 +12,7 @@ interface StatItemProps {
   icon: React.ReactNode;
   count: string;
   label: string;
-  countRef: React.RefObject<HTMLSpanElement | null>;
+  countRef: React.RefObject<HTMLSpanElement>;
 }
 
 function StatItem({ icon, count, label, countRef }: StatItemProps) {
@@ -41,10 +41,10 @@ function StatItem({ icon, count, label, countRef }: StatItemProps) {
 
 export default function SocialProof() {
   const [mounted, setMounted] = useState(false);
-  const [count1, ref1] = useCountUp({ target: 127, duration: 1500 });
-  const [count2, ref2] = useCountUp({ target: 50, duration: 1500 });
-  const [count3, ref3] = useCountUp({ target: 10, duration: 1500 });
-  const [count4, ref4] = useCountUp({ target: 4.7, duration: 1500, decimals: 1 });
+  const [count1, ref1] = useCountUp<HTMLSpanElement>({ target: 127, duration: 1500 });
+  const [count2, ref2] = useCountUp<HTMLSpanElement>({ target: 50, duration: 1500 });
+  const [count3, ref3] = useCountUp<HTMLSpanElement>({ target: 10, duration: 1500 });
+  const [count4, ref4] = useCountUp<HTMLSpanElement>({ target: 4.7, duration: 1500, decimals: 1 });
 
   useEffect(() => {
     setMounted(true);

@@ -369,7 +369,7 @@ export default function HeroSection() {
                   onClick={(e) => {
                     try {
                       (e.target as HTMLInputElement).showPicker();
-                    } catch (err) {}
+                    } catch {}
                   }}
                   min={new Date().toISOString().split("T")[0]}
                   className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white/80 hover:border-white/20 focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 h-[56px] font-sans w-full cursor-pointer"
@@ -381,7 +381,7 @@ export default function HeroSection() {
                   onClick={(e) => {
                     try {
                       (e.target as HTMLInputElement).showPicker();
-                    } catch (err) {}
+                    } catch {}
                   }}
                   min={dateFrom || new Date().toISOString().split("T")[0]}
                   className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white/80 hover:border-white/20 focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 h-[56px] font-sans w-full cursor-pointer"

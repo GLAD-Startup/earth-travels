@@ -8,9 +8,9 @@ interface UseCountUpProps {
   decimals?: number;
 }
 
-export default function useCountUp({ target, duration, decimals = 0 }: UseCountUpProps) {
+export default function useCountUp<T extends HTMLElement = HTMLElement>({ target, duration, decimals = 0 }: UseCountUpProps) {
   const [value, setValue] = useState(0);
-  const elementRef = useRef<HTMLElement | null>(null);
+  const elementRef = useRef<T>(null);
   const hasAnimatedRef = useRef(false);
 
   useEffect(() => {

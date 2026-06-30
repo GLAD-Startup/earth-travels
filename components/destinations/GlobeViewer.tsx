@@ -167,7 +167,7 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
           }
         });
       })
-      .catch((_err) => {
+      .catch(() => {
         console.log("No country border file loaded yet. Run download command to load country borders.");
       });
 
