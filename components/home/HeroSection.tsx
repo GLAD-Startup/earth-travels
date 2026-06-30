@@ -320,7 +320,7 @@ export default function HeroSection() {
 
       {/* Hero Overlapping Search Bar */}
       <div className="absolute bottom-[-75px] left-1/2 -translate-x-1/2 w-full max-w-[960px] px-6 z-20">
-        <GlassCard hover={false} className="p-7 md:p-10 bg-[#080C14]/80 backdrop-blur-[24px] border border-white/15 shadow-2xl rounded-[24px]">
+        <GlassCard hover={false} allowOverflow={true} className="p-7 md:p-10 bg-[#080C14]/80 backdrop-blur-[24px] border border-white/15 shadow-2xl rounded-[24px]">
           <form onSubmit={handleSearchSubmit} className="flex flex-col md:flex-row gap-6 items-stretch md:items-end justify-between">
             
             {/* Field 1: Custom Destination Dropdown */}
@@ -366,15 +366,25 @@ export default function HeroSection() {
                   type="date"
                   value={dateFrom}
                   onChange={(e) => setDateFrom(e.target.value)}
+                  onClick={(e) => {
+                    try {
+                      (e.target as HTMLInputElement).showPicker();
+                    } catch (err) {}
+                  }}
                   min={new Date().toISOString().split("T")[0]}
-                  className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white/80 hover:border-white/20 focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 h-[56px] font-sans"
+                  className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white/80 hover:border-white/20 focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 h-[56px] font-sans w-full cursor-pointer"
                 />
                 <input
                   type="date"
                   value={dateTo}
                   onChange={(e) => setDateTo(e.target.value)}
+                  onClick={(e) => {
+                    try {
+                      (e.target as HTMLInputElement).showPicker();
+                    } catch (err) {}
+                  }}
                   min={dateFrom || new Date().toISOString().split("T")[0]}
-                  className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white/80 hover:border-white/20 focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 h-[56px] font-sans"
+                  className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white/80 hover:border-white/20 focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 h-[56px] font-sans w-full cursor-pointer"
                 />
               </div>
             </div>

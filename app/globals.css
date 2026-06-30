@@ -8,6 +8,7 @@
 ──────────────────────────────────────────── */
 :root,
 [data-theme="dark"] {
+  color-scheme: dark;
   /* Core palette */
   --midnight: #080c14;
   --deep-navy: #0a1628;
@@ -53,6 +54,7 @@
    ☀️ Sandy Parchment · Teal Coast · Gold Amber
 ──────────────────────────────────────────── */
 [data-theme="light"] {
+  color-scheme: light;
   /* Core overrides */
   --midnight:   #fdf8f2;        /* warm parchment instead of black */
   --deep-navy:  #fff4e6;        /* creamy sand */
