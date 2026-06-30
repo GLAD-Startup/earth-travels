@@ -82,9 +82,9 @@ export default function PackageSlider() {
               nextEl: nextRef.current,
             }}
             onBeforeInit={(swiper) => {
-              // @ts-ignore
+              // @ts-expect-error swiper navigation ref typing is not exposed directly on swiper params
               swiper.params.navigation.prevEl = prevRef.current;
-              // @ts-ignore
+              // @ts-expect-error swiper navigation ref typing is not exposed directly on swiper params
               swiper.params.navigation.nextEl = nextRef.current;
             }}
             breakpoints={{

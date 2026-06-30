@@ -34,6 +34,13 @@ interface GlobeViewerProps {
   onSelectDestination: (name: string) => void;
 }
 
+interface GeoJSONFeature {
+  geometry: {
+    type: string;
+    coordinates: number[][][] | number[][][][];
+  };
+}
+
 export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
   const mountRef = useRef<HTMLDivElement>(null);
   const [tooltip, setTooltip] = useState<{
@@ -124,12 +131,12 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
           opacity: 0.45,
         });
 
-        data.features.forEach((feature: any) => {
+        data.features.forEach((feature: GeoJSONFeature) => {
           const { type, coordinates } = feature.geometry;
           if (type === "Polygon") {
-            drawRing(coordinates[0], lineMaterial, radius + 0.2);
+            drawRing(coordinates[0] as number[][], lineMaterial, radius + 0.2);
           } else if (type === "MultiPolygon") {
-            coordinates.forEach((polygon: any) => {
+            (coordinates as number[][][][]).forEach((polygon) => {
               drawRing(polygon[0], lineMaterial, radius + 0.2);
             });
           }
@@ -149,18 +156,18 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
           opacity: 0.18, // More subtle for inner country borders
         });
 
-        data.features.forEach((feature: any) => {
+        data.features.forEach((feature: GeoJSONFeature) => {
           const { type, coordinates } = feature.geometry;
           if (type === "Polygon") {
-            drawRing(coordinates[0], lineMaterial, radius + 0.18);
+            drawRing(coordinates[0] as number[][], lineMaterial, radius + 0.18);
           } else if (type === "MultiPolygon") {
-            coordinates.forEach((polygon: any) => {
+            (coordinates as number[][][][]).forEach((polygon) => {
               drawRing(polygon[0], lineMaterial, radius + 0.18);
             });
           }
         });
       })
-      .catch((err) => {
+      .catch((_err) => {
         console.log("No country border file loaded yet. Run download command to load country borders.");
       });
 

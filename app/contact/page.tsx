@@ -36,7 +36,7 @@ const MONTHS = [
 ];
 
 export default function ContactPage() {
-  const { isOpen, statusText } = useIsOpen();
+  const { isOpen } = useIsOpen();
 
   // Form State
   const [name, setName] = useState("");

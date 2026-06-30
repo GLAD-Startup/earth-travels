@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { gsap } from "gsap";
-import { GlassCard, RevealWrapper } from "@/components/ui";
+import { GlassCard } from "@/components/ui";
 import { ITINERARIES } from "@/lib/data/itineraries";
 import { PACKAGES } from "@/lib/data/packages";
 

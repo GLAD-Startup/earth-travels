@@ -202,7 +202,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <p className="font-sans">
-            &copy; 2025 Earth Travels. All rights reserved.
+            &copy; {currentYear} Earth Travels. All rights reserved.
           </p>
           <p className="font-sans">
             Designed with ♥ by{" "}

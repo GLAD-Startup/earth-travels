@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { DESTINATIONS } from "@/lib/data/destinations";
-import { GlassCard } from "@/components/ui";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -78,7 +77,7 @@ export default function DestShowcase() {
               }}
               className="!overflow-visible"
             >
-              {DESTINATIONS.map((dest, idx) => (
+              {DESTINATIONS.map((dest) => (
                 <SwiperSlide key={dest.id} className="h-auto">
                   <div className="dest-panel w-full h-[70vh] md:h-[75vh] relative overflow-hidden group rounded-2xl border border-white/8 bg-[#080C14]">
                     {/* Card Background Image */}

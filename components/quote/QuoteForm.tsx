@@ -132,7 +132,7 @@ export default function QuoteForm() {
       
       {/* LEFT PANEL: Branding & Badge details (desktop only) */}
       <div
-        className="hidden lg:flex flex-col justify-between p-16 relative bg-cover bg-center overflow-hidden border-r border-white/5"
+        className="quote-hero hidden lg:flex flex-col justify-between p-16 relative bg-cover bg-center overflow-hidden border-r border-white/5"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(8,12,20,0.4) 0%, rgba(8,12,20,0.85) 100%), url('https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1200&q=80')`,
         }}

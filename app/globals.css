@@ -112,6 +112,8 @@
 [data-theme="light"] .text-white\/50 { color: rgba(26,18,10,0.5)  !important; }
 [data-theme="light"] .text-white\/40 { color: rgba(26,18,10,0.4)  !important; }
 [data-theme="light"] .text-white\/30 { color: rgba(26,18,10,0.3)  !important; }
+[data-theme="light"] .text-white\/20 { color: rgba(26,18,10,0.2)  !important; }
+[data-theme="light"] .text-white\/10 { color: rgba(26,18,10,0.1)  !important; }
 
 /* Border colours */
 [data-theme="light"] .border-white\/5  { border-color: rgba(26,18,10,0.06) !important; }
@@ -164,13 +166,16 @@
 [data-theme="light"] ::-webkit-scrollbar-track { background: #fdf8f2; }
 [data-theme="light"] ::selection { background: rgba(196,144,15,0.2); color: #1a120a; }
 
-/* Input fields */
+/* Input and select fields */
 [data-theme="light"] input[type="date"],
 [data-theme="light"] input[type="text"],
 [data-theme="light"] input[type="email"],
+[data-theme="light"] input[type="tel"],
+[data-theme="light"] select,
+[data-theme="light"] option,
 [data-theme="light"] textarea {
-  background: rgba(255,255,255,0.85) !important;
-  border-color: rgba(26,18,10,0.15) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(26, 18, 10, 0.15) !important;
   color: #1a120a !important;
 }
 
@@ -232,6 +237,44 @@
 [data-theme="light"] .bg-\[\#080C14\]\/90,
 [data-theme="light"] .bg-\[\#080c14\]\/90 {
   background-color: rgba(253,248,242,0.95) !important;
+}
+[data-theme="light"] .bg-\[\#080C14\]\/75,
+[data-theme="light"] .bg-\[\#080c14\]\/75 {
+  background-color: rgba(255,255,255,0.85) !important;
+}
+[data-theme="light"] .bg-\[\#080C14\]\/72,
+[data-theme="light"] .bg-\[\#080c14\]\/72 {
+  background-color: rgba(255,255,255,0.82) !important;
+}
+[data-theme="light"] .bg-\[\#080C14\]\/70,
+[data-theme="light"] .bg-\[\#080c14\]\/70 {
+  background-color: rgba(255,255,255,0.8) !important;
+}
+[data-theme="light"] .bg-\[\#080C14\]\/30,
+[data-theme="light"] .bg-\[\#080c14\]\/30 {
+  background-color: rgba(255,255,255,0.4) !important;
+}
+[data-theme="light"] .bg-\[\#D4A017\]\/10,
+[data-theme="light"] .bg-\[\#d4a017\]\/10 {
+  background-color: rgba(196,144,15,0.1) !important;
+}
+[data-theme="light"] .bg-\[\#D4A017\]\/5,
+[data-theme="light"] .bg-\[\#d4a017\]\/5 {
+  background-color: rgba(196,144,15,0.05) !important;
+}
+/* Prevent text color overrides in QuoteHero split landing left panel */
+[data-theme="light"] .quote-hero,
+[data-theme="light"] .quote-hero .text-white {
+  color: #ffffff !important;
+}
+[data-theme="light"] .quote-hero .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+[data-theme="light"] .quote-hero .text-white\/80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+[data-theme="light"] .quote-hero .text-white\/50 {
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* Local tip callout box */

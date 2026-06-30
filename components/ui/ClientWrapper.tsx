@@ -10,7 +10,7 @@ import WhatsAppFAB from "./WhatsAppFAB";
 
 export default function ClientWrapper({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    let lenisInstance: any;
+    let lenisInstance: Awaited<ReturnType<typeof initLenis>> | null = null;
     const loadLenis = async () => {
       lenisInstance = await initLenis();
     };

@@ -2,28 +2,25 @@
 
 import React, { useRef, useState } from "react";
 
-type GlassCardProps<T extends React.ElementType> = {
-  as?: T;
+type GlassCardProps = {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
-  onClick?: (event: React.MouseEvent) => void;
-} & Omit<React.ComponentPropsWithoutRef<T>, "as" | "children" | "className" | "hover" | "onClick">;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+} & React.HTMLAttributes<HTMLDivElement>;
 
-export default function GlassCard<T extends React.ElementType = "div">({
-  as,
+export default function GlassCard({
   children,
   className = "",
   hover = true,
   onClick,
   ...props
-}: GlassCardProps<T>) {
-  const Component = as || "div";
-  const cardRef = useRef<HTMLElement>(null);
+}: GlassCardProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
   const shineRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!hover || !cardRef.current) return;
 
     const card = cardRef.current;
@@ -64,7 +61,7 @@ export default function GlassCard<T extends React.ElementType = "div">({
   };
 
   return (
-    <Component
+    <div
       ref={cardRef}
       className={`glass relative overflow-hidden transition-all duration-300 ${
         hover ? "hover:border-gold/30 hover:shadow-gold" : ""
@@ -87,6 +84,6 @@ export default function GlassCard<T extends React.ElementType = "div">({
         />
       )}
       <div className="relative z-20 h-full w-full">{children}</div>
-    </Component>
+    </div>
   );
 }

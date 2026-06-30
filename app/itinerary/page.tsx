@@ -95,7 +95,7 @@ export default function ItinerariesPage() {
                         {itinerary.title}
                       </h3>
                       <p className="font-sans text-xs text-white/50 italic mt-1.5">
-                        "{itinerary.tagline}"
+                        &quot;{itinerary.tagline}&quot;
                       </p>
                     </div>
 
