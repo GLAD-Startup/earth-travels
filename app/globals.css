@@ -4,379 +4,52 @@
 
 /* ────────────────────────────────────────────
    CSS VARIABLES — Earth Travels Design Tokens
-   DARK THEME (default)
+   Single Warm Light Theme
 ──────────────────────────────────────────── */
-:root,
-[data-theme="dark"] {
-  color-scheme: dark;
-  /* Core palette */
-  --midnight: #080c14;
-  --deep-navy: #0a1628;
-  --navy-glass: rgba(10, 22, 40, 0.72);
-  --gold: #d4a017;
-  --gold-light: #f0c040;
-  --gold-glow: rgba(212, 160, 23, 0.35);
-  --white: #ffffff;
-  --white-dim: rgba(255, 255, 255, 0.08);
-  --white-border: rgba(255, 255, 255, 0.12);
-  --stone: #f7f4ee;
-  --coral: #c4613a;
+:root {
+  color-scheme: light;
 
-  /* Semantic tokens — Dark */
-  --bg-primary:   #080c14;
-  --bg-secondary: #0a1628;
-  --bg-card:      rgba(255,255,255,0.04);
-  --bg-card-hover:rgba(255,255,255,0.07);
-  --text-primary:   #ffffff;
-  --text-secondary: rgba(255,255,255,0.65);
-  --text-muted:     rgba(255,255,255,0.35);
-  --border-subtle:  rgba(255,255,255,0.08);
-  --border-default: rgba(255,255,255,0.12);
-  --nav-bg:       rgba(8,12,20,0.72);
+  /* Core palette */
+  --parchment: #fdf8f2;
+  --cream: #fff4e6;
+  --espresso: #1a120a;
+  --gold: #c4900f;
+  --gold-light: #e8a820;
+  --gold-glow: rgba(196, 144, 15, 0.25);
+  --terracotta: #c4613a;
+  --teal: #0d7a6a;
+
+  /* Semantic tokens */
+  --bg-primary: #fdf8f2;
+  --bg-secondary: #fff4e6;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --text-primary: #1a120a;
+  --text-secondary: rgba(26, 18, 10, 0.65);
+  --text-muted: rgba(26, 18, 10, 0.38);
+  --border-subtle: rgba(26, 18, 10, 0.07);
+  --border-default: rgba(26, 18, 10, 0.13);
+  --nav-bg: rgba(253, 248, 242, 0.88);
 
   /* Glass surfaces */
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.13);
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: 1px solid rgba(26, 18, 10, 0.1);
   --blur: blur(20px);
 
   /* Shape */
   --radius-card: 20px;
   --radius-pill: 100px;
 
+  /* Shadows */
+  --shadow-card: 0 2px 20px rgba(26, 18, 10, 0.06);
+  --shadow-card-hover: 0 8px 32px rgba(26, 18, 10, 0.1);
+  --shadow-gold: 0 0 24px rgba(196, 144, 15, 0.25);
+  --shadow-gold-lg: 0 0 48px rgba(196, 144, 15, 0.35);
+
   /* Fonts */
   --font-display: var(--font-playfair), serif;
   --font-sans: var(--font-inter), sans-serif;
   --font-mono: var(--font-dm-mono), monospace;
-}
-
-/* ────────────────────────────────────────────
-   LIGHT THEME — Travel Niche Warm Palette
-   ☀️ Sandy Parchment · Teal Coast · Gold Amber
-──────────────────────────────────────────── */
-[data-theme="light"] {
-  color-scheme: light;
-  /* Core overrides */
-  --midnight:   #fdf8f2;        /* warm parchment instead of black */
-  --deep-navy:  #fff4e6;        /* creamy sand */
-  --navy-glass: rgba(253,248,242,0.85);
-  --white:      #1a120a;        /* dark espresso for text */
-  --white-dim:  rgba(26,18,10,0.07);
-  --white-border: rgba(26,18,10,0.12);
-
-  /* Semantic tokens — Light */
-  --bg-primary:   #fdf8f2;      /* warm parchment */
-  --bg-secondary: #fff4e6;      /* sandy cream */
-  --bg-card:      rgba(255,255,255,0.75);
-  --bg-card-hover:rgba(255,255,255,0.95);
-  --text-primary:   #1a120a;    /* espresso */
-  --text-secondary: rgba(26,18,10,0.65);
-  --text-muted:     rgba(26,18,10,0.38);
-  --border-subtle:  rgba(26,18,10,0.07);
-  --border-default: rgba(26,18,10,0.13);
-  --nav-bg:       rgba(253,248,242,0.88);
-
-  /* Glass surfaces — lighter */
-  --glass-bg:     rgba(255,255,255,0.6);
-  --glass-border: 1px solid rgba(26,18,10,0.1);
-
-  /* Gold stays consistent — it's the brand anchor */
-  --gold:       #c4900f;        /* slightly deeper for light bg contrast */
-  --gold-light: #e8a820;
-  --gold-glow:  rgba(196,144,15,0.25);
-}
-
-/* ────────────────────────────────────────────
-   GLOBAL PAGE BACKGROUND — theme-aware
-──────────────────────────────────────────── */
-[data-theme="light"] body,
-[data-theme="light"] .bg-\[\#080C14\],
-[data-theme="light"] .bg-\[\#080c14\] {
-  background-color: var(--bg-primary) !important;
-  color: var(--text-primary) !important;
-}
-
-/* Page & section backgrounds */
-[data-theme="light"] .bg-\[\#0A1628\],
-[data-theme="light"] .bg-\[\#0a1628\] { background-color: var(--bg-secondary) !important; }
-
-/* Gradient sections become warm light equivalents */
-[data-theme="light"] .bg-gradient-to-b.from-\[\#080C14\],
-[data-theme="light"] .bg-gradient-to-b.from-\[\#080c14\] {
-  background: linear-gradient(to bottom, #fdf8f2, #fff4e6) !important;
-}
-
-/* Text colours */
-[data-theme="light"] .text-white   { color: var(--text-primary)   !important; }
-[data-theme="light"] .text-white\/90 { color: rgba(26,18,10,0.9)  !important; }
-[data-theme="light"] .text-white\/80 { color: rgba(26,18,10,0.8)  !important; }
-[data-theme="light"] .text-white\/70 { color: rgba(26,18,10,0.7)  !important; }
-[data-theme="light"] .text-white\/60 { color: rgba(26,18,10,0.6)  !important; }
-[data-theme="light"] .text-white\/50 { color: rgba(26,18,10,0.5)  !important; }
-[data-theme="light"] .text-white\/40 { color: rgba(26,18,10,0.4)  !important; }
-[data-theme="light"] .text-white\/30 { color: rgba(26,18,10,0.3)  !important; }
-[data-theme="light"] .text-white\/20 { color: rgba(26,18,10,0.2)  !important; }
-[data-theme="light"] .text-white\/10 { color: rgba(26,18,10,0.1)  !important; }
-
-/* Border colours */
-[data-theme="light"] .border-white\/5  { border-color: rgba(26,18,10,0.06) !important; }
-[data-theme="light"] .border-white\/8  { border-color: rgba(26,18,10,0.08) !important; }
-[data-theme="light"] .border-white\/10 { border-color: rgba(26,18,10,0.10) !important; }
-[data-theme="light"] .border-white\/12 { border-color: rgba(26,18,10,0.12) !important; }
-
-/* Glass cards */
-[data-theme="light"] .glass {
-  background: rgba(255,255,255,0.65) !important;
-  border: 1px solid rgba(26,18,10,0.10) !important;
-  box-shadow: 0 4px 24px rgba(26,18,10,0.06);
-}
-[data-theme="light"] .glass-dark {
-  background: rgba(255,244,230,0.8) !important;
-  border: 1px solid rgba(26,18,10,0.10) !important;
-}
-[data-theme="light"] .glass-navy {
-  background: rgba(253,248,242,0.85) !important;
-  border: 1px solid rgba(26,18,10,0.10) !important;
-}
-
-/* Midnight & navy backgrounds on cards */
-[data-theme="light"] .bg-midnight\/35,
-[data-theme="light"] .bg-midnight\/40,
-[data-theme="light"] .bg-midnight\/50,
-[data-theme="light"] .bg-midnight\/60,
-[data-theme="light"] .bg-midnight\/80 {
-  background-color: rgba(255,255,255,0.75) !important;
-}
-[data-theme="light"] .bg-midnight { background-color: #fdf8f2 !important; }
-
-/* Nav */
-[data-theme="light"] nav { 
-  background: rgba(253,248,242,0.88) !important; 
-  border-bottom-color: rgba(26,18,10,0.08) !important;
-}
-[data-theme="light"] .nav-link { color: rgba(26,18,10,0.75) !important; }
-[data-theme="light"] .nav-link:hover { color: #1a120a !important; }
-
-/* Gold stays — only deepen slightly */
-[data-theme="light"] .text-\[\#D4A017\],
-[data-theme="light"] .text-\[\#d4a017\] { color: var(--gold) !important; }
-[data-theme="light"] .text-\[\#F0C040\],
-[data-theme="light"] .text-\[\#f0c040\] { color: var(--gold-light) !important; }
-[data-theme="light"] .border-\[\#D4A017\]\/35,
-[data-theme="light"] .border-\[\#D4A017\]\/30 { border-color: rgba(196,144,15,0.3) !important; }
-
-/* Scrollbar */
-[data-theme="light"] ::-webkit-scrollbar-track { background: #fdf8f2; }
-[data-theme="light"] ::selection { background: rgba(196,144,15,0.2); color: #1a120a; }
-
-/* Input and select fields */
-[data-theme="light"] input[type="date"],
-[data-theme="light"] input[type="text"],
-[data-theme="light"] input[type="email"],
-[data-theme="light"] input[type="tel"],
-[data-theme="light"] select,
-[data-theme="light"] option,
-[data-theme="light"] textarea {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-color: rgba(26, 18, 10, 0.15) !important;
-  color: #1a120a !important;
-}
-
-/* Section dividers */
-[data-theme="light"] .divide-white\/10 { --tw-divide-opacity: 1; border-color: rgba(26,18,10,0.10) !important; }
-
-/* ── bg-white/* opacity utilities ── */
-[data-theme="light"] .bg-white\/3  { background-color: rgba(26,18,10,0.025) !important; }
-[data-theme="light"] .bg-white\/5  { background-color: rgba(26,18,10,0.04)  !important; }
-[data-theme="light"] .bg-white\/6  { background-color: rgba(26,18,10,0.045) !important; }
-[data-theme="light"] .bg-white\/8  { background-color: rgba(26,18,10,0.055) !important; }
-[data-theme="light"] .bg-white\/10 { background-color: rgba(26,18,10,0.07)  !important; }
-[data-theme="light"] .bg-white\/15 { background-color: rgba(26,18,10,0.09)  !important; }
-[data-theme="light"] .bg-white\/20 { background-color: rgba(26,18,10,0.12)  !important; }
-
-/* ── border-white/* opacity utilities (extra variants) ── */
-[data-theme="light"] .border-white\/3  { border-color: rgba(26,18,10,0.04)  !important; }
-[data-theme="light"] .border-white\/6  { border-color: rgba(26,18,10,0.06)  !important; }
-[data-theme="light"] .border-white\/15 { border-color: rgba(26,18,10,0.12)  !important; }
-[data-theme="light"] .border-white\/20 { border-color: rgba(26,18,10,0.14)  !important; }
-[data-theme="light"] .border-white\/25 { border-color: rgba(26,18,10,0.16)  !important; }
-
-/* ── Itinerary day section activity cards ──
-   These use bg-white/5 on a dark parent — in light they'd be invisible.
-   Give them a proper card surface. */
-[data-theme="light"] .day-scroll-section {
-  border-bottom-color: rgba(26,18,10,0.08) !important;
-}
-[data-theme="light"] .day-scroll-section .bg-white\/5 {
-  background-color: rgba(255,255,255,0.85) !important;
-  box-shadow: 0 2px 12px rgba(26,18,10,0.06) !important;
-}
-[data-theme="light"] .day-scroll-section .border-white\/5 {
-  border-color: rgba(26,18,10,0.08) !important;
-}
-
-/* Day watermark text — should be espresso not white */
-[data-theme="light"] .day-scroll-section .opacity-\[0\.04\] span {
-  color: #1a120a !important;
-}
-
-/* ── Booking widget & aside panels ── */
-[data-theme="light"] .bg-\[\#080C14\]\/80,
-[data-theme="light"] .bg-\[\#080c14\]\/80 {
-  background-color: rgba(255,255,255,0.9) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/60,
-[data-theme="light"] .bg-\[\#080c14\]\/60 {
-  background-color: rgba(255,255,255,0.75) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/50,
-[data-theme="light"] .bg-\[\#080c14\]\/50 {
-  background-color: rgba(255,255,255,0.7) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/40,
-[data-theme="light"] .bg-\[\#080c14\]\/40 {
-  background-color: rgba(255,255,255,0.65) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/90,
-[data-theme="light"] .bg-\[\#080c14\]\/90 {
-  background-color: rgba(253,248,242,0.95) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/75,
-[data-theme="light"] .bg-\[\#080c14\]\/75 {
-  background-color: rgba(255,255,255,0.85) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/72,
-[data-theme="light"] .bg-\[\#080c14\]\/72 {
-  background-color: rgba(255,255,255,0.82) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/70,
-[data-theme="light"] .bg-\[\#080c14\]\/70 {
-  background-color: rgba(255,255,255,0.8) !important;
-}
-[data-theme="light"] .bg-\[\#080C14\]\/30,
-[data-theme="light"] .bg-\[\#080c14\]\/30 {
-  background-color: rgba(255,255,255,0.4) !important;
-}
-[data-theme="light"] .bg-\[\#D4A017\]\/10,
-[data-theme="light"] .bg-\[\#d4a017\]\/10 {
-  background-color: rgba(196,144,15,0.1) !important;
-}
-[data-theme="light"] .bg-\[\#D4A017\]\/5,
-[data-theme="light"] .bg-\[\#d4a017\]\/5 {
-  background-color: rgba(196,144,15,0.05) !important;
-}
-/* Prevent text color overrides in QuoteHero split landing left panel */
-[data-theme="light"] .quote-hero,
-[data-theme="light"] .quote-hero .text-white {
-  color: #ffffff !important;
-}
-[data-theme="light"] .quote-hero .text-white\/70 {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-[data-theme="light"] .quote-hero .text-white\/80 {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-[data-theme="light"] .quote-hero .text-white\/50 {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* Local tip callout box */
-[data-theme="light"] .border-l.border-\[\#D4A017\] {
-  background-color: rgba(196,144,15,0.06) !important;
-}
-
-/* ── SocialProof / Stats bar ── */
-[data-theme="light"] .bg-gradient-to-r.from-\[\#0A1628\] {
-  background: linear-gradient(to right, #fff4e6, #fdf8f2, #f5f0e8) !important;
-}
-[data-theme="light"] [class*="from-[#0A1628]"],
-[data-theme="light"] [class*="via-[#080C14]"],
-[data-theme="light"] [class*="to-[#0D2A24]"] {
-  background: #fdf8f2 !important;
-}
-
-/* ── Hero overlay — lighten gradient so text stays readable ── */
-[data-theme="light"] section[style*="rgba(8,12,20"] {
-  /* Keep hero images visible; darken text area slightly */
-  color: #ffffff !important; /* hero text always white over images */
-}
-
-/* Force hero text white even in light mode (it's over dark images) */
-[data-theme="light"] .hero-slide-up {
-  color: #ffffff !important;
-}
-
-/* ── GlassCard — ensure solid readable background ── */
-[data-theme="light"] [class*="rounded"][class*="border"][class*="bg-midnight"] {
-  background-color: rgba(255,255,255,0.85) !important;
-  border-color: rgba(26,18,10,0.10) !important;
-  box-shadow: 0 2px 16px rgba(26,18,10,0.07) !important;
-}
-
-/* ── Cards with hover:border-[#D4A017] (destination, package, itinerary cards) ── */
-[data-theme="light"] [class*="hover:border-\[#D4A017\]"] {
-  background-color: rgba(255,255,255,0.9) !important;
-}
-
-/* ── Packages page sidebar filter panel ── */
-[data-theme="light"] [class*="sticky"][class*="bg-[#080C14]"],
-[data-theme="light"] [class*="sticky"][class*="bg-midnight"] {
-  background-color: rgba(253,248,242,0.95) !important;
-}
-
-/* ── Mobile nav drawer ── */
-[data-theme="light"] [class*="translate-x"][class*="border-l"] {
-  background-color: rgba(253,248,242,0.97) !important;
-  border-left-color: rgba(26,18,10,0.10) !important;
-  color: #1a120a !important;
-}
-
-/* ── Marquee/ticker bars (SocialProof ticker) ── */
-[data-theme="light"] [class*="animate-marquee"] span,
-[data-theme="light"] [class*="animate-marquee"] {
-  color: rgba(26,18,10,0.55) !important;
-}
-
-/* ── Backdrop blur elements (dropdowns, toasts) ── */
-[data-theme="light"] [class*="backdrop-blur"][class*="bg-[#080"] {
-  background-color: rgba(253,248,242,0.92) !important;
-}
-
-/* ── Review / testimonial cards ── */
-[data-theme="light"] [class*="rounded"][class*="bg-white\/"] {
-  background-color: rgba(255,255,255,0.85) !important;
-  box-shadow: 0 2px 20px rgba(26,18,10,0.07) !important;
-}
-
-/* ── Stat numbers (SocialProof) stay gold ── */
-[data-theme="light"] [class*="text-gold"],
-[data-theme="light"] .text-gold { color: var(--gold) !important; }
-
-/* ── Progress map sidebar dots (itinerary) ── */
-[data-theme="light"] [class*="bg-midnight"][class*="border-white"] {
-  background-color: #fdf8f2 !important;
-  border-color: rgba(26,18,10,0.20) !important;
-}
-
-/* ── Opacity-based overlays on card images (gradient-to-t) ── */
-[data-theme="light"] [class*="from-midnight"] {
-  --tw-gradient-from: rgba(26,18,10,0.7) !important;
-}
-
-/* ── WhatsApp FAB — stays green regardless ── */
-[data-theme="light"] #whatsapp-float {
-  background: rgba(37,211,102,0.85) !important;
-  color: white !important;
-}
-
-/* Theme transition — smooth swap */
-*, *::before, *::after {
-  transition-property: background-color, border-color, color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: ease;
-}
-/* Exclude elements that should not transition (animations, transforms) */
-img, video, canvas, [class*="animate-"], [class*="motion-"] {
-  transition: none !important;
 }
 
 /* ────────────────────────────────────────────
@@ -395,8 +68,8 @@ html {
 }
 
 body {
-  background: var(--bg-primary, var(--midnight));
-  color: var(--text-primary, var(--white));
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.7;
@@ -417,18 +90,27 @@ body {
     border-radius: var(--radius-card);
   }
 
+  .glass-card {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(26, 18, 10, 0.08);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+  }
+
   .glass-dark {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: var(--navy-glass, rgba(8, 12, 20, 0.65));
-    border: var(--glass-border);
+    background: rgba(26, 18, 10, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-card);
   }
 
   .glass-navy {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    background: var(--navy-glass);
+    background: var(--nav-bg);
     border: var(--glass-border);
     border-radius: var(--radius-card);
   }
@@ -443,27 +125,32 @@ body {
 
   /* Glow effects */
   .gold-glow {
-    box-shadow: 0 0 24px rgba(212, 160, 23, 0.35);
+    box-shadow: var(--shadow-gold);
   }
 
   .gold-glow-lg {
-    box-shadow: 0 0 48px rgba(212, 160, 23, 0.5);
+    box-shadow: var(--shadow-gold-lg);
   }
 
-  /* Gold gradient button with white shimmer sweep every 3s */
+  /* Gold gradient button with shimmer */
   @keyframes gold-shimmer {
     0% { background-position: 200% 0; }
     26.6% { background-position: -100% 0; }
     100% { background-position: -100% 0; }
   }
 
-  .btn-gold,
-  [style*="D4A017"],
-  [style*="d4a017"] {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 40%, rgba(255, 255, 255, 0.6) 50%, var(--gold) 60%, var(--gold-light) 100%) !important;
+  .btn-gold {
+    background: linear-gradient(
+      135deg,
+      var(--gold) 0%,
+      var(--gold-light) 40%,
+      rgba(255, 255, 255, 0.6) 50%,
+      var(--gold) 60%,
+      var(--gold-light) 100%
+    ) !important;
     background-size: 300% 100% !important;
     animation: gold-shimmer 3s infinite ease-in-out !important;
-    color: var(--midnight) !important;
+    color: var(--parchment) !important;
     font-weight: 600;
     border-radius: var(--radius-pill);
     padding: 0.75rem 2rem;
@@ -475,24 +162,24 @@ body {
 
   .btn-gold:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 32px rgba(212, 160, 23, 0.5);
+    box-shadow: var(--shadow-gold-lg);
   }
 
-  /* Accessibility focus ring resets */
+  /* Accessibility focus ring */
   input:focus,
   select:focus,
   textarea:focus,
   button:focus,
   a:focus {
-    outline: 2px solid #D4A017 !important;
+    outline: 2px solid var(--gold) !important;
     outline-offset: 2px !important;
   }
 
-  /* Outlined glass button */
+  /* Outlined button */
   .btn-outline {
     background: transparent;
-    color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
+    border: 1px solid rgba(26, 18, 10, 0.2);
     border-radius: var(--radius-pill);
     padding: 0.75rem 2rem;
     cursor: pointer;
@@ -502,11 +189,11 @@ body {
   }
 
   .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 18, 10, 0.05);
     transform: scale(1.03);
   }
 
-  /* Section reveal animation base state */
+  /* Section reveal animation */
   .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -518,10 +205,10 @@ body {
     transform: translateY(0);
   }
 
-  /* Gold underline hover (nav links) */
+  /* Nav link with gold underline */
   .nav-link {
     position: relative;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(26, 18, 10, 0.7);
     text-decoration: none;
     font-size: 0.875rem;
     letter-spacing: 0.02em;
@@ -534,13 +221,13 @@ body {
     bottom: -4px;
     left: 50%;
     right: 50%;
-    height: 1px;
+    height: 2px;
     background: var(--gold);
     transition: left 0.3s ease, right 0.3s ease;
   }
 
   .nav-link:hover {
-    color: var(--white);
+    color: var(--text-primary);
   }
 
   .nav-link:hover::after,
@@ -633,7 +320,7 @@ body.cursor-hover #cursor-ring {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
-  background: rgba(37, 211, 102, 0.8);
+  background: rgba(37, 211, 102, 0.9);
   backdrop-filter: blur(12px);
   border-radius: var(--radius-pill);
   color: white;
@@ -678,11 +365,11 @@ body.cursor-hover #cursor-ring {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--midnight);
+  background: var(--parchment);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(212, 160, 23, 0.4);
+  background: rgba(196, 144, 15, 0.4);
   border-radius: 3px;
 }
 
@@ -694,76 +381,70 @@ body.cursor-hover #cursor-ring {
    SELECTION
 ──────────────────────────────────────────── */
 ::selection {
-  background: rgba(212, 160, 23, 0.3);
-  color: var(--white);
+  background: rgba(196, 144, 15, 0.2);
+  color: var(--text-primary);
 }
 
 /* ────────────────────────────────────────────
-   LIGHT THEME — Component-level deep overrides
+   HERO SECTION — dark overlay, keep text white
 ──────────────────────────────────────────── */
-
-/* Footer */
-[data-theme="light"] footer {
-  background-color: #f5ede0 !important;
-  border-top-color: rgba(26,18,10,0.10) !important;
-  color: #1a120a !important;
+.hero-overlay-dark .text-white {
+  color: #ffffff;
 }
 
-/* Sticky bars (day progress, etc.) */
-[data-theme="light"] .sticky {
-  background-color: rgba(253,248,242,0.92) !important;
-  border-bottom-color: rgba(26,18,10,0.08) !important;
+/* ────────────────────────────────────────────
+   FORM INPUTS — warm light styling
+──────────────────────────────────────────── */
+input[type="date"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+option,
+textarea {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(26, 18, 10, 0.15);
+  color: var(--text-primary);
 }
 
-/* Outlined buttons in light mode */
-[data-theme="light"] .btn-outline {
-  color: #1a120a !important;
-  border-color: rgba(26,18,10,0.25) !important;
-}
-[data-theme="light"] .btn-outline:hover {
-  background: rgba(26,18,10,0.06) !important;
-}
-
-/* Sections using bg-gradient-to-r from dark tones */
-[data-theme="light"] .bg-gradient-to-r {
-  --tw-gradient-from: #fdf8f2 !important;
-  --tw-gradient-to: #fff4e6 !important;
+/* ────────────────────────────────────────────
+   ANIMATION KEYFRAMES
+──────────────────────────────────────────── */
+@keyframes gradient-loop {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Mobile drawer panel */
-[data-theme="light"] [class*="translate-x-0"][class*="bg-[#080C14]"] {
-  background: rgba(253,248,242,0.97) !important;
-  border-left-color: rgba(26,18,10,0.10) !important;
+.animate-gradient-loop {
+  animation: gradient-loop 8s ease infinite;
 }
 
-/* Hero overlay gradients — keep image visible but lighten overlay */
-[data-theme="light"] [style*="rgba(8,12,20"] {
-  /* Unsplash images already have their own light look in light mode */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* GlassCard component refinement for light */
-[data-theme="light"] [class*="rounded-"][class*="border"][class*="bg-white"] {
-  box-shadow: 0 2px 16px rgba(26,18,10,0.08) !important;
+.animate-marquee {
+  animation: marquee-scroll 24s linear infinite;
 }
 
-/* Stat number & mono text */
-[data-theme="light"] .font-mono { color: inherit; }
-
-/* Gradient text — keep golds */
-[data-theme="light"] [class*="bg-gradient-to-r"][class*="from-[#D4A017]"],
-[data-theme="light"] [class*="bg-gradient-to-r"][class*="from-gold"] {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@keyframes ken-burns {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.15); }
 }
 
-/* Light mode palette reference card (colour swatches shown in docs) */
-:root {
-  --swatch-sand:      #fdf8f2;
-  --swatch-cream:     #fff4e6;
-  --swatch-espresso:  #1a120a;
-  --swatch-gold:      #c4900f;
-  --swatch-gold-lt:   #e8a820;
-  --swatch-teal:      #0d7a6a;
-  --swatch-coral:     #c4613a;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}

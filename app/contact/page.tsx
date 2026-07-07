@@ -122,10 +122,10 @@ export default function ContactPage() {
                   <div>
                     <span className="font-mono text-[10px] text-white/40 uppercase tracking-wider block mb-0.5">Phone</span>
                     <a
-                      href="tel:08941881111"
+                      href="tel:8941881111"
                       className="font-mono text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors"
                     >
-                      089418 81111
+                      89418 81111
                     </a>
                   </div>
                 </div>

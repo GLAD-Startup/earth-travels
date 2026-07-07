@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   name: "Earth Travels",
   nameHindi: "अर्थ ट्रैवल्स",
   tagline: "Crafting Journeys the World Remembers",
-  phone: "089418 81111",
+  phone: "89418 81111",
   whatsapp: "918941881111",
   email: "info@earthtravels.in",
   address: "Shop No.138, 1st Floor Krishna Plaza, Krishna Market, Mathura UP 281001",

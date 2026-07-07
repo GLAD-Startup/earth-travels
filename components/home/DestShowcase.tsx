@@ -1,207 +1,109 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import Image from "next/image";
 import { DESTINATIONS } from "@/lib/data/destinations";
-
-import "swiper/css";
-import "swiper/css/navigation";
+import { RevealWrapper } from "@/components/ui";
 
 export default function DestShowcase() {
-  const [mounted, setMounted] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
+  // Take top 5 for the bento grid
+  const showcaseDestinations = DESTINATIONS.slice(0, 5);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const getGridClasses = (index: number) => {
+    switch (index) {
+      case 0:
+        return "md:col-span-8 md:row-span-2 h-[400px] md:h-auto"; // Large Feature
+      case 1:
+        return "md:col-span-4 md:row-span-1 h-[300px] md:h-auto"; // Small Square Top Right
+      case 2:
+        return "md:col-span-4 md:row-span-1 h-[300px] md:h-auto"; // Small Square Bottom Right
+      case 3:
+        return "md:col-span-5 md:row-span-1 h-[400px] md:h-[450px]"; // Tall bottom left
+      case 4:
+        return "md:col-span-7 md:row-span-1 h-[350px] md:h-[450px]"; // Wide bottom right
+      default:
+        return "col-span-1 row-span-1";
+    }
+  };
 
   return (
-    <section className="relative w-full bg-[#080C14] py-20 overflow-hidden select-none border-t border-white/5">
-      {/* Header section above panels */}
-      <div className="max-w-7xl mx-auto px-6 text-center mb-12">
-        <h2 className="font-display text-4xl md:text-5xl lg:text-[56px] font-normal text-white leading-tight mb-3">
-          Our Signature Escapes
-        </h2>
-        <p className="font-sans text-sm md:text-[18px] text-white/60">
-          From Mathura to everywhere that matters.
-        </p>
-      </div>
-
-      {/* Slider Wrapper */}
-      <div className="relative w-full flex items-center justify-center px-4 md:px-12">
+    <section className="relative w-full bg-[#fdf8f2] py-32 overflow-hidden select-none">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
         
-        {/* Left Arrow */}
-        <button
-          ref={prevRef}
-          className="hidden md:flex absolute left-4 z-30 w-12 h-12 rounded-full border border-white/12 bg-[#080C14]/40 backdrop-blur-md items-center justify-center text-white/70 hover:text-white hover:border-[#D4A017]/50 transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed select-none"
-          aria-label="Previous escape"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        {/* Swiper Slider */}
-        <div className="w-full overflow-hidden">
-          {mounted ? (
-            <Swiper
-              modules={[Navigation, Autoplay]}
-              autoplay={{
-                delay: 1500,
-                disableOnInteraction: false,
-              }}
-              navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
-              }}
-              onBeforeInit={(swiper) => {
-                // Bind refs to navigation elements
-                if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
-                  swiper.params.navigation.prevEl = prevRef.current;
-                  swiper.params.navigation.nextEl = nextRef.current;
-                }
-              }}
-              slidesPerView={1.1}
-              spaceBetween={16}
-              grabCursor={true}
-              loop={true}
-              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 24,
-                },
-              }}
-              className="!overflow-visible"
-            >
-              {DESTINATIONS.map((dest) => (
-                <SwiperSlide key={dest.id} className="h-auto">
-                  <div className="dest-panel w-full h-[70vh] md:h-[75vh] relative overflow-hidden group rounded-2xl border border-white/8 bg-[#080C14]">
-                    {/* Card Background Image */}
-                    <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-                      <img
-                        src={dest.image}
-                        alt={dest.name}
-                        className="absolute inset-0 w-full h-full object-cover select-none transition-transform duration-700 ease-out group-hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-
-                    {/* Dark Overlay Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#080C14] via-[#080c14]/40 to-transparent z-10 pointer-events-none" />
-
-                    {/* Content Panel */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-20 flex flex-col items-start gap-4">
-                      
-                      {/* Season & Packages info row */}
-                      <div className="flex flex-wrap gap-2.5 items-center">
-                        <span className="glass px-3 py-1 rounded-full border border-[#D4A017]/30 text-[#D4A017] font-mono text-[10px] tracking-[0.1em] uppercase bg-[#D4A017]/5 font-semibold">
-                          {dest.season}
-                        </span>
-                        <span className="glass px-3 py-1 rounded-full border border-white/10 text-white/50 font-sans text-[10px] bg-white/5">
-                          {dest.packageCount} Packages Available
-                        </span>
-                      </div>
-
-                      {/* Name & Tagline */}
-                      <div>
-                        <h3 className="font-display text-3xl md:text-4xl font-normal italic text-white mb-2 leading-none">
-                          {dest.name}
-                        </h3>
-                        <p className="font-sans text-sm text-white/70 leading-relaxed max-w-xs line-clamp-2">
-                          {dest.tagline}
-                        </p>
-                      </div>
-
-                      {/* Price tag */}
-                      <div className="font-mono text-sm md:text-base text-[#D4A017] font-semibold">
-                        From ₹{dest.startingPrice.toLocaleString("en-IN")} / person
-                      </div>
-
-                      {/* Action trigger */}
-                      <Link
-                        href={`/packages?destination=${dest.name.toLowerCase()}`}
-                        className="view-pkg-link relative font-sans text-xs font-bold text-white uppercase tracking-wider group mt-1 pb-0.5"
-                      >
-                        View Packages <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
-                        <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-white transition-all duration-300 origin-left scale-x-100 group-hover:bg-[#D4A017]" />
-                      </Link>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          ) : (
-            // SSR Fallback grid layout
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {DESTINATIONS.slice(0, 3).map((dest) => (
-                <div key={dest.id} className="w-full h-[70vh] md:h-[75vh] relative overflow-hidden rounded-2xl border border-white/8 bg-[#080C14]">
-                  <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-                    <img
-                      src={dest.image}
-                      alt={dest.name}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080C14] via-[#080c14]/40 to-transparent z-10 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-20 flex flex-col items-start gap-4">
-                    <div className="flex flex-wrap gap-2.5 items-center">
-                      <span className="glass px-3 py-1 rounded-full border border-[#D4A017]/30 text-[#D4A017] font-mono text-[10px] uppercase bg-[#D4A017]/5 font-semibold">
-                        {dest.season}
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="font-display text-3xl md:text-4xl font-normal italic text-white mb-2 leading-none">
-                        {dest.name}
-                      </h3>
-                      <p className="font-sans text-sm text-white/70 max-w-xs">
-                        {dest.tagline}
-                      </p>
-                    </div>
-                    <div className="font-mono text-sm md:text-base text-[#D4A017] font-semibold">
-                      From ₹{dest.startingPrice.toLocaleString("en-IN")}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+          <div className="max-w-xl">
+            <span className="font-mono text-[10px] text-[#c4900f] uppercase tracking-[0.3em] font-semibold block mb-4">
+              The Collection
+            </span>
+            <h2 className="font-display text-5xl md:text-6xl font-normal text-[#1a120a] leading-[1.1] tracking-[-0.02em]">
+              Signature Escapes
+            </h2>
+          </div>
+          <Link
+            href="/destinations"
+            className="group relative inline-flex items-center text-[#1a120a] text-xs font-mono tracking-[0.2em] uppercase font-semibold pb-1"
+          >
+            <span className="relative z-10">Explore All Destinations</span>
+            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#1a120a] transform scale-x-100 origin-left transition-transform duration-500 group-hover:scale-x-0" />
+          </Link>
         </div>
 
-        {/* Right Arrow */}
-        <button
-          ref={nextRef}
-          className="hidden md:flex absolute right-4 z-30 w-12 h-12 rounded-full border border-white/12 bg-[#080C14]/40 backdrop-blur-md items-center justify-center text-white/70 hover:text-white hover:border-[#D4A017]/50 transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed select-none"
-          aria-label="Next escape"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
+        {/* Bento Box Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-3 gap-4 md:gap-6 md:h-[900px]">
+          {showcaseDestinations.map((dest, idx) => (
+            <div
+              key={dest.id}
+              className={`relative overflow-hidden group rounded-sm ${getGridClasses(idx)}`}
+            >
+              {/* Image */}
+              <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#1a120a]">
+                <Image
+                  src={dest.image}
+                  alt={dest.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover opacity-90 transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
+                  quality={85}
+                />
+              </div>
 
-      {/* Dot Indicators */}
-      <div className="flex items-center justify-center gap-2 mt-8 w-full">
-        {DESTINATIONS.map((_, idx) => {
-          const isActive = idx === activeIndex;
-          return (
-            <button
-              key={idx}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                isActive ? "bg-[#D4A017] w-6" : "bg-white/20 w-1.5"
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          );
-        })}
+              {/* Gradient overlay - appears on hover for contrast */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a120a]/80 via-[#1a120a]/20 to-transparent opacity-40 transition-opacity duration-700 group-hover:opacity-90 z-10 pointer-events-none" />
+
+              {/* Default State Content (Name only, elegant) - Hidden on mobile, visible on desktop until hover */}
+              <div className="hidden lg:flex absolute inset-0 p-8 md:p-10 z-20 flex-col justify-end transition-opacity duration-500 group-hover:opacity-0 pointer-events-none">
+                <h3 className="font-display text-4xl text-white font-normal drop-shadow-lg">
+                  {dest.name}
+                </h3>
+              </div>
+
+              {/* Hover State Content (Details reveal) - Always visible on mobile, reveal on hover on desktop */}
+              <div className="absolute inset-0 p-6 md:p-10 z-30 flex flex-col justify-end opacity-100 lg:opacity-0 lg:translate-y-8 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
+                <div className="flex flex-col items-start gap-2 md:gap-3">
+                  <span className="font-mono text-[10px] text-[#e8a820] uppercase tracking-[0.2em] font-semibold">
+                    {dest.season} • {dest.packageCount} Collections
+                  </span>
+                  <h3 className="font-display text-4xl md:text-5xl text-white font-normal italic leading-none">
+                    {dest.name}
+                  </h3>
+                  <p className="font-sans text-sm text-white/80 max-w-sm font-light leading-relaxed mt-2 line-clamp-2">
+                    {dest.tagline}
+                  </p>
+                  
+                  <Link
+                    href={`/packages?destination=${dest.name.toLowerCase()}`}
+                    className="mt-6 inline-block bg-white text-[#1a120a] text-[11px] font-sans font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-[#e8a820] hover:text-white transition-colors duration-300"
+                  >
+                    View Itineraries
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
       </div>
     </section>
   );

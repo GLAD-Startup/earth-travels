@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface UseCountUpProps {
   target: number;
@@ -9,13 +9,15 @@ interface UseCountUpProps {
 }
 
 export default function useCountUp<T extends HTMLElement = HTMLElement>({ target, duration, decimals = 0 }: UseCountUpProps) {
-  const [value, setValue] = useState(0);
   const elementRef = useRef<T>(null);
   const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
     const element = elementRef.current;
     if (!element) return;
+
+    // Set initial value
+    element.innerText = (0).toFixed(decimals);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -42,12 +44,16 @@ export default function useCountUp<T extends HTMLElement = HTMLElement>({ target
         const easeProgress = progress * (2 - progress);
         const currentValue = easeProgress * target;
 
-        setValue(currentValue);
+        if (elementRef.current) {
+          elementRef.current.innerText = currentValue.toFixed(decimals);
+        }
 
         if (progress < 1) {
           requestAnimationFrame(animate);
         } else {
-          setValue(target);
+          if (elementRef.current) {
+            elementRef.current.innerText = target.toFixed(decimals);
+          }
         }
       };
 
@@ -57,9 +63,8 @@ export default function useCountUp<T extends HTMLElement = HTMLElement>({ target
     return () => {
       observer.disconnect();
     };
-  }, [target, duration]);
+  }, [target, duration, decimals]);
 
-  const formattedValue = value.toFixed(decimals);
-
-  return [formattedValue, elementRef] as const;
+  // Return formatted initial value so it renders immediately, plus the ref
+  return [(0).toFixed(decimals), elementRef] as const;
 }

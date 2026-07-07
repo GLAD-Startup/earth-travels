@@ -5,5 +5,4 @@ export { default as Footer } from "./Footer";
 export { default as ScrollProgress } from "./ScrollProgress";
 export { default as CustomCursor } from "./CustomCursor";
 export { default as WhatsAppFAB } from "./WhatsAppFAB";
-export { default as ClientWrapper } from "./ClientWrapper";
-export { ThemeToggle } from "./ThemeToggle";
+export { default as ClientShell } from "./ClientShell";

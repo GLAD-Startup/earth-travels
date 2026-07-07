@@ -2,21 +2,19 @@
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { PACKAGES } from "@/lib/data/packages";
-import { GlassCard } from "@/components/ui";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 const CATEGORIES = [
-  { id: "all", name: "All Escapes" },
-  { id: "honeymoon", name: "Honeymoon Specials" },
-  { id: "family", name: "Family Vacations" },
-  { id: "adventure", name: "Adventure & Sports" },
-  { id: "luxury", name: "Luxury Getaways" },
-  { id: "budget", name: "Budget Friendly" },
+  { id: "all", name: "All Experiences" },
+  { id: "honeymoon", name: "Romantic Retreats" },
+  { id: "family", name: "Family Expeditions" },
+  { id: "luxury", name: "Ultra Luxury" },
 ];
 
 export default function PackageSlider() {
@@ -29,214 +27,153 @@ export default function PackageSlider() {
     return pkg.category.includes(activeCategory);
   });
 
-  const inclusions = [
-    { key: "flight", label: "Flight included", icon: "✈️" },
-    { key: "hotel", label: "Hotel included", icon: "🏨" },
-    { key: "meals", label: "Meals included", icon: "🍽️" },
-    { key: "visa", label: "Visa included", icon: "🛂" },
-    { key: "transfers", label: "Transfers included", icon: "🚗" },
-    { key: "sightseeing", label: "Sightseeing included", icon: "📸" },
-  ];
-
   return (
-    <section className="relative w-full bg-[#080C14] py-24 overflow-hidden select-none border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="relative w-full bg-[#fdf8f2] py-32 overflow-hidden select-none">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
         
-        {/* Section Heading */}
-        <div className="text-center mb-10">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-[56px] font-normal text-white mb-6">
-            Featured Packages
-          </h2>
+        {/* Section Heading & Filters */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16">
+          <div className="max-w-xl">
+            <span className="font-mono text-[10px] text-[#c4900f] uppercase tracking-[0.3em] font-semibold block mb-4">
+              Curated Itineraries
+            </span>
+            <h2 className="font-display text-5xl md:text-6xl font-normal text-[#1a120a] leading-[1.1] tracking-[-0.02em]">
+              Journeys of a<br />
+              <span className="italic text-[#c4900f]">Lifetime</span>
+            </h2>
+          </div>
           
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap gap-2.5 justify-center items-center">
+          {/* Minimalist Category Filter Pills */}
+          <div className="flex flex-wrap gap-6 md:justify-end">
             {CATEGORIES.map((cat) => {
               const isActive = cat.id === activeCategory;
               return (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-5 py-2.5 rounded-full text-xs font-sans font-semibold border transition-all duration-300 cursor-pointer ${
-                    isActive
-                      ? "bg-gradient-to-r from-[#D4A017] to-[#F0C040] text-midnight border-transparent font-bold shadow-lg shadow-gold/25"
-                      : "bg-white/5 border-white/10 text-white/70 hover:text-white hover:border-white/30"
+                  className={`relative font-mono text-[10px] tracking-[0.2em] uppercase font-semibold transition-colors duration-300 pb-1 ${
+                    isActive ? "text-[#1a120a]" : "text-[#1a120a]/40 hover:text-[#1a120a]/80"
                   }`}
                 >
                   {cat.name}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#1a120a]" />
+                  )}
                 </button>
               );
             })}
           </div>
         </div>
 
-        {/* Swiper Slider wrapper */}
-        <div className="relative mt-12 package-slider-container">
+        {/* Swiper Slider */}
+        <div className="relative w-full">
           <Swiper
             modules={[Navigation]}
-            spaceBetween={24}
-            slidesPerView={1.2}
+            spaceBetween={40}
+            slidesPerView={1.1}
             grabCursor={true}
             loop={false}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
+            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
             onBeforeInit={(swiper) => {
-              // @ts-expect-error swiper navigation ref typing is not exposed directly on swiper params
+              // @ts-expect-error swiper navigation ref typing
               swiper.params.navigation.prevEl = prevRef.current;
-              // @ts-expect-error swiper navigation ref typing is not exposed directly on swiper params
+              // @ts-expect-error swiper navigation ref typing
               swiper.params.navigation.nextEl = nextRef.current;
             }}
             breakpoints={{
-              640: {
-                slidesPerView: 2.2,
-              },
-              1024: {
-                slidesPerView: 3.2,
-              },
+              640: { slidesPerView: 2.1 },
+              1024: { slidesPerView: 3.1 },
             }}
             className="!overflow-visible"
           >
             {filteredPackages.map((pkg) => (
               <SwiperSlide key={pkg.id} className="h-auto">
-                <GlassCard
-                  hover={true}
-                  className="h-full flex flex-col justify-between p-0 bg-[#080C14]/40 border border-white/10 rounded-[20px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_24px_rgba(212,160,23,0.35)] group overflow-hidden"
-                >
-                  {/* TOP HALF: image + badge */}
-                  <div className="relative h-[250px] w-full overflow-hidden rounded-t-[16px]">
-                    <img
+                <div className="group flex flex-col gap-6 h-full cursor-pointer">
+                  {/* Image Container */}
+                  <div className="relative h-[450px] w-full overflow-hidden rounded-sm bg-[#1a120a]/5">
+                    <Image
                       src={pkg.image}
                       alt={pkg.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108"
+                      fill
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                      className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                      loading="lazy"
+                      quality={85}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 to-transparent" />
-
+                    
+                    {/* Minimal Badge */}
                     {pkg.badge && (
-                      <span
-                        className="absolute top-4 right-4 z-10 text-midnight text-[10px] font-mono tracking-wider uppercase font-extrabold rounded-full px-3.5 py-1.5 shadow-lg border border-transparent"
-                        style={{
-                          background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
-                        }}
-                      >
+                      <span className="absolute top-6 left-6 z-10 bg-white/90 backdrop-blur-md text-[#1a120a] text-[9px] font-sans uppercase font-bold tracking-widest px-4 py-2 rounded-full">
                         {pkg.badge}
                       </span>
                     )}
+
+                    {/* Duration Badge */}
+                    <span className="absolute bottom-6 right-6 z-10 bg-[#1a120a]/80 backdrop-blur-md text-white text-[9px] font-mono uppercase tracking-widest px-4 py-2 rounded-sm">
+                      {pkg.duration.nights}N / {pkg.duration.days}D
+                    </span>
                   </div>
 
-                  {/* BOTTOM HALF: details */}
-                  <div className="p-5 flex flex-col justify-between flex-grow">
-                    <div>
-                      {/* Name & Duration badge row */}
-                      <div className="flex items-start justify-between gap-4 mb-4">
-                        <h3 className="font-display text-xl md:text-[22px] font-bold text-white leading-snug group-hover:text-[#D4A017] transition-colors">
-                          {pkg.name}
-                        </h3>
-                        <span className="glass shrink-0 font-mono text-[10px] text-white/50 border border-white/10 px-2.5 py-1 rounded bg-white/5">
-                          {pkg.duration.nights}N / {pkg.duration.days}D
+                  {/* Minimalist Details */}
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="font-display text-2xl md:text-[28px] font-normal text-[#1a120a] leading-tight group-hover:text-[#c4900f] transition-colors duration-500">
+                        {pkg.name}
+                      </h3>
+                    </div>
+
+                    {/* Highlights - elegant list */}
+                    <p className="font-sans text-sm text-[#1a120a]/60 leading-relaxed font-light line-clamp-2">
+                      {pkg.highlights.join(" • ")}
+                    </p>
+
+                    {/* Pricing & Link */}
+                    <div className="flex items-center justify-between mt-4 pt-4 border-t border-[#1a120a]/10">
+                      <div className="flex flex-col">
+                        <span className="text-[9px] text-[#1a120a]/40 font-mono tracking-widest uppercase mb-1">
+                          Starting From
+                        </span>
+                        <span className="font-sans text-lg font-normal text-[#1a120a]">
+                          ₹{pkg.pricePerPerson.toLocaleString("en-IN")}
                         </span>
                       </div>
-
-                      {/* Inclusions Row with tooltips */}
-                      <div className="flex items-center gap-2.5 mb-5 py-3 border-y border-white/5 select-none">
-                        {inclusions.map((inc) => {
-                          const isIncluded = pkg.inclusions[inc.key as keyof typeof pkg.inclusions];
-                          return (
-                            <div
-                              key={inc.key}
-                              className={`relative group/inc flex items-center justify-center w-7 h-7 rounded-lg border text-sm transition-colors cursor-help ${
-                                isIncluded
-                                  ? "text-[#D4A017] border-[#D4A017]/30 bg-[#D4A017]/5"
-                                  : "text-white/20 border-transparent bg-white/5 opacity-40"
-                              }`}
-                            >
-                              <span>{inc.icon}</span>
-                              {/* Custom floating tooltip */}
-                              <div className="absolute bottom-full mb-2 hidden group-hover/inc:block z-30 bg-midnight border border-white/12 text-white/80 font-sans text-[9px] px-2.5 py-1 rounded shadow-xl whitespace-nowrap pointer-events-none">
-                                {inc.label}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-
-                      {/* Highlights */}
-                      <ul className="flex flex-col gap-2.5 mb-6 text-xs text-white/70">
-                        {pkg.highlights.map((h, i) => (
-                          <li key={i} className="flex items-center gap-2 truncate">
-                            <span className="w-1.5 h-1.5 bg-[#D4A017] rounded-full shrink-0" />
-                            <span className="font-sans truncate">{h}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Price & Buttons */}
-                    <div>
-                      {/* Price row */}
-                      <div className="flex items-baseline justify-between mb-5 pt-3 border-t border-white/5">
-                        <span className="text-[11px] text-white/50 font-sans uppercase">From</span>
-                        <div className="flex items-baseline gap-1">
-                          <span className="font-mono text-2xl font-black text-[#D4A017]">
-                            ₹{pkg.pricePerPerson.toLocaleString("en-IN")}
-                          </span>
-                          <span className="text-[10px] text-white/40 font-sans uppercase">/ person</span>
-                        </div>
-                      </div>
-
-                      {/* Buttons */}
-                      <div className="grid grid-cols-2 gap-3.5">
-                        <Link
-                          href={pkg.itineraryPage}
-                          className="btn-outline font-sans text-center text-xs font-semibold py-3 border border-white/10 hover:border-[#D4A017]/30 flex items-center justify-center"
-                        >
-                          View Itinerary
-                        </Link>
-                        <Link
-                          href={`/quote?destination=${pkg.destination.toLowerCase()}`}
-                          className="font-sans text-center text-xs font-semibold py-3 text-midnight rounded-full flex items-center justify-center hover:shadow-[0_0_15px_rgba(212,160,23,0.3)] transition-all duration-300 hover:scale-103 font-bold"
-                          style={{
-                            background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
-                          }}
-                        >
-                          Book Now
-                        </Link>
-                      </div>
+                      
+                      <Link
+                        href={pkg.itineraryPage}
+                        className="text-[10px] font-sans font-bold uppercase tracking-widest text-[#c4900f] hover:text-[#1a120a] transition-colors"
+                      >
+                        View Details →
+                      </Link>
                     </div>
                   </div>
-                </GlassCard>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
-          {/* Navigation Controls */}
-          <div className="flex justify-center items-center gap-4 mt-12 w-full">
+          {/* Minimalist Navigation */}
+          <div className="flex items-center gap-6 mt-16 w-full md:justify-end">
             <button
               ref={prevRef}
-              className="w-11 h-11 rounded-full border border-white/10 bg-[#080C14]/40 backdrop-blur-md flex items-center justify-center text-white/60 hover:text-[#D4A017] hover:border-[#D4A017]/50 transition-colors cursor-pointer select-none"
+              className="text-[#1a120a]/40 hover:text-[#1a120a] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
               aria-label="Previous package"
             >
-              ←
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+              </svg>
             </button>
             <button
               ref={nextRef}
-              className="w-11 h-11 rounded-full border border-white/10 bg-[#080C14]/40 backdrop-blur-md flex items-center justify-center text-white/60 hover:text-[#D4A017] hover:border-[#D4A017]/50 transition-colors cursor-pointer select-none"
+              className="text-[#1a120a]/40 hover:text-[#1a120a] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
               aria-label="Next package"
             >
-              →
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </button>
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        .package-slider-container .swiper-button-disabled {
-          opacity: 0.3 !important;
-          cursor: not-allowed !important;
-          border-color: rgba(255, 255, 255, 0.05) !important;
-          color: rgba(255, 255, 255, 0.2) !important;
-        }
-      `}</style>
     </section>
   );
 }

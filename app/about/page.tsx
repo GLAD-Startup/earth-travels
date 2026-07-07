@@ -354,16 +354,16 @@ export default function AboutPage() {
           </h2>
 
           <a
-            href="tel:08941881111"
+            href="tel:8941881111"
             className="font-mono text-2xl md:text-[32px] font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors select-all mt-1"
           >
-            089418 81111
+            89418 81111
           </a>
 
           {/* Action triggers */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full sm:w-auto">
             <a
-              href="tel:08941881111"
+              href="tel:8941881111"
               className="w-full sm:w-auto btn-outline font-sans text-center text-xs font-bold py-3.5 px-8 border border-white/10 hover:border-[#D4A017]/30 flex items-center justify-center gap-2 cursor-pointer shadow-lg"
             >
               Call Now

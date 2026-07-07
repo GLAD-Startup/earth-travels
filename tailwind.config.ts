@@ -9,24 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        midnight: "#080C14",
-        navy: "#0A1628",
-        gold: "#D4A017",
-        "gold-light": "#F0C040",
-        stone: "#F7F4EE",
-        coral: "#C4613A",
+        parchment: "#fdf8f2",
+        cream: "#fff4e6",
+        espresso: "#1a120a",
+        gold: "#c4900f",
+        "gold-light": "#e8a820",
+        terracotta: "#c4613a",
+        teal: "#0d7a6a",
       },
       fontFamily: {
         display: ["var(--font-playfair)", "serif"],
         sans: ["var(--font-inter)", "sans-serif"],
         mono: ["var(--font-dm-mono)", "monospace"],
       },
-      backdropBlur: {
-        glass: "20px",
-      },
       boxShadow: {
-        gold: "0 0 24px rgba(212,160,23,0.35)",
-        "gold-lg": "0 0 48px rgba(212,160,23,0.5)",
+        gold: "0 0 24px rgba(196,144,15,0.25)",
+        "gold-lg": "0 0 48px rgba(196,144,15,0.35)",
+        warm: "0 2px 20px rgba(26,18,10,0.06)",
+        "warm-lg": "0 8px 32px rgba(26,18,10,0.1)",
       },
       animation: {
         "pulse-ring": "pulse-ring 2s ease-out infinite",
