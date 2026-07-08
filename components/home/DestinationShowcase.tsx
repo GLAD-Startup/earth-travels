@@ -71,7 +71,7 @@ export default function DestinationShowcase() {
             </span>
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-charcoal" className="font-display">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-charcoal">
               Our Signature Escapes
             </h2>
           </RevealWrapper>
@@ -126,7 +126,7 @@ export default function DestinationShowcase() {
                 <span className="font-mono text-xs text-[#F0C040] uppercase tracking-wider block mb-1">
                   Starting at ₹{dest.startingPrice.toLocaleString("en-IN")}
                 </span>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2" className="font-display">
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2">
                   {dest.name}
                 </h3>
                 <p className="font-sans text-xs md:text-sm text-charcoal/70 mb-4 line-clamp-2 leading-relaxed">

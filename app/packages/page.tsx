@@ -62,7 +62,7 @@ export default function PackagesPage() {
             </span>
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
-            <h1 className="font-display text-4xl md:text-[64px] font-bold tracking-tight text-charcoal mb-2 leading-none" className="font-display">
+            <h1 className="font-display text-4xl md:text-[64px] font-bold tracking-tight text-charcoal mb-2 leading-none">
               Our Travel Packages
             </h1>
           </RevealWrapper>
@@ -94,7 +94,7 @@ export default function PackagesPage() {
                 <span className="font-mono text-[9px] text-charcoal/40 uppercase tracking-widest block">
                   Search results
                 </span>
-                <h3 className="font-display font-sans text-sm font-bold text-charcoal uppercase tracking-wider" className="font-display">
+                <h3 className="font-display font-sans text-sm font-bold text-charcoal uppercase tracking-wider">
                   Available Expeditions ({filteredPackages.length})
                 </h3>
               </div>

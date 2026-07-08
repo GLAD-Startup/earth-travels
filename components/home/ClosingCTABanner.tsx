@@ -26,7 +26,7 @@ export default function ClosingCTABanner() {
         </RevealWrapper>
 
         <RevealWrapper delay={0.2}>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-charcoal leading-tight mb-6" className="font-display">
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-charcoal leading-tight mb-6">
             Your Dream Journey Starts <br />
             with One Message
           </h2>

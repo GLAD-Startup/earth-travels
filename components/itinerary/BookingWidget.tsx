@@ -69,7 +69,7 @@ export default function BookingWidget() {
 
   return (
     <GlassCard hover={false} className="p-6 md:p-8 bg-background/80 border border-charcoal/10 shadow-2xl sticky top-24">
-      <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-6 border-b border-charcoal/5 pb-4" className="font-display">
+      <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-6 border-b border-charcoal/5 pb-4">
         Book This Package
       </h3>
 

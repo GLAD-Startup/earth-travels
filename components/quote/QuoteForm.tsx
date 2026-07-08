@@ -221,7 +221,7 @@ export default function QuoteForm() {
               {step === 1 && (
                 <div className="flex flex-col gap-6">
                   <div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2" className="font-display">
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2">
                       Journey Details
                     </h2>
                     <p className="text-xs text-charcoal/50 font-sans">
@@ -341,7 +341,7 @@ export default function QuoteForm() {
               {step === 2 && (
                 <div className="flex flex-col gap-6">
                   <div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2" className="font-display">
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2">
                       Travel Style
                     </h2>
                     <p className="text-xs text-charcoal/50 font-sans">
@@ -451,7 +451,7 @@ export default function QuoteForm() {
               {step === 3 && (
                 <form onSubmit={handleFormSubmit} className="flex flex-col gap-6">
                   <div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2" className="font-display">
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2">
                       Contact Info
                     </h2>
                     <p className="text-xs text-charcoal/50 font-sans">
@@ -591,7 +591,7 @@ export default function QuoteForm() {
               <div className="w-20 h-20 bg-[#D4A017]/10 border-2 border-[#D4A017] rounded-full flex items-center justify-center text-[#D4A017] text-4xl mb-6 shadow-2xl shadow-gold/10">
                 ✓
               </div>
-              <h2 className="font-display text-3xl font-bold text-charcoal mb-3" className="font-display">
+              <h2 className="font-display text-3xl font-bold text-charcoal mb-3">
                 Request Submitted!
               </h2>
               <p className="font-sans text-sm text-charcoal/60 max-w-sm mb-8 leading-relaxed">

@@ -86,7 +86,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
             </div>
 
             {/* Name */}
-            <h3 className="font-display text-2xl md:text-[30px] font-bold text-charcoal mb-2 leading-none hover:text-[#D4A017] transition-colors" className="font-display">
+            <h3 className="font-display text-2xl md:text-[30px] font-bold text-charcoal mb-2 leading-none hover:text-[#D4A017] transition-colors">
               {pkg.name}
             </h3>
 

@@ -94,8 +94,8 @@ export default function KashmirItineraryPage() {
             ITINERARY · {itinerary.destination.toUpperCase()}
           </div>
           <div>
-            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-charcoal leading-none mb-2" className="font-display">{itinerary.tagline}</h1>
-            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-charcoal/90 leading-none" className="font-display">{itinerary.title}</h2>
+            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-charcoal leading-none mb-2">{itinerary.tagline}</h1>
+            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-charcoal/90 leading-none">{itinerary.title}</h2>
           </div>
           <div className="hero-slide-up glass p-5 rounded-2xl border border-charcoal/10 max-w-4xl mt-4 bg-background/50 backdrop-blur-md">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x divide-charcoal/10">
@@ -157,7 +157,7 @@ export default function KashmirItineraryPage() {
                 </div>
                 <div className="relative z-10 pl-4 border-l-2 border-[#D4A017] mt-4 flex flex-col items-start gap-1">
                   <span className="glass px-2.5 py-0.5 rounded-full border border-[#D4A017]/30 text-[#D4A017] font-mono text-[9px] tracking-wider uppercase bg-[#D4A017]/5 font-semibold">{day.tag}</span>
-                  <h3 className="font-display text-3xl md:text-4xl font-normal text-charcoal mt-1 leading-tight" className="font-display">Day {day.dayNumber} — {day.title}</h3>
+                  <h3 className="font-display text-3xl md:text-4xl font-normal text-charcoal mt-1 leading-tight">Day {day.dayNumber} — {day.title}</h3>
                 </div>
                 <p className="font-sans text-sm text-charcoal/70 italic max-w-xl pl-4 relative z-10">{day.tagline}</p>
                 <div className="relative z-10 pl-4 flex flex-col gap-4 mt-2">
@@ -184,7 +184,7 @@ export default function KashmirItineraryPage() {
 
             {/* Inclusions */}
             <div className="pt-16">
-              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]" className="font-display">Inclusions &amp; Exclusions</h3>
+              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]">Inclusions &amp; Exclusions</h3>
               <GlassCard hover={false} className="p-6 md:p-8 bg-background/40 border border-charcoal/10 rounded-[20px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
@@ -220,7 +220,7 @@ export default function KashmirItineraryPage() {
 
             {/* Hotels */}
             <div className="pt-16">
-              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]" className="font-display">Handpicked Stays</h3>
+              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]">Handpicked Stays</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {itinerary.hotels.map((hotel, idx) => (
                   <GlassCard key={idx} hover={true} className="p-0 overflow-hidden bg-background/35 border border-charcoal/10 hover:border-[#D4A017]/30 transition-all duration-300 rounded-2xl flex flex-col justify-between group">
@@ -244,7 +244,7 @@ export default function KashmirItineraryPage() {
           {/* Booking Widget */}
           <aside className="w-full lg:w-80 shrink-0 sticky top-28 self-start mt-12 lg:mt-0">
             <GlassCard hover={false} className="p-6 md:p-8 bg-background/80 border border-charcoal/10 shadow-2xl rounded-[20px]">
-              <h3 className="font-display text-xl font-bold text-charcoal mb-6 border-b border-charcoal/5 pb-4" className="font-display">Book This Package</h3>
+              <h3 className="font-display text-xl font-bold text-charcoal mb-6 border-b border-charcoal/5 pb-4">Book This Package</h3>
               <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
                   <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Departure Date</label>
@@ -302,7 +302,7 @@ export default function KashmirItineraryPage() {
 
         {/* Related Packages */}
         <div className="pt-24 border-t border-charcoal/5 mt-20">
-          <h3 className="font-display text-3xl font-normal text-charcoal mb-10 pl-4 border-l-2 border-[#D4A017]" className="font-display">You Might Also Love</h3>
+          <h3 className="font-display text-3xl font-normal text-charcoal mb-10 pl-4 border-l-2 border-[#D4A017]">You Might Also Love</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedPackages.map((pkg, idx) => (
               <GlassCard key={idx} hover={true} className="p-0 overflow-hidden bg-background/35 border border-charcoal/10 group rounded-2xl flex flex-col justify-between">

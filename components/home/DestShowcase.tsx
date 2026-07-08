@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { DESTINATIONS } from "@/lib/data/destinations";
-import { RevealWrapper } from "@/components/ui";
 
 export default function DestShowcase() {
   // Take top 5 for the bento grid

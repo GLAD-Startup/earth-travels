@@ -37,7 +37,7 @@ export default function HowItWorks() {
             </span>
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
-            <h2 className="font-display text-4xl md:text-5xl font-normal text-charcoal" className="font-display">
+            <h2 className="font-display text-4xl md:text-5xl font-normal text-charcoal">
               Bespoke Journeys Made Easy
             </h2>
           </RevealWrapper>
@@ -63,7 +63,7 @@ export default function HowItWorks() {
 
                 <span className="text-3xl mb-4 block select-none">{step.icon}</span>
 
-                <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-3" className="font-display">
+                <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-3">
                   {step.title}
                 </h3>
 

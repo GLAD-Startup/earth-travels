@@ -49,7 +49,7 @@ export default function DaySection({
           <span className="font-mono text-xs text-gold uppercase tracking-[0.2em] block mb-1">
             Day {dayNumber} Journey
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-normal text-charcoal" className="font-display">
+          <h2 className="font-display text-3xl md:text-5xl font-normal text-charcoal">
             {title}
           </h2>
         </div>

@@ -25,7 +25,7 @@ export default function FeaturedPackages() {
               </span>
             </RevealWrapper>
             <RevealWrapper delay={0.2}>
-              <h2 className="font-display text-4xl md:text-5xl font-normal text-charcoal" className="font-display">
+              <h2 className="font-display text-4xl md:text-5xl font-normal text-charcoal">
                 Featured Signature Packages
               </h2>
             </RevealWrapper>
@@ -92,7 +92,7 @@ export default function FeaturedPackages() {
                       <span className="text-[#D4A017] font-mono text-xs uppercase tracking-wider block mb-1">
                         {pkg.destination}
                       </span>
-                      <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-4 leading-tight group-hover:text-[#D4A017] transition-colors" className="font-display">
+                      <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-4 leading-tight group-hover:text-[#D4A017] transition-colors">
                         {pkg.name}
                       </h3>
 

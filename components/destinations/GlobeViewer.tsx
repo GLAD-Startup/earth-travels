@@ -437,7 +437,7 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
             <span className="text-[10px] font-mono text-[#D4A017] uppercase tracking-wider block mb-1">
               📍 Destination Spotlight
             </span>
-            <h3 className="font-display text-2xl font-bold text-charcoal mb-2" className="font-display">
+            <h3 className="font-display text-2xl font-bold text-charcoal mb-2">
               {previewPanel.name}
             </h3>
             <p className="font-sans text-xs text-charcoal/70 leading-relaxed mb-4">

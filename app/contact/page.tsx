@@ -98,7 +98,7 @@ export default function ContactPage() {
       {/* 1. Page Header */}
       <section className="pt-28 pb-10 text-center px-6">
         <RevealWrapper delay={0.1}>
-          <h1 className="font-display text-4xl md:text-[64px] font-bold text-charcoal tracking-tight leading-tight" className="font-display">
+          <h1 className="font-display text-4xl md:text-[64px] font-bold text-charcoal tracking-tight leading-tight">
             Let&apos;s Plan Your Journey
           </h1>
         </RevealWrapper>
@@ -111,7 +111,7 @@ export default function ContactPage() {
           {/* LEFT: Contact details & Map (60% width equivalent) */}
           <div className="lg:col-span-7 flex flex-col gap-8 w-full">
             <GlassCard hover={false} className="p-8 bg-background/40 border border-charcoal/10 rounded-[20px] flex flex-col gap-6">
-              <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-2" className="font-display">
+              <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-2">
                 Get in Touch
               </h2>
 
@@ -220,7 +220,7 @@ export default function ContactPage() {
             <GlassCard hover={false} className="p-8 bg-background/40 border border-charcoal/10 rounded-[20px] shadow-2xl">
               {!isSubmitted ? (
                 <form onSubmit={handleInquirySubmit} className="flex flex-col gap-5">
-                  <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-2" className="font-display">
+                  <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-2">
                     Inquire About a Journey
                   </h2>
 
@@ -350,7 +350,7 @@ export default function ContactPage() {
                   <div className="w-16 h-16 bg-[#D4A017]/10 border border-[#D4A017] rounded-full flex items-center justify-center text-[#D4A017] text-3xl mb-6 shadow-2xl shadow-gold/5">
                     ✓
                   </div>
-                  <h3 className="font-display text-2xl font-bold text-charcoal mb-2 leading-none" className="font-display">
+                  <h3 className="font-display text-2xl font-bold text-charcoal mb-2 leading-none">
                     Inquiry Received!
                   </h3>
                   <p className="font-sans text-xs text-charcoal/60 max-w-xs mb-6 leading-relaxed">
@@ -380,7 +380,7 @@ export default function ContactPage() {
 
       {/* 3. Bottom Section: Walk-in Welcomes */}
       <section className="max-w-7xl mx-auto px-6 py-12 relative z-10 text-center select-none border-t border-charcoal/5">
-        <h3 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-3" className="font-display">
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-3">
           Find Us in Mathura
         </h3>
         <p className="font-sans text-xs md:text-sm text-charcoal/60 max-w-xl mx-auto leading-relaxed">
@@ -391,7 +391,7 @@ export default function ContactPage() {
 
       {/* 4. FAQ Accordions */}
       <section className="max-w-3xl mx-auto px-6 py-16 relative z-10 flex flex-col gap-6">
-        <h3 className="font-display text-2xl font-bold text-charcoal mb-2 pl-4 border-l-2 border-[#D4A017]" className="font-display">
+        <h3 className="font-display text-2xl font-bold text-charcoal mb-2 pl-4 border-l-2 border-[#D4A017]">
           Frequently Asked Questions
         </h3>
 

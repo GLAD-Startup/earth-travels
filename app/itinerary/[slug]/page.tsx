@@ -97,7 +97,7 @@ export default function ItineraryPage() {
           <span className="glass px-4 py-1.5 rounded-full border border-[#D4A017]/35 text-[#D4A017] font-mono text-[10px] tracking-wider uppercase bg-[#D4A017]/5 font-semibold mb-4 inline-block">
             Coming Soon
           </span>
-          <h2 className="font-display text-4xl font-bold text-charcoal my-4" className="font-display">
+          <h2 className="font-display text-4xl font-bold text-charcoal my-4">
             Itinerary in Crafting
           </h2>
           <p className="font-sans text-sm text-charcoal/50 mb-8 leading-relaxed">
@@ -155,10 +155,10 @@ export default function ItineraryPage() {
           </div>
 
           <div>
-            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-charcoal leading-none mb-2" className="font-display">
+            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-charcoal leading-none mb-2">
               {itinerary.tagline}
             </h1>
-            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-charcoal/90 leading-none" className="font-display">
+            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-charcoal/90 leading-none">
               {itinerary.title}
             </h2>
           </div>
@@ -263,7 +263,7 @@ export default function ItineraryPage() {
                   <span className="glass px-2.5 py-0.5 rounded-full border border-[#D4A017]/30 text-[#D4A017] font-mono text-[9px] tracking-wider uppercase bg-[#D4A017]/5 font-semibold">
                     {day.tag}
                   </span>
-                  <h3 className="font-display text-3xl md:text-4xl font-normal text-charcoal mt-1 leading-tight" className="font-display">
+                  <h3 className="font-display text-3xl md:text-4xl font-normal text-charcoal mt-1 leading-tight">
                     Day {day.dayNumber} — {day.title}
                   </h3>
                 </div>
@@ -312,7 +312,7 @@ export default function ItineraryPage() {
 
             {/* Inclusions & Exclusions Card */}
             <div className="pt-16">
-              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]" className="font-display">
+              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]">
                 Inclusions &amp; Exclusions
               </h3>
               <GlassCard hover={false} className="p-6 md:p-8 bg-background/40 border border-charcoal/10 rounded-[20px]">
@@ -350,7 +350,7 @@ export default function ItineraryPage() {
 
             {/* Handpicked Accommodations Section */}
             <div className="pt-16">
-              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]" className="font-display">
+              <h3 className="font-display text-2xl font-bold mb-6 pl-4 border-l-2 border-[#D4A017]">
                 Handpicked Stays
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -391,7 +391,7 @@ export default function ItineraryPage() {
           {/* RIGHT: Booking Widget Column */}
           <aside className="w-full lg:w-80 shrink-0 sticky top-28 self-start mt-12 lg:mt-0">
             <GlassCard hover={false} className="p-6 md:p-8 bg-background/80 border border-charcoal/10 shadow-2xl rounded-[20px] select-none">
-              <h3 className="font-display text-xl font-bold text-charcoal mb-6 border-b border-charcoal/5 pb-4" className="font-display">
+              <h3 className="font-display text-xl font-bold text-charcoal mb-6 border-b border-charcoal/5 pb-4">
                 Book This Package
               </h3>
 
@@ -520,7 +520,7 @@ export default function ItineraryPage() {
 
         {/* RELATED PACKAGES SECTION */}
         <div className="pt-24 border-t border-charcoal/5 mt-20">
-          <h3 className="font-display text-3xl font-normal text-charcoal mb-10 pl-4 border-l-2 border-[#D4A017]" className="font-display">
+          <h3 className="font-display text-3xl font-normal text-charcoal mb-10 pl-4 border-l-2 border-[#D4A017]">
             You Might Also Love
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
