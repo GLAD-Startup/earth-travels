@@ -9,3 +9,4 @@ export { default as SocialProof } from "./SocialProof";
 export { default as ClosingCTABanner } from "./ClosingCTABanner";
 export { default as FounderSection } from "./FounderSection";
 export { default as WhyEarthTravels } from "./WhyEarthTravels";
+export { default as FlightExperience } from "./FlightExperience";

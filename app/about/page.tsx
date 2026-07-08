@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { useCountUp } from "@/lib/hooks";
@@ -8,22 +8,22 @@ const CORE_DIFFERENCES = [
   {
     title: "We Answer the Phone",
     desc: "Direct WhatsApp access to your travel consultant. Not a chatbot. We support you 24/7 on tour.",
-    icon: "ðŸ“ž",
+    icon: "📞",
   },
   {
     title: "Complete Documentation",
-    desc: "Visa applications, travel insurance, foreign exchange â€” we handle the paperwork so you don't have to.",
-    icon: "ðŸ›‚",
+    desc: "Visa applications, travel insurance, foreign exchange — we handle the paperwork so you don't have to.",
+    icon: "🛂",
   },
   {
     title: "Honest Pricing",
     desc: "No hidden charges. You see the full itemized breakup before you pay a single rupee.",
-    icon: "ðŸ’³",
+    icon: "💳",
   },
   {
     title: "Local Understanding",
     desc: "Based in Krishna Market, Mathura, we understand the specific vegetarian and comfort needs of local families.",
-    icon: "ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦",
+    icon: "👨‍👩‍👧‍👦",
   },
 ];
 
@@ -32,19 +32,19 @@ const TEAM_MEMBERS = [
     name: "Team Earth Travels",
     role: "Your Travel Consultant",
     specialty: "Kashmir & Domestic Journeys",
-    avatar: "ðŸ‘¤",
+    avatar: "👤",
   },
   {
     name: "Team Earth Travels",
     role: "International Specialist",
     specialty: "Maldives, Dubai, SE Asia",
-    avatar: "ðŸŒ",
+    avatar: "🌍",
   },
   {
     name: "Team Earth Travels",
     role: "Documentation Expert",
     specialty: "Visa, Insurance & Permits",
-    avatar: "ðŸ“",
+    avatar: "📄",
   },
 ];
 
@@ -61,19 +61,19 @@ const TESTIMONIALS = [
   {
     initial: "R",
     name: "Rakesh Jain",
-    destination: "Kashmir ðŸ”ï¸",
+    destination: "Kashmir 🏔️",
     review: "We were surprised by the hospitality. The people are very honest and soft spoken. They made our entire stay comfortable and memorable.",
   },
   {
     initial: "R",
     name: "Ronak Agrawal",
-    destination: "Maldives ðŸŒŠ",
+    destination: "Maldives 🌊",
     review: "Earth Travels helped us choose the best family resort. They completed our documentation and even provided all baby amenities. Always a quick response.",
   },
   {
     initial: "S",
     name: "Saloni Agrawal",
-    destination: "Malaysia âœˆï¸",
+    destination: "Malaysia ✈️",
     review: "All hotel properties and tours were well managed and fun. They handled all documentation including travel insurance. Trip turned out amazing.",
   },
 ];
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
   return (
     <div className="bg-parchment min-h-screen text-espresso select-none">
-      <title>About Us â€” Our Story & Credentials | Earth Travels</title>
+      <title>About Us — Our Story & Credentials | Earth Travels</title>
       <meta name="description" content="Discover Earth Travels story. Founded in Mathura, UP, we help local families design and execute stress-free domestic and international trips." />
       
       {/* 1. Split Hero (60vh) */}
@@ -144,14 +144,14 @@ export default function AboutPage() {
                 &ldquo;We don&apos;t just plan trips. We make sure every family that trusts us comes back with a story they&apos;ll tell for years.&rdquo;
               </blockquote>
               <cite className="font-mono text-[10px] text-espresso/40 uppercase tracking-widest block mt-4 not-italic font-bold">
-                â€” Director, Earth Travels
+                — Director, Earth Travels
               </cite>
             </div>
           </RevealWrapper>
 
           <RevealWrapper delay={0.2} className="font-sans text-xs md:text-sm text-espresso/70 leading-relaxed flex flex-col gap-6">
             <p>
-              Earth Travels was founded in Mathura with a simple belief â€” that every family deserves to see the world, and that the journey should be as stress-free as the destination.
+              Earth Travels was founded in Mathura with a simple belief — that every family deserves to see the world, and that the journey should be as stress-free as the destination.
             </p>
             <p>
               For over a decade, we&apos;ve been planning trips for families across Uttar Pradesh, handling everything from Kashmir houseboats to Maldives water villas to European rail passes. Our office in Krishna Market is open six days a week, and our WhatsApp is open all seven. We believe in honest pricing, complete documentation support, and picking up the phone when you call.
@@ -167,7 +167,7 @@ export default function AboutPage() {
             { count: count1, ref: ref1, label: "Happy Travellers" },
             { count: count2, ref: ref2, label: "Destinations" },
             { count: count3, ref: ref3, label: "Years of Experience" },
-            { count: count4, ref: ref4, label: "Average Rating â˜…" },
+            { count: count4, ref: ref4, label: "Average Rating ★" },
           ].map((stat, idx) => (
             <GlassCard key={idx} hover={false} className="p-6 bg-white/60 border border-espresso/10 rounded-xl">
               <span
@@ -264,18 +264,18 @@ export default function AboutPage() {
                 4.7
               </span>
               <span className="font-sans text-xs text-espresso/60 tracking-wider block mt-1 uppercase font-semibold">
-                out of 5 Â· 127 reviews
+                out of 5 · 127 reviews
               </span>
             </div>
 
             <div className="flex flex-col items-center md:items-end gap-4 text-center md:text-right">
               {/* 5 star row */}
               <div className="flex items-center gap-1.5 text-2xl text-[#D4A017] select-none">
-                <span>â˜…</span>
-                <span>â˜…</span>
-                <span>â˜…</span>
-                <span>â˜…</span>
-                <span>â˜…</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
               </div>
               
               <a
@@ -307,17 +307,17 @@ export default function AboutPage() {
                     {t.name}
                   </h4>
                   <span className="text-[10px] text-espresso/40 font-mono tracking-widest block uppercase font-semibold mt-0.5">
-                    ðŸ“ Trip to {t.destination}
+                    📍 Trip to {t.destination}
                   </span>
                 </div>
               </div>
 
               <div className="flex items-center gap-1 text-[#D4A017] text-xs mb-3 select-none">
-                <span>â˜…</span>
-                <span>â˜…</span>
-                <span>â˜…</span>
-                <span>â˜…</span>
-                <span>â˜…</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
               </div>
               <p className="font-sans text-[13px] text-espresso/70 leading-[1.6] italic">
                 &ldquo;{t.review}&rdquo;
@@ -377,7 +377,7 @@ export default function AboutPage() {
                 background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
               }}
             >
-              ðŸ’¬ WhatsApp Us
+              💬 WhatsApp Us
             </a>
           </div>
 

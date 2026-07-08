@@ -38,7 +38,14 @@ const config: Config = {
       animation: {
         "pulse-ring": "pulse-ring 2s ease-out infinite",
         "gradient-shift": "gradient-shift 8s ease infinite",
+        "gradient-shift-slow": "gradient-shift-slow 35s ease infinite alternate",
         marquee: "marquee 30s linear infinite",
+        blob: "blob 7s infinite",
+        shimmer: "shimmer 8s linear infinite",
+        "float-slow": "float-slow 20s ease-in-out infinite alternate",
+        "drift-clouds": "drift-clouds 40s ease-in-out infinite alternate",
+        "birds-fly": "birds-fly 20s linear infinite",
+        "fog-drift": "fog-drift 30s ease-in-out infinite alternate",
       },
       keyframes: {
         "pulse-ring": {
@@ -52,6 +59,40 @@ const config: Config = {
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+        "gradient-shift-slow": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "100% 50%" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "200% center" },
+          "100%": { backgroundPosition: "-200% center" },
+        },
+        "float-slow": {
+          "0%": { transform: "translateY(0) scale(1)" },
+          "100%": { transform: "translateY(-30px) scale(1.05)" },
+        },
+        "drift-clouds": {
+          "0%": { transform: "translateX(-5%)" },
+          "100%": { transform: "translateX(5%)" },
+        },
+        "birds-fly": {
+          "0%": { transform: "translate(-10vw, 30vh) scale(0.5)" },
+          "100%": { transform: "translate(120vw, -10vh) scale(1)" },
+        },
+        "fog-drift": {
+          "0%": { transform: "translateX(-2%)" },
+          "100%": { transform: "translateX(2%)" },
         },
       },
     },

@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1566837430573-c1f516a24911?auto=format&fit=crop&w=1600&q=80",
+  "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80",
   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80",
