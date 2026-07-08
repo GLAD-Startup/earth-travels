@@ -49,8 +49,9 @@ export default function FlightExperience() {
       }
 
       // Fade existing canvas slightly to transparent (Trail fade-out)
+      // Note: Low values like 0.015 cause rounding bugs in canvas where it never fully reaches 0 opacity.
       ctx.globalCompositeOperation = "destination-out";
-      ctx.fillStyle = "rgba(0, 0, 0, 0.015)"; // Controls fade speed (lower = slower fade)
+      ctx.fillStyle = "rgba(0, 0, 0, 0.06)"; // Fast enough to guarantee complete erase without ghost lines
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Draw new segment
