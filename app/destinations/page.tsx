@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { DESTINATIONS } from "@/lib/data/destinations";
 import { DestinationGrid, GlobeViewer } from "@/components/destinations";
-import { GlassCard, RevealWrapper } from "@/components/ui";
+import { RevealWrapper } from "@/components/ui";
 
 const TABS = [
   { id: "all", name: "All" },
@@ -35,52 +35,54 @@ export default function DestinationsPage() {
   };
 
   return (
-    <div className="bg-[#080C14] min-h-screen text-white select-none">
+    <div className="bg-background min-h-screen text-charcoal select-none">
       <title>Explore Our World — Signature Escapes | Earth Travels</title>
       <meta name="description" content="View signature tour destinations by Earth Travels Mathura. From Kashmir valleys to Maldives overwater resorts, we plan it all." />
       
-      {/* 1. Page Hero (50vh) */}
+      {/* 1. Page Hero */}
       <section
-        className="relative h-[50vh] min-h-[350px] w-full bg-cover bg-center flex items-center justify-center text-center overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(8,12,20,0.6) 0%, rgba(8,12,20,0.95) 100%), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80')`,
-        }}
+        className="relative h-[50vh] min-h-[350px] w-full flex items-center justify-center text-center overflow-hidden"
       >
-        {/* Faint world map overlay */}
+        <img
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80"
+          alt="World from space"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div
-          className="absolute inset-0 pointer-events-none opacity-10 bg-cover bg-center"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80')`,
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%)",
           }}
         />
-
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <RevealWrapper delay={0.1}>
-            <h1 className="font-display text-4xl md:text-[72px] font-bold tracking-tight text-white mb-4 leading-tight">
+            <h1 className="font-display text-4xl md:text-[72px] font-bold tracking-tight text-white mb-4 leading-tight"
+              style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}
+            >
               Explore Our World
             </h1>
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
-            <p className="font-sans text-base md:text-lg text-white/60 max-w-lg mx-auto">
+            <p className="font-sans text-base md:text-lg text-white/70 max-w-lg mx-auto">
               From Mathura to everywhere that matters.
             </p>
           </RevealWrapper>
         </div>
       </section>
 
-      {/* 2. Sticky Filter Tabs */}
-      <div className="sticky top-[72px] z-30 w-full border-y border-white/5 bg-[#080C14]/75 backdrop-blur-[24px] py-4 select-none">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-2.5 items-center justify-center">
+      {/* 2. Sticky Filter Tabs — accent pills */}
+      <div className="sticky top-[56px] z-30 w-full border-y border-charcoal/5 bg-background/90 backdrop-blur-md py-4 select-none">
+        <div className="max-w-7xl mx-auto px-6 flex gap-2.5 items-center justify-start md:justify-center overflow-x-auto no-scrollbar">
           {TABS.map((tab) => {
             const isActive = tab.id === activeTab;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-5 py-2.5 rounded-full text-xs font-sans font-semibold border transition-all duration-300 cursor-pointer ${
+                className={`px-5 py-2.5 rounded-full text-xs font-sans font-semibold border transition-all duration-300 cursor-pointer whitespace-nowrap shrink-0 ${
                   isActive
-                    ? "bg-gradient-to-r from-[#D4A017] to-[#F0C040] text-midnight border-transparent font-bold shadow-lg shadow-gold/25"
-                    : "bg-white/5 border-white/10 text-white/70 hover:text-white hover:border-white/30"
+                    ? "bg-accent text-white border-accent shadow-[0_2px_12px_rgba(15,110,92,0.25)]"
+                    : "bg-transparent border-charcoal/15 text-charcoal/65 hover:text-charcoal hover:border-charcoal/30"
                 }`}
               >
                 {tab.name}
@@ -93,19 +95,34 @@ export default function DestinationsPage() {
       {/* 3. Main content body */}
       <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-16 relative z-10">
         
-        {/* 3D Interactive Globe */}
+        {/* 3D Globe with container frame */}
         <RevealWrapper delay={0}>
-          <GlobeViewer onSelectDestination={handleSelectDestination} />
+          <div className="rounded-2xl border border-charcoal/8 bg-gradient-to-br from-sand via-background to-sand p-6 md:p-10 relative overflow-hidden">
+            {/* Radial glow behind globe */}
+            <div className="absolute inset-0 pointer-events-none" style={{
+              background: "radial-gradient(ellipse at center, rgba(15,110,92,0.06) 0%, transparent 60%)",
+            }} />
+            <GlobeViewer onSelectDestination={handleSelectDestination} />
+            {/* Helper text pill overlay */}
+            <div className="flex justify-center mt-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-charcoal/8 shadow-sm text-[11px] text-charcoal/50 font-sans">
+                <svg className="w-3.5 h-3.5 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.8}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                </svg>
+                Drag to rotate · Scroll to zoom · Click dot to explore
+              </span>
+            </div>
+          </div>
         </RevealWrapper>
 
         {/* Destination Grid */}
         <RevealWrapper delay={0.1}>
           <div id="destination-grid-section" className="flex flex-col gap-8">
-            <div className="border-l-2 border-[#D4A017] pl-4">
-              <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest block mb-0.5">
+            <div className="border-l-2 border-accent pl-4">
+              <span className="font-sans text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
                 Signature Escapes
               </span>
-              <h2 className="font-display text-2xl font-bold text-white">
+              <h2 className="font-display text-2xl font-bold text-charcoal">
                 Signature Holiday Spots ({filteredDestinations.length})
               </h2>
             </div>
@@ -115,29 +132,44 @@ export default function DestinationsPage() {
 
         {/* Bottom CTA Card */}
         <RevealWrapper delay={0.2}>
-          <GlassCard
-            hover={false}
-            className="p-8 md:p-12 bg-gradient-to-r from-[#0A1628] to-[#080C14] border border-white/10 rounded-[20px] text-center flex flex-col items-center gap-4"
-          >
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-white">
-              Don&apos;t see your dream destination?
-            </h3>
-            <p className="font-sans text-sm text-white/60 max-w-sm mb-2">
-              We design premium tailor-made itineraries for families from Mathura to any global hotspot.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block text-midnight text-xs font-mono font-bold tracking-wider rounded-full px-8 py-3.5 hover:shadow-[0_0_15px_rgba(212,160,23,0.35)] transition-all duration-300 hover:scale-103 font-bold"
-              style={{
-                background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
-              }}
-            >
-              Contact Us for Custom Tours
-            </Link>
-          </GlassCard>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl p-10 md:p-16 text-center flex flex-col items-center gap-6 mt-12 group bg-teal">
+            {/* Background with gradient and subtle animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-teal via-[#09594d] to-espresso z-0 opacity-95"></div>
+            
+            {/* Decorative circles */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-gold rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-ring"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-teal rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+
+            <div className="relative z-10 flex flex-col items-center gap-5">
+              {/* Icon */}
+              <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold shadow-gold-lg group-hover:scale-110 transition-transform duration-500">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.8}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-parchment leading-tight">
+                Don&apos;t see your dream destination?
+              </h3>
+              <p className="font-sans text-base md:text-lg text-parchment/80 max-w-lg mb-4 text-center mx-auto">
+                We design premium tailor-made itineraries for families from Mathura to any global hotspot.
+              </p>
+              <Link
+                href="/contact"
+                className="btn-gold inline-flex items-center gap-2 text-sm uppercase tracking-wider"
+              >
+                Contact Us for Custom Tours
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+              </Link>
+            </div>
+          </div>
         </RevealWrapper>
 
       </section>
+
+      <style jsx global>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </div>
   );
 }

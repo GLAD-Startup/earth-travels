@@ -49,12 +49,12 @@ export default function PackagesPage() {
   });
 
   return (
-    <div className="bg-[#080C14] min-h-screen text-white select-none">
+    <div className="bg-background min-h-screen text-charcoal select-none">
       <title>Best Tour Packages — Kashmir, Maldives & SE Asia | Earth Travels</title>
       <meta name="description" content="Browse premium, custom tour packages by Earth Travels. Honest pricing, fully curated and supported from Mathura." />
       
       {/* Page Header */}
-      <section className="relative bg-midnight/50 py-20 px-6 border-b border-white/5 text-center">
+      <section className="relative bg-background/50 py-20 px-6 border-b border-charcoal/5 text-center">
         <div className="max-w-4xl mx-auto flex flex-col gap-3">
           <RevealWrapper delay={0.1}>
             <span className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.25em] block">
@@ -62,12 +62,12 @@ export default function PackagesPage() {
             </span>
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
-            <h1 className="font-display text-4xl md:text-[64px] font-bold tracking-tight text-white mb-2 leading-none">
+            <h1 className="font-display text-4xl md:text-[64px] font-bold tracking-tight text-charcoal mb-2 leading-none" className="font-display">
               Our Travel Packages
             </h1>
           </RevealWrapper>
           <RevealWrapper delay={0.3}>
-            <p className="font-sans text-sm md:text-[18px] text-white/60 max-w-lg mx-auto">
+            <p className="font-sans text-sm md:text-[18px] text-charcoal/60 max-w-lg mx-auto">
               8 destinations. Honest pricing. Full support from Mathura.
             </p>
           </RevealWrapper>
@@ -91,10 +91,10 @@ export default function PackagesPage() {
           <div className="flex-1 flex flex-col gap-6 w-full relative z-10">
             <div className="flex justify-between items-center border-l-2 border-[#D4A017] pl-4 mb-2">
               <div>
-                <span className="font-mono text-[9px] text-white/40 uppercase tracking-widest block">
+                <span className="font-mono text-[9px] text-charcoal/40 uppercase tracking-widest block">
                   Search results
                 </span>
-                <h3 className="font-sans text-sm font-bold text-white uppercase tracking-wider">
+                <h3 className="font-display font-sans text-sm font-bold text-charcoal uppercase tracking-wider" className="font-display">
                   Available Expeditions ({filteredPackages.length})
                 </h3>
               </div>
@@ -109,9 +109,9 @@ export default function PackagesPage() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-20 border border-dashed border-white/10 rounded-2xl">
+              <div className="text-center py-20 border border-dashed border-charcoal/10 rounded-2xl">
                 <span className="text-4xl block mb-4 select-none">🔍</span>
-                <p className="text-sm font-sans text-white/50 mb-2">
+                <p className="text-sm font-sans text-charcoal/50 mb-2">
                   No packages match your active filters.
                 </p>
                 <button

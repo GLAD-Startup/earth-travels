@@ -72,10 +72,10 @@ export default function PackageFilter({
     <div className="w-full lg:w-72 shrink-0">
       <GlassCard
         hover={false}
-        className="p-6 bg-[#080C14]/40 border border-white/10 lg:sticky lg:top-24 select-none"
+        className="p-6 bg-background/40 border border-charcoal/10 lg:sticky lg:top-24 select-none"
       >
         {/* Section Title */}
-        <div className="flex justify-between items-center border-b border-white/5 pb-4 mb-6">
+        <div className="flex justify-between items-center border-b border-charcoal/5 pb-4 mb-6">
           <h4 className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.15em] font-bold">
             Filter Packages
           </h4>
@@ -91,10 +91,10 @@ export default function PackageFilter({
         <div className="mb-6">
           <button
             onClick={() => setStyleOpen(!styleOpen)}
-            className="w-full flex items-center justify-between font-sans text-xs font-semibold text-white/90 mb-3"
+            className="w-full flex items-center justify-between font-sans text-xs font-semibold text-charcoal/90 mb-3"
           >
             <span>Travel Style</span>
-            <span className="text-[9px] text-white/40">{styleOpen ? "▲" : "▼"}</span>
+            <span className="text-[9px] text-charcoal/40">{styleOpen ? "▲" : "▼"}</span>
           </button>
 
           {styleOpen && (
@@ -104,7 +104,7 @@ export default function PackageFilter({
                 return (
                   <label
                     key={style.id}
-                    className="flex items-center gap-3 cursor-pointer group text-xs text-white/70 hover:text-white transition-colors"
+                    className="flex items-center gap-3 cursor-pointer group text-xs text-charcoal/70 hover:text-charcoal transition-colors"
                   >
                     <input
                       type="checkbox"
@@ -116,7 +116,7 @@ export default function PackageFilter({
                       className={`w-4 h-4 rounded border transition-all flex items-center justify-center ${
                         isChecked
                           ? "bg-[#D4A017] border-transparent text-midnight font-bold"
-                          : "border-white/20 group-hover:border-[#D4A017]/50 bg-white/5"
+                          : "border-charcoal/20 group-hover:border-[#D4A017]/50 bg-white/5"
                       }`}
                     >
                       {isChecked && <span className="text-[10px] leading-none">✓</span>}
@@ -130,13 +130,13 @@ export default function PackageFilter({
         </div>
 
         {/* Filter Group 2: Duration */}
-        <div className="mb-6 border-t border-white/5 pt-5">
+        <div className="mb-6 border-t border-charcoal/5 pt-5">
           <button
             onClick={() => setDurationOpen(!durationOpen)}
-            className="w-full flex items-center justify-between font-sans text-xs font-semibold text-white/90 mb-3"
+            className="w-full flex items-center justify-between font-sans text-xs font-semibold text-charcoal/90 mb-3"
           >
             <span>Duration</span>
-            <span className="text-[9px] text-white/40">{durationOpen ? "▲" : "▼"}</span>
+            <span className="text-[9px] text-charcoal/40">{durationOpen ? "▲" : "▼"}</span>
           </button>
 
           {durationOpen && (
@@ -146,7 +146,7 @@ export default function PackageFilter({
                 return (
                   <label
                     key={dur.id}
-                    className="flex items-center gap-3 cursor-pointer group text-xs text-white/70 hover:text-white transition-colors"
+                    className="flex items-center gap-3 cursor-pointer group text-xs text-charcoal/70 hover:text-charcoal transition-colors"
                   >
                     <input
                       type="radio"
@@ -159,10 +159,10 @@ export default function PackageFilter({
                       className={`w-4 h-4 rounded-full border transition-all flex items-center justify-center ${
                         isChecked
                           ? "border-[#D4A017] bg-[#D4A017] text-midnight"
-                          : "border-white/20 group-hover:border-[#D4A017]/50 bg-white/5"
+                          : "border-charcoal/20 group-hover:border-[#D4A017]/50 bg-white/5"
                       }`}
                     >
-                      {isChecked && <span className="w-1.5 h-1.5 rounded-full bg-midnight" />}
+                      {isChecked && <span className="w-1.5 h-1.5 rounded-full bg-background" />}
                     </span>
                     <span className="font-sans">{dur.name}</span>
                   </label>
@@ -173,13 +173,13 @@ export default function PackageFilter({
         </div>
 
         {/* Filter Group 3: Budget Range */}
-        <div className="border-t border-white/5 pt-5">
+        <div className="border-t border-charcoal/5 pt-5">
           <button
             onClick={() => setBudgetOpen(!budgetOpen)}
-            className="w-full flex items-center justify-between font-sans text-xs font-semibold text-white/90 mb-3"
+            className="w-full flex items-center justify-between font-sans text-xs font-semibold text-charcoal/90 mb-3"
           >
             <span>Budget per Person</span>
-            <span className="text-[9px] text-white/40">{budgetOpen ? "▲" : "▼"}</span>
+            <span className="text-[9px] text-charcoal/40">{budgetOpen ? "▲" : "▼"}</span>
           </button>
 
           {budgetOpen && (

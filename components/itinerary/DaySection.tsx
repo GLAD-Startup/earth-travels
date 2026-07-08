@@ -28,7 +28,7 @@ export default function DaySection({
   return (
     <section
       id={`day-${dayNumber}`}
-      className="relative min-h-[90vh] py-16 flex flex-col justify-center border-b border-white/5 overflow-hidden"
+      className="relative min-h-[90vh] py-16 flex flex-col justify-center border-b border-charcoal/5 overflow-hidden"
     >
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none opacity-[0.12] blur-xl z-0"
@@ -36,7 +36,7 @@ export default function DaySection({
           backgroundImage: `url(${image})`,
         }}
       />
-      <div className="absolute inset-0 bg-[#080C14]/70 pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-background/70 pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 w-full flex flex-col justify-between">
         <div className="absolute -top-12 -left-6 pointer-events-none select-none opacity-10 z-0">
@@ -49,7 +49,7 @@ export default function DaySection({
           <span className="font-mono text-xs text-gold uppercase tracking-[0.2em] block mb-1">
             Day {dayNumber} Journey
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-normal text-white">
+          <h2 className="font-display text-3xl md:text-5xl font-normal text-charcoal" className="font-display">
             {title}
           </h2>
         </div>
@@ -58,22 +58,22 @@ export default function DaySection({
           {activities.map((act, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/5"
+              className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-charcoal/5"
             >
-              <div className="w-12 h-12 shrink-0 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-xl shadow-lg">
+              <div className="w-12 h-12 shrink-0 bg-white/5 border border-charcoal/10 rounded-xl flex items-center justify-center text-xl shadow-lg">
                 {act.icon}
               </div>
 
               <div className="flex-grow">
                 <div className="flex items-baseline justify-between mb-1 gap-2">
-                  <h4 className="font-sans text-base font-bold text-white leading-tight">
+                  <h4 className="font-sans text-base font-bold text-charcoal leading-tight">
                     {act.name}
                   </h4>
                   <span className="font-mono text-[10px] text-gold uppercase tracking-wider block shrink-0">
                     ⏱ {act.time}
                   </span>
                 </div>
-                <p className="font-sans text-xs md:text-sm text-white/70 leading-relaxed">
+                <p className="font-sans text-xs md:text-sm text-charcoal/70 leading-relaxed">
                   {act.description}
                 </p>
               </div>
@@ -92,7 +92,7 @@ export default function DaySection({
                 <span className="font-mono text-[10px] text-gold-light uppercase tracking-wider block mb-1 font-semibold">
                   Mathura Agent local Tip
                 </span>
-                <p className="font-sans text-xs text-white/80 leading-relaxed">
+                <p className="font-sans text-xs text-charcoal/80 leading-relaxed">
                   {localTip}
                 </p>
               </div>

@@ -397,11 +397,11 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
   }, [onSelectDestination]);
 
   return (
-    <div className="relative w-full h-[65vh] min-h-[450px] lg:h-[75vh] flex items-center justify-center bg-midnight/30 rounded-3xl border border-white/5 overflow-hidden">
+    <div className="relative w-full h-[65vh] min-h-[450px] lg:h-[75vh] flex items-center justify-center bg-background/30 rounded-3xl border border-charcoal/5 overflow-hidden">
       <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing" />
 
       <div className="absolute bottom-6 left-6 pointer-events-none z-10">
-        <p className="text-[10px] md:text-xs font-mono tracking-widest text-white/40 uppercase">
+        <p className="text-[10px] md:text-xs font-mono tracking-widest text-charcoal/40 uppercase">
           🖱 Drag to rotate • Scroll to zoom • Click dot to explore
         </p>
       </div>
@@ -414,8 +414,8 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
             top: `${tooltip.y - 12}px`,
           }}
         >
-          <GlassCard hover={false} className="p-3 bg-midnight/90 border border-[#D4A017]/40 shadow-xl whitespace-nowrap">
-            <h4 className="font-sans text-xs font-bold text-white mb-0.5">
+          <GlassCard hover={false} className="p-3 bg-background/90 border border-[#D4A017]/40 shadow-xl whitespace-nowrap">
+            <h4 className="font-sans text-xs font-bold text-charcoal mb-0.5">
               {tooltip.marker.name}
             </h4>
             <span className="font-mono text-[9px] text-[#F0C040] uppercase tracking-wider block font-semibold">
@@ -427,25 +427,25 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
 
       {previewPanel && (
         <div className="absolute right-6 bottom-6 left-6 md:left-auto md:w-80 z-20 animate-fade-in-up">
-          <GlassCard hover={false} className="p-6 bg-midnight/90 border border-white/10 shadow-2xl relative">
+          <GlassCard hover={false} className="p-6 bg-background/90 border border-charcoal/10 shadow-2xl relative">
             <button
               onClick={() => setPreviewPanel(null)}
-              className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors text-xs font-mono"
+              className="absolute top-4 right-4 text-charcoal/50 hover:text-charcoal transition-colors text-xs font-mono"
             >
               ✕
             </button>
             <span className="text-[10px] font-mono text-[#D4A017] uppercase tracking-wider block mb-1">
               📍 Destination Spotlight
             </span>
-            <h3 className="font-display text-2xl font-bold text-white mb-2">
+            <h3 className="font-display text-2xl font-bold text-charcoal mb-2" className="font-display">
               {previewPanel.name}
             </h3>
-            <p className="font-sans text-xs text-white/70 leading-relaxed mb-4">
+            <p className="font-sans text-xs text-charcoal/70 leading-relaxed mb-4">
               {previewPanel.description}. Discover unique holiday packages custom designed for families from Mathura.
             </p>
-            <div className="flex items-center justify-between pt-3 border-t border-white/5">
+            <div className="flex items-center justify-between pt-3 border-t border-charcoal/5">
               <div>
-                <span className="text-[9px] text-white/40 block font-sans uppercase">Starting Price</span>
+                <span className="text-[9px] text-charcoal/40 block font-sans uppercase">Starting Price</span>
                 <span className="font-mono text-base font-bold text-[#D4A017]">
                   ₹{previewPanel.startingPrice.toLocaleString("en-IN")}
                 </span>

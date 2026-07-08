@@ -19,7 +19,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
 
   if (isLoading) {
     return (
-      <div className="w-full h-[320px] rounded-[20px] bg-white/5 border border-white/10 animate-pulse flex items-center justify-center">
+      <div className="w-full h-[320px] rounded-[20px] bg-white/5 border border-charcoal/10 animate-pulse flex items-center justify-center">
         <div className="text-[#D4A017] font-mono text-xs tracking-widest uppercase">
           Loading Package Details...
         </div>
@@ -43,7 +43,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
   return (
     <GlassCard
       hover={true}
-      className="p-0 overflow-hidden bg-[#080C14]/40 border border-white/10 hover:border-[#D4A017]/30 transition-all duration-500 rounded-[20px] w-full"
+      className="p-0 overflow-hidden bg-background/40 border border-charcoal/10 hover:border-[#D4A017]/30 transition-all duration-500 rounded-[20px] w-full"
     >
       <div className="flex flex-col lg:flex-row min-h-[300px]">
         
@@ -78,7 +78,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
               {pkg.category.map((cat) => (
                 <span
                   key={cat}
-                  className="glass px-3 py-1 rounded-full border border-white/10 text-white/50 font-mono text-[9px] uppercase tracking-wider bg-white/5"
+                  className="glass px-3 py-1 rounded-full border border-charcoal/10 text-charcoal/50 font-mono text-[9px] uppercase tracking-wider bg-white/5"
                 >
                   {cat}
                 </span>
@@ -86,17 +86,17 @@ export default function PackageCard({ pkg }: PackageCardProps) {
             </div>
 
             {/* Name */}
-            <h3 className="font-display text-2xl md:text-[30px] font-bold text-white mb-2 leading-none hover:text-[#D4A017] transition-colors">
+            <h3 className="font-display text-2xl md:text-[30px] font-bold text-charcoal mb-2 leading-none hover:text-[#D4A017] transition-colors" className="font-display">
               {pkg.name}
             </h3>
 
             {/* Duration + departure */}
-            <div className="font-mono text-xs text-white/60 mb-5">
+            <div className="font-mono text-xs text-charcoal/60 mb-5">
               ⏱ {pkg.duration.nights}N / {pkg.duration.days}D • Departs from Mathura / Delhi
             </div>
 
             {/* Inclusions Row */}
-            <div className="flex items-center gap-2.5 mb-6 select-none border-b border-white/5 pb-4">
+            <div className="flex items-center gap-2.5 mb-6 select-none border-b border-charcoal/5 pb-4">
               {inclusions.map((inc) => {
                 const isIncluded = pkg.inclusions[inc.key as keyof typeof pkg.inclusions];
                 return (
@@ -105,11 +105,11 @@ export default function PackageCard({ pkg }: PackageCardProps) {
                     className={`relative group/inc flex items-center justify-center w-7.5 h-7.5 rounded-lg border text-sm transition-colors cursor-help ${
                       isIncluded
                         ? "text-[#D4A017] border-[#D4A017]/30 bg-[#D4A017]/5"
-                        : "text-white/20 border-transparent bg-white/5 opacity-40"
+                        : "text-charcoal/20 border-transparent bg-white/5 opacity-40"
                     }`}
                   >
                     <span>{inc.icon}</span>
-                    <div className="absolute bottom-full mb-2 hidden group-hover/inc:block z-30 bg-midnight border border-white/12 text-white/80 font-sans text-[9px] px-2.5 py-1 rounded shadow-xl whitespace-nowrap pointer-events-none">
+                    <div className="absolute bottom-full mb-2 hidden group-hover/inc:block z-30 bg-background border border-charcoal/12 text-charcoal/80 font-sans text-[9px] px-2.5 py-1 rounded shadow-xl whitespace-nowrap pointer-events-none">
                       {inc.label}
                     </div>
                   </div>
@@ -120,7 +120,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
             {/* Highlights */}
             <ul className="flex flex-col gap-2.5 mb-6">
               {pkg.highlights.map((h, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-xs md:text-sm text-white/80 font-sans leading-snug">
+                <li key={i} className="flex items-start gap-2.5 text-xs md:text-sm text-charcoal/80 font-sans leading-snug">
                   <span className="text-[#D4A017] select-none mt-0.5">•</span>
                   <span>{h}</span>
                 </li>
@@ -129,16 +129,16 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           </div>
 
           {/* Bottom Actions Row */}
-          <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6">
+          <div className="pt-6 border-t border-charcoal/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6">
             
             {/* Pricing Section */}
             <div className="flex flex-col gap-0.5">
-              <span className="text-[10px] text-white/40 font-sans uppercase">From</span>
+              <span className="text-[10px] text-charcoal/40 font-sans uppercase">From</span>
               <div className="flex items-baseline gap-1.5 leading-none">
                 <span className="font-mono text-3xl md:text-[36px] font-black text-[#D4A017]">
                   ₹{pkg.pricePerPerson.toLocaleString("en-IN")}
                 </span>
-                <span className="text-[10px] text-white/50 font-sans uppercase">
+                <span className="text-[10px] text-charcoal/50 font-sans uppercase">
                   per person, twin sharing
                 </span>
               </div>
@@ -149,7 +149,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
               <div className="flex gap-3">
                 <Link
                   href={pkg.itineraryPage}
-                  className="btn-outline font-sans text-center text-xs font-semibold py-3 px-6 shrink-0 border border-white/10 hover:border-[#D4A017]/30 flex items-center justify-center"
+                  className="btn-outline font-sans text-center text-xs font-semibold py-3 px-6 shrink-0 border border-charcoal/10 hover:border-[#D4A017]/30 flex items-center justify-center"
                 >
                   View Full Itinerary
                 </Link>

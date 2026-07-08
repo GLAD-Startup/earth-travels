@@ -7,7 +7,7 @@ export default function QuotePage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-[#080C14] flex items-center justify-center text-[#D4A017] font-mono text-sm">
+        <div className="min-h-screen bg-background flex items-center justify-center text-[#D4A017] font-mono text-sm">
           Loading Planner Wizard...
         </div>
       }

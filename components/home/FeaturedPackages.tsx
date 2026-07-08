@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 
 export default function FeaturedPackages() {
   return (
-    <section className="relative py-24 bg-midnight border-t border-white/5 overflow-hidden">
+    <section className="relative py-24 bg-background border-t border-charcoal/5 overflow-hidden">
       <div className="absolute right-0 bottom-0 w-96 h-96 bg-[#D4A017]/10 rounded-full blur-[140px] pointer-events-none opacity-30 z-0" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -25,7 +25,7 @@ export default function FeaturedPackages() {
               </span>
             </RevealWrapper>
             <RevealWrapper delay={0.2}>
-              <h2 className="font-display text-4xl md:text-5xl font-normal text-white">
+              <h2 className="font-display text-4xl md:text-5xl font-normal text-charcoal" className="font-display">
                 Featured Signature Packages
               </h2>
             </RevealWrapper>
@@ -66,7 +66,7 @@ export default function FeaturedPackages() {
           >
             {PACKAGES.map((pkg) => (
               <SwiperSlide key={pkg.id} className="h-auto">
-                <GlassCard hover={true} className="h-full flex flex-col bg-[#080C14]/35 border border-white/10 group rounded-[20px]">
+                <GlassCard hover={true} className="h-full flex flex-col bg-background/35 border border-charcoal/10 group rounded-[20px]">
                   <div className="relative h-56 w-full overflow-hidden">
                     <img
                       src={pkg.image}
@@ -82,7 +82,7 @@ export default function FeaturedPackages() {
                       </span>
                     )}
 
-                    <span className="absolute bottom-4 right-4 z-10 bg-midnight/80 border border-white/10 text-white font-mono text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="absolute bottom-4 right-4 z-10 bg-background/80 border border-charcoal/10 text-charcoal font-mono text-xs px-3 py-1 rounded-full uppercase tracking-wider">
                       ⏱ {pkg.duration.nights}N/{pkg.duration.days}D
                     </span>
                   </div>
@@ -92,11 +92,11 @@ export default function FeaturedPackages() {
                       <span className="text-[#D4A017] font-mono text-xs uppercase tracking-wider block mb-1">
                         {pkg.destination}
                       </span>
-                      <h3 className="font-sans text-xl font-bold text-white mb-4 leading-tight group-hover:text-[#D4A017] transition-colors">
+                      <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-4 leading-tight group-hover:text-[#D4A017] transition-colors" className="font-display">
                         {pkg.name}
                       </h3>
 
-                      <div className="flex flex-col gap-2.5 mb-6 text-sm text-white/70">
+                      <div className="flex flex-col gap-2.5 mb-6 text-sm text-charcoal/70">
                         {pkg.highlights.map((highlight, index) => (
                           <div key={index} className="flex items-center gap-2">
                             <span className="text-[#D4A017] text-xs">✦</span>
@@ -107,18 +107,18 @@ export default function FeaturedPackages() {
                     </div>
 
                     <div>
-                      <div className="flex items-baseline gap-1.5 mb-6 pt-4 border-t border-white/5">
-                        <span className="text-xs text-white/40 font-sans">Starting at</span>
+                      <div className="flex items-baseline gap-1.5 mb-6 pt-4 border-t border-charcoal/5">
+                        <span className="text-xs text-charcoal/40 font-sans">Starting at</span>
                         <span className="font-mono text-2xl font-bold text-[#D4A017]">
                           ₹{pkg.pricePerPerson.toLocaleString("en-IN")}
                         </span>
-                        <span className="text-[10px] text-white/40 font-sans">/ person</span>
+                        <span className="text-[10px] text-charcoal/40 font-sans">/ person</span>
                       </div>
 
                       <div className="grid grid-cols-2 gap-3">
                         <Link
                           href={pkg.itineraryPage}
-                          className="btn-outline font-sans text-center text-xs font-semibold py-2.5 px-0 border border-white/10 hover:border-[#D4A017]/30 flex items-center justify-center"
+                          className="btn-outline font-sans text-center text-xs font-semibold py-2.5 px-0 border border-charcoal/10 hover:border-[#D4A017]/30 flex items-center justify-center"
                         >
                           View Itinerary
                         </Link>
@@ -140,10 +140,10 @@ export default function FeaturedPackages() {
             <div className="swiper-pagination-custom flex gap-2 !w-auto" />
 
             <div className="flex gap-3">
-              <button className="prev-pkg-btn w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#D4A017] hover:border-[#D4A017]/50 transition-colors bg-white/5 cursor-pointer">
+              <button className="prev-pkg-btn w-10 h-10 rounded-full border border-charcoal/10 flex items-center justify-center text-charcoal/60 hover:text-[#D4A017] hover:border-[#D4A017]/50 transition-colors bg-white/5 cursor-pointer">
                 ←
               </button>
-              <button className="next-pkg-btn w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-[#D4A017] hover:border-[#D4A017]/50 transition-colors bg-white/5 cursor-pointer">
+              <button className="next-pkg-btn w-10 h-10 rounded-full border border-charcoal/10 flex items-center justify-center text-charcoal/60 hover:text-[#D4A017] hover:border-[#D4A017]/50 transition-colors bg-white/5 cursor-pointer">
                 →
               </button>
             </div>

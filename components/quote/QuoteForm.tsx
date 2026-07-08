@@ -126,29 +126,29 @@ export default function QuoteForm() {
   )}`;
 
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-[#080C14] text-white">
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-background text-charcoal">
       <title>Request a Custom Quote — Plan My Trip | Earth Travels</title>
       <meta name="description" content="Design custom travel itineraries using our multi-step planner. Budget ranges, travel style tags, and direct consultations from Mathura." />
       
       {/* LEFT PANEL: Branding & Badge details (desktop only) */}
       <div
-        className="quote-hero hidden lg:flex flex-col justify-between p-16 relative bg-cover bg-center overflow-hidden border-r border-white/5"
+        className="quote-hero hidden lg:flex flex-col justify-between p-16 relative bg-cover bg-center overflow-hidden border-r border-charcoal/5"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(8,12,20,0.4) 0%, rgba(8,12,20,0.85) 100%), url('https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1200&q=80')`,
         }}
       >
-        <div className="absolute inset-0 bg-[#080C14]/30 pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-background/30 pointer-events-none z-0" />
 
         {/* Brand wordmark logo */}
         <Link href="/" className="relative z-10 block self-start">
-          <span className="font-display text-2xl font-black text-white tracking-wide">
+          <span className="font-display text-2xl font-black text-charcoal tracking-wide">
             Earth Travels
           </span>
         </Link>
 
         {/* Center Quote */}
         <div className="relative z-10 max-w-sm flex flex-col gap-3 my-auto">
-          <blockquote className="font-display text-3xl font-light italic leading-tight text-white">
+          <blockquote className="font-display text-3xl font-light italic leading-tight text-charcoal">
             &ldquo;Every journey begins with a single decision.&rdquo;
           </blockquote>
           <cite className="font-mono text-xs text-[#D4A017] uppercase tracking-widest font-semibold not-italic">
@@ -158,15 +158,15 @@ export default function QuoteForm() {
 
         {/* Bottom Trust Badges */}
         <div className="relative z-10 flex flex-col gap-3.5 select-none max-w-sm">
-          <div className="glass px-4 py-2 border border-white/10 rounded-full text-xs font-sans text-white/80 bg-white/5 flex items-center gap-2">
+          <div className="glass px-4 py-2 border border-charcoal/10 rounded-full text-xs font-sans text-charcoal/80 bg-white/5 flex items-center gap-2">
             <span className="text-[#D4A017]">💳</span>
             <span>No advance payment to get a quote</span>
           </div>
-          <div className="glass px-4 py-2 border border-white/10 rounded-full text-xs font-sans text-white/80 bg-white/5 flex items-center gap-2">
+          <div className="glass px-4 py-2 border border-charcoal/10 rounded-full text-xs font-sans text-charcoal/80 bg-white/5 flex items-center gap-2">
             <span className="text-[#D4A017]">⏱</span>
             <span>Expert consultant assigned within 2 hours</span>
           </div>
-          <div className="glass px-4 py-2 border border-white/10 rounded-full text-xs font-sans text-white/80 bg-white/5 flex items-center gap-2">
+          <div className="glass px-4 py-2 border border-charcoal/10 rounded-full text-xs font-sans text-charcoal/80 bg-white/5 flex items-center gap-2">
             <span className="text-[#D4A017]">👨‍👩‍👧‍👦</span>
             <span>Trusted by 127+ families from Mathura</span>
           </div>
@@ -174,7 +174,7 @@ export default function QuoteForm() {
       </div>
 
       {/* RIGHT PANEL: Form inputs */}
-      <div className="bg-[#0A1628] p-6 md:p-12 lg:p-16 flex flex-col justify-center overflow-y-auto">
+      <div className="bg-surface p-6 md:p-12 lg:p-16 flex flex-col justify-center overflow-y-auto">
         <div className="max-w-xl mx-auto w-full">
           
           {/* Step Indicator Header */}
@@ -200,12 +200,12 @@ export default function QuoteForm() {
                         ? "bg-[#D4A017] text-midnight border-transparent font-bold cursor-pointer"
                         : isCurrent
                         ? "border-[#D4A017] bg-[#D4A017] text-midnight font-bold"
-                        : "border-white/20 bg-midnight text-white/40 cursor-not-allowed"
+                        : "border-charcoal/20 bg-background text-charcoal/40 cursor-not-allowed"
                     }`}
                   >
                     {isCompleted ? "✓" : num}
                   </button>
-                  <span className="hidden md:block text-[10px] font-sans text-white/40 uppercase tracking-wider text-center absolute top-10 whitespace-nowrap">
+                  <span className="hidden md:block text-[10px] font-sans text-charcoal/40 uppercase tracking-wider text-center absolute top-10 whitespace-nowrap">
                     {num === 1 ? "Journey Details" : num === 2 ? "Travel Style" : "Contact Info"}
                   </span>
                 </div>
@@ -221,17 +221,17 @@ export default function QuoteForm() {
               {step === 1 && (
                 <div className="flex flex-col gap-6">
                   <div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-2">
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2" className="font-display">
                       Journey Details
                     </h2>
-                    <p className="text-xs text-white/50 font-sans">
+                    <p className="text-xs text-charcoal/50 font-sans">
                       Select where you want to travel and configure details.
                     </p>
                   </div>
 
                   {/* Multi-select Pills */}
                   <div className="flex flex-col gap-3">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Where do you want to go?
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -245,7 +245,7 @@ export default function QuoteForm() {
                             className={`px-4 py-2 rounded-full text-xs font-sans font-semibold border transition-all duration-300 cursor-pointer ${
                               isSelected
                                 ? "bg-[#D4A017] text-midnight border-transparent font-bold shadow shadow-gold/25"
-                                : "bg-white/5 border-white/10 text-white/70 hover:border-white/30"
+                                : "bg-white/5 border-charcoal/10 text-charcoal/70 hover:border-charcoal/30"
                             }`}
                           >
                             {dest}
@@ -257,7 +257,7 @@ export default function QuoteForm() {
 
                   {/* Departure city */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Departure City
                     </label>
                     <input
@@ -265,7 +265,7 @@ export default function QuoteForm() {
                       value={departureCity}
                       onChange={(e) => setDepartureCity(e.target.value)}
                       placeholder="e.g. Mathura, Agra, Delhi..."
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
                       required
                     />
                   </div>
@@ -273,7 +273,7 @@ export default function QuoteForm() {
                   {/* Date ranges */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col gap-2">
-                      <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                         From
                       </label>
                       <input
@@ -281,12 +281,12 @@ export default function QuoteForm() {
                         value={dateFrom}
                         onChange={(e) => setDateFrom(e.target.value)}
                         min={new Date().toISOString().split("T")[0]}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px] animate-none"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px] animate-none"
                         required
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                         To
                       </label>
                       <input
@@ -294,7 +294,7 @@ export default function QuoteForm() {
                         value={dateTo}
                         onChange={(e) => setDateTo(e.target.value)}
                         min={dateFrom || new Date().toISOString().split("T")[0]}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px] animate-none"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px] animate-none"
                         required
                       />
                     </div>
@@ -302,22 +302,22 @@ export default function QuoteForm() {
 
                   {/* Trip Duration */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Trip Duration
                     </label>
                     <div className="relative">
                       <select
                         value={duration}
                         onChange={(e) => setDuration(e.target.value)}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
                       >
-                        <option value="4–5 days" className="bg-[#080C14]">4 – 5 Days</option>
-                        <option value="6–7 days" className="bg-[#080C14]">6 – 7 Days</option>
-                        <option value="8–10 days" className="bg-[#080C14]">8 – 10 Days</option>
-                        <option value="10–14 days" className="bg-[#080C14]">10 – 14 Days</option>
-                        <option value="15+ days" className="bg-[#080C14]">15+ Days</option>
+                        <option value="4–5 days" className="bg-background">4 – 5 Days</option>
+                        <option value="6–7 days" className="bg-background">6 – 7 Days</option>
+                        <option value="8–10 days" className="bg-background">8 – 10 Days</option>
+                        <option value="10–14 days" className="bg-background">10 – 14 Days</option>
+                        <option value="15+ days" className="bg-background">15+ Days</option>
                       </select>
-                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/40 text-xs">
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
                         ▼
                       </div>
                     </div>
@@ -341,17 +341,17 @@ export default function QuoteForm() {
               {step === 2 && (
                 <div className="flex flex-col gap-6">
                   <div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-2">
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2" className="font-display">
                       Travel Style
                     </h2>
-                    <p className="text-xs text-white/50 font-sans">
+                    <p className="text-xs text-charcoal/50 font-sans">
                       Select your target budget tier and describe any custom requests.
                     </p>
                   </div>
 
                   {/* 2x2 Budget Grid */}
                   <div className="flex flex-col gap-3">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Budget per Person
                     </label>
                     <div className="grid grid-cols-2 gap-4">
@@ -365,17 +365,17 @@ export default function QuoteForm() {
                             className={`p-4 rounded-xl cursor-pointer text-left transition-all border ${
                               isSelected
                                 ? "bg-[#D4A017]/10 border-[#D4A017] shadow-lg shadow-[#D4A017]/15"
-                                : "bg-white/5 border-white/10 hover:border-white/20"
+                                : "bg-white/5 border-charcoal/10 hover:border-charcoal/20"
                             }`}
                           >
                             <span className="text-xl mb-1.5 block select-none">{tier.icon}</span>
-                            <h4 className="font-sans text-xs font-bold text-white mb-0.5 leading-tight">
+                            <h4 className="font-sans text-xs font-bold text-charcoal mb-0.5 leading-tight">
                               {tier.name}
                             </h4>
                             <span className="font-mono text-[10px] text-[#D4A017] block font-semibold mb-1">
                               {tier.range}
                             </span>
-                            <p className="font-sans text-[10px] text-white/40 leading-snug">
+                            <p className="font-sans text-[10px] text-charcoal/40 leading-snug">
                               {tier.desc}
                             </p>
                           </GlassCard>
@@ -386,7 +386,7 @@ export default function QuoteForm() {
 
                   {/* Who's travelling */}
                   <div className="flex flex-col gap-3">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Who&apos;s travelling?
                     </label>
                     <div className="flex flex-wrap gap-2.5">
@@ -400,7 +400,7 @@ export default function QuoteForm() {
                             className={`px-4 py-2.5 rounded-full text-xs font-sans font-semibold border transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                               isSelected
                                 ? "bg-[#D4A017] text-midnight border-transparent font-bold"
-                                : "bg-white/5 border-white/10 text-white/70 hover:border-white/30"
+                                : "bg-white/5 border-charcoal/10 text-charcoal/70 hover:border-charcoal/30"
                             }`}
                           >
                             <span>{type.icon}</span>
@@ -413,7 +413,7 @@ export default function QuoteForm() {
 
                   {/* Special requests */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Special requests or must-haves
                     </label>
                     <textarea
@@ -421,7 +421,7 @@ export default function QuoteForm() {
                       onChange={(e) => setSpecialRequests(e.target.value)}
                       placeholder="e.g. vegetarian meals, wheelchair access, anniversary surprise, specific hotel..."
                       rows={4}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] font-sans resize-none"
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans resize-none"
                     />
                   </div>
 
@@ -429,7 +429,7 @@ export default function QuoteForm() {
                     <button
                       type="button"
                       onClick={() => handleTransition(1)}
-                      className="btn-outline font-sans text-center text-xs font-semibold py-3.5 border border-white/10 hover:border-[#D4A017]/30 flex items-center justify-center cursor-pointer"
+                      className="btn-outline font-sans text-center text-xs font-semibold py-3.5 border border-charcoal/10 hover:border-[#D4A017]/30 flex items-center justify-center cursor-pointer"
                     >
                       ← Back
                     </button>
@@ -451,17 +451,17 @@ export default function QuoteForm() {
               {step === 3 && (
                 <form onSubmit={handleFormSubmit} className="flex flex-col gap-6">
                   <div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-2">
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-2" className="font-display">
                       Contact Info
                     </h2>
-                    <p className="text-xs text-white/50 font-sans">
+                    <p className="text-xs text-charcoal/50 font-sans">
                       Leave your details so we can assign an advisor from Mathura to prepare your plan.
                     </p>
                   </div>
 
                   {/* Name */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Your Name
                     </label>
                     <input
@@ -469,18 +469,18 @@ export default function QuoteForm() {
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="e.g. Rakesh Jain"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
                       required
                     />
                   </div>
 
                   {/* Phone */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       WhatsApp Number
                     </label>
                     <div className="relative">
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 font-mono text-sm">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/40 font-mono text-sm">
                         +91
                       </span>
                       <input
@@ -488,7 +488,7 @@ export default function QuoteForm() {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))}
                         placeholder="XXXXX XXXXX"
-                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-14 pr-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-mono h-[46px]"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl pl-14 pr-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-mono h-[46px]"
                         required
                       />
                     </div>
@@ -496,7 +496,7 @@ export default function QuoteForm() {
 
                   {/* Email */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Email Address
                     </label>
                     <input
@@ -504,28 +504,28 @@ export default function QuoteForm() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="name@domain.com"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
                       required
                     />
                   </div>
 
                   {/* Callback time */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-white/50 uppercase tracking-widest pl-1">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
                       Best time to call
                     </label>
                     <div className="relative">
                       <select
                         value={callbackTime}
                         onChange={(e) => setCallbackTime(e.target.value)}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
                       >
-                        <option value="Morning (9–11 AM)" className="bg-[#080C14]">Morning (9–11 AM)</option>
-                        <option value="Afternoon (12–3 PM)" className="bg-[#080C14]">Afternoon (12–3 PM)</option>
-                        <option value="Evening (4–7 PM)" className="bg-[#080C14]">Evening (4–7 PM)</option>
-                        <option value="Anytime" className="bg-[#080C14]">Anytime</option>
+                        <option value="Morning (9–11 AM)" className="bg-background">Morning (9–11 AM)</option>
+                        <option value="Afternoon (12–3 PM)" className="bg-background">Afternoon (12–3 PM)</option>
+                        <option value="Evening (4–7 PM)" className="bg-background">Evening (4–7 PM)</option>
+                        <option value="Anytime" className="bg-background">Anytime</option>
                       </select>
-                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/40 text-xs">
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
                         ▼
                       </div>
                     </div>
@@ -547,14 +547,14 @@ export default function QuoteForm() {
                     <button
                       type="button"
                       onClick={() => handleTransition(2)}
-                      className="btn-outline font-sans text-center text-xs font-semibold py-3 border border-white/10 hover:border-[#D4A017]/30 flex items-center justify-center cursor-pointer"
+                      className="btn-outline font-sans text-center text-xs font-semibold py-3 border border-charcoal/10 hover:border-[#D4A017]/30 flex items-center justify-center cursor-pointer"
                     >
                       Back
                     </button>
                   </div>
 
                   {/* Live Business Hours Status Check */}
-                  <div className="flex items-center justify-center gap-2 mt-4 text-xs font-sans text-white/60 select-none">
+                  <div className="flex items-center justify-center gap-2 mt-4 text-xs font-sans text-charcoal/60 select-none">
                     <span
                       className={`w-2.5 h-2.5 rounded-full inline-block ${
                         isOpen ? "bg-green-500 animate-pulse" : "bg-red-500"
@@ -568,15 +568,15 @@ export default function QuoteForm() {
                   </div>
 
                   {/* WhatsApp Alternative */}
-                  <div className="pt-5 border-t border-white/5 text-center flex flex-col items-center gap-3 mt-2">
-                    <span className="font-sans text-xs text-white/40 select-none">
+                  <div className="pt-5 border-t border-charcoal/5 text-center flex flex-col items-center gap-3 mt-2">
+                    <span className="font-sans text-xs text-charcoal/40 select-none">
                       Prefer to just message us?
                     </span>
                     <a
                       href={whatsAppLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full text-center font-sans text-xs font-bold py-3.5 text-white rounded-full bg-emerald-600/10 border border-emerald-500/30 hover:bg-emerald-500/20 backdrop-blur-md transition-all duration-300 hover:scale-103 shadow-lg select-none"
+                      className="w-full text-center font-sans text-xs font-bold py-3.5 text-charcoal rounded-full bg-emerald-600/10 border border-emerald-500/30 hover:bg-emerald-500/20 backdrop-blur-md transition-all duration-300 hover:scale-103 shadow-lg select-none"
                     >
                       💬 Message Us on WhatsApp
                     </a>
@@ -591,10 +591,10 @@ export default function QuoteForm() {
               <div className="w-20 h-20 bg-[#D4A017]/10 border-2 border-[#D4A017] rounded-full flex items-center justify-center text-[#D4A017] text-4xl mb-6 shadow-2xl shadow-gold/10">
                 ✓
               </div>
-              <h2 className="font-display text-3xl font-bold text-white mb-3">
+              <h2 className="font-display text-3xl font-bold text-charcoal mb-3" className="font-display">
                 Request Submitted!
               </h2>
-              <p className="font-sans text-sm text-white/60 max-w-sm mb-8 leading-relaxed">
+              <p className="font-sans text-sm text-charcoal/60 max-w-sm mb-8 leading-relaxed">
                 Thank you, <span className="font-bold text-[#D4A017]">{fullName}</span>. An expert planner has been assigned. We will reach out to you on WhatsApp within 2 hours.
               </p>
               
@@ -621,7 +621,7 @@ export default function QuoteForm() {
                     setPhone("");
                     setFullName("");
                   }}
-                  className="btn-outline font-sans text-center text-xs font-semibold py-3 border border-white/10 hover:border-[#D4A017]/30 flex items-center justify-center cursor-pointer"
+                  className="btn-outline font-sans text-center text-xs font-semibold py-3 border border-charcoal/10 hover:border-[#D4A017]/30 flex items-center justify-center cursor-pointer"
                 >
                   Design Another Journey
                 </button>

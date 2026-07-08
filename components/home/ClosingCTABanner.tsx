@@ -7,7 +7,7 @@ import { RevealWrapper } from "@/components/ui";
 
 export default function ClosingCTABanner() {
   return (
-    <section className="relative py-24 px-6 overflow-hidden w-full flex items-center justify-center bg-midnight border-t border-white/5">
+    <section className="relative py-24 px-6 overflow-hidden w-full flex items-center justify-center bg-background border-t border-charcoal/5">
       <div className="absolute inset-0 bg-gradient-to-r from-midnight via-[#0A1628] to-emerald-950/20 bg-[size:200%_200%] animate-gradient-shift z-0" />
 
       <div
@@ -26,14 +26,14 @@ export default function ClosingCTABanner() {
         </RevealWrapper>
 
         <RevealWrapper delay={0.2}>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-white leading-tight mb-6">
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-charcoal leading-tight mb-6" className="font-display">
             Your Dream Journey Starts <br />
             with One Message
           </h2>
         </RevealWrapper>
 
         <RevealWrapper delay={0.3}>
-          <p className="font-sans text-sm md:text-base text-white/70 max-w-xl mx-auto mb-8">
+          <p className="font-sans text-sm md:text-base text-charcoal/70 max-w-xl mx-auto mb-8">
             Tell us where you want to go. We will customize the perfect package, handle all of your documentation, and support you 24/7.
           </p>
         </RevealWrapper>
@@ -54,7 +54,7 @@ export default function ClosingCTABanner() {
             href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-sans font-semibold rounded-full border border-emerald-500/20 hover:shadow-lg hover:shadow-emerald-500/20 transition-all flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-charcoal font-sans font-semibold rounded-full border border-emerald-500/20 hover:shadow-lg hover:shadow-emerald-500/20 transition-all flex items-center justify-center gap-2"
           >
             <svg
               className="w-5 h-5 fill-current"

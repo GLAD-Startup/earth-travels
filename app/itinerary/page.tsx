@@ -9,7 +9,7 @@ export default function ItinerariesPage() {
   const itineraryList = Object.values(ITINERARIES);
 
   return (
-    <div className="bg-[#080C14] min-h-screen text-white select-none">
+    <div className="bg-background min-h-screen text-charcoal select-none">
       <title>Signature Itineraries — Day-by-Day Journeys | Earth Travels</title>
       <meta
         name="description"
@@ -33,7 +33,7 @@ export default function ItinerariesPage() {
             </h1>
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
-            <p className="font-sans text-base md:text-lg text-white/60 max-w-lg mx-auto">
+            <p className="font-sans text-base md:text-lg text-white/80 max-w-lg mx-auto">
               Every hour planned. Every memory guaranteed. Journeys crafted by our expert team.
             </p>
           </RevealWrapper>
@@ -44,10 +44,10 @@ export default function ItinerariesPage() {
       <section className="max-w-7xl mx-auto px-6 py-20">
         <RevealWrapper delay={0.1}>
           <div className="border-l-2 border-[#D4A017] pl-4 mb-12">
-            <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest block mb-0.5">
+            <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
               Handcrafted Journeys
             </span>
-            <h2 className="font-display text-2xl font-bold text-white">
+            <h2 className="font-display text-2xl font-bold text-charcoal">
               {itineraryList.length} Detailed Itineraries
             </h2>
           </div>
@@ -59,7 +59,7 @@ export default function ItinerariesPage() {
               <Link href={`/itinerary/${itinerary.slug}`} className="group block h-full">
                 <GlassCard
                   hover={true}
-                  className="p-0 overflow-hidden bg-midnight/35 border border-white/10 hover:border-[#D4A017]/40 transition-all duration-300 rounded-2xl flex flex-col h-full"
+                  className="p-0 overflow-hidden bg-background/35 border border-charcoal/10 hover:border-[#D4A017]/40 transition-all duration-300 rounded-2xl flex flex-col h-full"
                 >
                   {/* Image */}
                   <div className="relative h-52 w-full overflow-hidden">
@@ -71,8 +71,8 @@ export default function ItinerariesPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/20 to-transparent" />
 
                     {/* Days count badge */}
-                    <div className="absolute top-4 right-4 glass px-3 py-1.5 rounded-full border border-white/10 bg-midnight/60 backdrop-blur-sm">
-                      <span className="font-mono text-[9px] text-white/70 uppercase tracking-wider">
+                    <div className="absolute top-4 right-4 glass px-3 py-1.5 rounded-full border border-charcoal/10 bg-background/60 backdrop-blur-sm">
+                      <span className="font-mono text-[9px] text-charcoal/70 uppercase tracking-wider">
                         {itinerary.days.length} Days
                       </span>
                     </div>
@@ -88,13 +88,13 @@ export default function ItinerariesPage() {
                   {/* Content */}
                   <div className="p-6 flex flex-col flex-grow gap-3">
                     <div>
-                      <p className="font-sans text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">
+                      <p className="font-sans text-[10px] text-charcoal/40 uppercase tracking-widest font-semibold mb-1">
                         {itinerary.duration}
                       </p>
-                      <h3 className="font-display text-xl font-bold text-white group-hover:text-[#D4A017] transition-colors leading-tight">
+                      <h3 className="font-display text-xl font-bold text-charcoal group-hover:text-[#D4A017] transition-colors leading-tight">
                         {itinerary.title}
                       </h3>
-                      <p className="font-sans text-xs text-white/50 italic mt-1.5">
+                      <p className="font-sans text-xs text-charcoal/50 italic mt-1.5">
                         &quot;{itinerary.tagline}&quot;
                       </p>
                     </div>
@@ -104,28 +104,28 @@ export default function ItinerariesPage() {
                       {itinerary.days.slice(0, 3).map((day) => (
                         <span
                           key={day.dayNumber}
-                          className="text-[9px] font-mono text-white/40 bg-white/5 border border-white/5 rounded-full px-2 py-0.5"
+                          className="text-[9px] font-mono text-charcoal/40 bg-white/5 border border-charcoal/5 rounded-full px-2 py-0.5"
                         >
                           {day.tag}
                         </span>
                       ))}
                       {itinerary.days.length > 3 && (
-                        <span className="text-[9px] font-mono text-white/30 bg-white/5 border border-white/5 rounded-full px-2 py-0.5">
+                        <span className="text-[9px] font-mono text-charcoal/30 bg-white/5 border border-charcoal/5 rounded-full px-2 py-0.5">
                           +{itinerary.days.length - 3} more
                         </span>
                       )}
                     </div>
 
                     {/* Price & CTA */}
-                    <div className="pt-4 border-t border-white/5 flex items-center justify-between mt-auto">
+                    <div className="pt-4 border-t border-charcoal/5 flex items-center justify-between mt-auto">
                       <div>
-                        <span className="text-[9px] text-white/40 block font-sans uppercase">Starting at</span>
+                        <span className="text-[9px] text-charcoal/40 block font-sans uppercase">Starting at</span>
                         <span className="font-mono text-lg font-bold text-[#D4A017]">
                           ₹{itinerary.basePrice.toLocaleString("en-IN")}
-                          <span className="text-[10px] text-white/40 font-normal ml-1">/person</span>
+                          <span className="text-[10px] text-charcoal/40 font-normal ml-1">/person</span>
                         </span>
                       </div>
-                      <span className="text-xs font-mono text-white/50 group-hover:text-[#D4A017] transition-colors flex items-center gap-1">
+                      <span className="text-xs font-mono text-charcoal/50 group-hover:text-[#D4A017] transition-colors flex items-center gap-1">
                         View Itinerary →
                       </span>
                     </div>
@@ -140,12 +140,12 @@ export default function ItinerariesPage() {
         <RevealWrapper delay={0.3}>
           <GlassCard
             hover={false}
-            className="mt-20 p-8 md:p-12 bg-gradient-to-r from-[#0A1628] to-[#080C14] border border-white/10 rounded-[20px] text-center flex flex-col items-center gap-4"
+            className="mt-20 p-8 md:p-12 bg-gradient-to-r from-[#0A1628] to-[#080C14] border border-charcoal/10 rounded-[20px] text-center flex flex-col items-center gap-4"
           >
             <h3 className="font-display text-2xl md:text-3xl font-bold text-white">
               Don&apos;t see your dream destination?
             </h3>
-            <p className="font-sans text-sm text-white/60 max-w-sm mb-2">
+            <p className="font-sans text-sm text-white/70 max-w-sm mb-2 text-center mx-auto">
               We design premium tailor-made itineraries for families from Mathura to any global hotspot.
             </p>
             <Link

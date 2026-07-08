@@ -10,7 +10,7 @@ export default function WhatsAppFloat() {
       href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 z-[999] flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-white bg-[#25D366]/80 backdrop-blur-md border border-[#25D366]/40 hover:scale-105 transition-all duration-300 select-none shadow-lg hover:shadow-[#25D366]/30"
+      className="fixed bottom-8 right-8 z-[999] flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-charcoal bg-[#25D366]/80 backdrop-blur-md border border-[#25D366]/40 hover:scale-105 transition-all duration-300 select-none shadow-lg hover:shadow-[#25D366]/30"
       style={{
         textShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
       }}

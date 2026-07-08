@@ -26,7 +26,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative py-24 bg-midnight border-t border-white/5 overflow-hidden">
+    <section className="relative py-24 bg-background border-t border-charcoal/5 overflow-hidden">
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#D4A017]/10 rounded-full blur-[120px] pointer-events-none opacity-40" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -37,12 +37,12 @@ export default function HowItWorks() {
             </span>
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
-            <h2 className="font-display text-4xl md:text-5xl font-normal text-white">
+            <h2 className="font-display text-4xl md:text-5xl font-normal text-charcoal" className="font-display">
               Bespoke Journeys Made Easy
             </h2>
           </RevealWrapper>
           <RevealWrapper delay={0.3}>
-            <p className="text-sm text-white/60 mt-4 leading-relaxed">
+            <p className="text-sm text-charcoal/60 mt-4 leading-relaxed">
               We handle every details of your vacation from Mathura so you can simply step onto the flight.
             </p>
           </RevealWrapper>
@@ -53,7 +53,7 @@ export default function HowItWorks() {
 
           {STEPS.map((step, idx) => (
             <RevealWrapper key={idx} delay={0.15 * (idx + 1)} className="relative z-10">
-              <GlassCard hover={true} className="p-8 h-full bg-[#080C14]/40 border border-white/5 flex flex-col items-center text-center">
+              <GlassCard hover={true} className="p-8 h-full bg-background/40 border border-charcoal/5 flex flex-col items-center text-center">
                 <div className="relative mb-6">
                   <div className="absolute -inset-2 rounded-full border border-[#D4A017]/20 animate-pulse" />
                   <div className="w-16 h-16 rounded-full bg-linear-to-br from-[#D4A017] to-[#F0C040] text-[#080C14] font-mono text-lg font-bold flex items-center justify-center shadow-lg shadow-[#D4A017]/20">
@@ -63,11 +63,11 @@ export default function HowItWorks() {
 
                 <span className="text-3xl mb-4 block select-none">{step.icon}</span>
 
-                <h3 className="font-sans text-xl font-bold text-white mb-3">
+                <h3 className="font-display font-sans text-xl font-bold text-charcoal mb-3" className="font-display">
                   {step.title}
                 </h3>
 
-                <p className="text-sm text-white/70 leading-relaxed font-sans max-w-xs">
+                <p className="text-sm text-charcoal/70 leading-relaxed font-sans max-w-xs">
                   {step.description}
                 </p>
               </GlassCard>

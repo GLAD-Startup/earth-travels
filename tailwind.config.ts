@@ -16,6 +16,13 @@ const config: Config = {
         "gold-light": "#e8a820",
         terracotta: "#c4613a",
         teal: "#0d7a6a",
+        // Restored aliases for broken components
+        charcoal: "#1a120a",
+        background: "#fdf8f2",
+        accent: "#0d7a6a",
+        surface: "#ffffff",
+        midnight: "#080C14",
+        sand: "#fff4e6",
       },
       fontFamily: {
         display: ["var(--font-playfair)", "serif"],

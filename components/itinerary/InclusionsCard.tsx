@@ -25,7 +25,7 @@ const EXCLUSIONS = [
 
 export default function InclusionsCard() {
   return (
-    <GlassCard hover={false} className="p-6 md:p-8 bg-midnight/40 border border-white/10">
+    <GlassCard hover={false} className="p-6 md:p-8 bg-background/40 border border-charcoal/10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <h4 className="font-sans text-lg font-bold text-emerald-400 mb-6 flex items-center gap-2">
@@ -36,7 +36,7 @@ export default function InclusionsCard() {
           </h4>
           <ul className="flex flex-col gap-3.5">
             {INCLUSIONS.map((item, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-xs md:text-sm text-white/80 leading-relaxed font-sans">
+              <li key={idx} className="flex items-start gap-3 text-xs md:text-sm text-charcoal/80 leading-relaxed font-sans">
                 <span className="text-emerald-400 shrink-0 select-none mt-0.5">✔</span>
                 <span>{item}</span>
               </li>
@@ -44,7 +44,7 @@ export default function InclusionsCard() {
           </ul>
         </div>
 
-        <div className="border-t md:border-t-0 md:border-l border-white/5 pt-8 md:pt-0 md:pl-8">
+        <div className="border-t md:border-t-0 md:border-l border-charcoal/5 pt-8 md:pt-0 md:pl-8">
           <h4 className="font-sans text-lg font-bold text-rose-400 mb-6 flex items-center gap-2">
             <span className="w-6 h-6 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center text-xs border border-rose-500/20">
               ✕
@@ -53,7 +53,7 @@ export default function InclusionsCard() {
           </h4>
           <ul className="flex flex-col gap-3.5">
             {EXCLUSIONS.map((item, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-xs md:text-sm text-white/60 leading-relaxed font-sans">
+              <li key={idx} className="flex items-start gap-3 text-xs md:text-sm text-charcoal/60 leading-relaxed font-sans">
                 <span className="text-rose-400 shrink-0 select-none mt-0.5">✖</span>
                 <span>{item}</span>
               </li>
