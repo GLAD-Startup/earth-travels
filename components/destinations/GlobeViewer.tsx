@@ -53,72 +53,77 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
   const [previewPanel, setPreviewPanel] = useState<Marker | null>(null);
 
   useEffect(() => {
-    if (!mountRef.current) return;
+    const container = mountRef.current;
+    if (!container) return;
 
-    const width = mountRef.current.clientWidth;
-    const height = mountRef.current.clientHeight || 500;
+    const width = container.clientWidth;
+    const height = container.clientHeight || 500;
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x080c14, 0.0015);
+    scene.fog = new THREE.FogExp2(0x080c14, 0.001);
 
     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-    camera.position.z = 220;
+    // Position camera straight on z-axis looking down at flat plane
+    camera.position.set(0, 0, 110);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    mountRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
-    controls.minDistance = 120;
-    controls.maxDistance = 350;
-    controls.enablePan = false;
-
-    const ambientLight = new THREE.AmbientLight(0x0a1628, 1.5);
-    scene.add(ambientLight);
-
-    const dirLight1 = new THREE.DirectionalLight(0xd4a017, 2.5);
-    dirLight1.position.set(5, 3, 5);
-    scene.add(dirLight1);
-
-    const dirLight2 = new THREE.DirectionalLight(0x0a1628, 2);
-    dirLight2.position.set(-5, -3, -5);
-    scene.add(dirLight2);
-
-    const radius = 50;
-
-    const latLonToVector3 = (lat: number, lon: number, r: number) => {
-      const phi = (90 - lat) * (Math.PI / 180);
-      const theta = (lon + 180) * (Math.PI / 180);
-
-      const x = -(r * Math.sin(phi) * Math.sin(theta));
-      const y = r * Math.cos(phi);
-      const z = r * Math.sin(phi) * Math.cos(theta);
-
-      return new THREE.Vector3(x, y, z);
+    controls.minDistance = 40;
+    controls.maxDistance = 180;
+    controls.enableRotate = false; // Disable 3D rotation for a 2D map view
+    
+    // Enable panning with left click, dolly with scroll/middle
+    controls.mouseButtons = {
+      LEFT: THREE.MOUSE.PAN,
+      MIDDLE: THREE.MOUSE.DOLLY,
+      RIGHT: THREE.MOUSE.ROTATE
     };
 
-    const globeGeometry = new THREE.SphereGeometry(radius, 64, 64);
-    const globeMaterial = new THREE.MeshBasicMaterial({
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.8);
+    scene.add(ambientLight);
+
+    const dirLight1 = new THREE.DirectionalLight(0xd4a017, 1.2);
+    dirLight1.position.set(0, 0, 10);
+    scene.add(dirLight1);
+
+    // Flat Map Projections
+    const latLonToVector3 = (lat: number, lon: number, zVal: number = 0.2) => {
+      // Maps lon (-180 to 180) to x (-85 to 85)
+      const x = (lon / 180) * 85;
+      // Maps lat (-90 to 90) to y (-42.5 to 42.5)
+      const y = (lat / 90) * 42.5;
+      return new THREE.Vector3(x, y, zVal);
+    };
+
+    // Flat World Map Background Plane
+    const mapPlaneGeo = new THREE.PlaneGeometry(170, 85);
+    const mapPlaneMat = new THREE.MeshBasicMaterial({
       color: 0x080C14,
       transparent: true,
       opacity: 0.95,
+      side: THREE.DoubleSide
     });
-    const globe = new THREE.Mesh(globeGeometry, globeMaterial);
+    const globe = new THREE.Mesh(mapPlaneGeo, mapPlaneMat);
     scene.add(globe);
 
-    const pointsGeometry = new THREE.SphereGeometry(radius + 0.1, 48, 48);
+    // Decorative grid overlay on plane
+    const pointsGeometry = new THREE.PlaneGeometry(170, 85, 24, 12);
     const wireframeGlobe = new THREE.Mesh(
       pointsGeometry,
       new THREE.MeshBasicMaterial({
         color: 0x1d2e47,
         wireframe: true,
         transparent: true,
-        opacity: 0.08,
+        opacity: 0.04,
       })
     );
+    wireframeGlobe.position.z = 0.05;
     scene.add(wireframeGlobe);
 
     // Fetch and render world land outlines from GeoJSON
@@ -134,16 +139,16 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
         data.features.forEach((feature: GeoJSONFeature) => {
           const { type, coordinates } = feature.geometry;
           if (type === "Polygon") {
-            drawRing(coordinates[0] as number[][], lineMaterial, radius + 0.2);
+            drawRing(coordinates[0] as number[][], lineMaterial, 0.1);
           } else if (type === "MultiPolygon") {
             (coordinates as number[][][][]).forEach((polygon) => {
-              drawRing(polygon[0], lineMaterial, radius + 0.2);
+              drawRing(polygon[0], lineMaterial, 0.1);
             });
           }
         });
       })
       .catch((err) => {
-        console.error("Failed to load globe outline data:", err);
+        console.error("Failed to load map outline data:", err);
       });
 
     // Fetch and render country borders (subtle lines)
@@ -153,28 +158,28 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
         const lineMaterial = new THREE.LineBasicMaterial({
           color: 0xd4a017,
           transparent: true,
-          opacity: 0.18, // More subtle for inner country borders
+          opacity: 0.15, // More subtle for inner country borders
         });
 
         data.features.forEach((feature: GeoJSONFeature) => {
           const { type, coordinates } = feature.geometry;
           if (type === "Polygon") {
-            drawRing(coordinates[0] as number[][], lineMaterial, radius + 0.18);
+            drawRing(coordinates[0] as number[][], lineMaterial, 0.08);
           } else if (type === "MultiPolygon") {
             (coordinates as number[][][][]).forEach((polygon) => {
-              drawRing(polygon[0], lineMaterial, radius + 0.18);
+              drawRing(polygon[0], lineMaterial, 0.08);
             });
           }
         });
       })
       .catch(() => {
-        console.log("No country border file loaded yet. Run download command to load country borders.");
+        console.log("No country border file loaded yet.");
       });
 
-    const drawRing = (ring: number[][], material: THREE.LineBasicMaterial, r: number) => {
+    const drawRing = (ring: number[][], material: THREE.LineBasicMaterial, zVal: number) => {
       const points: THREE.Vector3[] = [];
       ring.forEach(([lon, lat]) => {
-        points.push(latLonToVector3(lat, lon, r));
+        points.push(latLonToVector3(lat, lon, zVal));
       });
       const geometry = new THREE.BufferGeometry().setFromPoints(points);
       const line = new THREE.Line(geometry, material);
@@ -184,7 +189,7 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
     const markerGroup = new THREE.Group();
     scene.add(markerGroup);
 
-    const markerGeometry = new THREE.SphereGeometry(1.4, 16, 16);
+    const markerGeometry = new THREE.SphereGeometry(1.2, 16, 16);
     const markerMaterial = new THREE.MeshBasicMaterial({
       color: 0xd4a017,
     });
@@ -194,17 +199,18 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
     // Mathura Hub Coordinates
     const mathuraLat = 27.4924;
     const mathuraLon = 77.6737;
-    const mathuraPos = latLonToVector3(mathuraLat, mathuraLon, radius + 0.6);
+    const mathuraPos = latLonToVector3(mathuraLat, mathuraLon, 0.5);
 
-    // Render Mathura Hub
-    const hubGeometry = new THREE.SphereGeometry(1.5, 16, 16);
+    // Render Mathura Hub (lying flat)
+    const hubGeometry = new THREE.RingGeometry(0.1, 1.2, 32);
     const hubMaterial = new THREE.MeshBasicMaterial({
       color: 0xef4444, // Red headquarters indicator
+      side: THREE.DoubleSide
     });
     const hubMesh = new THREE.Mesh(hubGeometry, hubMaterial);
     hubMesh.position.copy(mathuraPos);
     
-    const hubRingGeo = new THREE.RingGeometry(2.0, 2.8, 32);
+    const hubRingGeo = new THREE.RingGeometry(1.6, 2.2, 32);
     const hubRingMat = new THREE.MeshBasicMaterial({
       color: 0xef4444,
       side: THREE.DoubleSide,
@@ -213,19 +219,16 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
     });
     const hubRingMesh = new THREE.Mesh(hubRingGeo, hubRingMat);
     hubRingMesh.position.copy(mathuraPos);
-    hubRingMesh.lookAt(new THREE.Vector3(0, 0, 0));
-    hubRingMesh.rotateY(Math.PI);
     
     markerGroup.add(hubMesh);
     markerGroup.add(hubRingMesh);
 
-    // Draw route arcs from Mathura to destinations
+    // Draw route arcs from Mathura to destinations (rising out of the map)
     const drawRouteArc = (p1: THREE.Vector3, p2: THREE.Vector3) => {
       const dist = p1.distanceTo(p2);
-      const arcHeight = radius + dist * 0.22;
-      
+      // Curve pulls out on Z axis relative to 2D distance
       const midPoint = new THREE.Vector3().addVectors(p1, p2).multiplyScalar(0.5);
-      const controlPoint = midPoint.clone().normalize().multiplyScalar(arcHeight);
+      const controlPoint = new THREE.Vector3(midPoint.x, midPoint.y, dist * 0.28 + 3.0);
       
       const curve = new THREE.QuadraticBezierCurve3(p1, controlPoint, p2);
       const points = curve.getPoints(30);
@@ -234,7 +237,7 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
       const material = new THREE.LineBasicMaterial({
         color: 0xd4a017,
         transparent: true,
-        opacity: 0.35,
+        opacity: 0.38,
       });
       
       const line = new THREE.Line(geometry, material);
@@ -242,11 +245,11 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
     };
 
     MARKERS.forEach((m) => {
-      const position = latLonToVector3(m.lat, m.lon, radius + 0.6);
+      const position = latLonToVector3(m.lat, m.lon, 0.5);
       const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial.clone());
       markerMesh.position.copy(position);
 
-      const ringGeo = new THREE.RingGeometry(1.8, 2.5, 32);
+      const ringGeo = new THREE.RingGeometry(1.5, 2.1, 32);
       const ringMat = new THREE.MeshBasicMaterial({
         color: 0xf0c040,
         side: THREE.DoubleSide,
@@ -255,8 +258,6 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
       });
       const ringMesh = new THREE.Mesh(ringGeo, ringMat);
       ringMesh.position.copy(position);
-      ringMesh.lookAt(new THREE.Vector3(0, 0, 0));
-      ringMesh.rotateY(Math.PI);
       
       markerGroup.add(ringMesh);
       markerGroup.add(markerMesh);
@@ -324,17 +325,20 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
         const matched = markerObjects.find((o) => o.mesh === clickedMesh);
 
         if (matched) {
-          const targetPos = matched.mesh.position.clone().normalize().multiplyScalar(150);
-
-          gsap.to(camera.position, {
-            x: targetPos.x,
-            y: targetPos.y,
-            z: targetPos.z,
-            duration: 1.5,
+          // Pan camera and target to clicked destination smoothly in 2D
+          gsap.to(controls.target, {
+            x: matched.mesh.position.x,
+            y: matched.mesh.position.y,
+            z: 0,
+            duration: 1.2,
             ease: "power2.inOut",
-            onUpdate: () => {
-              camera.lookAt(0, 0, 0);
-            },
+          });
+          gsap.to(camera.position, {
+            x: matched.mesh.position.x,
+            y: matched.mesh.position.y,
+            z: 60, // Zoomed in height
+            duration: 1.2,
+            ease: "power2.inOut",
           });
 
           setPreviewPanel(matched.data);
@@ -347,21 +351,9 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
     renderer.domElement.addEventListener("click", handleClick);
 
     let animationFrameId: number;
-    let idleRotation = true;
-
-    controls.addEventListener("start", () => {
-      idleRotation = false;
-    });
 
     const animate = () => {
       controls.update();
-
-      if (idleRotation) {
-        globe.rotation.y += 0.0012;
-        wireframeGlobe.rotation.y += 0.0012;
-        markerGroup.rotation.y += 0.0012;
-      }
-
       renderer.render(scene, camera);
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -369,9 +361,9 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
     animate();
 
     const handleResize = () => {
-      if (!mountRef.current || !renderer || !camera) return;
-      const w = mountRef.current.clientWidth;
-      const h = mountRef.current.clientHeight || 500;
+      if (!container || !renderer || !camera) return;
+      const w = container.clientWidth;
+      const h = container.clientHeight || 500;
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
@@ -382,11 +374,11 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", handleResize);
-      if (renderer && renderer.domElement && mountRef.current) {
+      if (renderer && renderer.domElement && container) {
         renderer.domElement.removeEventListener("mousemove", handleMouseMove);
         renderer.domElement.removeEventListener("click", handleClick);
         try {
-          mountRef.current.removeChild(renderer.domElement);
+          container.removeChild(renderer.domElement);
         } catch {
           // Ignored
         }
@@ -402,7 +394,7 @@ export default function GlobeViewer({ onSelectDestination }: GlobeViewerProps) {
 
       <div className="absolute bottom-6 left-6 pointer-events-none z-10">
         <p className="text-[10px] md:text-xs font-mono tracking-widest text-charcoal/40 uppercase">
-          🖱 Drag to rotate • Scroll to zoom • Click dot to explore
+          🖱 Drag to pan • Scroll to zoom • Click dot to explore
         </p>
       </div>
 

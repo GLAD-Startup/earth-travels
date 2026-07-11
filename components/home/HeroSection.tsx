@@ -25,16 +25,16 @@ export default function HeroSection() {
 
   // Text entrance animation
   useEffect(() => {
-    gsap.set(".hero-word", { opacity: 0, y: 100 });
+    gsap.set(".hero-word", { y: "115%" });
     gsap.set(".hero-subtext", { opacity: 0, y: 30 });
     gsap.set(".hero-ctas", { opacity: 0, y: 30 });
 
     const tl = gsap.timeline({ delay: 0.2 });
 
     tl.to(".hero-word", {
-      opacity: 1, y: 0, duration: 1.2, stagger: 0.1, ease: "power4.out",
+      y: "0%", duration: 1.4, stagger: 0.08, ease: "power4.out",
     })
-      .to(".hero-subtext", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.8")
+      .to(".hero-subtext", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.9")
       .to(".hero-ctas", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.8");
   }, []);
 

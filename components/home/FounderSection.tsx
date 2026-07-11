@@ -1,11 +1,56 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function FounderSection() {
+  useEffect(() => {
+    const anim1 = gsap.fromTo(
+      ".award-image-1",
+      { y: 40 },
+      {
+        y: -40,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".founder-section-container",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      }
+    );
+
+    const anim2 = gsap.fromTo(
+      ".award-image-2",
+      { y: -60 },
+      {
+        y: 60,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".founder-section-container",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      }
+    );
+
+    return () => {
+      anim1.scrollTrigger?.kill();
+      anim2.scrollTrigger?.kill();
+      anim1.kill();
+      anim2.kill();
+    };
+  }, []);
+
   return (
-    <section className="relative w-full bg-[#1a120a] text-white pt-32 pb-40 overflow-hidden select-none">
+    <section className="founder-section-container relative w-full bg-[#1a120a] text-white pt-32 pb-40 overflow-hidden select-none">
       
       {/* Background Texture/Noise for Premium Feel */}
       <div className="absolute inset-0 opacity-[0.015] pointer-events-none mix-blend-screen" 
@@ -69,7 +114,7 @@ export default function FounderSection() {
           <div className="w-full lg:w-7/12 relative h-[600px] lg:h-[700px] mt-12 lg:mt-0">
             
             {/* Primary Award Image (TBO) - Large, offset left */}
-            <div className="absolute top-0 left-0 w-4/5 h-[400px] lg:h-[500px] z-10">
+            <div className="award-image-1 absolute top-0 left-0 w-4/5 h-[400px] lg:h-[500px] z-10">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src="/images/award-1.png"
@@ -90,7 +135,7 @@ export default function FounderSection() {
             </div>
 
             {/* Secondary Award Image (SGC) - Smaller, offset right, overlapping */}
-            <div className="absolute bottom-0 right-0 w-3/5 h-[300px] lg:h-[400px] z-20 bg-[#1a120a] p-4 lg:p-6 pb-0 pr-0">
+            <div className="award-image-2 absolute bottom-0 right-0 w-3/5 h-[300px] lg:h-[400px] z-20 bg-[#1a120a] p-4 lg:p-6 pb-0 pr-0">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src="/images/award-2.png"

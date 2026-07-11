@@ -90,32 +90,32 @@ export default function PackageSlider() {
               <SwiperSlide key={pkg.id} className="h-auto">
                 <div className="group flex flex-col gap-6 h-full cursor-pointer">
                   {/* Image Container */}
-                  <div className="relative h-[450px] w-full overflow-hidden rounded-sm bg-[#1a120a]/5">
+                  <div className="relative h-[450px] w-full overflow-hidden rounded-xl border border-[#1a120a]/8 shadow-sm group-hover:shadow-[0_12px_45px_rgba(26,18,10,0.08)] group-hover:border-[#c4900f]/35 transition-all duration-500 bg-[#1a120a]/5">
                     <Image
                       src={pkg.image}
                       alt={pkg.name}
                       fill
                       sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-                      className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                      className="object-cover transition-transform duration-[1.8s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
                       loading="lazy"
                       quality={85}
                     />
                     
                     {/* Minimal Badge */}
                     {pkg.badge && (
-                      <span className="absolute top-6 left-6 z-10 bg-white/90 backdrop-blur-md text-[#1a120a] text-[9px] font-sans uppercase font-bold tracking-widest px-4 py-2 rounded-full">
+                      <span className="absolute top-6 left-6 z-10 bg-white/95 backdrop-blur-md text-[#1a120a] text-[9px] font-sans uppercase font-bold tracking-widest px-4 py-2 rounded-full shadow-sm">
                         {pkg.badge}
                       </span>
                     )}
 
                     {/* Duration Badge */}
-                    <span className="absolute bottom-6 right-6 z-10 bg-[#1a120a]/80 backdrop-blur-md text-white text-[9px] font-mono uppercase tracking-widest px-4 py-2 rounded-sm">
+                    <span className="absolute bottom-6 right-6 z-10 bg-[#1a120a]/80 backdrop-blur-md text-white text-[9px] font-mono uppercase tracking-widest px-4 py-2 rounded-lg">
                       {pkg.duration.nights}N / {pkg.duration.days}D
                     </span>
                   </div>
 
                   {/* Minimalist Details */}
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-3 px-2">
                     <div className="flex items-start justify-between gap-4">
                       <h3 className="font-display text-2xl md:text-[28px] font-normal text-[#1a120a] leading-tight group-hover:text-[#c4900f] transition-colors duration-500">
                         {pkg.name}
@@ -151,24 +151,24 @@ export default function PackageSlider() {
             ))}
           </Swiper>
 
-          {/* Minimalist Navigation */}
-          <div className="flex items-center gap-6 mt-16 w-full md:justify-end">
+          {/* Minimalist Circular Navigation */}
+          <div className="flex items-center gap-4 mt-16 w-full md:justify-end select-none">
             <button
               ref={prevRef}
-              className="text-[#1a120a]/40 hover:text-[#1a120a] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full border border-[#1a120a]/15 flex items-center justify-center transition-all duration-300 hover:bg-[#1a120a] hover:text-white hover:border-[#1a120a] active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#1a120a] disabled:hover:border-[#1a120a]/15 disabled:cursor-not-allowed group"
               aria-label="Previous package"
             >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+              <svg className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75-6.75M4.5 12l6.75 6.75" />
               </svg>
             </button>
             <button
               ref={nextRef}
-              className="text-[#1a120a]/40 hover:text-[#1a120a] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full border border-[#1a120a]/15 flex items-center justify-center transition-all duration-300 hover:bg-[#1a120a] hover:text-white hover:border-[#1a120a] active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#1a120a] disabled:hover:border-[#1a120a]/15 disabled:cursor-not-allowed group"
               aria-label="Next package"
             >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
               </svg>
             </button>
           </div>

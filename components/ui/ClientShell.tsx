@@ -44,6 +44,7 @@ export default function ClientShell({
 
   return (
     <>
+      <div className="film-grain" />
       <ScrollProgress />
       <CustomCursor />
       <Navbar />

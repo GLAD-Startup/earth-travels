@@ -60,7 +60,7 @@ export default function ClosingCTABanner() {
   }, []);
 
   return (
-    <section className="relative py-32 px-6 overflow-hidden w-full flex items-center justify-center border-t border-charcoal/5 min-h-[700px]">
+    <section className="relative py-32 px-6 overflow-hidden w-full flex items-center justify-center border-t border-charcoal/5 min-h-[700px] bg-[#fdf8f2]">
       
       {/* ================= BACKGROUND LAYERS ================= */}
       {/* 2-second fade in animation on mount via CSS */}
@@ -73,31 +73,31 @@ export default function ClosingCTABanner() {
         } as React.CSSProperties}
       >
         {/* Layer 1: Animated Morphing Gradients */}
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,#183A2D,#2C5F7A,#2A1A12,#C97A2B,#D9A441,#F7E9D0)] bg-[size:400%_400%] animate-gradient-shift-slow opacity-90" />
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,#fff4e6,#fdf8f2,#fffcf7)] bg-[size:400%_400%] animate-gradient-shift-slow opacity-100" />
 
         {/* Layer 2: Moving Light Rays (Golden sunlight from top-left) */}
         <div 
-          className="absolute top-[-50%] left-[-20%] w-[150%] h-[150%] bg-[radial-gradient(ellipse_at_top_left,rgba(217,164,65,0.25),transparent_60%)] animate-pulse-ring mix-blend-screen pointer-events-none"
+          className="absolute top-[-50%] left-[-20%] w-[150%] h-[150%] bg-[radial-gradient(ellipse_at_top_left,rgba(232,168,32,0.12),transparent_60%)] animate-pulse-ring pointer-events-none"
           style={{ transform: "translate(calc(var(--mouse-x) * 15px), calc(var(--mouse-y) * 15px - var(--scroll-y) * 0.1px))" }}
         />
         <div 
-          className="absolute top-[-20%] left-[-10%] w-[120%] h-[120%] bg-[linear-gradient(135deg,rgba(247,233,208,0.1)_0%,transparent_40%)] pointer-events-none"
+          className="absolute top-[-20%] left-[-10%] w-[120%] h-[120%] bg-[linear-gradient(135deg,rgba(232,168,32,0.04)_0%,transparent_40%)] pointer-events-none"
           style={{ transform: "translate(calc(var(--mouse-x) * 20px), calc(var(--mouse-y) * 20px - var(--scroll-y) * 0.15px))" }}
         />
 
         {/* Layer 3: Abstract Floating Clouds */}
         <div 
-          className="absolute top-[20%] left-[-10%] w-[60%] h-[40%] bg-white/5 rounded-full blur-[100px] animate-drift-clouds mix-blend-screen pointer-events-none"
+          className="absolute top-[20%] left-[-10%] w-[60%] h-[40%] bg-[#fff]/40 rounded-full blur-[100px] animate-drift-clouds pointer-events-none"
           style={{ transform: "translate(calc(var(--mouse-x) * -10px), calc(var(--mouse-y) * -10px - var(--scroll-y) * 0.2px))" }}
         />
         <div 
-          className="absolute top-[40%] right-[-10%] w-[50%] h-[30%] bg-[#D9A441]/10 rounded-full blur-[120px] animate-drift-clouds animation-delay-2000 mix-blend-screen pointer-events-none"
+          className="absolute top-[40%] right-[-10%] w-[50%] h-[30%] bg-[#e8a820]/5 rounded-full blur-[120px] animate-drift-clouds animation-delay-2000 pointer-events-none"
           style={{ transform: "translate(calc(var(--mouse-x) * 12px), calc(var(--mouse-y) * 12px - var(--scroll-y) * 0.05px))" }}
         />
 
         {/* Layer 4: Soft Fog at bottom for depth */}
         <div 
-          className="absolute bottom-[-10%] left-[-20%] w-[140%] h-[40%] bg-gradient-to-t from-[#2A1A12]/90 to-transparent blur-[50px] animate-fog-drift pointer-events-none"
+          className="absolute bottom-[-10%] left-[-20%] w-[140%] h-[40%] bg-gradient-to-t from-[#fdf8f2]/95 to-transparent blur-[50px] animate-fog-drift pointer-events-none"
           style={{ transform: "translate(calc(var(--mouse-x) * 5px), calc(var(--scroll-y) * -0.1px))" }}
         />
 
@@ -109,7 +109,7 @@ export default function ClosingCTABanner() {
           {particles.map(p => (
             <div
               key={p.id}
-              className="absolute rounded-full animate-float-slow mix-blend-screen"
+              className="absolute rounded-full animate-float-slow"
               style={{
                 left: p.left,
                 top: p.top,
@@ -118,8 +118,8 @@ export default function ClosingCTABanner() {
                 opacity: p.opacity,
                 animationDelay: p.delay,
                 animationDuration: p.duration,
-                boxShadow: `0 0 ${p.size * 2}px rgba(217,164,65,0.6)`,
-                backgroundColor: p.size > 2.5 ? '#D9A441' : '#F7E9D0'
+                boxShadow: `0 0 ${p.size * 2}px rgba(196,144,15,0.25)`,
+                backgroundColor: p.size > 2.5 ? '#c4900f' : '#e8a820'
               }}
             />
           ))}
@@ -127,7 +127,7 @@ export default function ClosingCTABanner() {
 
         {/* Layer 6: Flying Birds (Minimal Silhouette) - Hidden on mobile/tablet */}
         <div className="absolute top-[10%] left-0 w-full h-[50vh] pointer-events-none hidden lg:block overflow-hidden">
-           <svg className="absolute w-[80px] h-[40px] animate-birds-fly opacity-30 mix-blend-screen text-[#F7E9D0]" viewBox="0 0 64 64" fill="currentColor">
+           <svg className="absolute w-[80px] h-[40px] animate-birds-fly opacity-[0.08] text-[#1a120a]" viewBox="0 0 64 64" fill="currentColor">
               {/* Abstract tiny bird silhouettes */}
               <path d="M10,30 Q15,25 20,30 Q15,28 10,30 Z M20,30 Q25,25 30,30 Q25,28 20,30 Z" />
               <path d="M30,20 Q35,15 40,20 Q35,18 30,20 Z M40,20 Q45,15 50,20 Q45,18 40,20 Z" />
@@ -139,24 +139,24 @@ export default function ClosingCTABanner() {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <RevealWrapper delay={0.1}>
-          <span className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.2em] block mb-4 drop-shadow-md">
+          <span className="font-mono text-xs text-[#c4900f] uppercase tracking-[0.2em] block mb-4 drop-shadow-sm font-semibold">
             Begin Your Story
           </span>
         </RevealWrapper>
 
         <RevealWrapper delay={0.2}>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight mb-8 relative drop-shadow-lg">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-[#1a120a] leading-tight mb-8 relative drop-shadow-sm">
             
             {/* Animated Radial Glow behind the text */}
-            <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[120%] h-[150%] bg-[radial-gradient(ellipse_at_center,rgba(217,164,65,0.2),transparent_60%)] blur-[40px] animate-pulse-ring pointer-events-none -z-10 rounded-full" />
+            <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[120%] h-[150%] bg-[radial-gradient(ellipse_at_center,rgba(196,144,15,0.08),transparent_60%)] blur-[40px] animate-pulse-ring pointer-events-none -z-10 rounded-full" />
 
             Your Dream Journey Starts <br />
-            with <span className="italic bg-clip-text text-transparent bg-[linear-gradient(110deg,#D4A017,45%,#FFF,55%,#D4A017)] bg-[length:250%_100%] animate-shimmer inline-block pt-2">One Message</span>
+            with <span className="italic bg-clip-text text-transparent bg-[linear-gradient(110deg,#c4900f,45%,#e8a820,55%,#c4900f)] bg-[length:250%_100%] animate-shimmer inline-block pt-2">One Message</span>
           </h2>
         </RevealWrapper>
 
         <RevealWrapper delay={0.3}>
-          <p className="font-sans text-sm md:text-base text-white/80 max-w-xl mx-auto mb-10 drop-shadow-md">
+          <p className="font-sans text-sm md:text-base text-[#1a120a]/75 max-w-xl mx-auto mb-10 drop-shadow-sm leading-relaxed">
             Tell us where you want to go. We will customize the perfect package, handle all of your documentation, and support you 24/7.
           </p>
         </RevealWrapper>
@@ -166,7 +166,7 @@ export default function ClosingCTABanner() {
             href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-2xl md:text-4xl font-bold text-[#D4A017] hover:text-[#F7E9D0] transition-colors select-all underline underline-offset-8 decoration-[#D4A017]/30 hover:decoration-[#D4A017] drop-shadow-md"
+            className="font-mono text-2xl md:text-4xl font-bold text-[#c4900f] hover:text-[#1a120a] transition-colors select-all underline underline-offset-8 decoration-[#c4900f]/30 hover:decoration-[#c4900f] drop-shadow-md"
           >
             💬 {SITE_CONFIG.phone}
           </a>
@@ -177,9 +177,8 @@ export default function ClosingCTABanner() {
             href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative w-full sm:w-auto px-8 py-4 bg-[#183A2D] hover:bg-[#204a39] text-[#F7E9D0] font-sans font-semibold rounded-full border border-emerald-500/20 shadow-[0_0_15px_rgba(13,122,106,0.3)] hover:shadow-[0_0_25px_rgba(13,122,106,0.6)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden"
+            className="group relative w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans font-semibold rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.25)] hover:shadow-[0_8px_25px_rgba(37,211,102,0.4)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden"
           >
-            <div className="absolute inset-0 border-2 border-emerald-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse-ring pointer-events-none" />
             <svg
               className="w-5 h-5 fill-current z-10"
               viewBox="0 0 24 24"
@@ -192,8 +191,8 @@ export default function ClosingCTABanner() {
           
           <Link
             href="/quote"
-            className="group relative w-full sm:w-auto font-sans font-semibold tracking-wide text-center py-4 px-8 rounded-full text-[#1A120A] overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(217,164,65,0.4)] transition-all duration-300"
-            style={{ background: "linear-gradient(135deg, #F7E9D0 0%, #D9A441 100%)" }}
+            className="group relative w-full sm:w-auto font-sans font-semibold tracking-wide text-center py-4 px-8 rounded-full text-[#1A120A] overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(196,144,15,0.25)] transition-all duration-300"
+            style={{ background: "linear-gradient(135deg, #f0c040 0%, #e8a820 100%)" }}
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_ease-in-out_infinite]" />
             <span className="relative z-10">Request Free Itinerary</span>

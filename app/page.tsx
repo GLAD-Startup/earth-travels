@@ -10,6 +10,7 @@ import {
   WhyEarthTravels,
   ClosingCTABanner,
   FlightExperience,
+  TripFinder,
 } from "@/components/home";
 import { RevealWrapper } from "@/components/ui";
 
@@ -26,7 +27,8 @@ export default function Home() {
       <HeroSection />
 
       {/* 2. Search bar overlap space */}
-      <div className="pt-28" />
+      <TripFinder />
+      <div className="pt-16" />
 
       {/* 3. Trust Bar Marquee */}
       <RevealWrapper delay={0}>

@@ -39,14 +39,29 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  const isDarkHeroPage = pathname === "/" || pathname === "/destinations";
+
+  const getTextColorClass = (isActive: boolean) => {
+    if (isScrolled) {
+      return isActive ? "text-[#1a120a]" : "text-[#1a120a]/70 hover:text-[#1a120a]";
+    }
+    if (isDarkHeroPage) {
+      return isActive ? "text-white" : "text-white/70 hover:text-white";
+    }
+    return isActive ? "text-[#1a120a]" : "text-[#1a120a]/70 hover:text-[#1a120a]";
+  };
+
+  const brandColorClass = isScrolled ? "text-[#1a120a]" : isDarkHeroPage ? "text-white" : "text-[#1a120a]";
+  const hamburgerColorClass = isScrolled ? "text-[#1a120a]" : isDarkHeroPage ? "text-white" : "text-[#1a120a]";
+
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-400 ${
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         } ${
           isScrolled
-            ? "bg-[#fdf8f2]/88 backdrop-blur-[24px] border-b border-[#1a120a]/8 py-4 shadow-sm"
+            ? "bg-[#fdf8f2]/90 backdrop-blur-[20px] border-b border-[#1a120a]/10 py-4 shadow-sm"
             : "bg-transparent py-6"
         }`}
       >
@@ -54,7 +69,7 @@ export default function Navbar() {
           {/* Left: Brand name */}
           <Link href="/" className="flex flex-col">
             <span
-              className="font-display text-[22px] font-extrabold tracking-wide text-[#1a120a]"
+              className={`font-display text-[22px] font-extrabold tracking-wide transition-colors duration-300 ${brandColorClass}`}
               style={{ textShadow: "0 0 20px rgba(196, 144, 15, 0.15)" }}
             >
               Earth Travels
@@ -70,9 +85,9 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative text-sm font-medium transition-colors duration-300 px-1 py-1 text-[#1a120a]/70 hover:text-[#1a120a] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#c4900f] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center ${
-                    isActive ? "text-[#1a120a] after:scale-x-100" : ""
-                  }`}
+                  className={`relative text-sm font-medium transition-colors duration-300 px-1 py-1 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#c4900f] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center ${getTextColorClass(
+                    isActive
+                  )} ${isActive ? "after:scale-x-100 font-semibold" : ""}`}
                 >
                   {link.name}
                 </Link>
@@ -84,7 +99,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/quote"
-              className="inline-block text-white font-sans text-sm font-semibold rounded-full px-6 py-2.5 transition-all duration-300 hover:scale-103 hover:shadow-[0_0_20px_rgba(196,144,15,0.4)]"
+              className="inline-block text-white font-sans text-sm font-semibold rounded-full px-6 py-2.5 transition-all duration-300 hover:scale-103 hover:shadow-[0_0_20px_rgba(196, 144, 15, 0.4)]"
               style={{ background: "linear-gradient(135deg, #c4900f 0%, #e8a820 100%)" }}
             >
               Plan My Trip
@@ -95,7 +110,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-[#1a120a] hover:text-[#c4900f] focus:outline-none transition-colors z-50"
+              className={`p-2 hover:text-[#c4900f] focus:outline-none transition-colors z-50 ${hamburgerColorClass}`}
               aria-label="Toggle Menu"
             >
               <div className="w-6 h-5 relative flex flex-col justify-between overflow-hidden">

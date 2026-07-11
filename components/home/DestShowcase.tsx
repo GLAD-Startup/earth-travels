@@ -54,8 +54,13 @@ export default function DestShowcase() {
           {showcaseDestinations.map((dest, idx) => (
             <div
               key={dest.id}
-              className={`relative overflow-hidden group rounded-sm ${getGridClasses(idx)}`}
+              className={`relative overflow-hidden group rounded-xl border border-[#1a120a]/8 hover:border-[#e8a820]/45 hover:shadow-[0_12px_45px_rgba(232,168,32,0.18)] transition-all duration-700 ${getGridClasses(idx)}`}
             >
+              {/* Floating Glassmorphic Season Badge */}
+              <div className="absolute top-4 right-4 z-20 px-3.5 py-1.5 rounded-full border border-white/10 text-[9px] font-mono font-bold tracking-widest text-[#e8a820] uppercase bg-[#1a120a]/60 backdrop-blur-md transition-all duration-500 group-hover:bg-[#e8a820] group-hover:text-[#1a120a] group-hover:border-transparent select-none">
+                {dest.season}
+              </div>
+
               {/* Image */}
               <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#1a120a]">
                 <Image
@@ -63,16 +68,16 @@ export default function DestShowcase() {
                   alt={dest.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover opacity-90 transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
+                  className="object-cover opacity-90 transition-transform duration-[1.8s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.08]"
                   quality={85}
                 />
               </div>
 
               {/* Gradient overlay - appears on hover for contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a120a]/80 via-[#1a120a]/20 to-transparent opacity-40 transition-opacity duration-700 group-hover:opacity-90 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a120a]/90 via-[#1a120a]/35 to-transparent opacity-50 transition-opacity duration-700 group-hover:opacity-90 z-10 pointer-events-none" />
 
               {/* Default State Content (Name only, elegant) - Hidden on mobile, visible on desktop until hover */}
-              <div className="hidden lg:flex absolute inset-0 p-8 md:p-10 z-20 flex-col justify-end transition-opacity duration-500 group-hover:opacity-0 pointer-events-none">
+              <div className="hidden lg:flex absolute inset-0 p-8 md:p-10 z-20 flex-col justify-end transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                 <h3 className="font-display text-4xl text-white font-normal drop-shadow-lg">
                   {dest.name}
                 </h3>
@@ -82,7 +87,7 @@ export default function DestShowcase() {
               <div className="absolute inset-0 p-6 md:p-10 z-30 flex flex-col justify-end opacity-100 lg:opacity-0 lg:translate-y-8 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
                 <div className="flex flex-col items-start gap-2 md:gap-3">
                   <span className="font-mono text-[10px] text-[#e8a820] uppercase tracking-[0.2em] font-semibold">
-                    {dest.season} • {dest.packageCount} Collections
+                    {dest.packageCount} Collections
                   </span>
                   <h3 className="font-display text-4xl md:text-5xl text-white font-normal italic leading-none">
                     {dest.name}
@@ -93,7 +98,7 @@ export default function DestShowcase() {
                   
                   <Link
                     href={`/packages?destination=${dest.name.toLowerCase()}`}
-                    className="mt-6 inline-block bg-white text-[#1a120a] text-[11px] font-sans font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-[#e8a820] hover:text-white transition-colors duration-300"
+                    className="mt-6 inline-block bg-white text-[#1a120a] text-[11px] font-sans font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-[#e8a820] hover:text-white transition-colors duration-300 shadow-md"
                   >
                     View Itineraries
                   </Link>
