@@ -56,19 +56,29 @@ const CORE_DIFFERENCES = [
  
 const TEAM_MEMBERS = [
   {
-    name: "Ankit Sharma",
-    role: "Founder & Travel Director",
-    specialty: "Europe & Exotic Destinations",
+    name: "Mohini Khandelwal",
+    role: "Operations",
+    specialty: "",
   },
   {
-    name: "Priya Gupta",
-    role: "Senior Travel Consultant",
-    specialty: "Maldives & Southeast Asia",
+    name: "Salisha Bansal",
+    role: "Sales & Operations",
+    specialty: "",
   },
   {
-    name: "Rahul Mathur",
-    role: "Documentation Specialist",
-    specialty: "Visa, Insurance & Permits",
+    name: "Deepti Agrawal",
+    role: "Operations",
+    specialty: "",
+  },
+  {
+    name: "Ashok Pachori",
+    role: "Accounts",
+    specialty: "",
+  },
+  {
+    name: "Vikas Agrawal",
+    role: "Senior Accountant",
+    specialty: "",
   },
 ];
  
@@ -313,7 +323,7 @@ export default function AboutPage() {
           </h2>
         </div>
  
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TEAM_MEMBERS.map((member, idx) => (
             <RevealWrapper key={idx} delay={idx * 0.1}>
               <GlassCard
@@ -333,9 +343,11 @@ export default function AboutPage() {
                   <span className="font-mono text-[10px] text-[#D4A017] uppercase tracking-widest block mb-3 font-semibold">
                     {member.role}
                   </span>
-                  <p className="font-sans text-xs text-espresso/50">
-                    Focus: <span className="text-espresso/80 font-medium">{member.specialty}</span>
-                  </p>
+                  {member.specialty && (
+                    <p className="font-sans text-xs text-espresso/50">
+                      Focus: <span className="text-espresso/80 font-medium">{member.specialty}</span>
+                    </p>
+                  )}
                 </div>
               </GlassCard>
             </RevealWrapper>
