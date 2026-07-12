@@ -41,7 +41,13 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
-  const isDarkHeroPage = pathname === "/" || pathname === "/destinations";
+  const isDarkHeroPage =
+    pathname === "/" ||
+    pathname === "/destinations" ||
+    pathname === "/cruises" ||
+    pathname === "/rails" ||
+    pathname === "/about" ||
+    pathname.startsWith("/itinerary");
 
   const getTextColorClass = (isActive: boolean) => {
     if (isScrolled) {

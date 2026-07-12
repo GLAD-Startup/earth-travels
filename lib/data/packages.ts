@@ -53,17 +53,10 @@ export const PACKAGES: Package[] = [
     id: "dubai-5n6d",
     destination: "Dubai",
     destinationId: "dubai",
-<<<<<<< HEAD
-    name: "Dubai Bestseller (Burj Khalifa, Desert Safari & Dhow Cruise)",
-    duration: { nights: 5, days: 6 },
-    pricePerPerson: 52000,
-    category: ["family", "group"],
-=======
     name: "Dubai Deluxe Escape",
     duration: { nights: 4, days: 5 },
     pricePerPerson: 45000,
     category: ["family", "luxury"],
->>>>>>> abb79b9b2fa46e080e5444e49987dfc7069ca65e
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
     highlights: ["Burj Khalifa 124th Floor", "Desert Safari with BBQ", "Marina Dhow Cruise Dinner"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
@@ -82,11 +75,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Petronas Twin Towers", "Batu Caves Temple", "Genting Highlands Cable Car"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Best Value",
-<<<<<<< HEAD
-    itineraryPage: "/itinerary/malaysia-culture",
-=======
     itineraryPage: "/itinerary/malaysia",
->>>>>>> abb79b9b2fa46e080e5444e49987dfc7069ca65e
   },
   {
     id: "thailand-5n6d",
