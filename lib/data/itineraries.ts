@@ -1179,7 +1179,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Baku (Azerbaijan)",
     title: "Baku Special (Old City, Fire Temple & Caspian Cruise)",
     duration: "4 Nights / 5 Days",
-    heroImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/baku.jpg",
     tagline: "Wind and Fire on the Caspian Coast",
     basePrice: 34000,
     days: [
@@ -1435,7 +1435,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Leh Ladakh",
     title: "Ladakh Heights (Leh, Pangong Lake & Nubra Valley)",
     duration: "6 Nights / 7 Days",
-    heroImage: "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/leh_ladakh.jpg",
     tagline: "Land of High Passes & Blue Lakes",
     basePrice: 24000,
     days: [
