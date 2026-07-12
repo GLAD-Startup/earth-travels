@@ -70,8 +70,8 @@ export default function DestinationsPage() {
         </div>
       </section>
 
-      {/* 2. Sticky Filter Tabs — accent pills */}
-      <div className="sticky top-[56px] z-30 w-full border-y border-charcoal/5 bg-background/90 backdrop-blur-md py-4 select-none">
+      {/* 2. Filter Tabs — accent pills */}
+      <div className="w-full border-y border-charcoal/5 bg-background py-4 select-none">
         <div className="max-w-7xl mx-auto px-6 flex gap-2.5 items-center justify-start md:justify-center overflow-x-auto no-scrollbar">
           {TABS.map((tab) => {
             const isActive = tab.id === activeTab;
@@ -102,7 +102,7 @@ export default function DestinationsPage() {
             <div className="absolute inset-0 pointer-events-none" style={{
               background: "radial-gradient(ellipse at center, rgba(15,110,92,0.06) 0%, transparent 60%)",
             }} />
-            <GlobeViewer onSelectDestination={handleSelectDestination} />
+            <GlobeViewer onSelectDestination={handleSelectDestination} activeRegion={activeTab} />
             {/* Helper text pill overlay */}
             <div className="flex justify-center mt-4">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-charcoal/8 shadow-sm text-[11px] text-charcoal/50 font-sans">
