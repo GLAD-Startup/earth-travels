@@ -74,7 +74,7 @@ export default function PackageSlider() {
             autoplay={
               filteredPackages.length >= 3
                 ? {
-                    delay: 3500,
+                    delay: 2000,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                   }
