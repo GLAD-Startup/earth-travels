@@ -64,7 +64,7 @@ export default function RevealWrapper({
     return () => {
       observer.disconnect();
     };
-  }, [direction, delay]);
+  }, [direction, delay, threshold]);
 
   return (
     <div ref={containerRef} className={className}>

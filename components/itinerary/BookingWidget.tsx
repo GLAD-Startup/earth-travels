@@ -8,6 +8,18 @@ import { GlassCard } from "@/components/ui";
 const BASE_ADULT = 32000;
 const BASE_CHILD = 20800;
 
+const roomRates: Record<string, number> = {
+  standard: 0,
+  luxury: 8000,
+  suite: 15000,
+};
+
+const addonRates: Record<string, number> = {
+  photoshoot: 2500,
+  heliride: 7500,
+  feast: 1800,
+};
+
 export default function BookingWidget() {
   const router = useRouter();
   const [adults, setAdults] = useState(2);
@@ -16,18 +28,6 @@ export default function BookingWidget() {
   const [roomType, setRoomType] = useState("standard");
   const [addons, setAddons] = useState<string[]>([]);
   const [totalPrice, setTotalPrice] = useState(0);
-
-  const roomRates: Record<string, number> = {
-    standard: 0,
-    luxury: 8000,
-    suite: 15000,
-  };
-
-  const addonRates: Record<string, number> = {
-    photoshoot: 2500,
-    heliride: 7500,
-    feast: 1800,
-  };
 
   useEffect(() => {
     const baseAmount = adults * BASE_ADULT + children * BASE_CHILD;
