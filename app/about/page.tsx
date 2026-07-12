@@ -457,7 +457,7 @@ export default function AboutPage() {
                       <img
                         src={cert.logo}
                         alt={cert.name}
-                        className="w-8 h-8 object-contain shrink-0 opacity-70 grayscale hover:grayscale-0 transition-all duration-300"
+                        className="w-8 h-8 object-contain shrink-0 transition-transform duration-300 hover:scale-110"
                         loading="lazy"
                       />
                       <span className="font-sans text-xs font-semibold text-espresso/70 whitespace-nowrap">{cert.label}</span>
@@ -469,7 +469,7 @@ export default function AboutPage() {
               <div className="flex gap-6 items-center justify-center flex-wrap">
                 {CERTIFICATIONS.slice(0, 7).map((cert, idx) => (
                   <div key={idx} className="flex items-center gap-3 px-5 py-3.5 rounded-2xl border border-espresso/8 bg-white/60 shadow-sm">
-                    <img src={cert.logo} alt={cert.name} className="w-8 h-8 object-contain opacity-70 grayscale" loading="lazy" />
+                    <img src={cert.logo} alt={cert.name} className="w-8 h-8 object-contain" loading="lazy" />
                     <span className="font-sans text-xs font-semibold text-espresso/70 whitespace-nowrap">{cert.label}</span>
                   </div>
                 ))}

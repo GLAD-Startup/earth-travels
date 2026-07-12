@@ -13,10 +13,6 @@ interface PackageCardProps {
 export default function PackageCard({ pkg }: PackageCardProps) {
   const [isLoading, setIsLoading] = useState(true);
 
-  // Resolve the destination image — falls back to pkg.image if no match
-  const destImage =
-    DESTINATIONS.find((d) => d.id === pkg.destinationId)?.image ?? pkg.image;
-
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 300);
@@ -116,7 +112,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
         {/* LEFT: Image Section */}
         <div className="relative w-full lg:w-[300px] h-64 lg:h-auto shrink-0 overflow-hidden">
           <img
-            src={destImage}
+            src={pkg.image}
             alt={pkg.name}
             className="w-full h-full object-cover select-none"
           />
