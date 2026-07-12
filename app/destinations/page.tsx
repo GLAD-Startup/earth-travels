@@ -119,7 +119,7 @@ export default function DestinationsPage() {
             <div className="absolute inset-0 pointer-events-none" style={{
               background: "radial-gradient(ellipse at center, rgba(15,110,92,0.06) 0%, transparent 60%)",
             }} />
-            <GlobeViewer onSelectDestination={handleSelectDestination} />
+            <GlobeViewer onSelectDestination={handleSelectDestination} activeRegion={activeTab} />
             {/* Helper text pill overlay */}
             <div className="flex justify-center mt-4">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-charcoal/8 shadow-sm text-[11px] text-charcoal/50 font-sans">

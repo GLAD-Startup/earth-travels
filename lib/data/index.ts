@@ -19,9 +19,14 @@ export const SITE_CONFIG = {
 import { DESTINATIONS as DESTINATIONS_DATA } from "./destinations";
 export const DESTINATIONS = DESTINATIONS_DATA;
 
-
 import { PACKAGES as PACKAGES_DATA } from "./packages";
 export const PACKAGES = PACKAGES_DATA;
+
+import { CRUISES as CRUISES_DATA } from "./cruises";
+export const CRUISES = CRUISES_DATA;
+
+import { RAIL_JOURNEYS as RAIL_JOURNEYS_DATA } from "./rails";
+export const RAIL_JOURNEYS = RAIL_JOURNEYS_DATA;
 
 export const TESTIMONIALS = [
   {

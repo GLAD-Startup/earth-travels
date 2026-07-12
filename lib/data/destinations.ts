@@ -38,7 +38,7 @@ export const DESTINATIONS: Destination[] = [
     season: "BEST: OCT – APR",
     startingPrice: 52000,
     region: "middle-east",
-    packageCount: 2,
+    packageCount: 1,
   },
   {
     id: "bali",
@@ -49,6 +49,16 @@ export const DESTINATIONS: Destination[] = [
     startingPrice: 46000,
     region: "southeast-asia",
     packageCount: 2,
+  },
+  {
+    id: "malaysia",
+    name: "Malaysia",
+    tagline: "Asia's Melting Pot",
+    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80",
+    season: "BEST: YEAR ROUND",
+    startingPrice: 55000,
+    region: "southeast-asia",
+    packageCount: 1,
   },
   {
     id: "europe",

@@ -35,6 +35,8 @@ export default function Navbar() {
     { name: "Destinations", href: "/destinations" },
     { name: "Packages", href: "/packages" },
     { name: "Itineraries", href: "/itinerary" },
+    { name: "Cruises", href: "/cruises" },
+    { name: "Rails", href: "/rails" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -66,8 +68,13 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* Left: Brand name */}
-          <Link href="/" className="flex flex-col">
+          {/* Left: Brand name with Logo */}
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="/images/logo_transparent.png"
+              alt="Earth Travels Logo"
+              className="w-10 h-10 object-contain"
+            />
             <span
               className={`font-display text-[22px] font-extrabold tracking-wide transition-colors duration-300 ${brandColorClass}`}
               style={{ textShadow: "0 0 20px rgba(196, 144, 15, 0.15)" }}
