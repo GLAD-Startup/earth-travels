@@ -17,10 +17,9 @@ const TABS = [
  
 export default function DestinationsPage() {
   const [activeTab, setActiveTab] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
- 
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -31,25 +30,14 @@ export default function DestinationsPage() {
       }
       lastScrollY.current = currentScrollY;
     };
- 
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
  
   const filteredDestinations = DESTINATIONS.filter((dest) => {
-    const matchesTab = activeTab === "all" || dest.region === activeTab;
-    
-    // Map region code (like 'southeast-asia') to clean tag names (like 'Southeast Asia')
-    const regionObj = TABS.find((t) => t.id === dest.region);
-    const cleanRegionName = regionObj ? regionObj.name : "";
- 
-    const matchesSearch =
-      dest.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      dest.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      dest.region.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      cleanRegionName.toLowerCase().includes(searchQuery.toLowerCase());
- 
-    return matchesTab && matchesSearch;
+    if (activeTab === "all") return true;
+    return dest.region === activeTab;
   });
  
   const handleSelectDestination = (name: string) => {
@@ -98,7 +86,7 @@ export default function DestinationsPage() {
           </RevealWrapper>
         </div>
       </section>
- 
+
       {/* 2. Sticky Filter Tabs — accent pills */}
       <div className={`sticky z-30 w-full border-y border-charcoal/5 bg-background/90 backdrop-blur-md py-4 select-none transition-all duration-500 ease-in-out ${isVisible ? "top-[56px]" : "top-[-100px]"}`}>
         <div className="max-w-7xl mx-auto px-6 flex gap-2.5 items-center justify-start md:justify-center overflow-x-auto no-scrollbar">
@@ -120,7 +108,7 @@ export default function DestinationsPage() {
           })}
         </div>
       </div>
- 
+
       {/* 3. Main content body */}
       <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-16 relative z-10">
         
@@ -143,45 +131,22 @@ export default function DestinationsPage() {
             </div>
           </div>
         </RevealWrapper>
- 
+
         {/* Destination Grid */}
         <RevealWrapper delay={0.1}>
           <div id="destination-grid-section" className="flex flex-col gap-8">
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-between border-b border-charcoal/5 pb-6">
-              <div className="border-l-2 border-accent pl-4">
-                <span className="font-sans text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
-                  Signature Escapes
-                </span>
-                <h2 className="font-display text-2xl font-bold text-charcoal">
-                  Signature Holiday Spots ({filteredDestinations.length})
-                </h2>
-              </div>
-              <div className="relative w-full md:w-80">
-                <input
-                  type="text"
-                  placeholder="Search destinations by name or tags..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2.5 pl-10 text-xs font-sans border border-charcoal/15 rounded-full bg-surface text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all duration-300"
-                />
-                <svg className="absolute left-3.5 top-3.5 w-4 h-4 text-charcoal/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
+            <div className="border-l-2 border-accent pl-4">
+              <span className="font-sans text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
+                Signature Escapes
+              </span>
+              <h2 className="font-display text-2xl font-bold text-charcoal">
+                Signature Holiday Spots ({filteredDestinations.length})
+              </h2>
             </div>
-            {filteredDestinations.length > 0 ? (
-              <DestinationGrid destinations={filteredDestinations} />
-            ) : (
-              <div className="text-center py-20 border border-dashed border-charcoal/10 rounded-2xl">
-                <span className="text-4xl block mb-4 select-none">🔍</span>
-                <p className="text-sm font-sans text-charcoal/50">
-                  No destinations match your search query &ldquo;{searchQuery}&rdquo;.
-                </p>
-              </div>
-            )}
+            <DestinationGrid destinations={filteredDestinations} />
           </div>
         </RevealWrapper>
- 
+
         {/* Bottom CTA Card */}
         <RevealWrapper delay={0.2}>
           <div className="relative rounded-3xl overflow-hidden shadow-2xl p-10 md:p-16 text-center flex flex-col items-center gap-6 mt-12 group bg-teal">
@@ -191,7 +156,7 @@ export default function DestinationsPage() {
             {/* Decorative circles */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-gold rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-ring"></div>
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-teal rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
- 
+
             <div className="relative z-10 flex flex-col items-center gap-5">
               {/* Icon */}
               <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold shadow-gold-lg group-hover:scale-110 transition-transform duration-500">
@@ -215,9 +180,9 @@ export default function DestinationsPage() {
             </div>
           </div>
         </RevealWrapper>
- 
+
       </section>
- 
+
       <style jsx global>{`
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

@@ -18,7 +18,6 @@ export default function ClientShell({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const isDarkHeroPage = pathname === "/" || pathname === "/destinations";
 
   // Lenis Scroll
   useEffect(() => {
@@ -43,7 +42,7 @@ export default function ClientShell({
     }
   }, [pathname]);
 
-  const isHeroPage = isDarkHeroPage;
+  const isHeroPage = pathname === "/" || pathname === "/destinations";
 
   return (
     <>
@@ -51,7 +50,7 @@ export default function ClientShell({
       <ScrollProgress />
       <CustomCursor />
       <Navbar />
-      <main className={`flex-grow ${isDarkHeroPage ? "" : "pt-20"}`}>
+      <main className={`flex-grow ${isHeroPage ? "" : "pt-20"}`}>
         <div id="page-transition-container" style={{ opacity: 0 }}>
           {children}
         </div>

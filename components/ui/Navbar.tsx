@@ -35,6 +35,8 @@ export default function Navbar() {
     { name: "Destinations", href: "/destinations" },
     { name: "Packages", href: "/packages" },
     { name: "Itineraries", href: "/itinerary" },
+    { name: "Cruises", href: "/cruises" },
+    { name: "Rails", href: "/rails" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
