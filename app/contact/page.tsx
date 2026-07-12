@@ -7,6 +7,8 @@ import { useIsOpen } from "@/lib/hooks";
 import { DESTINATIONS as DESTINATIONS_DATA } from "@/lib/data/destinations";
 import { CRUISES } from "@/lib/data/cruises";
 import { RAIL_JOURNEYS } from "@/lib/data/rails";
+import { SITE_CONFIG } from "@/lib/data";
+
 
 const MONTHS = [
   "January",
@@ -176,10 +178,10 @@ export default function ContactPage() {
                   <div>
                     <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Email</span>
                     <a
-                      href="mailto:info@earthtravelsindia.in"
+                      href={`mailto:${SITE_CONFIG.email}`}
                       className="font-mono text-sm hover:text-[#D4A017] transition-colors"
                     >
-                      info@earthtravelsindia.in
+                      {SITE_CONFIG.email}
                     </a>
                   </div>
                 </div>
@@ -190,7 +192,7 @@ export default function ContactPage() {
                   <div>
                     <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Address</span>
                     <p className="font-sans leading-relaxed">
-                      Shop No.138, 1st Floor Krishna Plaza, Krishna Market, Mathura, UP 281001
+                      {SITE_CONFIG.address}
                     </p>
                   </div>
                 </div>
@@ -238,6 +240,7 @@ export default function ContactPage() {
               </div>
 
               {/* Status Badge */}
+
               <div className="flex items-center gap-2 pt-4 border-t border-charcoal/5 text-xs font-sans">
                 <span
                   className={`w-2.5 h-2.5 rounded-full inline-block ${
@@ -256,16 +259,17 @@ export default function ContactPage() {
             <div className="w-full h-[280px] rounded-2xl overflow-hidden border border-charcoal/10 shadow-2xl relative">
               {/* NOTE: Google Maps embed placeholder queries are populated securely */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.8872242130383!2d77.68884947545041!3d27.20695027647209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973715ffea226db%3A0xe54b9d0ab0fa000b!2sKrishna%20Plaza!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.990207533686!2d77.6531641!3d27.50068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39737162ce216137%3A0xbc512273dac12e8!2sEarth%20Travels!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Earth Travels Office Location, Krishna Market Mathura"
+                title="Earth Travels Office Location, Krishna Plaza Mathura"
                 className="absolute inset-0 w-full h-full"
               />
+
             </div>
           </div>
 
