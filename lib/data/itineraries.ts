@@ -40,7 +40,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Kashmir",
     title: "Kashmir Special (Mughal Gardens, Gulmarg & Pahalgam)",
     duration: "7 Nights / 8 Days",
-    heroImage: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/kashmir_1.jpg",
     tagline: "Paradise on Earth",
     basePrice: 24500,
     days: [
@@ -56,7 +56,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍽️", title: "Welcome Wazwan Dinner", description: "Feast on a multi-course traditional meal prepared fresh by native chefs." },
         ],
         tip: "Ask your shikara wala to take you to the floating vegetable market at dawn — it's not in any brochure.",
-        image: "https://images.unsplash.com/photo-1618083707368-b3823daa2726?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_1.jpg",
       },
       {
         dayNumber: 2,
@@ -70,7 +70,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌲", title: "Meadow Walk & Lunch", description: "Stroll along the sprawling alpine meadow golf course before heading back." },
         ],
         tip: "Carry layered clothing even in summer — the top gondola station sits at 13,780 ft.",
-        image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_2.jpg",
       },
       {
         dayNumber: 3,
@@ -84,7 +84,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍽️", title: "Local Trout Lunch", description: "Enjoy a fresh local river trout meal prepared at a boutique riverside lodge." },
         ],
         tip: "Betaab Valley is best in early morning before tour buses arrive.",
-        image: "https://images.unsplash.com/photo-1589136777351-fdc9c9c8c680?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_3.jpg",
       },
       {
         dayNumber: 4,
@@ -98,7 +98,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "⛰️", title: "Zoji La Pass Views", description: "Stand at high-altitude viewpoints looking out to the treacherous highway pass connecting to Ladakh." },
         ],
         tip: "Don't skip the glacier — the walk from the road is under 2km and completely worth it.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_1.jpg",
       },
       {
         dayNumber: 5,
@@ -112,7 +112,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛍️", title: "Kashmiri Handicraft Market", description: "Shop directly for hand-knotted silk carpets, pashmina shawls, and wood carvings." },
         ],
         tip: "Buy saffron directly from government-certified shops on Residency Road — avoid tourist traps.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_2.jpg",
       },
       {
         dayNumber: 6,
@@ -125,7 +125,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍲", title: "Optional: Cooking Class", description: "Learn the secrets of Kashmiri Rogan Josh or Yakhni from the local family cook." },
         ],
         tip: "The floating flower market opens at 6AM — set an alarm once.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_3.jpg",
       },
       {
         dayNumber: 7,
@@ -137,7 +137,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🎁", title: "Farewell Dinner", description: "Review trip memories over a candlelit final dinner hosted by Earth Travels." },
         ],
         tip: "Ensure all delicate souvenirs and walnut crafts are packed carefully. Ask our driver for bubble wraps.",
-        image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_1.jpg",
       },
       {
         dayNumber: 8,
@@ -148,12 +148,12 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Airport Drop-off", description: "Pack bags and bid farewell to Srinagar as we drop you off for your flight back home." },
         ],
         tip: "Reach Srinagar Airport at least 3 hours before departure as the security checks are rigorous.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kashmir_2.jpg",
       },
     ],
     hotels: [
-      { name: "Sukoon Houseboat", rating: "★★★★", type: "Heritage Houseboat", location: "Dal Lake, Srinagar", image: "https://images.unsplash.com/photo-1618083707368-b3823daa2726?auto=format&fit=crop&w=400&q=80" },
-      { name: "Khyber Mountain Resort", rating: "★★★★★", type: "Luxury Retreat", location: "Gulmarg Heights", image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=400&q=80" },
+      { name: "Sukoon Houseboat", rating: "★★★★", type: "Heritage Houseboat", location: "Dal Lake, Srinagar", image: "/images/destinations/kashmir_3.jpg" },
+      { name: "Khyber Mountain Resort", rating: "★★★★★", type: "Luxury Retreat", location: "Gulmarg Heights", image: "/images/destinations/kashmir_1.jpg" },
     ],
   },
   maldives: {
@@ -161,7 +161,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Maldives",
     title: "Maldives Bestseller (Overwater Villa & Speedboat)",
     duration: "4 Nights / 5 Days",
-    heroImage: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/maldives_1.jpg",
     tagline: "Stillness Above the Ocean",
     basePrice: 78000,
     days: [
@@ -176,7 +176,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍹", title: "Resort Check-In & Welcome Drink", description: "Settle into your premium beach villa, sipping a fresh coconut cocktail." },
         ],
         tip: "Keep your camera ready during the speedboat transfer for a chance to spot wild dolphins.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/maldives_1.jpg",
       },
       {
         dayNumber: 2,
@@ -188,7 +188,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛶", title: "Kayak & Paddleboarding Session", description: "Enjoy complimentary non-motorized water sports at the resort lagoon." },
         ],
         tip: "Avoid touching corals — they are extremely fragile and part of protected ecosystems.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/maldives_2.jpg",
       },
       {
         dayNumber: 3,
@@ -200,7 +200,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌅", title: "Sunset Cruise with Drinks", description: "Board a traditional Maldivian Dhoni boat to watch the sunset sky with fruit mocktails." },
         ],
         tip: "Apply reef-safe sunscreen to protect marine life during swims.",
-        image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/maldives_3.jpg",
       },
       {
         dayNumber: 4,
@@ -212,7 +212,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🦞", title: "Candlelit Lagoon Seafood Dinner", description: "Feast on a private beach buffet set up under the starlit sky." },
         ],
         tip: "Inform the chef early if you have any seafood allergies so they can customize the grill.",
-        image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/maldives_1.jpg",
       },
       {
         dayNumber: 5,
@@ -223,11 +223,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚤", title: "Speedboat back to Male Airport", description: "Board the morning speedboat for a smooth transfer back to Velana Airport." },
         ],
         tip: "Arrive at Male Airport 3 hours early as immigration lines get busy during peak seasons.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/maldives_2.jpg",
       },
     ],
     hotels: [
-      { name: "Centara Grand Island Resort", rating: "★★★★★", type: "All-Inclusive Resort", location: "South Ari Atoll", image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=400&q=80" },
+      { name: "Centara Grand Island Resort", rating: "★★★★★", type: "All-Inclusive Resort", location: "South Ari Atoll", image: "/images/destinations/maldives_3.jpg" },
     ],
   },
   dubai: {
@@ -235,7 +235,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Dubai",
     title: "Dubai Bestseller (Burj Khalifa, Desert Safari & Dhow Cruise)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/dubai_1.jpg",
     tagline: "Where the Desert Meets the Sky",
     basePrice: 52000,
     days: [
@@ -249,7 +249,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Marina Dhow Cruise & Buffet", description: "Sail past illuminated futuristic high-rises on a traditional wooden boat with buffet dining." },
         ],
         tip: "Marina Dhow cruises offer premium views compared to Creek cruises; hold onto your tickets.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/dubai_1.jpg",
       },
       {
         dayNumber: 2,
@@ -262,7 +262,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "⛲", title: "Dubai Mall & Fountain Show", description: "Shop at the world's largest mall and watch the spectacular choreographed dancing fountain show." },
         ],
         tip: "Sunset slots for Burj Khalifa are the most popular; make sure to queue early.",
-        image: "https://images.unsplash.com/photo-1546412414-8035e1776c9a?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/dubai_2.jpg",
       },
       {
         dayNumber: 3,
@@ -275,7 +275,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍗", title: "Belly Dance & BBQ Dinner", description: "Feast on a traditional buffet under the stars while watching Tanoura and belly dancers." },
         ],
         tip: "Eat a light lunch before the safari to prevent motion sickness during dune bashing.",
-        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/dubai_3.jpg",
       },
       {
         dayNumber: 4,
@@ -287,7 +287,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "💍", title: "Deira Gold & Spice Souks", description: "Explore historic open markets packed with glittering window gold and sacks of spices." },
         ],
         tip: "Bargain heavily on jewelry and spices inside the Gold Souks — vendors expect it.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/dubai_1.jpg",
       },
       {
         dayNumber: 5,
@@ -298,7 +298,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌊", title: "Aquaventure Slides & Pools", description: "Access the world's largest waterpark, trying out leap-of-faith shark lagoon slides." },
         ],
         tip: "Buy waterproof phone pouches outside the park to save money.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/dubai_2.jpg",
       },
       {
         dayNumber: 6,
@@ -309,12 +309,12 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "DXB Airport Drop", description: "Transfer to Dubai International Airport for your departure flight home." },
         ],
         tip: "Reach the airport 3 hours early to process tax-free shopping refunds.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/dubai_3.jpg",
       },
     ],
     hotels: [
-      { name: "Swissôtel Al Ghurair", rating: "★★★★★", type: "Luxury City Hotel", location: "Deira, Dubai", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=400&q=80" },
-      { name: "Canal Central Hotel Business Bay", rating: "★★★★★", type: "Premium Waterfront Retreat", location: "Business Bay, Dubai", image: "https://images.unsplash.com/photo-1546412414-8035e1776c9a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Swissôtel Al Ghurair", rating: "★★★★★", type: "Luxury City Hotel", location: "Deira, Dubai", image: "/images/destinations/dubai_1.jpg" },
+      { name: "Canal Central Hotel Business Bay", rating: "★★★★★", type: "Premium Waterfront Retreat", location: "Business Bay, Dubai", image: "/images/destinations/dubai_2.jpg" },
     ],
   },
   "malaysia-culture": {
@@ -322,7 +322,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Malaysia",
     title: "Malaysia Wonders & Culture",
     duration: "4 Nights / 5 Days",
-    heroImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/malaysia_1.jpg",
     tagline: "Asia's Melting Pot",
     basePrice: 55000,
     days: [
@@ -336,7 +336,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Hotel Check-In", description: "Settle into your hotel and enjoy free time in the city centre." },
         ],
         tip: "Grab some Malaysian Ringgit at the airport or use standard credit cards for merchant shopping.",
-        image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_1.jpg",
       },
       {
         dayNumber: 2,
@@ -348,7 +348,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏢", title: "Petronas Twin Towers Visit", description: "Walk across the double-decker skybridge connecting the twin towers and look out from the 86th floor." },
         ],
         tip: "Wear covered clothes when visiting temples; knees and shoulders must be covered.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_2.jpg",
       },
       {
         dayNumber: 3,
@@ -360,7 +360,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🎰", title: "Genting Theme Parks", description: "Enjoy indoor and outdoor theme parks, shopping plazas, and dining outlets at the peak." },
         ],
         tip: "Temperatures at the top can drop to 18°C; carry a light jacket.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_3.jpg",
       },
       {
         dayNumber: 4,
@@ -372,7 +372,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍜", title: "Jalan Alor Night Market", description: "Dine on authentic Malaysian satay, dim sum, and seafood at the famous night food market." },
         ],
         tip: "Carry cash to purchase satays and fresh fruits at the Jalan Alor food stalls.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_1.jpg",
       },
       {
         dayNumber: 5,
@@ -383,7 +383,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "KLIA Airport Drop", description: "Transfer from hotel to Kuala Lumpur International Airport for your departure flight back home." },
         ],
         tip: "Check in early to explore duty-free shopping inside KLIA terminal.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_2.jpg",
       },
     ],
     hotels: [
@@ -392,14 +392,14 @@ export const ITINERARIES: Record<string, ItineraryData> = {
         rating: "★★★★★",
         type: "Premium Business Retreat",
         location: "Bukit Bintang, KL",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=400&q=80",
+        image: "/images/destinations/malaysia_3.jpg",
       },
       {
         name: "The Westin Kuala Lumpur",
         rating: "★★★★★",
         type: "Luxury Urban Retreat",
         location: "Bukit Bintang, KL",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=400&q=80",
+        image: "/images/destinations/malaysia_1.jpg",
       },
     ],
   },
@@ -408,7 +408,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Thailand",
     title: "Thailand Bestseller (Bangkok Temple & Coral Island Pattaya)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/thailand_1.jpg",
     tagline: "Land of Smiles",
     basePrice: 38000,
     days: [
@@ -422,7 +422,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏖️", title: "Pattaya Beach Leisure", description: "Stroll along Beach Road and settle into your resort." },
         ],
         tip: "Carry some Thai Baht for road toll booths and airport snacks.",
-        image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/thailand_1.jpg",
       },
       {
         dayNumber: 2,
@@ -434,7 +434,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍽️", title: "Indian Buffet Lunch", description: "Dine on a hot lunch prepared fresh on the beach." },
         ],
         tip: "Parasailing is optional; bargain with vendors directly if you want to try it.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/thailand_2.jpg",
       },
       {
         dayNumber: 3,
@@ -447,7 +447,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🦁", title: "Marble Temple (Wat Benchamabophit)", description: "Photograph the beautiful Carrara marble temple courtyard." },
         ],
         tip: "Wear clothes covering knees and shoulders for temple visits.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/thailand_3.jpg",
       },
       {
         dayNumber: 4,
@@ -459,7 +459,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🐬", title: "Marine Park Shows", description: "Enjoy marine animal feeds, cowboy stunts, and intelligent dolphin shows." },
         ],
         tip: "Safari World is large; plan your day around the show schedules to catch the best stunts.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/thailand_1.jpg",
       },
       {
         dayNumber: 5,
@@ -471,7 +471,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Chao Phraya Princess Cruise", description: "Dine on a luxury double-decker cruise liner, passing illuminated historic temples." },
         ],
         tip: "Ask for an upper-deck seat on the cruise when booking to enjoy the open air.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/thailand_2.jpg",
       },
       {
         dayNumber: 6,
@@ -482,11 +482,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Suvarnabhumi Airport Transfer", description: "Private drive to Bangkok Airport for your return flight." },
         ],
         tip: "Arrive at BKK airport 3 hours early to clear immigration and process tax refunds.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/thailand_3.jpg",
       },
     ],
     hotels: [
-      { name: "Deevana Plaza Patong", rating: "★★★★", type: "Boutique Beach Resort", location: "Patong Beach, Phuket", image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=400&q=80" },
+      { name: "Deevana Plaza Patong", rating: "★★★★", type: "Boutique Beach Resort", location: "Patong Beach, Phuket", image: "/images/destinations/thailand_1.jpg" },
     ],
   },
   bali: {
@@ -494,7 +494,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Bali",
     title: "Bali Magic (Ubud Private Pool Villa & Uluwatu Sunset)",
     duration: "6 Nights / 7 Days",
-    heroImage: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/bali_1.jpg",
     tagline: "Island of the Gods",
     basePrice: 46000,
     days: [
@@ -508,7 +508,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Jungle Villa Check-In", description: "Check into a luxury resort overlooking tropical greenery and private infinity pools." },
         ],
         tip: "Bali traffic is heavy; prepare for a 1.5-hour drive from airport to Ubud.",
-        image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/bali_1.jpg",
       },
       {
         dayNumber: 2,
@@ -521,7 +521,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "☕", title: "Luwak Coffee Tasting", description: "Taste fresh roasted coffee and spices at a native plantation garden." },
         ],
         tip: "Buy local souvenirs at Tegallalang shops, but bargain up to 50% of the initial price.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/bali_2.jpg",
       },
       {
         dayNumber: 3,
@@ -533,7 +533,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🐒", title: "Sacred Ubud Monkey Forest", description: "Walk down shaded pathways home to over 700 Balinese long-tailed macaque monkeys." },
         ],
         tip: "Keep sunglasses, hats, and jewelry inside your backpack at the Monkey Forest.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/bali_3.jpg",
       },
       {
         dayNumber: 4,
@@ -545,7 +545,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛕", title: "Tanah Lot Sea Temple", description: "Witness the iconic offshore Hindu temple standing on wave-swept crags during sunset." },
         ],
         tip: "Tanah Lot is accessible only at low tide; check the tide levels before walking over the rocks.",
-        image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/bali_1.jpg",
       },
       {
         dayNumber: 5,
@@ -558,7 +558,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌊", title: "Angel's Billabong & Broken Beach", description: "Swim in natural rocky lagoons and admire a massive hollow rock archway." },
         ],
         tip: "Nusa Penida roads are rough and bumpy; bring motion sickness tablets if required.",
-        image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/bali_2.jpg",
       },
       {
         dayNumber: 6,
@@ -571,7 +571,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🦞", title: "Jimbaran Bay Seafood Dinner", description: "Feast on a candlelight seafood platter with your feet in the sand." },
         ],
         tip: "The Kecak show ticket lines are long; our driver will pre-book them to save you 1 hour.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/bali_3.jpg",
       },
       {
         dayNumber: 7,
@@ -582,11 +582,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "DPS Airport Transfer", description: "Private drop-off at Denpasar Airport for your flight back home." },
         ],
         tip: "Ensure you clear immigration early to check out the DPS duty-free shops.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/bali_1.jpg",
       },
     ],
     hotels: [
-      { name: "Maya Ubud Resort & Spa", rating: "★★★★★", type: "Luxury Jungle Lodge", location: "Petanu Valley, Ubud", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&q=80" },
+      { name: "Maya Ubud Resort & Spa", rating: "★★★★★", type: "Luxury Jungle Lodge", location: "Petanu Valley, Ubud", image: "/images/destinations/bali_2.jpg" },
     ],
   },
   kerala: {
@@ -594,7 +594,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Kerala",
     title: "Kerala Hills & Backwaters (Munnar, Thekkady & Houseboat Alleppey)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/kerala_1.jpg",
     tagline: "God's Own Country",
     basePrice: 19500,
     days: [
@@ -609,7 +609,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Resort Check-In & Rest", description: "Settle into your hill resort surrounded by tea gardens and mist." },
         ],
         tip: "Munnar hills get foggy after sunset; try to complete the road trip by 5 PM.",
-        image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kerala_1.jpg",
       },
       {
         dayNumber: 2,
@@ -622,7 +622,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏞️", title: "Mattupetty Dam & Echo Point", description: "Boating in the dam reservoir and shouting into the scenic echo valley." },
         ],
         tip: "Book Eravikulam tickets online to avoid 2-hour lines at the park gate.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kerala_2.jpg",
       },
       {
         dayNumber: 3,
@@ -635,7 +635,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌶️", title: "Spice Plantation Tour", description: "See fresh growing vanilla, cardamon, pepper, and cinnamon, with local guides explaining their healing properties." },
         ],
         tip: "Perform the boat boarding 30 minutes before the scheduled cruise departure.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kerala_3.jpg",
       },
       {
         dayNumber: 4,
@@ -648,7 +648,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌾", title: "Vembanad Lake Cruise", description: "Glide past coconut groves, paddy fields, and local fisherman canoes." },
         ],
         tip: "Houseboats anchor by 5:30 PM due to local fishing net regulations; enjoy a quiet evening on deck.",
-        image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kerala_1.jpg",
       },
       {
         dayNumber: 5,
@@ -659,7 +659,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Fort Kochi Walking Tour", description: "Explore the St. Francis Church, Santa Cruz Basilica, and the iconic Chinese Fishing Nets." },
         ],
         tip: "Buy fresh fish near the nets and local restaurants will cook it on the spot for you.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kerala_2.jpg",
       },
       {
         dayNumber: 6,
@@ -670,11 +670,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Airport Drop-Off", description: "Drive to Cochin Airport for your return flight home." },
         ],
         tip: "Carry some packed banana chips from local bakeries — they make the best souvenirs.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/kerala_3.jpg",
       },
     ],
     hotels: [
-      { name: "Blanket Hotel & Spa", rating: "★★★★", type: "Premium Hill Resort", location: "Attukad Falls, Munnar", image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=400&q=80" },
+      { name: "Blanket Hotel & Spa", rating: "★★★★", type: "Premium Hill Resort", location: "Attukad Falls, Munnar", image: "/images/destinations/kerala_1.jpg" },
     ],
   },
   rajasthan: {
@@ -682,7 +682,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Rajasthan",
     title: "Royal Rajasthan (Jaipur, Jodhpur & Jaisalmer Camp)",
     duration: "7 Nights / 8 Days",
-    heroImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/rajasthan_1.jpg",
     tagline: "Rangeelo Rajasthan",
     basePrice: 22000,
     days: [
@@ -696,7 +696,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛍️", title: "Johri & Bapu Bazaar Walk", description: "Shop for colored gemstones, traditional textiles, and blue pottery." },
         ],
         tip: "Try the famous lassi at Lassiwala on MI road — served in earthen pots.",
-        image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/rajasthan_1.jpg",
       },
       {
         dayNumber: 2,
@@ -708,7 +708,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🗼", title: "Hawa Mahal & City Palace", description: "Photograph the iconic pink honeycomb window wall and visit the museum collection." },
         ],
         tip: "Elephant rides at Amer Fort are strictly monitored; hire a government-approved guide for best history details.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/rajasthan_2.jpg",
       },
       {
         dayNumber: 3,
@@ -720,7 +720,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏰", title: "Mehrangarh Fort Tour", description: "Walk through massive gate scars and see the royal palanquins on high battlements." },
         ],
         tip: "Try the local Pyaz Kachori at Jodhpur's Janta Sweet Home.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/rajasthan_3.jpg",
       },
       {
         dayNumber: 4,
@@ -733,7 +733,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🐪", title: "Camel Safari & Cultural Show", description: "Ride camels into the Thar dunes during sunset and watch folk dances." },
         ],
         tip: "Bring warm clothes if visiting from Nov to Jan; desert temperatures drop sharply at night.",
-        image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/rajasthan_1.jpg",
       },
       {
         dayNumber: 5,
@@ -745,7 +745,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛕", title: "Patwon Ki Haveli", description: "Admire the gold-colored stone lattice arches of Jaisalmer's largest haveli." },
         ],
         tip: "Hire a local guide to explain the water harvesting systems of the fort.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/rajasthan_2.jpg",
       },
       {
         dayNumber: 6,
@@ -756,7 +756,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚗", title: "Drive back to Jodhpur", description: "A 5-hour return drive. Relax in your heritage resort." },
         ],
         tip: "Spend the evening walking around the Clock Tower market.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/rajasthan_3.jpg",
       },
       {
         dayNumber: 7,
@@ -767,11 +767,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Jodhpur Airport Drop-Off", description: "Drop-off at Jodhpur Airport for your flight back home." },
         ],
         tip: "Arrive at Jodhpur airport 2 hours early to clear check-in.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/rajasthan_1.jpg",
       },
     ],
     hotels: [
-      { name: "Alsisar Haveli", rating: "★★★★", type: "Heritage Mansion", location: "Jaipur City", image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=400&q=80" },
+      { name: "Alsisar Haveli", rating: "★★★★", type: "Heritage Mansion", location: "Jaipur City", image: "/images/destinations/rajasthan_2.jpg" },
     ],
   },
   singapore: {
@@ -779,7 +779,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Singapore",
     title: "Singapore & Malaysia Super Saver (Sentosa & Kuala Lumpur)",
     duration: "6 Nights / 7 Days",
-    heroImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/singapore_1.jpg",
     tagline: "The Future, Already Here",
     basePrice: 72000,
     days: [
@@ -793,7 +793,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🦁", title: "Night Safari Tram Ride", description: "Ride the open tram to spot lions, rhinos, and nocturnal beasts roaming free in forest areas." },
         ],
         tip: "Changi Airport is an attraction itself; leave some time on departure to see Jewel.",
-        image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/singapore_1.jpg",
       },
       {
         dayNumber: 2,
@@ -806,7 +806,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌅", title: "Wings of Time Laser Show", description: "Watch the spectacular multi-sensory pyrotechnic and laser water show on Siloso Beach." },
         ],
         tip: "Buy your Wings of Time sunset slot tickets early to get central seats.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/singapore_2.jpg",
       },
       {
         dayNumber: 3,
@@ -817,7 +817,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🎢", title: "USS Full Day Entry Pass", description: "Access Transformers 3D rides, Battlestar Galactica coasters, and Far Far Away castles." },
         ],
         tip: "Buy Express passes inside the park to skip 1-hour queues for popular coasters.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/singapore_3.jpg",
       },
       {
         dayNumber: 4,
@@ -829,7 +829,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚌", title: "Luxury Coach to Kuala Lumpur", description: "Board your premium express coach for a comfortable 5-hour highway drive to Malaysia." },
         ],
         tip: "Carry your physical passport handy for the Singapore-Malaysia woodland land border custom checks.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/singapore_1.jpg",
       },
       {
         dayNumber: 5,
@@ -841,7 +841,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚡", title: "Awana Cable Car & Genting", description: "Ride the cable car to Genting Highlands mountain resort." },
         ],
         tip: "Wear appropriate clothing covering knees and shoulders for temple entries.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/singapore_2.jpg",
       },
       {
         dayNumber: 6,
@@ -853,7 +853,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛍️", title: "Pavilion Mall Hopping", description: "Tax-free shopping at Bukit Bintang avenue." },
         ],
         tip: "Dine at Jalan Alor night street food market for authentic Malaysian satay.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/singapore_3.jpg",
       },
       {
         dayNumber: 7,
@@ -864,11 +864,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "KLIA Airport Drop", description: "Transfer to KLIA airport for your return flight back home." },
         ],
         tip: "Keep all duty-free shopping receipts ready for checkout points.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/singapore_1.jpg",
       },
     ],
     hotels: [
-      { name: "Orchard Rendezvous Hotel", rating: "★★★★", type: "Premium City Hotel", location: "Orchard Road, Singapore", image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=400&q=80" },
+      { name: "Orchard Rendezvous Hotel", rating: "★★★★", type: "Premium City Hotel", location: "Orchard Road, Singapore", image: "/images/destinations/singapore_2.jpg" },
     ],
   },
   europe: {
@@ -876,7 +876,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Europe",
     title: "European Dream (Paris, Swiss Alps & Venice)",
     duration: "9 Nights / 10 Days",
-    heroImage: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/europe_1.jpg",
     tagline: "Old Stones, New Memories",
     basePrice: 145000,
     days: [
@@ -890,7 +890,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Seine River Cruise", description: "Glide past illuminated monuments like Notre Dame, Louvre, and Eiffel Tower." },
         ],
         tip: "Paris Metro is the fastest way to get around; buy a pack of 10 tickets (Carnet).",
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_1.jpg",
       },
       {
         dayNumber: 2,
@@ -902,7 +902,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🎨", title: "Louvre Museum Guided Entry", description: "Skip the lines to see Venus de Milo, Winged Victory, and the Mona Lisa." },
         ],
         tip: "Book your Louvre slots months in advance to secure morning entries.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_2.jpg",
       },
       {
         dayNumber: 3,
@@ -914,7 +914,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Lucerne Hotel Check-In", description: "Settle into your hotel located walking distance from the Lake shore." },
         ],
         tip: "Validate your Swiss Travel Pass before boarding local Swiss connections.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_3.jpg",
       },
       {
         dayNumber: 4,
@@ -926,7 +926,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌉", title: "Titlis Cliff Walk", description: "Walk along Europe's highest suspension bridge overlooking steep rock drops." },
         ],
         tip: "Wear layered woolens and sturdy shoes as the glacier park is icy and cold.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_1.jpg",
       },
       {
         dayNumber: 5,
@@ -938,7 +938,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Lake Thun Boat Cruise", description: "Sail past historic castles and mountains on a classic passenger cruise boat." },
         ],
         tip: "Try the traditional cheese fondue at Interlaken's local cafes.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_2.jpg",
       },
       {
         dayNumber: 6,
@@ -949,7 +949,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚊", title: "Eiger Express & Jungfrau Cog Railway", description: "Ride the modern cable car and cog train up to the station at 11,332 ft." },
         ],
         tip: "Altitude sickness can happen; climb slowly and drink plenty of water.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_3.jpg",
       },
       {
         dayNumber: 7,
@@ -961,7 +961,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Venice Hotel Check-In", description: "Settle into your hotel. Explore the bridges around St. Mark's." },
         ],
         tip: "Use water taxis (Vaporetto) for fast and easy transit along the Grand Canal.",
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_1.jpg",
       },
       {
         dayNumber: 8,
@@ -973,7 +973,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛕", title: "St. Mark's Basilica", description: "Visit the spectacular golden-domed cathedral and historic piazza." },
         ],
         tip: "Gondola rates are regulated; check official boards at the docks before boarding.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_2.jpg",
       },
       {
         dayNumber: 9,
@@ -985,7 +985,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏛️", title: "Colosseum & Roman Forum", description: "Guided walking tour inside the ancient gladiator amphitheater." },
         ],
         tip: "Rome streets are paved in stone; wear comfortable walking shoes.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_3.jpg",
       },
       {
         dayNumber: 10,
@@ -996,11 +996,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Rome Airport Transfer", description: "Private drop-off at Rome FCO Airport for your return flight home." },
         ],
         tip: "Arrive at FCO airport 3.5 hours early to clear security checkpoints.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/europe_1.jpg",
       },
     ],
     hotels: [
-      { name: "Hotel Lutetia Paris", rating: "★★★★★", type: "Luxury Palace Hotel", location: "Saint-Germain-des-Prés", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=400&q=80" },
+      { name: "Hotel Lutetia Paris", rating: "★★★★★", type: "Luxury Palace Hotel", location: "Saint-Germain-des-Prés", image: "/images/destinations/europe_2.jpg" },
     ],
   },
   vietnam: {
@@ -1008,7 +1008,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Vietnam",
     title: "Vietnam Cultural Explorer (Hanoi, Halong Bay & Hoi An)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/vietnam_1.jpg",
     tagline: "Timeless Charm & Green Rivers",
     basePrice: 26000,
     days: [
@@ -1022,7 +1022,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛶", title: "Hoan Kiem Lake & Ngoc Son Temple", description: "Stroll around the peaceful lake and cross the red wooden bridge to the island temple." },
         ],
         tip: "Egg Coffee at Cafe Giang is a must-try culinary creation in Hanoi.",
-        image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/vietnam_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1035,7 +1035,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛶", title: "Luon Cave Kayaking", description: "Paddle inside a quiet, enclosed lagoon accessible only via low rocky caves." },
         ],
         tip: "Join the early morning Tai Chi session on the sundeck at dawn for spectacular views.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/vietnam_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1048,7 +1048,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Hoi An Check-In", description: "Private drive to Hoi An Ancient Town and check into a boutique garden villa resort." },
         ],
         tip: "Bargain at Hoi An markets for tailor-made silk clothing created overnight.",
-        image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/vietnam_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1060,7 +1060,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛶", title: "Thu Bon River Boat & Lantern Release", description: "Board a small wooden boat at night to float paper lanterns on the dark river water." },
         ],
         tip: "Release your lantern near the central bridge for the best background photo glow.",
-        image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/vietnam_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1072,7 +1072,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🤲", title: "Golden Bridge Walk", description: "Walk along the curved golden bridge supported by two giant weathered stone hands." },
         ],
         tip: "Ba Na Hills gets rainy and cold; pack a windcheater or light sweater.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/vietnam_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1083,11 +1083,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Da Nang Airport Drop", description: "Transfer from Hoi An to Da Nang International Airport for your departure flight home." },
         ],
         tip: "Check in 3 hours early for international connections via Ho Chi Minh or Hanoi.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/vietnam_3.jpg",
       },
     ],
     hotels: [
-      { name: "La Siesta Classic Hang Thung", rating: "★★★★★", type: "Boutique Luxury Hotel", location: "Hanoi Old Quarter", image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=400&q=80" },
+      { name: "La Siesta Classic Hang Thung", rating: "★★★★★", type: "Boutique Luxury Hotel", location: "Hanoi Old Quarter", image: "/images/destinations/vietnam_1.jpg" },
     ],
   },
   malaysia: {
@@ -1095,7 +1095,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Malaysia",
     title: "Malaysia Bestseller (Kuala Lumpur & Langkawi Escape)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/malaysia_2.jpg",
     tagline: "Truly Asia, Divergent & Beautiful",
     basePrice: 28000,
     days: [
@@ -1109,7 +1109,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏢", title: "Petronas Twin Towers Walk", description: "Stroll out to KLCC park at night to photograph the illuminated steel towers." },
         ],
         tip: "Buy local SIM cards at the airport arrival terminal for cheap data.",
-        image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1121,7 +1121,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚡", title: "Awana Skyway Gondola", description: "Ride the cable car to Genting Highlands, stopping at Chin Swee Caves Temple." },
         ],
         tip: "Wear decent clothing covering shoulders and knees for the temple visits.",
-        image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1133,7 +1133,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏖️", title: "Cenang Beach Sunset", description: "Settle into your beachfront hotel and walk along the lively Cenang sands." },
         ],
         tip: "Langkawi is a duty-free island; chocolates and goods are very cheap.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1145,7 +1145,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚤", title: "Island Hopping Boat Tour", description: "Visit Dayang Bunting (Lake of Pregnant Maiden) and watch eagle feeding tours." },
         ],
         tip: "Purchase SkyCab tickets online to avoid long queues during afternoons.",
-        image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1156,7 +1156,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛥️", title: "Kilim Geoforest Boat Tour", description: "Ride through mangrove forests, visiting crocodile cave, bat cave, and floating lunch spots." },
         ],
         tip: "Do not feed or touch the monkeys during the river boat tour.",
-        image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1167,11 +1167,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Langkawi Airport Drop", description: "Transfer to Langkawi Airport for your return flight home." },
         ],
         tip: "Ensure all duty-free shopping receipts are kept ready for checking at custom points.",
-        image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/malaysia_3.jpg",
       },
     ],
     hotels: [
-      { name: "JW Marriott Kuala Lumpur", rating: "★★★★★", type: "Premium City Retreat", location: "Bukit Bintang, KL", image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=400&q=80" },
+      { name: "JW Marriott Kuala Lumpur", rating: "★★★★★", type: "Premium City Retreat", location: "Bukit Bintang, KL", image: "/images/destinations/malaysia_1.jpg" },
     ],
   },
   baku: {
@@ -1179,7 +1179,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Baku (Azerbaijan)",
     title: "Baku Special (Old City, Fire Temple & Caspian Cruise)",
     duration: "4 Nights / 5 Days",
-    heroImage: "/images/baku.jpg",
+    heroImage: "/images/destinations/baku_1.jpg",
     tagline: "Wind and Fire on the Caspian Coast",
     basePrice: 34000,
     days: [
@@ -1193,7 +1193,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚶", title: "Caspian Boulevard Walk", description: "Walk along the scenic seaside promenade, viewing Baku Eye and Mini-Venice." },
         ],
         tip: "Exchange some Manat (AZN) at the airport for minor taxi and dining expenses.",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/baku_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1205,7 +1205,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🔥", title: "Highland Park & Flame Towers", description: "Take the funicular up to Highland Park for stunning views of the Flame Towers illuminated at night." },
         ],
         tip: "Baku is windy; carry a jacket even in spring or summer afternoons.",
-        image: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/baku_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1218,7 +1218,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🔥", title: "Yanar Dag (Burning Mountain)", description: "Visit the hillside with active natural gas flames that never extinguish." },
         ],
         tip: "Wear closed shoes as the mud volcano areas are dusty and uneven.",
-        image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/baku_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1230,7 +1230,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏢", title: "Heydar Aliyev Center", description: "Photograph the stunning curved white architectural center designed by Zaha Hadid." },
         ],
         tip: "The photo spot in front of the center's green letters is the best angle.",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/baku_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1242,11 +1242,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Baku Airport Transfer", description: "Private drop-off at GYD Airport for your flight back home." },
         ],
         tip: "Confirm that you have packed local tea and Azeri baklava sweets.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/baku_2.jpg",
       },
     ],
     hotels: [
-      { name: "Hilton Baku", rating: "★★★★★", type: "Luxury City Hotel", location: "Caspian Boulevard", image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" },
+      { name: "Hilton Baku", rating: "★★★★★", type: "Luxury City Hotel", location: "Caspian Boulevard", image: "/images/destinations/baku_3.jpg" },
     ],
   },
   turkey: {
@@ -1254,7 +1254,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Turkey",
     title: "Turkey Bestseller (Istanbul, Cappadocia & Pamukkale)",
     duration: "7 Nights / 8 Days",
-    heroImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/turkey_1.jpg",
     tagline: "East Meets West Under Hot Air Balloons",
     basePrice: 68000,
     days: [
@@ -1268,7 +1268,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Bosphorus Dinner Cruise", description: "Sail past illuminated palaces and bridge links, enjoying traditional Turkish shows and a buffet." },
         ],
         tip: "Dress warmly for the cruise top deck as evening sea winds can be cold.",
-        image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1280,7 +1280,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛍️", title: "Grand Bazaar Tour", description: "Explore the massive covered market containing over 4,000 shops of spices, lanterns, and carpets." },
         ],
         tip: "Bargain at the Grand Bazaar up to 40% of the initial quoted price.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1292,7 +1292,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Cave Hotel Check-In", description: "Settle into a premium boutique hotel carved directly out of historic volcanic rocks." },
         ],
         tip: "Keep camera gears ready as Cappadocia views are spectacular at sunset.",
-        image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1304,7 +1304,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛕", title: "Goreme Open Air Museum", description: "Explore historic rock-cut churches featuring 10th-century Byzantine fresco paintings." },
         ],
         tip: "Balloon flights depend on wind conditions; book for your first morning to allow rescheduling if cancelled.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1315,7 +1315,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "⛰️", title: "Kaymakli Underground City", description: "Explore rock tunnels, storage cellars, and ventilation shafts descending 8 levels deep." },
         ],
         tip: "Watch your head inside the low-ceiling tunnels; carry a light jacket.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1327,7 +1327,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Thermal Resort Check-In", description: "Check into a luxury resort featuring hot mineral spring bath pools." },
         ],
         tip: "Spend the evening bathing in the mineral rich pools of your resort.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_3.jpg",
       },
       {
         dayNumber: 7,
@@ -1339,7 +1339,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏛️", title: "Hierapolis Ruins & Cleopatra Pool", description: "Visit the massive Roman amphitheater and swim among submerged ancient pillars." },
         ],
         tip: "You must remove shoes when walking on the white travertine terraces to prevent damage.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_1.jpg",
       },
       {
         dayNumber: 8,
@@ -1350,11 +1350,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Airport Drop-Off", description: "Transfer to Denizli Airport (DNZ) for your domestic flight to Istanbul and return home." },
         ],
         tip: "Pack Turkish tea glasses and local spices carefully inside bubble wrap.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/turkey_2.jpg",
       },
     ],
     hotels: [
-      { name: "Sultanhan Hotel", rating: "★★★★", type: "Heritage Hotel", location: "Sultanahmet, Istanbul", image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=400&q=80" },
+      { name: "Sultanhan Hotel", rating: "★★★★", type: "Heritage Hotel", location: "Sultanahmet, Istanbul", image: "/images/destinations/turkey_3.jpg" },
     ],
   },
   goa: {
@@ -1362,7 +1362,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Goa",
     title: "Goa Beach Escapade (North & South Goa Package)",
     duration: "4 Nights / 5 Days",
-    heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/goa_1.jpg",
     tagline: "Sun, Sand, and Portuguese Solitude",
     basePrice: 9500,
     days: [
@@ -1376,7 +1376,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏖️", title: "Calangute Beach Sunset Walk", description: "Spend your evening walking along the sands, enjoying beach shacks." },
         ],
         tip: "Renting a scooter at Calangute is the cheapest way to explore locally.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/goa_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1388,7 +1388,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚤", title: "Baga Beach Water Sports", description: "Enjoy jet skiing, banana boat riding, and parasailing with certified guides." },
         ],
         tip: "Complete water sports early in the morning to avoid long queues.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/goa_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1400,7 +1400,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍛", title: "Spice Plantation Tour & Lunch", description: "Walk through spice farms in Ponda, enjoying a traditional buffet on banana leaves." },
         ],
         tip: "Buy local Goan feni and certified spices at the plantation farm shop.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/goa_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1412,7 +1412,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Sunset Mandovi River Cruise", description: "Board a double-decker cruise boat for 1 hour of music and traditional Dekhni dances." },
         ],
         tip: "Reach the cruise terminal 30 minutes early to grab the best deck seats.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/goa_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1423,11 +1423,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Goa Airport Drop-off", description: "Private drop-off at Goa Airport for your return flight home." },
         ],
         tip: "Make sure to pack Goan cashews in your carry-on bag.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/goa_2.jpg",
       },
     ],
     hotels: [
-      { name: "Estrela Do Mar Beach Resort", rating: "★★★★", type: "Beach Resort", location: "Calangute, Goa", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" },
+      { name: "Estrela Do Mar Beach Resort", rating: "★★★★", type: "Beach Resort", location: "Calangute, Goa", image: "/images/destinations/goa_3.jpg" },
     ],
   },
   ladakh: {
@@ -1435,7 +1435,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Leh Ladakh",
     title: "Ladakh Heights (Leh, Pangong Lake & Nubra Valley)",
     duration: "6 Nights / 7 Days",
-    heroImage: "/images/leh_ladakh.jpg",
+    heroImage: "/images/destinations/ladakh_1.jpg",
     tagline: "Land of High Passes & Blue Lakes",
     basePrice: 24000,
     days: [
@@ -1449,7 +1449,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Full Day Bed Rest", description: "Spend your first 24 hours resting in your room. Avoid any physical exertion." },
         ],
         tip: "Drink at least 4 liters of water today. Saffron kehwa tea helps with headaches.",
-        image: "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/ladakh_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1461,7 +1461,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛕", title: "Shanti Stupa Sunset", description: "Climb the white-domed peace pagoda at sunset for panoramic valley views." },
         ],
         tip: "Avoid climbing the stupa steps too fast; take brief breathing pauses.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/ladakh_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1473,7 +1473,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🐪", title: "Hunder Sand Dunes Camel Ride", description: "Ride double-humped Bactrian camels past cold desert sand dunes." },
         ],
         tip: "Limit your stay at Khardung La summit to 15 minutes to prevent altitude sickness.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/ladakh_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1485,7 +1485,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌊", title: "Pangong Lake Check-in", description: "Settle into deluxe lake-facing tents at Spangmik, watching the water change colors." },
         ],
         tip: "Pangong camps run on limited solar power; charge all camera batteries during the day.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/ladakh_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1497,7 +1497,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚗", title: "Return via Chang La (17,586 ft)", description: "Drive back to Leh town, settling into your hotel." },
         ],
         tip: "Keep woolen jackets and gloves handy today as Chang La pass has cold winds.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/ladakh_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1509,7 +1509,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🎖️", title: "Hall of Fame Museum", description: "Visit the war memorial museum run by the Indian Army." },
         ],
         tip: "Spend the evening buying local apricots and silver jewelry at Leh Main Bazaar.",
-        image: "https://images.unsplash.com/photo-1596422846543-75c6fc18a52b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/ladakh_3.jpg",
       },
       {
         dayNumber: 7,
@@ -1520,11 +1520,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Leh Airport Transfer", description: "Transfer to Leh Airport for your return flight home." },
         ],
         tip: "Confirm that you have removed power banks from check-in luggage; Leh airport rules are strict.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/ladakh_1.jpg",
       },
     ],
     hotels: [
-      { name: "The Grand Dragon Ladakh", rating: "★★★★★", type: "Luxury Hotel", location: "Leh Town", image: "https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?auto=format&fit=crop&w=400&q=80" },
+      { name: "The Grand Dragon Ladakh", rating: "★★★★★", type: "Luxury Hotel", location: "Leh Town", image: "/images/destinations/ladakh_2.jpg" },
     ],
   },
   himachal: {
@@ -1532,7 +1532,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Himachal Pradesh",
     title: "Himachal Wonders (Shimla & Manali Hill Station)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/himachal_1.jpg",
     tagline: "Into the Heart of the Snow-Capped Valley",
     basePrice: 14500,
     days: [
@@ -1546,7 +1546,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Resort Check-In", description: "Settle into your hotel and enjoy views of the valleys." },
         ],
         tip: "Stop at Pinjore Gardens near Chandigarh for lunch to break the long drive.",
-        image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/himachal_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1558,7 +1558,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚶", title: "Shimla Ridge & Mall Road", description: "Walk the pedestrian-only Ridge, visiting Christ Church and Lakkar Bazaar." },
         ],
         tip: "Taxis are not allowed on Mall Road; prepare for a gentle walk.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/himachal_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1570,7 +1570,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛍️", title: "Kullu Shawl Outlets", description: "Stop at handloom weaving factories to buy authentic warm woolens." },
         ],
         tip: "Ask your driver to stop near Pandoh Dam for spectacular canyon photos.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/himachal_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1582,7 +1582,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🪂", title: "Solang Valley Paragliding", description: "Try paragliding, zorbing, or ATV quad biking with local guides." },
         ],
         tip: "Carry cash for paragliding tickets as network signals can be weak at Solang.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/himachal_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1594,7 +1594,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛀", title: "Vashisht Sulfur Springs", description: "Visit the hot sulfur springs temple for a relaxing foot dip." },
         ],
         tip: "Carry a towel and extra clothes if you plan to bathe in the hot springs.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/himachal_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1605,11 +1605,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚗", title: "Drive back to Delhi", description: "Long return drive to Delhi. Drop-off at Airport." },
         ],
         tip: "Confirm that you have packed all Kullu woolens and local apples safely.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/himachal_3.jpg",
       },
     ],
     hotels: [
-      { name: "Manu Allaya Resort", rating: "★★★★", type: "Luxury Valley Resort", location: "Manali Town", image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=400&q=80" },
+      { name: "Manu Allaya Resort", rating: "★★★★", type: "Luxury Valley Resort", location: "Manali Town", image: "/images/destinations/himachal_1.jpg" },
     ],
   },
   uttarakhand: {
@@ -1617,7 +1617,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Uttarakhand",
     title: "Uttarakhand Explorer (Nainital & Mussoorie Special)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/uttarakhand_1.jpg",
     tagline: "Sacred Hills and Glacial Rivers",
     basePrice: 12000,
     days: [
@@ -1631,7 +1631,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "⛵", title: "Naini Lake Boating", description: "Enjoy a relaxed boating ride in the pear-shaped central lake." },
         ],
         tip: "The lake boating rates are fixed; buy tickets at the municipal counters.",
-        image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uttarakhand_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1643,7 +1643,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏔️", title: "Naini Peak Viewpoint", description: "Take the cable car up to Snow View point for Himalayan peak horizons." },
         ],
         tip: "Bhimtal is quieter than Nainital; spend your afternoon cafe hopping there.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uttarakhand_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1655,7 +1655,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Jungle Resort Check-In", description: "Check into a luxury resort located near the buffer forest zone." },
         ],
         tip: "Carry identification cards (Aadhar/Passport) as they are checked at forest gates.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uttarakhand_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1667,7 +1667,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚗", title: "Drive to Rishikesh", description: "Check out and drive to the spiritual city of Rishikesh (4 hours)." },
         ],
         tip: "Safaris must be booked 45 days in advance for popular zones; our office handles this.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uttarakhand_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1679,7 +1679,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🔥", title: "Triveni Ghat Ganga Aarti", description: "Witness the spectacular sunset prayer ceremony with floating camphor lamps on the river." },
         ],
         tip: "Carry dry clothes in a plastic bag as you will get wet during rafting.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uttarakhand_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1690,11 +1690,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚗", title: "Drive back to Delhi", description: "Drive back from Rishikesh to Delhi (6 hours) for your flight home." },
         ],
         tip: "Purchase local organic honey or copper items from Rishikesh bazaar.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uttarakhand_3.jpg",
       },
     ],
     hotels: [
-      { name: "The Solluna Resort", rating: "★★★★★", type: "Jungle Lodge", location: "Merchula Valley, Jim Corbett", image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=400&q=80" },
+      { name: "The Solluna Resort", rating: "★★★★★", type: "Jungle Lodge", location: "Merchula Valley, Jim Corbett", image: "/images/destinations/uttarakhand_1.jpg" },
     ],
   },
   andaman: {
@@ -1702,7 +1702,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Andaman & Nicobar",
     title: "Andaman Paradise (Port Blair & Havelock Island)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/andaman_1.jpg",
     tagline: "Tropical Reefs and Sparkling Shorelines",
     basePrice: 22500,
     days: [
@@ -1716,7 +1716,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏰", title: "Cellular Jail Sound & Light Show", description: "Walk through historic cells and watch the evening sound & light show." },
         ],
         tip: "Purchase entry tickets for the Cellular Jail museum online to avoid long queues.",
-        image: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/andaman_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1728,7 +1728,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Beach Resort Check-in", description: "Check into a luxury beach cottage resort surrounded by palm trees." },
         ],
         tip: "Ferry seats are pre-booked by our office; carry a light snack for the cruise.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/andaman_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1739,7 +1739,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏖️", title: "Radhanagar Beach Walk", description: "Walk barefoot along the powdery white sands bordered by massive green forest trees." },
         ],
         tip: "The sunset at Radhanagar happens early (around 5:15 PM); reach by 4 PM.",
-        image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/andaman_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1751,7 +1751,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🤿", title: "Complimentary Snorkeling Safari", description: "Explore the reef corals and sea life with our certified water guide." },
         ],
         tip: "Carry dry clothes and plastic baggies as changing rooms are available at Elephant Beach.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/andaman_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1763,7 +1763,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌅", title: "Chidiya Tapu Sunset Point", description: "Drive to the southern tip of the island to watch the sun sink behind rocky islands." },
         ],
         tip: "Chidiya Tapu road winding through thick forests is very scenic; keep your camera ready.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/andaman_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1774,11 +1774,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Veer Savarkar Airport Drop", description: "Private drop-off for your flight home." },
         ],
         tip: "Ensure you carry seashells only with valid purchase receipts; custom checks at airport are strict.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/andaman_3.jpg",
       },
     ],
     hotels: [
-      { name: "Symphony Palms Beach Resort", rating: "★★★★", type: "Beach Cottage", location: "Havelock Island", image: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=400&q=80" },
+      { name: "Symphony Palms Beach Resort", rating: "★★★★", type: "Beach Cottage", location: "Havelock Island", image: "/images/destinations/andaman_1.jpg" },
     ],
   },
   mauritius: {
@@ -1786,7 +1786,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Mauritius",
     title: "Mauritius Island Escapade (North & South Island Tour)",
     duration: "6 Nights / 7 Days",
-    heroImage: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/mauritius_1.jpg",
     tagline: "A Contrast of Sapphire Reefs and Valleys",
     basePrice: 58000,
     days: [
@@ -1800,7 +1800,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍹", title: "Beach Leisure", description: "Relax at the pool or walk along the private beach sands." },
         ],
         tip: "Resort dress code is usually smart-casual for dinners; pack some collared shirts.",
-        image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/mauritius_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1812,7 +1812,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛍️", title: "Caudan Waterfront Shopping", description: "Shop for local crafts, vanilla tea, and explore the umbrella-covered walks." },
         ],
         tip: "Buy local sugarcane molasses or sugar packs at Caudan crafts market.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/mauritius_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1824,7 +1824,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌊", title: "Chamarel Waterfalls & Grand Bassin", description: "Gaze at the 100m waterfall canyon and visit the holy Hindu lake Grand Bassin." },
         ],
         tip: "Purchase tickets for Chamarel adventure trails online to save time.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/mauritius_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1836,7 +1836,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🤿", title: "Lagoon Swimming & Snorkeling", description: "Swim in shallow turquoise waters and enjoy beach water activities." },
         ],
         tip: "Wear water sandals as the lagoon beds near the corals are rocky.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/mauritius_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1847,7 +1847,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🐬", title: "West Coast Yacht Cruise", description: "Board a luxury catamaran to spot spinner dolphins in their natural lagoon." },
         ],
         tip: "Keep sunscreen and hats ready as the catamaran deck gets hot at noon.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/mauritius_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1858,7 +1858,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🦁", title: "Casela Safari Bus Drive", description: "See African rhinos, zebras, and antelopes roaming the fields." },
         ],
         tip: "You can book custom walk-with-lions tickets at Casela in advance.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/mauritius_3.jpg",
       },
       {
         dayNumber: 7,
@@ -1869,11 +1869,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "MRU Airport Transfer", description: "Private drive to Sir Seewoosagur Airport for your return flight home." },
         ],
         tip: "Pack local rum and vanilla tea carefully inside checked-in bags.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/mauritius_1.jpg",
       },
     ],
     hotels: [
-      { name: "Outrigger Mauritius Beach Resort", rating: "★★★★★", type: "Beach Resort", location: "Bel Ombre, Mauritius", image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80" },
+      { name: "Outrigger Mauritius Beach Resort", rating: "★★★★★", type: "Beach Resort", location: "Bel Ombre, Mauritius", image: "/images/destinations/mauritius_2.jpg" },
     ],
   },
   seychelles: {
@@ -1881,7 +1881,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Seychelles",
     title: "Seychelles Tropical Dream (Mahe Island & Praslin Daytrip)",
     duration: "5 Nights / 6 Days",
-    heroImage: "https://images.unsplash.com/photo-1589979482837-e74f2e145060?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/seychelles_1.jpg",
     tagline: "Granite Boulders on Powder-White Sands",
     basePrice: 85000,
     days: [
@@ -1895,7 +1895,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏖️", title: "Beau Vallon Beach Leisure", description: "Stroll along the lively white sands and enjoy sunset over the ocean." },
         ],
         tip: "Carry some Euros or Seychelles Rupees (SCR) for local dining.",
-        image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/seychelles_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1907,7 +1907,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🐢", title: "Botanical Gardens", description: "See giant Aldabra tortoises and the rare Coco de Mer palms." },
         ],
         tip: "Buying tortoise feed at the botanical gardens is a fun activity for families.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/seychelles_2.jpg",
       },
       {
         dayNumber: 3,
@@ -1919,7 +1919,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌴", title: "Vallee de Mai UNESCO Reserve", description: "Walk through the prehistoric palm forest home to giant double coconuts." },
         ],
         tip: "A rain poncho is recommended as Vallee de Mai forest experiences frequent showers.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/seychelles_3.jpg",
       },
       {
         dayNumber: 4,
@@ -1932,7 +1932,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏖️", title: "Anse Source d'Argent Beach", description: "Relax on the iconic beach framed by towering pink granite rock formations." },
         ],
         tip: "Bicycles are the main transport on La Digue; check brakes before riding off the docks.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/seychelles_1.jpg",
       },
       {
         dayNumber: 5,
@@ -1943,7 +1943,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛥️", title: "Glass-Bottom Boat Cruise", description: "Cruise inside the marine park, feeding fish and snorkeling over coral reefs." },
         ],
         tip: "Snorkeling gears are provided on board; apply sunscreen before diving.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/seychelles_2.jpg",
       },
       {
         dayNumber: 6,
@@ -1954,11 +1954,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Mahe Airport Drop-Off", description: "Private transfer to SEZ Airport for your departure flight home." },
         ],
         tip: "Arrive at Mahe Airport 3 hours early to process checks.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/seychelles_3.jpg",
       },
     ],
     hotels: [
-      { name: "Constance Ephelia Mahe", rating: "★★★★★", type: "Luxury Beach Resort", location: "Port Launay, Mahe", image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=400&q=80" },
+      { name: "Constance Ephelia Mahe", rating: "★★★★★", type: "Luxury Beach Resort", location: "Port Launay, Mahe", image: "/images/destinations/seychelles_1.jpg" },
     ],
   },
   switzerland: {
@@ -1966,7 +1966,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "Switzerland",
     title: "Swiss Alpine Dream (Zurich, Lucerne & Mt. Titlis)",
     duration: "6 Nights / 7 Days",
-    heroImage: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/switzerland_1.jpg",
     tagline: "Alpine Perfection, Clockwork & Chocolate",
     basePrice: 115000,
     days: [
@@ -1980,7 +1980,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛍️", title: "Bahnhofstrasse Shopping Walk", description: "Walk past elite watch boutiques, chocolate makers, and scenic river canals." },
         ],
         tip: "Drink fresh, clean mountain water from the city's public stone fountains.",
-        image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/switzerland_1.jpg",
       },
       {
         dayNumber: 2,
@@ -1992,7 +1992,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌉", title: "Chapel Bridge (Kapellbrücke) Walk", description: "Explore the 14th-century wooden covered bridge featuring painted historic panels." },
         ],
         tip: "Buy a Swiss Travel Pass early to cover all public trains and city buses.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/switzerland_2.jpg",
       },
       {
         dayNumber: 3,
@@ -2004,7 +2004,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌉", title: "Titlis Cliff Walk", description: "Walk along Europe's highest suspension bridge overlooking steep rock drops." },
         ],
         tip: "Wear layered woolens and sturdy shoes as the glacier park is icy and cold.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/switzerland_3.jpg",
       },
       {
         dayNumber: 4,
@@ -2016,7 +2016,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Lake Thun Boat Cruise", description: "Sail past historic castles and mountains on a classic passenger cruise boat." },
         ],
         tip: "Try the traditional cheese fondue at Interlaken's local cafes.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/switzerland_1.jpg",
       },
       {
         dayNumber: 5,
@@ -2027,7 +2027,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚊", title: "Eiger Express & Jungfrau Cog Railway", description: "Ride the modern cable car and cog train up to the station at 11,332 ft." },
         ],
         tip: "Altitude sickness can happen; climb slowly and drink plenty of water.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/switzerland_2.jpg",
       },
       {
         dayNumber: 6,
@@ -2038,7 +2038,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🍫", title: "Lindt Home of Chocolate Tour", description: "Visit the massive chocolate museum in Kilchberg, viewing the 9m chocolate fountain." },
         ],
         tip: "Save some space in your bags for authentic Swiss chocolate bars.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/switzerland_3.jpg",
       },
       {
         dayNumber: 7,
@@ -2049,11 +2049,11 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Zurich Airport Drop-Off", description: "SBB Train or private transfer to ZRH Airport for your return flight." },
         ],
         tip: "Confirm that you have processed SBB refund cards before checking in.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/switzerland_1.jpg",
       },
     ],
     hotels: [
-      { name: "Hotel Schweizerhof Luzern", rating: "★★★★★", type: "Luxury Heritage Hotel", location: "Lake Lucerne", image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=400&q=80" },
+      { name: "Hotel Schweizerhof Luzern", rating: "★★★★★", type: "Luxury Heritage Hotel", location: "Lake Lucerne", image: "/images/destinations/switzerland_2.jpg" },
     ],
   },
   "united-kingdom": {
@@ -2061,7 +2061,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
     destination: "United Kingdom",
     title: "UK Classic (London, Stonehenge & Edinburgh Train)",
     duration: "7 Nights / 8 Days",
-    heroImage: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/images/destinations/uk_1.jpg",
     tagline: "Royalty, Castles, and Green Fields",
     basePrice: 85000,
     days: [
@@ -2075,7 +2075,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🌉", title: "Tower Bridge Sunset Walk", description: "Stroll along the Thames, viewing the iconic suspension bridge and historic Tower of London." },
         ],
         tip: "Get an Oyster Card or use contactless cards for easy London Tube rail travel.",
-        image: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_1.jpg",
       },
       {
         dayNumber: 2,
@@ -2087,7 +2087,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏰", title: "Buckingham Palace Changing of the Guard", description: "Watch the royal guards in red tunics march past the palace gates." },
         ],
         tip: "Book London Eye tickets early to grab fast-track entrance lanes.",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_2.jpg",
       },
       {
         dayNumber: 3,
@@ -2099,7 +2099,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🎭", title: "West End Theater Show Entry", description: "Watch a famous musical like Lion King or West Side Story in historic theaters." },
         ],
         tip: "British Museum entry is free, but pre-booking entry slots online is required.",
-        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_3.jpg",
       },
       {
         dayNumber: 4,
@@ -2111,7 +2111,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🛀", title: "Roman Baths Museum", description: "Explore the ancient natural hot baths used by Romans in Bath city." },
         ],
         tip: "Pack a jacket as the open Stonehenge plains are very windy.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_1.jpg",
       },
       {
         dayNumber: 5,
@@ -2123,7 +2123,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🏨", title: "Edinburgh Hotel Check-In", description: "Settle into your hotel situated in the cobblestoned Old Town." },
         ],
         tip: "Sit on the right side of the train when traveling north for beautiful North Sea views.",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_2.jpg",
       },
       {
         dayNumber: 6,
@@ -2135,7 +2135,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚶", title: "Royal Mile Walking Tour", description: "Walk from the castle to Holyrood Palace past historic stone tenements." },
         ],
         tip: "Listen for the One O'Clock Gun fired daily from the castle ramparts.",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_3.jpg",
       },
       {
         dayNumber: 7,
@@ -2147,7 +2147,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "🚢", title: "Loch Ness Cruise Safari", description: "Board a boat equipped with sonar to search for the legendary Nessie monster." },
         ],
         tip: "Bring a warm, windproof coat for the Loch Ness boat cruise.",
-        image: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_1.jpg",
       },
       {
         dayNumber: 8,
@@ -2158,11 +2158,110 @@ export const ITINERARIES: Record<string, ItineraryData> = {
           { icon: "✈️", title: "Edinburgh Airport Drop-Off", description: "Transfer to EDI Airport for your departure flight back home." },
         ],
         tip: "Reach the airport 3 hours early to clear immigration checkpoints.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/destinations/uk_2.jpg",
       },
     ],
     hotels: [
-      { name: "The Balmoral Edinburgh", rating: "★★★★★", type: "Luxury Castle Hotel", location: "Princes Street", image: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&w=400&q=80" },
+      { name: "The Balmoral Edinburgh", rating: "★★★★★", type: "Luxury Castle Hotel", location: "Princes Street", image: "/images/destinations/uk_3.jpg" },
+    ],
+  },
+  "sri-lanka": {
+    slug: "sri-lanka",
+    destination: "Sri Lanka",
+    title: "Sri Lanka Cultural Heritage (Colombo, Kandy & Sigiriya)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/sri_lanka_1.jpg",
+    tagline: "The Pearl of the Indian Ocean",
+    basePrice: 32000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Colombo & Transfer to Sigiriya",
+        tag: "SIGIRIYA ARRIVAL",
+        tagline: "Welcome to Sri Lanka! Drive to the cultural heartland.",
+        activities: [
+          { icon: "✈️", title: "Airport Pickup & Drive", description: "Our representative meets you at Bandaranaike International Airport (CMB) and transfers you to Sigiriya (4 hours)." },
+          { icon: "🏨", title: "Resort Check-In", description: "Check into your jungle resort. Settle in and enjoy the peaceful surroundings." },
+        ],
+        tip: "Stop for fresh king coconut water along the road — it's sweet and cooling.",
+        image: "/images/destinations/sri_lanka_1.jpg",
+      },
+      {
+        dayNumber: 2,
+        title: "Climb Sigiriya Lion Rock Fortress",
+        tag: "LION ROCK FORTRESS",
+        tagline: "Ascend the world-famous rock citadel in the sky.",
+        activities: [
+          { icon: "🧗", title: "Sigiriya Rock Guided Climb", description: "Climb the 1,200 ancient steps past the Mirror Wall and frescoes to the flat summit ruins." },
+          { icon: "🌾", title: "Water & Boulder Gardens", description: "Stroll through the symmetric terraced gardens and see the giant lion's paws carvings." },
+        ],
+        tip: "Start your climb early by 7:30 AM to beat the mid-day sun and crowds.",
+        image: "/images/destinations/sri_lanka_2.jpg",
+      },
+      {
+        dayNumber: 3,
+        title: "Dambulla Cave Temple & Kandy Transit",
+        tag: "KANDY SIGHTS",
+        tagline: "Visit the sacred cave temple and travel to the hill capital.",
+        activities: [
+          { icon: "🛕", title: "Dambulla Cave Temple Tour", description: "Explore the five ancient cave shrines containing over 150 serene Buddha statues and murals." },
+          { icon: "🌶️", title: "Matale Spice Garden Visit", description: "See fresh cinnamon, vanilla, and cocoa growing. Enjoy a quick head massage." },
+        ],
+        tip: "Your knees and shoulders must be covered when visiting sacred temples.",
+        image: "/images/destinations/sri_lanka_3.jpg",
+      },
+      {
+        dayNumber: 4,
+        title: "Temple of the Tooth & Royal Botanical Gardens",
+        tag: "SACRED HERITAGE",
+        tagline: "See the holy tooth relic of Buddha and walk giant palm avenues.",
+        activities: [
+          { icon: "🕌", title: "Temple of the Sacred Tooth Relic", description: "Explore the golden canopy sanctuary housing the sacred tooth relic of Lord Buddha." },
+          { icon: "🌴", title: "Peradeniya Royal Botanical Gardens", description: "Walk through towering double coconut avenues and see the giant Javan fig tree." },
+          { icon: "💃", title: "Kandyan Cultural Dance Show", description: "Watch a high-energy dance performance featuring traditional drummers and fire-walking." },
+        ],
+        tip: "Wear white or light-colored clothing when visiting the Temple of the Tooth.",
+        image: "/images/destinations/sri_lanka_1.jpg",
+      },
+      {
+        dayNumber: 5,
+        title: "Scenic Train to Nuwara Eliya",
+        tag: "TEA HILLS",
+        tagline: "Board one of the world's most scenic trains past misty tea mountains.",
+        activities: [
+          { icon: "🚊", title: "Scenic Tea Country Train", description: "Board the train from Kandy to Nanu Oya, passing green tea estates and rushing waterfalls." },
+          { icon: "🍃", title: "Ceylon Tea Estate & Factory Tour", description: "Walk through tea gardens and see the processing factory, followed by a fresh tasting session." },
+        ],
+        tip: "Grab a seat on the right side of the train when leaving Kandy for the best views.",
+        image: "/images/destinations/sri_lanka_2.jpg",
+      },
+      {
+        dayNumber: 6,
+        title: "Colombo City Tour & Shopping",
+        tag: "COLOMBO CITY",
+        tagline: "Drive to the capital city for a heritage street tour and shopping.",
+        activities: [
+          { icon: "🚗", title: "Drive to Colombo", description: "Descend from the cold mountain pass to the capital city of Colombo (4.5 hours)." },
+          { icon: "🏙️", title: "Colombo City Tour", description: "Visit Galle Face Green, Gangaramaya Buddhist Temple, and Pettah Floating Market." },
+        ],
+        tip: "Buy high-quality Ceylon tea at Laksala or Odel for local gifts.",
+        image: "/images/destinations/sri_lanka_3.jpg",
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Colombo",
+        tag: "DEPARTURE",
+        tagline: "Airport drop-off for your flight home.",
+        activities: [
+          { icon: "✈️", title: "Colombo Airport Drop-off", description: "Private transfer to Bandaranaike International Airport (CMB) for your flight back home." },
+        ],
+        tip: "Arrive at CMB airport 3 hours early for international departures.",
+        image: "/images/destinations/sri_lanka_1.jpg",
+      },
+    ],
+    hotels: [
+      { name: "Amaara Forest Hotel Sigiriya", rating: "★★★★", type: "Luxury Eco-Resort", location: "Sigiriya Jungle", image: "/images/destinations/sri_lanka_2.jpg" },
+      { name: "The Grand Hotel Nuwara Eliya", rating: "★★★★★", type: "Heritage Mansion", location: "Nuwara Eliya Hills", image: "/images/destinations/sri_lanka_3.jpg" },
     ],
   },
 };

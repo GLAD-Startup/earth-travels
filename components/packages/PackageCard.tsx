@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { GlassCard } from "@/components/ui";
 import { Package } from "@/lib/data/packages";
-import { DESTINATIONS } from "@/lib/data/destinations";
 
 interface PackageCardProps {
   pkg: Package;
