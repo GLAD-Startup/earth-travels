@@ -246,8 +246,8 @@ export default function ContactPage() {
                 />
                 <span className="font-mono text-charcoal/80 font-medium">
                   {isOpen
-                    ? `Open Now · We&apos;ll respond within 2 hours`
-                    : `Closed · We&apos;ll respond first thing Monday 10 AM`}
+                    ? `Open Now · We'll respond within 2 hours`
+                    : `Closed · We'll respond first thing Monday 10 AM`}
                 </span>
               </div>
             </GlassCard>
