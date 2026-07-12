@@ -18,9 +18,9 @@ export default function DestShowcase() {
       case 2:
         return "md:col-span-4 md:row-span-1 h-[300px] md:h-auto"; // Small Square Bottom Right
       case 3:
-        return "md:col-span-5 md:row-span-1 h-[400px] md:h-[450px]"; // Tall bottom left
+        return "md:col-span-5 md:row-span-1 h-[400px] md:h-auto"; // Tall bottom left
       case 4:
-        return "md:col-span-7 md:row-span-1 h-[350px] md:h-[450px]"; // Wide bottom right
+        return "md:col-span-7 md:row-span-1 h-[350px] md:h-auto"; // Wide bottom right
       default:
         return "col-span-1 row-span-1";
     }

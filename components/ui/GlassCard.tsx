@@ -30,14 +30,14 @@ export default function GlassCard({
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Calculate rotation (max 10 degrees)
+    // Calculate rotation (max 3 degrees for subtle 3D effect)
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -10;
-    const rotateY = ((x - centerX) / centerX) * 10;
+    const rotateX = ((y - centerY) / centerY) * -3;
+    const rotateY = ((x - centerX) / centerX) * 3;
 
     // Apply 3D transform
-    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.01)`;
 
     // Update shine position
     if (shineRef.current) {
@@ -49,7 +49,7 @@ export default function GlassCard({
     if (!hover) return;
     setIsHovered(true);
     if (cardRef.current) {
-      cardRef.current.style.transition = "transform 0.1s ease";
+      cardRef.current.style.transition = "transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1)";
     }
   };
 
@@ -57,7 +57,7 @@ export default function GlassCard({
     if (!hover) return;
     setIsHovered(false);
     if (cardRef.current) {
-      cardRef.current.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+      cardRef.current.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
       cardRef.current.style.transition = "transform 0.4s ease";
     }
   };

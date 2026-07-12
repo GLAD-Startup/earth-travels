@@ -42,13 +42,15 @@ export default function ClientShell({
     }
   }, [pathname]);
 
+  const isHeroPage = pathname === "/" || pathname === "/destinations";
+
   return (
     <>
       <div className="film-grain" />
       <ScrollProgress />
       <CustomCursor />
       <Navbar />
-      <main className="flex-grow pt-20">
+      <main className={`flex-grow ${isHeroPage ? "" : "pt-20"}`}>
         <div id="page-transition-container" style={{ opacity: 0 }}>
           {children}
         </div>

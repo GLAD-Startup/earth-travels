@@ -3,15 +3,11 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
+import { DESTINATIONS as DESTINATIONS_DATA } from "@/lib/data/destinations";
+
 const DESTINATIONS = [
   { value: "all", label: "All Destinations" },
-  { value: "kashmir", label: "Kashmir" },
-  { value: "maldives", label: "Maldives" },
-  { value: "malaysia", label: "Malaysia" },
-  { value: "dubai", label: "Dubai" },
-  { value: "thailand", label: "Thailand" },
-  { value: "bali", label: "Bali" },
-  { value: "europe", label: "Europe" },
+  ...DESTINATIONS_DATA.map((d) => ({ value: d.id, label: d.name })),
 ];
 
 const TRAVEL_STYLES = [
