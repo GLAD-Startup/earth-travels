@@ -13,21 +13,29 @@ interface StatItemProps {
   count: string;
   label: string;
   countRef: React.RefObject<HTMLSpanElement>;
+  showPlus?: boolean;
 }
 
-function StatItem({ icon, count, label, countRef }: StatItemProps) {
+function StatItem({ icon, count, label, countRef, showPlus = false }: StatItemProps) {
   return (
     <div className="p-5 bg-white border border-[#1a120a]/8 rounded-2xl min-h-[130px] md:min-h-[140px] flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
       <div className="flex flex-col items-center justify-center text-center w-full h-full gap-2">
         <div className="text-xl md:text-2xl text-[#c4900f] select-none flex items-center justify-center">
           {icon}
         </div>
-        <span
-          ref={countRef}
-          className="font-mono text-3xl md:text-4xl font-bold text-[#c4900f] leading-none"
-        >
-          {count}
-        </span>
+        <div className="flex items-baseline justify-center">
+          <span
+            ref={countRef}
+            className="font-mono text-3xl md:text-4xl font-bold text-[#c4900f] leading-none"
+          >
+            {count}
+          </span>
+          {showPlus && (
+            <span className="font-mono text-3xl md:text-4xl font-bold text-[#c4900f] leading-none">
+              +
+            </span>
+          )}
+        </div>
         <span className="font-sans text-[11px] md:text-[12px] text-[#1a120a]/55 font-semibold tracking-wider uppercase">
           {label}
         </span>
@@ -82,7 +90,7 @@ export default function SocialProof() {
       <div className="relative w-full py-16 px-6 bg-gradient-to-r from-[#fff4e6] via-[#fdf8f2] to-[#f5ede0] border-y border-[#1a120a]/5">
         <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <StatItem key={index} icon={stat.icon} count={stat.count} label={stat.label} countRef={stat.ref} />
+            <StatItem key={index} icon={stat.icon} count={stat.count} label={stat.label} countRef={stat.ref} showPlus={index !== 3} />
           ))}
         </div>
       </div>
