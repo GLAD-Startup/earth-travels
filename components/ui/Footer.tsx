@@ -31,11 +31,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1 */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2.5">
+            <Link href="/" className="flex items-center gap-3">
               <img
-                src="/images/logo.png"
+                src="/images/logo_transparent.png"
                 alt="Earth Travels Logo"
-                className="w-9 h-9 object-contain"
+                className="w-12 h-12 object-contain"
               />
               <span className="font-display text-2xl font-black text-white tracking-wide">
                 Earth Travels

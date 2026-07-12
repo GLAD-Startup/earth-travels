@@ -124,10 +124,10 @@ We integrated the company's official brand logos (`logo.png` and `full logo.jpeg
 ### Changes Made
 
 #### [components/ui/Navbar.tsx](file:///c:/Users/imsto/Desktop/Earth%20Travels/components/ui/Navbar.tsx)
-- Prefixed the brand text "Earth Travels" with the transparent icon logo (`logo.png`) scaled at a clean, responsive `w-8 h-8` size to balance header spacing.
+- Prefixed the brand text "Earth Travels" with the background-removed logo (`logo_transparent.png`), enlarged to `w-10 h-10` with spacing `gap-3` and a restored font size of `22px` for high readability.
 
 #### [components/ui/Footer.tsx](file:///c:/Users/imsto/Desktop/Earth%20Travels/components/ui/Footer.tsx)
-- Integrated the transparent icon logo (`logo.png`) next to the brand name in the main footer info block at a detailed `w-9 h-9` size.
+- Integrated the transparent logo (`logo_transparent.png`) next to the brand name in the main footer info block at an enlarged `w-12 h-12` size to balance footer columns.
 
 #### [app/about/page.tsx](file:///c:/Users/imsto/Desktop/Earth%20Travels/app/about/page.tsx)
 - Embedded the official complete brand mark (`full logo.jpeg`) directly below the Director's quote on the About page. The logo is styled inside a gold-accented white card (`bg-white border rounded-2xl shadow-sm`) to resemble a framed quality stamp.
