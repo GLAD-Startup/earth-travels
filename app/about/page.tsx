@@ -364,7 +364,7 @@ export default function AboutPage() {
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <a
-                href="https://maps.app.goo.gl/wKx6oV839iS3XvRVA"
+                href="https://www.google.com/search?gs_ssp=eJwFwTEOgCAMAMC4mji6M7jblkiVJ_iLWokkygJoeL53_TBfM6JCK3AnB52foNmNLaMjDYQOLXtohy5IxPYURQrrPgbJNZqa5QtPMUlqfLP8F7oWfQ&q=earth+travels+mathura&oq=earth+travels&gs_lcrp=EgZjaHJvbWUqDQgBEC4YrwEYxwEYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDM2ODZqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x39737162ce216137:0xbc512273dac12e8,1,,,,"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline font-sans text-center text-xs font-semibold py-3 px-6 border border-espresso/10 hover:border-[#D4A017]/30 flex items-center justify-center gap-1.5"
