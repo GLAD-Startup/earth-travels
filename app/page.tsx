@@ -10,6 +10,7 @@ import {
   WhyEarthTravels,
   ClosingCTABanner,
   FlightExperience,
+  PartnerCarousel,
 } from "@/components/home";
 import { RevealWrapper } from "@/components/ui";
 
@@ -61,6 +62,11 @@ export default function Home() {
       {/* 4. Why Earth Travels — Value Proposition */}
       <RevealWrapper delay={0}>
         <WhyEarthTravels />
+      </RevealWrapper>
+
+      {/* 4.5 Partner Carousel — credibility strip */}
+      <RevealWrapper delay={0}>
+        <PartnerCarousel />
       </RevealWrapper>
 
       {/* 5. Destinations Showcase */}

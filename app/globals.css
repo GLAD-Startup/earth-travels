@@ -448,3 +448,208 @@ textarea {
 .animate-fade-in-up {
   animation: fade-in-up 0.5s ease-out forwards;
 }
+
+/* ────────────────────────────────────────────
+   PARTNER CAROUSEL — PartnerCarousel.tsx
+   CSS-only, GPU-accelerated marquee.
+   Duplicated list animated by -50% for a
+   seamless, jump-free infinite loop.
+──────────────────────────────────────────── */
+
+/* Keyframe — partner strip scrolls right-to-left */
+@keyframes partner-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Section shell ──────────────────────────────────────────────── */
+.pc-section {
+  width: 100%;
+  background: var(--parchment);
+  padding: 4rem 0 4.5rem;
+  overflow: hidden;
+  /* Prevent this section from bleeding into surrounding layout */
+  isolation: isolate;
+}
+
+/* ── Eyebrow header ─────────────────────────────────────────────── */
+.pc-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 1400px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .pc-header { padding: 0 4rem; }
+}
+
+.pc-divider {
+  flex: 1;
+  height: 1px;
+  background: rgba(26, 18, 10, 0.12);
+}
+
+.pc-eyebrow {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;          /* 11px */
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(26, 18, 10, 0.42);
+  white-space: nowrap;
+  /* reset h2 defaults */
+  margin: 0;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .pc-eyebrow { font-size: 0.6rem; letter-spacing: 0.16em; }
+}
+
+/* ── Fade-edge mask wrapper ─────────────────────────────────────── */
+.pc-mask-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  /* Fade logos in/out at both edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* Pause on hover (desktop) */
+.pc-mask-wrapper:hover .pc-track {
+  animation-play-state: paused;
+}
+
+/* ── Scrolling track ────────────────────────────────────────────── */
+.pc-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* wide enough to hold the duplicated list + breathing room */
+  width: max-content;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+
+  animation: partner-marquee 38s linear infinite;
+  /* GPU hint — keeps animation on compositor thread */
+  will-change: transform;
+}
+
+/* ── Individual pill ────────────────────────────────────────────── */
+.pc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0 2.5rem;
+
+  /* Full colour, slightly dimmed at rest */
+  opacity: 0.72;
+  filter: none;
+  transform: scale(1);
+  transition:
+    opacity 0.3s ease,
+    transform 0.25s ease,
+    filter 0.3s ease;
+
+  /* Prevent text wrap */
+  white-space: nowrap;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+/* Hover: fully opaque + subtle lift */
+.pc-pill:hover {
+  opacity: 1;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
+  transform: scale(1.08);
+}
+
+/* ── Logo image ─────────────────────────────────────────────────── */
+.pc-pill__img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* Inherit grayscale from parent, transition is on parent */
+}
+
+/* ── Icon wrapper (keeps placeholder & img aligned) ────────────── */
+.pc-pill__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+/* ── Brand name label ───────────────────────────────────────────── */
+.pc-pill__name {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;          /* 13px */
+  font-weight: 500;
+  color: var(--espresso);
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .pc-pill { padding: 0 1.5rem; gap: 0.5rem; }
+  .pc-pill__name { font-size: 0.75rem; }
+  .pc-pill__icon,
+  .pc-pill__img { width: 28px; height: 28px; }
+}
+
+/* ── prefers-reduced-motion — freeze or static grid ────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .pc-track {
+    animation: none;
+    /* Switch to a natural wrapping grid so all logos are visible */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem 0;
+    padding: 0 1.5rem;
+  }
+
+  /* Full-colour static pills */
+  .pc-pill {
+    opacity: 0.75;
+    filter: none;
+  }
+
+  .pc-pill:hover {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  /* No mask needed when static */
+  .pc-mask-wrapper {
+    -webkit-mask-image: none;
+    mask-image: none;
+    overflow: visible;
+  }
+}
