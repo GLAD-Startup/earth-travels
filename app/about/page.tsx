@@ -246,13 +246,19 @@ export default function AboutPage() {
             { count: count4, ref: ref4, label: "Average Rating ★" },
           ].map((stat, idx) => (
             <GlassCard key={idx} hover={false} className="p-6 bg-white/60 border border-espresso/10 rounded-xl">
-              <span
-                ref={stat.ref}
-                className="font-mono text-3xl md:text-4xl lg:text-5xl font-bold text-[#D4A017] leading-none block mb-2"
-              >
-                {stat.count}
-                {idx !== 3 && "+"}
-              </span>
+              <div className="flex items-baseline justify-center mb-2">
+                <span
+                  ref={stat.ref}
+                  className="font-mono text-3xl md:text-4xl lg:text-5xl font-bold text-[#D4A017] leading-none"
+                >
+                  {stat.count}
+                </span>
+                {idx !== 3 && (
+                  <span className="font-mono text-3xl md:text-4xl lg:text-5xl font-bold text-[#D4A017] leading-none">
+                    +
+                  </span>
+                )}
+              </div>
               <span className="font-sans text-[11px] text-espresso/60 uppercase tracking-wider font-semibold">
                 {stat.label}
               </span>
