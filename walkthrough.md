@@ -104,6 +104,19 @@ We enhanced the visual aesthetics and hover behaviors of the floating WhatsApp b
 
 ---
 
+## 6. Homepage Featured Packages Slider Autoplay & Carousel Navigation
+
+We updated the "Journeys of a Lifetime" section on the home page to behave as a fully automated looping carousel, resolving navigation binding bugs on initial mount.
+
+### Changes Made
+
+#### [components/home/PackageSlider.tsx](file:///c:/Users/imsto/Desktop/Earth%20Travels/components/home/PackageSlider.tsx)
+- **Autoplay & Looping**: Added Swiper's `Autoplay` module. Configured Swiper to loop infinitely and slide automatically every 3.5 seconds (`delay: 3500`), pausing on mouse hover to let users read card details comfortably.
+- **Dynamic Carousel State**: Implemented dynamic rules (`loop={filteredPackages.length >= 3}`) so that Swiper only loops and autoplays when the category contains enough cards, avoiding layout glitches on short filter queries.
+- **Robust Navigation Selectors**: Changed Swiper's navigation binding from React refs (`prevRef`, `nextRef` which were initially `null` on mount, breaking navigation links) to stable custom class selectors (`.swiper-prev-pkg` and `.swiper-next-pkg`).
+
+---
+
 ## Verification & Testing
 
 Using the JetSki Browser Agent, we verified the following states:
