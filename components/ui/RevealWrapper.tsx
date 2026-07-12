@@ -8,6 +8,7 @@ interface RevealWrapperProps {
   delay?: number;
   direction?: "up" | "left" | "right";
   className?: string;
+  threshold?: number;
 }
 
 export default function RevealWrapper({
@@ -15,6 +16,7 @@ export default function RevealWrapper({
   delay = 0,
   direction = "up",
   className = "",
+  threshold = 0.05,
 }: RevealWrapperProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +54,7 @@ export default function RevealWrapper({
         });
       },
       {
-        threshold: 0.15,
+        threshold: threshold,
         rootMargin: "0px 0px -50px 0px",
       }
     );
