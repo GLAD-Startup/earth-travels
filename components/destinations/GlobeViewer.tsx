@@ -18,26 +18,31 @@ type Marker = {
 };
 
 const MARKERS: Marker[] = [
-  { name: "Kashmir", lat: 34.08, lon: 74.8, packagesCount: 3, startingPrice: 32000, description: "Where Heaven Touches Earth", region: "india" },
-  { name: "Maldives", lat: 3.2, lon: 73.02, packagesCount: 2, startingPrice: 65000, description: "Stillness Above the Ocean", region: "islands" },
-  { name: "Malaysia", lat: 3.13, lon: 101.68, packagesCount: 1, startingPrice: 55000, description: "Asia's Melting Pot", region: "southeast-asia" },
-  { name: "Dubai", lat: 25.2, lon: 55.27, packagesCount: 1, startingPrice: 45000, description: "Where Desert Meets the Sky", region: "middle-east" },
-  { name: "Thailand", lat: 13.75, lon: 100.5, packagesCount: 2, startingPrice: 28000, description: "Chaos and Calm in Balance", region: "southeast-asia" },
-  { name: "Bali", lat: -8.4, lon: 115.18, packagesCount: 2, startingPrice: 45000, description: "Island of a Thousand Temples", region: "southeast-asia" },
-  { name: "Paris", lat: 48.85, lon: 2.35, packagesCount: 3, startingPrice: 120000, description: "Romantic European Heart", region: "europe" },
-  { name: "Kerala", lat: 10.85, lon: 76.27, packagesCount: 2, startingPrice: 18000, description: "Where Backwaters Hold Time", region: "india" },
+  { name: "Kashmir", lat: 34.08, lon: 74.8, packagesCount: 3, startingPrice: 24500, description: "Where Heaven Touches Earth", region: "india" },
+  { name: "Maldives", lat: 3.2, lon: 73.02, packagesCount: 2, startingPrice: 78000, description: "Stillness Above the Ocean", region: "islands" },
+  { name: "Dubai", lat: 25.2, lon: 55.27, packagesCount: 1, startingPrice: 52000, description: "Where Desert Meets the Sky", region: "middle-east" },
+  { name: "Bali", lat: -8.4, lon: 115.18, packagesCount: 2, startingPrice: 46000, description: "Island of a Thousand Temples", region: "southeast-asia" },
+  { name: "Europe", lat: 48.85, lon: 2.35, packagesCount: 3, startingPrice: 145000, description: "Old Stones, New Memories", region: "europe" },
+  { name: "Thailand", lat: 13.75, lon: 100.5, packagesCount: 2, startingPrice: 38000, description: "Chaos and Calm in Balance", region: "southeast-asia" },
+  { name: "Kerala", lat: 10.85, lon: 76.27, packagesCount: 2, startingPrice: 19500, description: "Where Backwaters Hold Time", region: "india" },
   { name: "Rajasthan", lat: 27.02, lon: 74.21, packagesCount: 2, startingPrice: 22000, description: "Royal India, Unfiltered", region: "india" },
+  { name: "Singapore", lat: 1.35, lon: 103.86, packagesCount: 2, startingPrice: 55000, description: "The Future, Already Here", region: "southeast-asia" },
   { name: "Sri Lanka", lat: 7.87, lon: 80.77, packagesCount: 1, startingPrice: 35000, description: "Pearl of the Indian Ocean", region: "islands" },
-  { name: "Singapore", lat: 1.35, lon: 103.86, packagesCount: 1, startingPrice: 55000, description: "The Future, Already Here", region: "southeast-asia" },
-  // Additional Locations
-  { name: "Ladakh", lat: 34.15, lon: 77.58, packagesCount: 1, startingPrice: 35000, description: "The Land of High Passes", region: "india" },
-  { name: "Goa", lat: 15.29, lon: 74.12, packagesCount: 1, startingPrice: 15000, description: "Sun, Sand, and Seafood", region: "india" },
-  { name: "Vietnam", lat: 16.0, lon: 108.0, packagesCount: 1, startingPrice: 38000, description: "Timeless Charm & History", region: "southeast-asia" },
-  { name: "Oman", lat: 23.58, lon: 58.38, packagesCount: 1, startingPrice: 60000, description: "The Essence of Arabia", region: "middle-east" },
-  { name: "Switzerland", lat: 46.8, lon: 8.2, packagesCount: 1, startingPrice: 135000, description: "Lakes, Gorges, and Alpine Peaks", region: "europe" },
-  { name: "London", lat: 51.5, lon: -0.11, packagesCount: 1, startingPrice: 95000, description: "Royal Heritage & Modern Culture", region: "europe" },
-  { name: "Seychelles", lat: -4.6, lon: 55.45, packagesCount: 1, startingPrice: 85000, description: "Pristine Tropical Paradise", region: "islands" },
+  { name: "Vietnam", lat: 16.0, lon: 108.0, packagesCount: 2, startingPrice: 26000, description: "Heritage and Emerald Waters", region: "southeast-asia" },
+  { name: "Malaysia", lat: 3.13, lon: 101.68, packagesCount: 2, startingPrice: 28000, description: "Truly Asia, Divergent & Beautiful", region: "southeast-asia" },
+  { name: "Baku (Azerbaijan)", lat: 40.40, lon: 49.86, packagesCount: 1, startingPrice: 34000, description: "Wind and Fire on the Caspian Coast", region: "middle-east" },
+  { name: "Turkey", lat: 41.01, lon: 28.97, packagesCount: 2, startingPrice: 68000, description: "East Meets West Under Balloons", region: "europe" },
+  { name: "Goa", lat: 15.29, lon: 74.12, packagesCount: 1, startingPrice: 9500, description: "Sun, Sand, and Seafood", region: "india" },
+  { name: "Leh Ladakh", lat: 34.15, lon: 77.58, packagesCount: 1, startingPrice: 24000, description: "The Land of High Passes", region: "india" },
+  { name: "Himachal Pradesh", lat: 31.10, lon: 77.17, packagesCount: 2, startingPrice: 14500, description: "Into the Heart of the Snow-Capped Valley", region: "india" },
+  { name: "Uttarakhand", lat: 30.32, lon: 78.03, packagesCount: 1, startingPrice: 12000, description: "Sacred Hills and Glacial Rivers", region: "india" },
+  { name: "Andaman & Nicobar", lat: 11.62, lon: 92.73, packagesCount: 1, startingPrice: 22500, description: "Tropical Reefs and Sparkling Shorelines", region: "islands" },
+  { name: "Mauritius", lat: -20.34, lon: 57.55, packagesCount: 1, startingPrice: 58000, description: "A Contrast of Sapphire Reefs and Valleys", region: "islands" },
+  { name: "Seychelles", lat: -4.68, lon: 55.45, packagesCount: 1, startingPrice: 85000, description: "Pristine Tropical Paradise", region: "islands" },
+  { name: "Switzerland", lat: 46.80, lon: 8.23, packagesCount: 1, startingPrice: 115000, description: "Lakes, Gorges, and Alpine Peaks", region: "europe" },
+  { name: "United Kingdom", lat: 51.50, lon: -0.12, packagesCount: 1, startingPrice: 85000, description: "Royalty, Castles, and Green Fields", region: "europe" },
 ];
+
 
 interface GlobeViewerProps {
   onSelectDestination: (name: string) => void;
