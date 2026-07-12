@@ -2460,8 +2460,6 @@ export const VARIANT_ITINERARIES: Record<string, any> = {
     ],
     hotels: [{ name: "Hotel Mewar Haveli Udaipur", rating: "★★★★", type: "Heritage Hotel", location: "Old City, Udaipur", image: "/images/destinations/rajasthan_3.jpg" }, { name: "Shahpura House Jaipur", rating: "★★★★", type: "Heritage Boutique Hotel", location: "Jaipur", image: "/images/destinations/rajasthan_3.jpg" }],
   },
-};
-
 // ── MALAYSIA VARIANTS ──
   "malaysia-island": {
     slug: "malaysia-island", destination: "Malaysia", title: "Malaysia Island Paradise (Langkawi & Penang Beaches)", duration: "6 Nights / 7 Days", heroImage: "/images/destinations/malaysia_3.jpg", tagline: "Langkawi sky bridge, Eagle Square, Penang street art and George Town UNESCO World Heritage", basePrice: 38000,
