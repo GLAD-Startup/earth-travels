@@ -6,19 +6,22 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { GlassCard } from "@/components/ui";
 import { ITINERARIES } from "@/lib/data/itineraries";
+import { VARIANT_ITINERARIES } from "@/lib/data/itineraries";
 import { PACKAGES } from "@/lib/data/packages";
 
 export default function ItineraryPage() {
   const { slug } = useParams();
   const slugStr = Array.isArray(slug) ? slug[0] : slug ?? "";
 
-  // First try: direct itinerary slug (e.g. "kashmir")
-  // Second try: package ID slug (e.g. "kashmir-7n8d") → look up package → find base itinerary
-  const baseItinerary = ITINERARIES[slugStr];
+  // Resolution order:
+  // 1. Check ITINERARIES directly (original destination slugs like "kashmir")
+  // 2. Check VARIANT_ITINERARIES (unique package variant slugs like "kashmir-premium")
+  // 3. Fallback: find package by ID → get base destination itinerary + override price/title/duration
+  const baseItinerary = ITINERARIES[slugStr] ?? VARIANT_ITINERARIES[slugStr] ?? null;
   const matchedPackage = PACKAGES.find((p) => p.id === slugStr);
   const packageBaseItinerary = matchedPackage ? ITINERARIES[matchedPackage.destinationId] : null;
 
-  // Build the resolved itinerary — package-specific if slug is a package ID
+  // Build the resolved itinerary
   const itinerary = baseItinerary
     ? baseItinerary
     : matchedPackage && packageBaseItinerary
@@ -31,7 +34,6 @@ export default function ItineraryPage() {
         heroImage: matchedPackage.image,
         tagline: packageBaseItinerary.tagline,
         basePrice: matchedPackage.pricePerPerson,
-        // Slice days to match the package duration; cycle from start if base has fewer days
         days: Array.from({ length: matchedPackage.duration.days }, (_, i) =>
           packageBaseItinerary.days[i % packageBaseItinerary.days.length]
             ? { ...packageBaseItinerary.days[i % packageBaseItinerary.days.length], dayNumber: i + 1 }
