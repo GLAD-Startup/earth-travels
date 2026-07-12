@@ -22,6 +22,12 @@ export default function ItineraryPage() {
   const [roomType, setRoomType] = useState("twin");
   const [totalPrice, setTotalPrice] = useState(0);
 
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+
   // Active Day Scrollspy state
   const [activeDay, setActiveDay] = useState(1);
 
@@ -43,6 +49,47 @@ export default function ItineraryPage() {
       setReturnDate(d.toISOString().split("T")[0]);
     }
   };
+
+  const handleBookingSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!itinerary) return;
+
+    const finalData = {
+      formType: "Itinerary Booking Request",
+      name: fullName,
+      phone: `+91 ${phone}`,
+      email,
+      meta: {
+        destination: itinerary.title,
+        departureDate,
+        returnDate,
+        adults,
+        children,
+        roomType,
+        totalPrice: `₹${totalPrice.toLocaleString("en-IN")}`
+      }
+    };
+
+    console.log("Earth Travels - Itinerary Booking Request:", finalData);
+    setIsSubmitted(true);
+
+    const sheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+    if (sheetsUrl) {
+      try {
+        await fetch(sheetsUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(finalData),
+        });
+      } catch (err) {
+        console.error("Error submitting to Google Sheets:", err);
+      }
+    }
+  };
+
 
   // Price calculations
   useEffect(() => {
@@ -395,124 +442,200 @@ export default function ItineraryPage() {
                 Book This Package
               </h3>
 
-              <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-5">
+               {!isSubmitted ? (
+                <form onSubmit={handleBookingSubmit} className="flex flex-col gap-5">
 
-                {/* Departure date */}
-                <div className="flex flex-col gap-2">
-                  <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
-                    Departure Date
-                  </label>
-                  <input
-                    type="date"
-                    value={departureDate}
-                    onChange={(e) => handleDepartureChange(e.target.value)}
-                    min={new Date().toISOString().split("T")[0]}
-                    className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans animate-none"
-                    required
-                  />
-                </div>
-
-                {/* Return date */}
-                <div className="flex flex-col gap-2">
-                  <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
-                    Return Date ({itinerary.duration})
-                  </label>
-                  <input
-                    type="date"
-                    value={returnDate}
-                    onChange={(e) => setReturnDate(e.target.value)}
-                    min={departureDate || new Date().toISOString().split("T")[0]}
-                    className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans animate-none"
-                    required
-                  />
-                </div>
-
-                {/* Adults / Children Stepper */}
-                <div className="grid grid-cols-2 gap-4">
+                  {/* Departure date */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Adults</label>
-                    <div className="flex items-center justify-between bg-white/5 border border-charcoal/10 rounded-xl px-2 py-1 h-[40px]">
-                      <button type="button" onClick={() => setAdults((prev) => Math.max(1, prev - 1))} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">-</button>
-                      <span className="font-mono text-xs font-semibold text-charcoal/80">{adults}</span>
-                      <button type="button" onClick={() => setAdults((prev) => prev + 1)} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">+</button>
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      Departure Date
+                    </label>
+                    <input
+                      type="date"
+                      value={departureDate}
+                      onChange={(e) => handleDepartureChange(e.target.value)}
+                      min={new Date().toISOString().split("T")[0]}
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans animate-none"
+                      required
+                    />
+                  </div>
+
+                  {/* Return date */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      Return Date ({itinerary.duration})
+                    </label>
+                    <input
+                      type="date"
+                      value={returnDate}
+                      onChange={(e) => setReturnDate(e.target.value)}
+                      min={departureDate || new Date().toISOString().split("T")[0]}
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans animate-none"
+                      required
+                    />
+                  </div>
+
+                  {/* Adults / Children Stepper */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-2">
+                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Adults</label>
+                      <div className="flex items-center justify-between bg-white/5 border border-charcoal/10 rounded-xl px-2 py-1 h-[40px]">
+                        <button type="button" onClick={() => setAdults((prev) => Math.max(1, prev - 1))} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">-</button>
+                        <span className="font-mono text-xs font-semibold text-charcoal/80">{adults}</span>
+                        <button type="button" onClick={() => setAdults((prev) => prev + 1)} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">+</button>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Children</label>
+                      <div className="flex items-center justify-between bg-white/5 border border-charcoal/10 rounded-xl px-2 py-1 h-[40px]">
+                        <button type="button" onClick={() => setChildren((prev) => Math.max(0, prev - 1))} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">-</button>
+                        <span className="font-mono text-xs font-semibold text-charcoal/80">{children}</span>
+                        <button type="button" onClick={() => setChildren((prev) => prev + 1)} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">+</button>
+                      </div>
                     </div>
                   </div>
 
+                  {/* Room Standards */}
                   <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Children</label>
-                    <div className="flex items-center justify-between bg-white/5 border border-charcoal/10 rounded-xl px-2 py-1 h-[40px]">
-                      <button type="button" onClick={() => setChildren((prev) => Math.max(0, prev - 1))} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">-</button>
-                      <span className="font-mono text-xs font-semibold text-charcoal/80">{children}</span>
-                      <button type="button" onClick={() => setChildren((prev) => prev + 1)} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">+</button>
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Sharing Class</label>
+                    <div className="flex flex-col gap-2.5 mt-1 pl-1">
+                      {[
+                        { value: "twin", label: "Twin Sharing stay" },
+                        { value: "double", label: "Double Room stay" },
+                        { value: "single", label: "Single Supplement (+₹8,000)" },
+                      ].map((option) => (
+                        <label key={option.value} className="flex items-center gap-2.5 text-xs text-charcoal/70 hover:text-charcoal cursor-pointer select-none">
+                          <input type="radio" name="room" checked={roomType === option.value} onChange={() => setRoomType(option.value)} className="sr-only" />
+                          <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center transition-colors ${roomType === option.value ? "border-[#D4A017] bg-[#D4A017]" : "border-charcoal/20"}`}>
+                            {roomType === option.value && <span className="w-1.5 h-1.5 rounded-full bg-background" />}
+                          </span>
+                          <span>{option.label}</span>
+                        </label>
+                      ))}
                     </div>
                   </div>
-                </div>
 
-                {/* Room Standards */}
-                <div className="flex flex-col gap-2">
-                  <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Sharing Class</label>
-                  <div className="flex flex-col gap-2.5 mt-1 pl-1">
-                    {[
-                      { value: "twin", label: "Twin Sharing stay" },
-                      { value: "double", label: "Double Room stay" },
-                      { value: "single", label: "Single Supplement (+₹8,000)" },
-                    ].map((option) => (
-                      <label key={option.value} className="flex items-center gap-2.5 text-xs text-charcoal/70 hover:text-charcoal cursor-pointer select-none">
-                        <input type="radio" name="room" checked={roomType === option.value} onChange={() => setRoomType(option.value)} className="sr-only" />
-                        <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center transition-colors ${roomType === option.value ? "border-[#D4A017] bg-[#D4A017]" : "border-charcoal/20"}`}>
-                          {roomType === option.value && <span className="w-1.5 h-1.5 rounded-full bg-background" />}
-                        </span>
-                        <span>{option.label}</span>
+                  {/* Contact Info Inside Widget */}
+                  <div className="pt-4 border-t border-charcoal/5 flex flex-col gap-4">
+                    <div className="flex flex-col gap-1.5">
+                      <label className="font-mono text-[9px] text-charcoal/50 uppercase tracking-widest pl-1">
+                        Full Name
                       </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Price Breakdown */}
-                <div className="pt-4 border-t border-charcoal/5 flex flex-col gap-2.5 text-xs text-charcoal/50 font-sans">
-                  <div className="flex justify-between">
-                    <span>Base Fare (Adults × {adults})</span>
-                    <span>₹{(itinerary.basePrice * adults).toLocaleString("en-IN")}</span>
-                  </div>
-                  {children > 0 && (
-                    <div className="flex justify-between">
-                      <span>Child Discount (× {children})</span>
-                      <span>₹{(Math.round(itinerary.basePrice * 0.65) * children).toLocaleString("en-IN")}</span>
+                      <input
+                        type="text"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        placeholder="Your name"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-3 py-2 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans h-[38px]"
+                        required
+                      />
                     </div>
-                  )}
-                  {roomType === "single" && (
-                    <div className="flex justify-between">
-                      <span>Single Supplement</span>
-                      <span>+₹8,000</span>
+
+                    <div className="flex flex-col gap-1.5">
+                      <label className="font-mono text-[9px] text-charcoal/50 uppercase tracking-widest pl-1">
+                        WhatsApp Number
+                      </label>
+                      <div className="relative">
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-charcoal/40 font-mono text-xs">
+                          +91
+                        </span>
+                        <input
+                          type="tel"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))}
+                          placeholder="Phone number"
+                          className="w-full bg-white/5 border border-charcoal/10 rounded-xl pl-11 pr-3 py-2 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-mono h-[38px]"
+                          required
+                        />
+                      </div>
                     </div>
-                  )}
-                  <div className="pt-3 border-t border-charcoal/5 flex items-baseline justify-between">
-                    <span className="text-charcoal font-semibold">Total Cost</span>
-                    <span className="font-mono text-2xl font-black text-[#D4A017]">
-                      ₹{totalPrice.toLocaleString("en-IN")}
-                    </span>
+
+                    <div className="flex flex-col gap-1.5">
+                      <label className="font-mono text-[9px] text-charcoal/50 uppercase tracking-widest pl-1">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email address"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-3 py-2 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans h-[38px]"
+                        required
+                      />
+                    </div>
                   </div>
+
+                  {/* Price Breakdown */}
+                  <div className="pt-4 border-t border-charcoal/5 flex flex-col gap-2.5 text-xs text-charcoal/50 font-sans">
+                    <div className="flex justify-between">
+                      <span>Base Fare (Adults × {adults})</span>
+                      <span>₹{(itinerary.basePrice * adults).toLocaleString("en-IN")}</span>
+                    </div>
+                    {children > 0 && (
+                      <div className="flex justify-between">
+                        <span>Child Discount (× {children})</span>
+                        <span>₹{(Math.round(itinerary.basePrice * 0.65) * children).toLocaleString("en-IN")}</span>
+                      </div>
+                    )}
+                    {roomType === "single" && (
+                      <div className="flex justify-between">
+                        <span>Single Supplement</span>
+                        <span>+₹8,000</span>
+                      </div>
+                    )}
+                    <div className="pt-3 border-t border-charcoal/5 flex items-baseline justify-between">
+                      <span className="text-charcoal font-semibold">Total Cost</span>
+                      <span className="font-mono text-2xl font-black text-[#D4A017]">
+                        ₹{totalPrice.toLocaleString("en-IN")}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Request Booking Button */}
+                  <button
+                    type="submit"
+                    className="gold-pulse-btn font-sans text-center text-xs font-bold py-3.5 mt-2 text-midnight rounded-full select-none"
+                    style={{ background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)" }}
+                  >
+                    Request Booking
+                  </button>
+
+                  <a
+                    href={whatsAppLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center font-sans text-xs text-charcoal/50 hover:text-charcoal transition-colors block underline underline-offset-4 mt-1"
+                  >
+                    or WhatsApp us →
+                  </a>
+
+                </form>
+              ) : (
+                <div className="text-center py-12 flex flex-col items-center select-none">
+                  <div className="w-12 h-12 bg-[#D4A017]/10 border border-[#D4A017] rounded-full flex items-center justify-center text-[#D4A017] text-2xl mb-4">
+                    ✓
+                  </div>
+                  <h4 className="font-display text-lg font-bold text-charcoal mb-2">
+                    Request Received!
+                  </h4>
+                  <p className="font-sans text-[11px] text-charcoal/60 leading-relaxed mb-6">
+                    Thank you, <span className="font-bold text-[#D4A017]">{fullName}</span>. Our Mathura planners will design your custom {itinerary.destination} package and call you back shortly.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setFullName("");
+                      setPhone("");
+                      setEmail("");
+                    }}
+                    className="btn-outline font-sans text-xs font-semibold py-2 px-4"
+                  >
+                    Modify Request
+                  </button>
                 </div>
+              )}
 
-                {/* Request Booking */}
-                <Link
-                  href={`/quote?destination=${slugStr}&adults=${adults}&children=${children}&date=${departureDate}`}
-                  className="gold-pulse-btn font-sans text-center text-xs font-bold py-3.5 mt-2 text-midnight rounded-full select-none"
-                  style={{ background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)" }}
-                >
-                  Request Booking
-                </Link>
-
-                <a
-                  href={whatsAppLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center font-sans text-xs text-charcoal/50 hover:text-charcoal transition-colors block underline underline-offset-4 mt-1"
-                >
-                  or WhatsApp us →
-                </a>
-
-              </form>
             </GlassCard>
           </aside>
 
