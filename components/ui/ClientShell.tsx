@@ -42,7 +42,7 @@ export default function ClientShell({
     }
   }, [pathname]);
 
-  const isHeroPage = pathname === "/" || pathname === "/destinations";
+  const isHeroPage = isDarkHeroPage;
 
   return (
     <>
@@ -50,7 +50,7 @@ export default function ClientShell({
       <ScrollProgress />
       <CustomCursor />
       <Navbar />
-      <main className={`flex-grow ${isHeroPage ? "" : "pt-20"}`}>
+      <main className={`flex-grow ${isDarkHeroPage ? "" : "pt-20"}`}>
         <div id="page-transition-container" style={{ opacity: 0 }}>
           {children}
         </div>

@@ -94,11 +94,11 @@ export default function KashmirItineraryPage() {
             ITINERARY · {itinerary.destination.toUpperCase()}
           </div>
           <div>
-            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-charcoal leading-none mb-2">{itinerary.tagline}</h1>
-            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-charcoal/90 leading-none">{itinerary.title}</h2>
+            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-white leading-none mb-2" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>{itinerary.tagline}</h1>
+            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-white/90 leading-none" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>{itinerary.title}</h2>
           </div>
-          <div className="hero-slide-up glass p-5 rounded-2xl border border-charcoal/10 max-w-4xl mt-4 bg-background/50 backdrop-blur-md">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x divide-charcoal/10">
+          <div className="hero-slide-up glass p-5 rounded-2xl border border-white/20 max-w-4xl mt-4 bg-charcoal/30 backdrop-blur-md">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x divide-white/20">
               {[
                 { label: "Duration", value: itinerary.duration },
                 { label: "Origin", value: "Mathura / Delhi" },
@@ -107,8 +107,8 @@ export default function KashmirItineraryPage() {
                 { label: "Starting at", value: `₹${itinerary.basePrice.toLocaleString("en-IN")}/person`, gold: true },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col gap-1 pt-2 md:pt-0">
-                  <span className="text-charcoal/40 font-sans text-[10px] uppercase">{item.label}</span>
-                  <span className={`text-xs md:text-sm font-semibold font-mono ${item.gold ? "text-[#D4A017]" : "text-charcoal"}`}>{item.value}</span>
+                  <span className="text-white/60 font-sans text-[10px] uppercase">{item.label}</span>
+                  <span className={`text-xs md:text-sm font-semibold font-mono ${item.gold ? "text-[#D4A017]" : "text-white"}`}>{item.value}</span>
                 </div>
               ))}
             </div>

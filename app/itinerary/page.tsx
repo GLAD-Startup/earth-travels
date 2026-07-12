@@ -1,12 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ITINERARIES } from "@/lib/data/itineraries";
 import { GlassCard, RevealWrapper } from "@/components/ui";
 
 export default function ItinerariesPage() {
   const itineraryList = Object.values(ITINERARIES);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredItineraries = itineraryList.filter((itinerary) => {
+    if (!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    return (
+      itinerary.title.toLowerCase().includes(q) ||
+      itinerary.destination.toLowerCase().includes(q) ||
+      itinerary.tagline.toLowerCase().includes(q) ||
+      itinerary.slug.toLowerCase().includes(q)
+    );
+  });
 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
@@ -43,18 +55,32 @@ export default function ItinerariesPage() {
       {/* Itinerary Cards Grid */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <RevealWrapper delay={0.1}>
-          <div className="border-l-2 border-[#D4A017] pl-4 mb-12">
-            <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
-              Handcrafted Journeys
-            </span>
-            <h2 className="font-display text-2xl font-bold text-charcoal">
-              {itineraryList.length} Detailed Itineraries
-            </h2>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between border-l-2 border-[#D4A017] pl-4 mb-12 gap-4">
+            <div>
+              <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
+                Handcrafted Journeys
+              </span>
+              <h2 className="font-display text-2xl font-bold text-charcoal">
+                {filteredItineraries.length} Detailed Itineraries
+              </h2>
+            </div>
+            <div className="relative w-full sm:w-72">
+              <input
+                type="text"
+                placeholder="Search itineraries..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 pl-9 text-[11px] font-sans border border-charcoal/15 rounded-lg bg-surface text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-[#D4A017] focus:ring-1 focus:ring-[#D4A017] transition-all duration-300 shadow-sm"
+              />
+              <svg className="absolute left-3 top-2.5 w-3.5 h-3.5 text-charcoal/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
           </div>
         </RevealWrapper>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {itineraryList.map((itinerary, idx) => (
+          {filteredItineraries.length > 0 ? filteredItineraries.map((itinerary, idx) => (
             <RevealWrapper key={itinerary.slug} delay={idx * 0.05}>
               <Link href={`/itinerary/${itinerary.slug}`} className="group block h-full">
                 <GlassCard
@@ -133,7 +159,20 @@ export default function ItinerariesPage() {
                 </GlassCard>
               </Link>
             </RevealWrapper>
-          ))}
+          )) : (
+            <div className="col-span-full text-center py-20 border border-dashed border-charcoal/10 rounded-2xl">
+              <span className="text-4xl block mb-4 select-none">🔍</span>
+              <p className="text-sm font-sans text-charcoal/50 mb-2">
+                No itineraries match your search query &ldquo;{searchQuery}&rdquo;.
+              </p>
+              <button
+                onClick={() => setSearchQuery("")}
+                className="font-mono text-xs text-[#D4A017] hover:underline uppercase tracking-wider"
+              >
+                Clear search
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Bottom CTA */}
