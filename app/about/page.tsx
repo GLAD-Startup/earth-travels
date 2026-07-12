@@ -139,13 +139,24 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <RevealWrapper delay={0.1}>
-            <div className="border-l-4 border-[#D4A017] pl-6 md:pl-8">
-              <blockquote className="font-display text-2xl md:text-[32px] italic text-[#D4A017] leading-normal font-light">
-                &ldquo;We don&apos;t just plan trips. We make sure every family that trusts us comes back with a story they&apos;ll tell for years.&rdquo;
-              </blockquote>
-              <cite className="font-mono text-[10px] text-espresso/40 uppercase tracking-widest block mt-4 not-italic font-bold">
-                — Director, Earth Travels
-              </cite>
+            <div className="flex flex-col gap-8">
+              <div className="border-l-4 border-[#D4A017] pl-6 md:pl-8">
+                <blockquote className="font-display text-2xl md:text-[32px] italic text-[#D4A017] leading-normal font-light">
+                  &ldquo;We don&apos;t just plan trips. We make sure every family that trusts us comes back with a story they&apos;ll tell for years.&rdquo;
+                </blockquote>
+                <cite className="font-mono text-[10px] text-espresso/40 uppercase tracking-widest block mt-4 not-italic font-bold">
+                  — Director, Earth Travels
+                </cite>
+              </div>
+              
+              {/* Full Logo Placement */}
+              <div className="relative w-full max-w-[280px] overflow-hidden rounded-2xl border border-espresso/10 bg-white p-4 shadow-sm">
+                <img
+                  src="/images/full logo.jpeg"
+                  alt="Earth Travels Full Logo"
+                  className="w-full object-contain"
+                />
+              </div>
             </div>
           </RevealWrapper>
 

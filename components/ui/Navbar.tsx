@@ -66,10 +66,15 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* Left: Brand name */}
-          <Link href="/" className="flex flex-col">
+          {/* Left: Brand name with Logo */}
+          <Link href="/" className="flex items-center gap-2">
+            <img
+              src="/images/logo.png"
+              alt="Earth Travels Logo"
+              className="w-8 h-8 object-contain"
+            />
             <span
-              className={`font-display text-[22px] font-extrabold tracking-wide transition-colors duration-300 ${brandColorClass}`}
+              className={`font-display text-[20px] font-extrabold tracking-wide transition-colors duration-300 ${brandColorClass}`}
               style={{ textShadow: "0 0 20px rgba(196, 144, 15, 0.15)" }}
             >
               Earth Travels
