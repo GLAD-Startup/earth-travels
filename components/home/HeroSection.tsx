@@ -132,6 +132,19 @@ export default function HeroSection() {
         </div>
 
       </div>
+      
+      {/* Floating No. 1 In Mathura Sticker Badge */}
+      <div className="absolute top-28 right-6 lg:right-16 w-24 h-24 md:w-36 md:h-36 z-20 pointer-events-auto transition-transform duration-700 hover:rotate-12 hover:scale-105">
+        <Image
+          src="/no1InMathura.png"
+          alt="No. 1 Travel Agent in Mathura"
+          width={150}
+          height={150}
+          className="object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)]"
+          priority
+        />
+      </div>
+
     </section>
   );
 }
