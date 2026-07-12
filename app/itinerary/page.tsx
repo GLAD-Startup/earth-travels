@@ -2,21 +2,20 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ITINERARIES } from "@/lib/data/itineraries";
+import { PACKAGES } from "@/lib/data/packages";
 import { GlassCard, RevealWrapper } from "@/components/ui";
 
 export default function ItinerariesPage() {
-  const itineraryList = Object.values(ITINERARIES);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredItineraries = itineraryList.filter((itinerary) => {
+  const filteredPackages = PACKAGES.filter((pkg) => {
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     return (
-      itinerary.title.toLowerCase().includes(q) ||
-      itinerary.destination.toLowerCase().includes(q) ||
-      itinerary.tagline.toLowerCase().includes(q) ||
-      itinerary.slug.toLowerCase().includes(q)
+      pkg.name.toLowerCase().includes(q) ||
+      pkg.destination.toLowerCase().includes(q) ||
+      pkg.destinationId.toLowerCase().includes(q) ||
+      pkg.category.some((c) => c.toLowerCase().includes(q))
     );
   });
 
@@ -61,7 +60,7 @@ export default function ItinerariesPage() {
                 Handcrafted Journeys
               </span>
               <h2 className="font-display text-2xl font-bold text-charcoal">
-                {filteredItineraries.length} Detailed Itineraries
+                {filteredPackages.length} Packages
               </h2>
             </div>
             <div className="relative w-full sm:w-72">
@@ -80,9 +79,9 @@ export default function ItinerariesPage() {
         </RevealWrapper>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItineraries.length > 0 ? filteredItineraries.map((itinerary, idx) => (
-            <RevealWrapper key={itinerary.slug} delay={idx * 0.05}>
-              <Link href={`/itinerary/${itinerary.slug}`} className="group block h-full">
+          {filteredPackages.length > 0 ? filteredPackages.map((pkg, idx) => (
+            <RevealWrapper key={pkg.id} delay={idx * 0.03}>
+              <Link href={pkg.itineraryPage} className="group block h-full">
                 <GlassCard
                   hover={true}
                   className="p-0 overflow-hidden bg-background/35 border border-charcoal/10 hover:border-[#D4A017]/40 transition-all duration-300 rounded-2xl flex flex-col h-full"
@@ -90,24 +89,29 @@ export default function ItinerariesPage() {
                   {/* Image */}
                   <div className="relative h-52 w-full overflow-hidden">
                     <img
-                      src={itinerary.heroImage}
-                      alt={itinerary.title}
+                      src={pkg.image}
+                      alt={pkg.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/20 to-transparent" />
 
-                    {/* Days count badge */}
+                    {/* Duration badge */}
                     <div className="absolute top-4 right-4 glass px-3 py-1.5 rounded-full border border-charcoal/10 bg-background/60 backdrop-blur-sm">
                       <span className="font-mono text-[9px] text-charcoal/70 uppercase tracking-wider">
-                        {itinerary.days.length} Days
+                        {pkg.duration.nights}N / {pkg.duration.days}D
                       </span>
                     </div>
 
                     {/* Destination tag */}
-                    <div className="absolute bottom-4 left-4">
+                    <div className="absolute bottom-4 left-4 flex items-center gap-2">
                       <span className="glass px-2.5 py-0.5 rounded-full border border-[#D4A017]/40 text-[#D4A017] font-mono text-[9px] tracking-wider uppercase bg-[#D4A017]/10 font-semibold">
-                        {itinerary.destination}
+                        {pkg.destination}
                       </span>
+                      {pkg.badge && (
+                        <span className="glass px-2.5 py-0.5 rounded-full border border-white/20 text-white font-mono text-[9px] tracking-wider uppercase bg-white/10 font-semibold">
+                          {pkg.badge}
+                        </span>
+                      )}
                     </div>
                   </div>
 
@@ -115,29 +119,26 @@ export default function ItinerariesPage() {
                   <div className="p-6 flex flex-col flex-grow gap-3">
                     <div>
                       <p className="font-sans text-[10px] text-charcoal/40 uppercase tracking-widest font-semibold mb-1">
-                        {itinerary.duration}
+                        {pkg.duration.nights} Nights · {pkg.duration.days} Days
                       </p>
                       <h3 className="font-display text-xl font-bold text-charcoal group-hover:text-[#D4A017] transition-colors leading-tight">
-                        {itinerary.title}
+                        {pkg.name}
                       </h3>
-                      <p className="font-sans text-xs text-charcoal/50 italic mt-1.5">
-                        &quot;{itinerary.tagline}&quot;
-                      </p>
                     </div>
 
-                    {/* Day highlights preview */}
+                    {/* Highlights */}
                     <div className="flex flex-wrap gap-1.5 mt-1">
-                      {itinerary.days.slice(0, 3).map((day) => (
+                      {pkg.highlights.slice(0, 3).map((h, i) => (
                         <span
-                          key={day.dayNumber}
+                          key={i}
                           className="text-[9px] font-mono text-charcoal/40 bg-white/5 border border-charcoal/5 rounded-full px-2 py-0.5"
                         >
-                          {day.tag}
+                          {h}
                         </span>
                       ))}
-                      {itinerary.days.length > 3 && (
+                      {pkg.highlights.length > 3 && (
                         <span className="text-[9px] font-mono text-charcoal/30 bg-white/5 border border-charcoal/5 rounded-full px-2 py-0.5">
-                          +{itinerary.days.length - 3} more
+                          +{pkg.highlights.length - 3} more
                         </span>
                       )}
                     </div>
@@ -147,7 +148,7 @@ export default function ItinerariesPage() {
                       <div>
                         <span className="text-[9px] text-charcoal/40 block font-sans uppercase">Starting at</span>
                         <span className="font-mono text-lg font-bold text-[#D4A017]">
-                          ₹{itinerary.basePrice.toLocaleString("en-IN")}
+                          ₹{pkg.pricePerPerson.toLocaleString("en-IN")}
                           <span className="text-[10px] text-charcoal/40 font-normal ml-1">/person</span>
                         </span>
                       </div>
@@ -163,7 +164,7 @@ export default function ItinerariesPage() {
             <div className="col-span-full text-center py-20 border border-dashed border-charcoal/10 rounded-2xl">
               <span className="text-4xl block mb-4 select-none">🔍</span>
               <p className="text-sm font-sans text-charcoal/50 mb-2">
-                No itineraries match your search query &ldquo;{searchQuery}&rdquo;.
+                No packages match your search query &ldquo;{searchQuery}&rdquo;.
               </p>
               <button
                 onClick={() => setSearchQuery("")}
