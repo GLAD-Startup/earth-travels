@@ -12,7 +12,34 @@ export default function ItineraryPage() {
   const { slug } = useParams();
   const slugStr = Array.isArray(slug) ? slug[0] : slug ?? "";
 
-  const itinerary = ITINERARIES[slugStr];
+  // First try: direct itinerary slug (e.g. "kashmir")
+  // Second try: package ID slug (e.g. "kashmir-7n8d") → look up package → find base itinerary
+  const baseItinerary = ITINERARIES[slugStr];
+  const matchedPackage = PACKAGES.find((p) => p.id === slugStr);
+  const packageBaseItinerary = matchedPackage ? ITINERARIES[matchedPackage.destinationId] : null;
+
+  // Build the resolved itinerary — package-specific if slug is a package ID
+  const itinerary = baseItinerary
+    ? baseItinerary
+    : matchedPackage && packageBaseItinerary
+    ? {
+        ...packageBaseItinerary,
+        slug: slugStr,
+        title: matchedPackage.name,
+        destination: matchedPackage.destination,
+        duration: `${matchedPackage.duration.nights} Nights / ${matchedPackage.duration.days} Days`,
+        heroImage: matchedPackage.image,
+        tagline: packageBaseItinerary.tagline,
+        basePrice: matchedPackage.pricePerPerson,
+        // Slice days to match the package duration; cycle from start if base has fewer days
+        days: Array.from({ length: matchedPackage.duration.days }, (_, i) =>
+          packageBaseItinerary.days[i % packageBaseItinerary.days.length]
+            ? { ...packageBaseItinerary.days[i % packageBaseItinerary.days.length], dayNumber: i + 1 }
+            : packageBaseItinerary.days[packageBaseItinerary.days.length - 1]
+        ),
+        hotels: packageBaseItinerary.hotels,
+      }
+    : null;
 
   // Booking Widget Form states
   const [departureDate, setDepartureDate] = useState("");
