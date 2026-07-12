@@ -5,8 +5,8 @@ import { GlassCard, RevealWrapper } from "@/components/ui";
 import { useIsOpen } from "@/lib/hooks";
 
 import { DESTINATIONS as DESTINATIONS_DATA } from "@/lib/data/destinations";
-
-const DESTINATIONS = [...DESTINATIONS_DATA.map((d) => d.name), "Custom/Not Sure"];
+import { CRUISES } from "@/lib/data/cruises";
+import { RAIL_JOURNEYS } from "@/lib/data/rails";
 
 const MONTHS = [
   "January",
@@ -31,7 +31,8 @@ export default function ContactPage() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [destination, setDestination] = useState("Custom/Not Sure");
+  const [serviceType, setServiceType] = useState("Custom Tour Package");
+  const [interestDetail, setInterestDetail] = useState("Custom/Not Sure");
   const [month, setMonth] = useState("Flexible");
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -50,19 +51,53 @@ export default function ContactPage() {
     }));
   };
 
-  const handleInquirySubmit = (e: React.FormEvent) => {
+  const getInterestOptions = () => {
+    switch (serviceType) {
+      case "Custom Tour Package":
+        return [...DESTINATIONS_DATA.map((d) => d.name), "Custom/Not Sure"];
+      case "Luxury & Scenic Cruise":
+        return [...CRUISES.map((c) => c.name), "Other Cruise Route"];
+      case "Luxury & Scenic Rail Journey":
+        return [...RAIL_JOURNEYS.map((r) => r.name), "Other Train Route"];
+      default:
+        return ["General Inquiry"];
+    }
+  };
+
+  const handleInquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const finalInquiry = {
+      formType: "Contact Inquiry",
       name,
       phone: `+91 ${phone}`,
       email,
-      destination,
-      month,
-      message,
+      meta: {
+        destination: serviceType === "General / Other Inquiry" ? "General Inquiry" : `[${serviceType}] ${interestDetail}`,
+        month,
+        message,
+      }
     };
     console.log("Earth Travels - Tour Inquiry Received:", finalInquiry);
     setIsSubmitted(true);
+
+
+    const sheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+    if (sheetsUrl) {
+      try {
+        await fetch(sheetsUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(finalInquiry),
+        });
+      } catch (err) {
+        console.error("Error submitting to Google Sheets:", err);
+      }
+    }
   };
+
 
   const faqs = [
     {
@@ -263,28 +298,66 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Destination */}
+                  {/* Service Type Selection */}
                   <div className="flex flex-col gap-2">
                     <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
-                      Destination Interest
+                      Service Interest
                     </label>
                     <div className="relative">
                       <select
-                        value={destination}
-                        onChange={(e) => setDestination(e.target.value)}
+                        value={serviceType}
+                        onChange={(e) => {
+                          const newType = e.target.value;
+                          setServiceType(newType);
+                          // Reset the interest detail to default when service type changes
+                          if (newType === "Custom Tour Package") {
+                            setInterestDetail("Custom/Not Sure");
+                          } else if (newType === "Luxury & Scenic Cruise") {
+                            setInterestDetail("Other Cruise Route");
+                          } else if (newType === "Luxury & Scenic Rail Journey") {
+                            setInterestDetail("Other Train Route");
+                          } else {
+                            setInterestDetail("General Inquiry");
+                          }
+                        }}
                         className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
                       >
-                        {DESTINATIONS.map((dest) => (
-                          <option key={dest} value={dest} className="bg-background">
-                            {dest}
-                          </option>
-                        ))}
+                        <option value="Custom Tour Package" className="bg-background">Custom Tour Package</option>
+                        <option value="Luxury & Scenic Cruise" className="bg-background">Luxury & Scenic Cruise Route</option>
+                        <option value="Luxury & Scenic Rail Journey" className="bg-background">Luxury & Scenic Rail Journey</option>
+                        <option value="General / Other Inquiry" className="bg-background">General / Other Inquiry</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
                         ▼
                       </div>
                     </div>
                   </div>
+
+                  {/* Dynamic Destination / Route Detail */}
+                  {serviceType !== "General / Other Inquiry" && (
+                    <div className="flex flex-col gap-2">
+                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                        Select Destination / Route
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={interestDetail}
+                          onChange={(e) => setInterestDetail(e.target.value)}
+                          className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                        >
+                          {getInterestOptions().map((opt) => (
+                            <option key={opt} value={opt} className="bg-background">
+                              {opt}
+                            </option>
+                          ))}
+                        </select>
+                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
+                          ▼
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
 
                   {/* Month */}
                   <div className="flex flex-col gap-2">
@@ -343,7 +416,7 @@ export default function ContactPage() {
                     Inquiry Received!
                   </h3>
                   <p className="font-sans text-xs text-charcoal/60 max-w-xs mb-6 leading-relaxed">
-                    Thank you, <span className="font-bold text-[#D4A017]">{name}</span>. Our Mathura team has registered your interest in {destination} and will reach out to you within 2 hours.
+                    Thank you, <span className="font-bold text-[#D4A017]">{name}</span>. Our Mathura team has registered your interest in {serviceType === "General / Other Inquiry" ? "our services" : interestDetail} and will reach out to you within 2 hours.
                   </p>
                   <button
                     onClick={() => {
@@ -351,13 +424,15 @@ export default function ContactPage() {
                       setName("");
                       setPhone("");
                       setEmail("");
-                      setDestination("Custom/Not Sure");
+                      setServiceType("Custom Tour Package");
+                      setInterestDetail("Custom/Not Sure");
                       setMonth("Flexible");
                       setMessage("");
                     }}
                     className="btn-outline font-sans text-xs font-semibold py-2.5 px-6"
                   >
                     Send Another Inquiry
+
                   </button>
                 </div>
               )}
