@@ -2435,7 +2435,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
 
 // Variant-specific itinerary entries (indexed by package ID)
 // These extend ITINERARIES with unique content for each package variant
-const VARIANT_ITINERARIES: Record<string, any> = {
+export const VARIANT_ITINERARIES: Record<string, any> = {
   "rajasthan-palace": {
     slug: "rajasthan-palace", destination: "Rajasthan", title: "Rajasthan Palace Luxury (Udaipur & Pushkar Heritage Tour)", duration: "6 Nights / 7 Days", heroImage: "/images/destinations/rajasthan_2.jpg", tagline: "City of Lakes, floating palaces, camel fairs and romantic Pushkar ghats", basePrice: 38000,
     days: [
@@ -2463,7 +2463,6 @@ const VARIANT_ITINERARIES: Record<string, any> = {
 };
 
 // ── MALAYSIA VARIANTS ──
-export const MALAYSIA_VARIANTS = {
   "malaysia-island": {
     slug: "malaysia-island", destination: "Malaysia", title: "Malaysia Island Paradise (Langkawi & Penang Beaches)", duration: "6 Nights / 7 Days", heroImage: "/images/destinations/malaysia_3.jpg", tagline: "Langkawi sky bridge, Eagle Square, Penang street art and George Town UNESCO World Heritage", basePrice: 38000,
     days: [
@@ -2478,10 +2477,7 @@ export const MALAYSIA_VARIANTS = {
     ],
     hotels: [{ name: "Meritus Pelangi Beach Resort Langkawi", rating: "★★★★★", type: "Beachfront Resort", location: "Pantai Cenang, Langkawi", image: "/images/destinations/malaysia_3.jpg" }, { name: "Penang Hard Rock Hotel", rating: "★★★★★", type: "Beach Resort", location: "Batu Ferringhi, Penang", image: "/images/destinations/malaysia_3.jpg" }],
   },
-};
-
 // ── GOA VARIANTS ──
-export const GOA_VARIANTS = {
   "goa-luxury": {
     slug: "goa-luxury", destination: "Goa", title: "Goa Luxury Beach Retreat (5-Star Resort & Spa)", duration: "5 Nights / 6 Days", heroImage: "/images/destinations/goa_2.jpg", tagline: "Private beach, spa, candlelight dinners and curated experiences in 5-star Goa", basePrice: 22000,
     days: [
@@ -2506,10 +2502,4 @@ export const GOA_VARIANTS = {
     hotels: [{ name: "Park Calangute Resort Goa", rating: "★★★★", type: "Beach Resort", location: "Calangute, North Goa", image: "/images/destinations/goa_3.jpg" }],
   },
 };
-
-// ── ADD ALL VARIANTS TO ITINERARIES OBJECT ──
-// These are exported and merged into the main ITINERARIES constant via the resolver in [slug]/page.tsx
-// The resolver also handles the "1st package → base destination itinerary" fallback automatically.
-
-Object.assign(VARIANT_ITINERARIES, RAJASTHAN_VARIANTS, MALAYSIA_VARIANTS, GOA_VARIANTS);
 
