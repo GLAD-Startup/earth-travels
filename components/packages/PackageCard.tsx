@@ -129,33 +129,33 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           </div>
 
           {/* Bottom Actions Row */}
-          <div className="pt-6 border-t border-charcoal/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6">
+          <div className="pt-6 border-t border-charcoal/5 flex flex-wrap items-center justify-between gap-4">
             
             {/* Pricing Section */}
             <div className="flex flex-col gap-0.5">
               <span className="text-[10px] text-charcoal/40 font-sans uppercase">From</span>
-              <div className="flex items-baseline gap-1.5 leading-none">
+              <div className="flex flex-wrap items-baseline gap-1.5 leading-none">
                 <span className="font-mono text-3xl md:text-[36px] font-black text-[#D4A017]">
                   ₹{pkg.pricePerPerson.toLocaleString("en-IN")}
                 </span>
-                <span className="text-[10px] text-charcoal/50 font-sans uppercase">
+                <span className="text-[10px] text-charcoal/50 font-sans uppercase max-w-[100px] leading-tight">
                   per person, twin sharing
                 </span>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col gap-3">
-              <div className="flex gap-3">
+            <div className="flex flex-col gap-3 w-full sm:w-auto mt-2 sm:mt-0">
+              <div className="flex flex-wrap sm:flex-nowrap gap-3">
                 <Link
                   href={pkg.itineraryPage}
-                  className="btn-outline font-sans text-center text-xs font-semibold py-3 px-6 shrink-0 border border-charcoal/10 hover:border-[#D4A017]/30 flex items-center justify-center"
+                  className="btn-outline font-sans text-center text-xs font-semibold py-3 px-4 xl:px-6 shrink-0 border border-charcoal/10 hover:border-[#D4A017]/30 flex items-center justify-center flex-1 sm:flex-none"
                 >
                   View Full Itinerary
                 </Link>
                 <Link
                   href={`/quote?destination=${pkg.destination.toLowerCase()}`}
-                  className="font-sans text-center text-xs font-bold py-3 px-6 text-midnight rounded-full hover:shadow-[0_0_15px_rgba(212,160,23,0.3)] transition-all duration-300 hover:scale-103 inline-block shrink-0"
+                  className="font-sans text-center text-xs font-bold py-3 px-4 xl:px-6 text-midnight rounded-full hover:shadow-[0_0_15px_rgba(212,160,23,0.3)] transition-all duration-300 hover:scale-103 inline-block shrink-0 flex-1 sm:flex-none"
                   style={{
                     background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
                   }}

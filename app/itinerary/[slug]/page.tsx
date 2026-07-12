@@ -155,35 +155,35 @@ export default function ItineraryPage() {
           </div>
 
           <div>
-            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-charcoal leading-none mb-2">
+            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-white leading-none mb-2" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
               {itinerary.tagline}
             </h1>
-            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-charcoal/90 leading-none">
+            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-white/90 leading-none" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
               {itinerary.title}
             </h2>
           </div>
 
           {/* Quick-Info Glass Bar */}
-          <div className="hero-slide-up glass p-5 rounded-2xl border border-charcoal/10 max-w-4xl mt-4 bg-background/50 backdrop-blur-md">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x divide-charcoal/10 select-none">
+          <div className="hero-slide-up glass p-5 rounded-2xl border border-white/20 max-w-4xl mt-4 bg-charcoal/30 backdrop-blur-md">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x divide-white/20 select-none">
               <div className="flex flex-col gap-1">
-                <span className="text-charcoal/40 font-sans text-[10px] uppercase">Duration</span>
-                <span className="text-xs md:text-sm font-semibold font-mono text-charcoal">{itinerary.duration}</span>
+                <span className="text-white/60 font-sans text-[10px] uppercase">Duration</span>
+                <span className="text-xs md:text-sm font-semibold font-mono text-white">{itinerary.duration}</span>
               </div>
               <div className="flex flex-col gap-1 pt-2 md:pt-0">
-                <span className="text-charcoal/40 font-sans text-[10px] uppercase">Origin</span>
-                <span className="text-xs md:text-sm font-semibold font-mono text-charcoal">Mathura / Delhi</span>
+                <span className="text-white/60 font-sans text-[10px] uppercase">Origin</span>
+                <span className="text-xs md:text-sm font-semibold font-mono text-white">Mathura / Delhi</span>
               </div>
               <div className="flex flex-col gap-1 pt-2 md:pt-0">
-                <span className="text-charcoal/40 font-sans text-[10px] uppercase">Group Size</span>
-                <span className="text-xs md:text-sm font-semibold font-mono text-charcoal">Max 20 People</span>
+                <span className="text-white/60 font-sans text-[10px] uppercase">Group Size</span>
+                <span className="text-xs md:text-sm font-semibold font-mono text-white">Max 20 People</span>
               </div>
               <div className="flex flex-col gap-1 pt-2 md:pt-0">
-                <span className="text-charcoal/40 font-sans text-[10px] uppercase">Meals</span>
-                <span className="text-xs md:text-sm font-semibold font-mono text-charcoal">Breakfast + Dinner</span>
+                <span className="text-white/60 font-sans text-[10px] uppercase">Meals</span>
+                <span className="text-xs md:text-sm font-semibold font-mono text-white">Breakfast + Dinner</span>
               </div>
               <div className="flex flex-col gap-1 pt-2 md:pt-0">
-                <span className="text-charcoal/40 font-sans text-[10px] uppercase">Starting at</span>
+                <span className="text-white/60 font-sans text-[10px] uppercase">Starting at</span>
                 <span className="text-xs md:text-sm font-semibold font-mono text-[#D4A017]">
                   ₹{itinerary.basePrice.toLocaleString("en-IN")}/person
                 </span>
