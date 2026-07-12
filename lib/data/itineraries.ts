@@ -2511,6 +2511,5 @@ export const GOA_VARIANTS = {
 // These are exported and merged into the main ITINERARIES constant via the resolver in [slug]/page.tsx
 // The resolver also handles the "1st package → base destination itinerary" fallback automatically.
 
-Object.assign(ITINERARIES_EXTRA, RAJASTHAN_VARIANTS, MALAYSIA_VARIANTS, GOA_VARIANTS);
-
+Object.assign(VARIANT_ITINERARIES, RAJASTHAN_VARIANTS, MALAYSIA_VARIANTS, GOA_VARIANTS);
 
