@@ -43,6 +43,8 @@ export default function ClientShell({
     }
   }, [pathname]);
 
+  const isHeroPage = isDarkHeroPage;
+
   return (
     <>
       <div className="film-grain" />

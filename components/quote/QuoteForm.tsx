@@ -6,19 +6,9 @@ import { gsap } from "gsap";
 import { GlassCard } from "@/components/ui";
 import { useIsOpen } from "@/lib/hooks";
 
-const DESTINATIONS = [
-  "Kashmir",
-  "Maldives",
-  "Malaysia",
-  "Dubai",
-  "Thailand",
-  "Bali",
-  "Europe",
-  "Kerala",
-  "Rajasthan",
-  "Singapore",
-  "Sri Lanka",
-];
+import { DESTINATIONS as DESTINATIONS_DATA } from "@/lib/data/destinations";
+
+const DESTINATIONS = DESTINATIONS_DATA.map((d) => d.name);
 
 const BUDGET_TIERS = [
   { id: "economy", name: "Economy", icon: "🎒", range: "₹15k–₹30k", desc: "Comfortable guest houses, public transits" },

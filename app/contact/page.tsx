@@ -4,20 +4,9 @@ import React, { useState } from "react";
 import { GlassCard, RevealWrapper } from "@/components/ui";
 import { useIsOpen } from "@/lib/hooks";
 
-const DESTINATIONS = [
-  "Kashmir",
-  "Maldives",
-  "Malaysia",
-  "Dubai",
-  "Thailand",
-  "Bali",
-  "Europe",
-  "Kerala",
-  "Rajasthan",
-  "Sri Lanka",
-  "Singapore",
-  "Custom/Not Sure",
-];
+import { DESTINATIONS as DESTINATIONS_DATA } from "@/lib/data/destinations";
+
+const DESTINATIONS = [...DESTINATIONS_DATA.map((d) => d.name), "Custom/Not Sure"];
 
 const MONTHS = [
   "January",

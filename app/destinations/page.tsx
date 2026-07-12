@@ -1,11 +1,11 @@
 "use client";
-
-import React, { useState } from "react";
+ 
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { DESTINATIONS } from "@/lib/data/destinations";
 import { DestinationGrid, GlobeViewer } from "@/components/destinations";
 import { RevealWrapper } from "@/components/ui";
-
+ 
 const TABS = [
   { id: "all", name: "All" },
   { id: "india", name: "India" },
@@ -14,15 +14,32 @@ const TABS = [
   { id: "europe", name: "Europe" },
   { id: "islands", name: "Islands" },
 ];
-
+ 
 export default function DestinationsPage() {
   const [activeTab, setActiveTab] = useState("all");
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 200) {
+        setIsVisible(currentScrollY < lastScrollY.current || currentScrollY < 60);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+ 
   const filteredDestinations = DESTINATIONS.filter((dest) => {
     if (activeTab === "all") return true;
     return dest.region === activeTab;
   });
-
+ 
   const handleSelectDestination = (name: string) => {
     const dest = DESTINATIONS.find((d) => d.name.toLowerCase() === name.toLowerCase());
     if (dest) {
@@ -33,7 +50,7 @@ export default function DestinationsPage() {
       }
     }
   };
-
+ 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
       <title>Explore Our World — Signature Escapes | Earth Travels</title>
@@ -70,8 +87,8 @@ export default function DestinationsPage() {
         </div>
       </section>
 
-      {/* 2. Filter Tabs — accent pills */}
-      <div className="w-full border-y border-charcoal/5 bg-background py-4 select-none">
+      {/* 2. Sticky Filter Tabs — accent pills */}
+      <div className={`sticky z-30 w-full border-y border-charcoal/5 bg-background/90 backdrop-blur-md py-4 select-none transition-all duration-500 ease-in-out ${isVisible ? "top-[56px]" : "top-[-100px]"}`}>
         <div className="max-w-7xl mx-auto px-6 flex gap-2.5 items-center justify-start md:justify-center overflow-x-auto no-scrollbar">
           {TABS.map((tab) => {
             const isActive = tab.id === activeTab;

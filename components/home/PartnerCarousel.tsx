@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 // ─────────────────────────────────────────────────────────────────
 //  PARTNER DATA
@@ -20,31 +24,28 @@ interface Partner {
 
 export const PARTNERS: Partner[] = [
   // ── Airlines ──────────────────────────────────────────────────
-  { name: "Qatar Airways",      logo: "/logos/qatar-airways.svg",    category: "airline",   accentColor: "#5C0632" },
-  { name: "Singapore Airlines", logo: "/logos/singapore-airlines.svg", category: "airline", accentColor: "#1A3263" },
-  { name: "Emirates",           logo: "/logos/emirates.svg",          category: "airline",   accentColor: "#D4162D" },
-  { name: "IndiGo",             logo: "/logos/indigo.svg",            category: "airline",   accentColor: "#1B2AA6" },
-  { name: "Air India",          logo: "/logos/air-india.svg",         category: "airline",   accentColor: "#C8102E" },
-  { name: "SpiceJet",           logo: "/logos/spicejet.svg",          category: "airline",   accentColor: "#E05B0A" },
-  { name: "Etihad Airways",     logo: "/logos/etihad.svg",            category: "airline",   accentColor: "#B7A47B" },
-  { name: "Lufthansa",          logo: "/logos/lufthansa.svg",         category: "airline",   accentColor: "#05164D" },
+  { name: "Qatar Airways",      logo: "/logos/qatar-airways.png",    category: "airline",   accentColor: "#5C0632" },
+  { name: "Singapore Airlines", logo: "/logos/singapore-airlines.png", category: "airline", accentColor: "#1A3263" },
+  { name: "Emirates",           logo: "/logos/emirates.png",          category: "airline",   accentColor: "#D4162D" },
+  { name: "IndiGo",             logo: "/logos/indigo.png",            category: "airline",   accentColor: "#1B2AA6" },
+  { name: "Air India",          logo: "/logos/air-india.png",         category: "airline",   accentColor: "#C8102E" },
+  { name: "SpiceJet",           logo: "/logos/spicejet.png",          category: "airline",   accentColor: "#E05B0A" },
+  { name: "Etihad Airways",     logo: "/logos/etihad.png",            category: "airline",   accentColor: "#B7A47B" },
+  { name: "Lufthansa",          logo: "/logos/lufthansa.png",         category: "airline",   accentColor: "#05164D" },
   // ── Hotels ────────────────────────────────────────────────────
-  { name: "Taj Hotels",         logo: "/logos/taj-hotels.svg",        category: "hotel",     accentColor: "#6B3728" },
-  { name: "ITC Hotels",         logo: "/logos/itc-hotels.svg",        category: "hotel",     accentColor: "#1A3050" },
-  { name: "The Leela",          logo: "/logos/the-leela.svg",         category: "hotel",     accentColor: "#7B5C35" },
-  { name: "Marriott",           logo: "/logos/marriott.svg",          category: "hotel",     accentColor: "#8A1538" },
-  { name: "Waldorf Astoria",    logo: "/logos/waldorf-astoria.svg",   category: "hotel",     accentColor: "#B5924C" },
-  { name: "Park Hyatt",         logo: "/logos/park-hyatt.svg",        category: "hotel",     accentColor: "#2B2B2B" },
-  { name: "Oberoi Hotels",      logo: "/logos/oberoi-hotels.svg",     category: "hotel",     accentColor: "#1A3050" },
+  { name: "Taj Hotels",         logo: "/logos/taj-hotels.png",        category: "hotel",     accentColor: "#6B3728" },
+  { name: "ITC Hotels",         logo: "/logos/itc-hotels.png",        category: "hotel",     accentColor: "#1A3050" },
+  { name: "The Leela",          logo: "/logos/the-leela.png",         category: "hotel",     accentColor: "#7B5C35" },
+  { name: "Marriott",           logo: "/logos/marriott.png",          category: "hotel",     accentColor: "#8A1538" },
+  { name: "Waldorf Astoria",    logo: "/logos/waldorf-astoria.png",   category: "hotel",     accentColor: "#B5924C" },
+  { name: "Park Hyatt",         logo: "/logos/park-hyatt.png",        category: "hotel",     accentColor: "#2B2B2B" },
+  { name: "Oberoi Hotels",      logo: "/logos/oberoi-hotels.png",     category: "hotel",     accentColor: "#1A3050" },
   // ── Platforms / Trust ─────────────────────────────────────────
-  { name: "TripAdvisor",        logo: "/logos/tripadvisor.svg",       category: "platform",  accentColor: "#34E0A1" },
-  { name: "Booking.com",        logo: "/logos/booking-com.svg",       category: "platform",  accentColor: "#003580" },
-  { name: "Visa",               logo: "/logos/visa.svg",              category: "payment",   accentColor: "#1A1F71" },
-  { name: "Mastercard",         logo: "/logos/mastercard.svg",        category: "payment",   accentColor: "#EB001B" },
-  { name: "Allianz Travel",     logo: "/logos/allianz.svg",           category: "insurance", accentColor: "#003781" },
-  /* Add relevant tourism board / DMC logos below, e.g.:
-  { name: "Tourism Australia",  logo: "/logos/tourism-australia.svg", category: "tourism-board", accentColor: "#FF0000" },
-  */
+  { name: "TripAdvisor",        logo: "/logos/tripadvisor.png",       category: "platform",  accentColor: "#34E0A1" },
+  { name: "Booking.com",        logo: "/logos/booking-com.png",       category: "platform",  accentColor: "#003580" },
+  { name: "Visa",               logo: "/logos/visa.png",              category: "payment",   accentColor: "#1A1F71" },
+  { name: "Mastercard",         logo: "/logos/mastercard.png",        category: "payment",   accentColor: "#EB001B" },
+  { name: "Allianz Travel",     logo: "/logos/allianz.png",           category: "insurance", accentColor: "#003781" },
 ];
 
 // ─────────────────────────────────────────────────────────────────
@@ -92,7 +93,7 @@ function PartnerPill({ partner }: { partner: Partner }) {
   const [imgFailed, setImgFailed] = React.useState(false);
 
   return (
-    <li
+    <div
       className="pc-pill"
       style={{ "--accent": partner.accentColor ?? "#c4900f" } as React.CSSProperties}
       aria-label={partner.name}
@@ -122,7 +123,7 @@ function PartnerPill({ partner }: { partner: Partner }) {
 
       {/* Brand name */}
       <span className="pc-pill__name">{partner.name}</span>
-    </li>
+    </div>
   );
 }
 
@@ -130,8 +131,11 @@ function PartnerPill({ partner }: { partner: Partner }) {
 //  MAIN COMPONENT
 // ─────────────────────────────────────────────────────────────────
 export default function PartnerCarousel() {
-  // Duplicate list once → animate by -50% → seamless infinite loop
-  const strip = [...PARTNERS, ...PARTNERS];
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section className="pc-section" aria-label="Our trusted travel partners">
@@ -143,14 +147,45 @@ export default function PartnerCarousel() {
       </div>
 
       {/* ── Scrolling strip ────────────────────────────────────── */}
-      {/* Outer wrapper carries the fade-edge mask */}
-      <div className="pc-mask-wrapper" aria-hidden="false">
-        <ul className="pc-track" role="list">
-          {strip.map((partner, idx) => (
-            <PartnerPill key={`${partner.name}-${idx}`} partner={partner} />
-          ))}
-        </ul>
+      <div className="pc-mask-wrapper font-sans" aria-hidden="false">
+        {mounted ? (
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            speed={4000}
+            watchSlidesProgress={true}
+            slidesPerView="auto"
+            spaceBetween={20}
+            grabCursor={true}
+            loop={true}
+            breakpoints={{
+              640: { spaceBetween: 30 },
+              1024: { spaceBetween: 40 },
+            }}
+            className="!overflow-visible partners-swiper"
+          >
+            {PARTNERS.map((partner, idx) => (
+              <SwiperSlide key={`${partner.name}-${idx}`} className="h-auto !w-auto">
+                <PartnerPill partner={partner} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <ul className="pc-track" role="list">
+            {PARTNERS.slice(0, 8).map((partner, idx) => (
+              <li key={`${partner.name}-${idx}`} className="h-auto">
+                <PartnerPill partner={partner} />
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
+
+      <style jsx global>{`
+        .partners-swiper .swiper-wrapper {
+          transition-timing-function: linear !important;
+        }
+      `}</style>
     </section>
   );
 }
