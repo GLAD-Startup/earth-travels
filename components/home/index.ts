@@ -11,4 +11,5 @@ export { default as FounderSection } from "./FounderSection";
 export { default as WhyEarthTravels } from "./WhyEarthTravels";
 export { default as FlightExperience } from "./FlightExperience";
 export { default as TripFinder } from "./TripFinder";
+export { default as PartnerCarousel } from "./PartnerCarousel";
 
