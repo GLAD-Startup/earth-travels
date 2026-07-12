@@ -5,8 +5,10 @@ import { GlassCard, RevealWrapper } from "@/components/ui";
 import { useIsOpen } from "@/lib/hooks";
 
 import { DESTINATIONS as DESTINATIONS_DATA } from "@/lib/data/destinations";
+import { CRUISES } from "@/lib/data/cruises";
+import { RAIL_JOURNEYS } from "@/lib/data/rails";
+import { SITE_CONFIG } from "@/lib/data";
 
-const DESTINATIONS = [...DESTINATIONS_DATA.map((d) => d.name), "Custom/Not Sure"];
 
 const MONTHS = [
   "January",
@@ -31,7 +33,8 @@ export default function ContactPage() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [destination, setDestination] = useState("Custom/Not Sure");
+  const [serviceType, setServiceType] = useState("Custom Tour Package");
+  const [interestDetail, setInterestDetail] = useState("Custom/Not Sure");
   const [month, setMonth] = useState("Flexible");
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -50,19 +53,53 @@ export default function ContactPage() {
     }));
   };
 
-  const handleInquirySubmit = (e: React.FormEvent) => {
+  const getInterestOptions = () => {
+    switch (serviceType) {
+      case "Custom Tour Package":
+        return [...DESTINATIONS_DATA.map((d) => d.name), "Custom/Not Sure"];
+      case "Luxury & Scenic Cruise":
+        return [...CRUISES.map((c) => c.name), "Other Cruise Route"];
+      case "Luxury & Scenic Rail Journey":
+        return [...RAIL_JOURNEYS.map((r) => r.name), "Other Train Route"];
+      default:
+        return ["General Inquiry"];
+    }
+  };
+
+  const handleInquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const finalInquiry = {
+      formType: "Contact Inquiry",
       name,
       phone: `+91 ${phone}`,
       email,
-      destination,
-      month,
-      message,
+      meta: {
+        destination: serviceType === "General / Other Inquiry" ? "General Inquiry" : `[${serviceType}] ${interestDetail}`,
+        month,
+        message,
+      }
     };
     console.log("Earth Travels - Tour Inquiry Received:", finalInquiry);
     setIsSubmitted(true);
+
+
+    const sheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+    if (sheetsUrl) {
+      try {
+        await fetch(sheetsUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(finalInquiry),
+        });
+      } catch (err) {
+        console.error("Error submitting to Google Sheets:", err);
+      }
+    }
   };
+
 
   const faqs = [
     {
@@ -141,10 +178,10 @@ export default function ContactPage() {
                   <div>
                     <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Email</span>
                     <a
-                      href="mailto:info@earthtravelsindia.in"
+                      href={`mailto:${SITE_CONFIG.email}`}
                       className="font-mono text-sm hover:text-[#D4A017] transition-colors"
                     >
-                      info@earthtravelsindia.in
+                      {SITE_CONFIG.email}
                     </a>
                   </div>
                 </div>
@@ -155,7 +192,7 @@ export default function ContactPage() {
                   <div>
                     <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Address</span>
                     <p className="font-sans leading-relaxed">
-                      Shop No.138, 1st Floor Krishna Plaza, Krishna Market, Mathura, UP 281001
+                      {SITE_CONFIG.address}
                     </p>
                   </div>
                 </div>
@@ -170,9 +207,40 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
+
+                {/* Instagram */}
+                <div className="flex items-start gap-4">
+                  <span className="text-xl select-none shrink-0 mt-0.5">📸</span>
+                  <div className="flex flex-col gap-2">
+                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block">Instagram</span>
+                    <a
+                      href="https://instagram.com/niteshkhandelwal8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 group"
+                    >
+                      <svg className="w-4 h-4 text-[#E1306C] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                      </svg>
+                      <span className="font-mono text-sm font-bold text-[#D4A017] group-hover:text-[#E1306C] transition-colors">@niteshkhandelwal8</span>
+                    </a>
+                    <a
+                      href="https://instagram.com/earthtravelsmathura"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 group"
+                    >
+                      <svg className="w-4 h-4 text-[#E1306C] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                      </svg>
+                      <span className="font-mono text-sm font-bold text-[#D4A017] group-hover:text-[#E1306C] transition-colors">@earthtravelsmathura</span>
+                    </a>
+                  </div>
+                </div>
               </div>
 
               {/* Status Badge */}
+
               <div className="flex items-center gap-2 pt-4 border-t border-charcoal/5 text-xs font-sans">
                 <span
                   className={`w-2.5 h-2.5 rounded-full inline-block ${
@@ -181,8 +249,8 @@ export default function ContactPage() {
                 />
                 <span className="font-mono text-charcoal/80 font-medium">
                   {isOpen
-                    ? `Open Now · We&apos;ll respond within 2 hours`
-                    : `Closed · We&apos;ll respond first thing Monday 10 AM`}
+                    ? `Open Now · We'll respond within 2 hours`
+                    : `Closed · We'll respond first thing Monday 10 AM`}
                 </span>
               </div>
             </GlassCard>
@@ -191,16 +259,17 @@ export default function ContactPage() {
             <div className="w-full h-[280px] rounded-2xl overflow-hidden border border-charcoal/10 shadow-2xl relative">
               {/* NOTE: Google Maps embed placeholder queries are populated securely */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.8872242130383!2d77.68884947545041!3d27.20695027647209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973715ffea226db%3A0xe54b9d0ab0fa000b!2sKrishna%20Plaza!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.990207533686!2d77.6531641!3d27.50068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39737162ce216137%3A0xbc512273dac12e8!2sEarth%20Travels!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Earth Travels Office Location, Krishna Market Mathura"
+                title="Earth Travels Office Location, Krishna Plaza Mathura"
                 className="absolute inset-0 w-full h-full"
               />
+
             </div>
           </div>
 
@@ -263,28 +332,66 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Destination */}
+                  {/* Service Type Selection */}
                   <div className="flex flex-col gap-2">
                     <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
-                      Destination Interest
+                      Service Interest
                     </label>
                     <div className="relative">
                       <select
-                        value={destination}
-                        onChange={(e) => setDestination(e.target.value)}
+                        value={serviceType}
+                        onChange={(e) => {
+                          const newType = e.target.value;
+                          setServiceType(newType);
+                          // Reset the interest detail to default when service type changes
+                          if (newType === "Custom Tour Package") {
+                            setInterestDetail("Custom/Not Sure");
+                          } else if (newType === "Luxury & Scenic Cruise") {
+                            setInterestDetail("Other Cruise Route");
+                          } else if (newType === "Luxury & Scenic Rail Journey") {
+                            setInterestDetail("Other Train Route");
+                          } else {
+                            setInterestDetail("General Inquiry");
+                          }
+                        }}
                         className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
                       >
-                        {DESTINATIONS.map((dest) => (
-                          <option key={dest} value={dest} className="bg-background">
-                            {dest}
-                          </option>
-                        ))}
+                        <option value="Custom Tour Package" className="bg-background">Custom Tour Package</option>
+                        <option value="Luxury & Scenic Cruise" className="bg-background">Luxury & Scenic Cruise Route</option>
+                        <option value="Luxury & Scenic Rail Journey" className="bg-background">Luxury & Scenic Rail Journey</option>
+                        <option value="General / Other Inquiry" className="bg-background">General / Other Inquiry</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
                         ▼
                       </div>
                     </div>
                   </div>
+
+                  {/* Dynamic Destination / Route Detail */}
+                  {serviceType !== "General / Other Inquiry" && (
+                    <div className="flex flex-col gap-2">
+                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                        Select Destination / Route
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={interestDetail}
+                          onChange={(e) => setInterestDetail(e.target.value)}
+                          className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                        >
+                          {getInterestOptions().map((opt) => (
+                            <option key={opt} value={opt} className="bg-background">
+                              {opt}
+                            </option>
+                          ))}
+                        </select>
+                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
+                          ▼
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
 
                   {/* Month */}
                   <div className="flex flex-col gap-2">
@@ -343,7 +450,7 @@ export default function ContactPage() {
                     Inquiry Received!
                   </h3>
                   <p className="font-sans text-xs text-charcoal/60 max-w-xs mb-6 leading-relaxed">
-                    Thank you, <span className="font-bold text-[#D4A017]">{name}</span>. Our Mathura team has registered your interest in {destination} and will reach out to you within 2 hours.
+                    Thank you, <span className="font-bold text-[#D4A017]">{name}</span>. Our Mathura team has registered your interest in {serviceType === "General / Other Inquiry" ? "our services" : interestDetail} and will reach out to you within 2 hours.
                   </p>
                   <button
                     onClick={() => {
@@ -351,13 +458,15 @@ export default function ContactPage() {
                       setName("");
                       setPhone("");
                       setEmail("");
-                      setDestination("Custom/Not Sure");
+                      setServiceType("Custom Tour Package");
+                      setInterestDetail("Custom/Not Sure");
                       setMonth("Flexible");
                       setMessage("");
                     }}
                     className="btn-outline font-sans text-xs font-semibold py-2.5 px-6"
                   >
                     Send Another Inquiry
+
                   </button>
                 </div>
               )}

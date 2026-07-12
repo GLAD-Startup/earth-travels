@@ -42,7 +42,13 @@ export default function ClientShell({
     }
   }, [pathname]);
 
-  const isHeroPage = pathname === "/" || pathname === "/destinations";
+  const isHeroPage =
+    pathname === "/" ||
+    pathname === "/destinations" ||
+    pathname === "/cruises" ||
+    pathname === "/rails" ||
+    pathname === "/about" ||
+    pathname.startsWith("/itinerary");
 
   return (
     <>

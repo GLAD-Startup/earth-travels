@@ -34,7 +34,7 @@ export default function Home() {
       {/* 3. Trust Bar Marquee */}
       <RevealWrapper delay={0}>
         <div className="relative w-full overflow-hidden bg-[#fdf8f2] py-6 border-y border-[#1a120a]/5 select-none z-10">
-          <div className="flex w-max items-center animate-marquee whitespace-nowrap font-mono text-[12px] text-[#1a120a]/40 uppercase tracking-[0.15em]">
+          <div className="flex w-max items-center animate-marquee whitespace-nowrap font-mono text-[12px] text-[#1a120a]/80 uppercase tracking-[0.15em]">
             <div className="flex items-center gap-12 mx-12">
               <span>127+ Happy Travellers</span>
               <span className="text-[#c4900f]">★</span>

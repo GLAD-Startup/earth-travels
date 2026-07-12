@@ -7,8 +7,8 @@ export const SITE_CONFIG = {
   tagline: "Crafting Journeys the World Remembers",
   phone: "89418 81111",
   whatsapp: "918941881111",
-  email: "info@earthtravels.in",
-  address: "Shop No.138, 1st Floor Krishna Plaza, Krishna Market, Mathura UP 281001",
+  email: "info@earthtravelsindia.com",
+  address: "Shop No. 143, 144, 145, 1st Floor, Krishna Plaza, Krishna Nagar, Mathura - 281004 (U.P.)",
   hours: "Mon–Sat: 10AM – 7:30PM",
   rating: 4.7,
   reviews: 127,
@@ -16,12 +16,18 @@ export const SITE_CONFIG = {
   yearsExperience: 10,
 };
 
+
 import { DESTINATIONS as DESTINATIONS_DATA } from "./destinations";
 export const DESTINATIONS = DESTINATIONS_DATA;
 
-
 import { PACKAGES as PACKAGES_DATA } from "./packages";
 export const PACKAGES = PACKAGES_DATA;
+
+import { CRUISES as CRUISES_DATA } from "./cruises";
+export const CRUISES = CRUISES_DATA;
+
+import { RAIL_JOURNEYS as RAIL_JOURNEYS_DATA } from "./rails";
+export const RAIL_JOURNEYS = RAIL_JOURNEYS_DATA;
 
 export const TESTIMONIALS = [
   {

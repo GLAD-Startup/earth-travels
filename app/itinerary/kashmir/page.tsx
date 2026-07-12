@@ -25,6 +25,12 @@ export default function KashmirItineraryPage() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [activeDay, setActiveDay] = useState(1);
 
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+
   useEffect(() => {
     gsap.fromTo(
       ".hero-slide-up",
@@ -41,6 +47,47 @@ export default function KashmirItineraryPage() {
       setReturnDate(d.toISOString().split("T")[0]);
     }
   };
+
+  const handleBookingSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!itinerary) return;
+
+    const finalData = {
+      formType: "Itinerary Booking Request",
+      name: fullName,
+      phone: `+91 ${phone}`,
+      email,
+      meta: {
+        destination: itinerary.title,
+        departureDate,
+        returnDate,
+        adults,
+        children,
+        roomType,
+        totalPrice: `₹${totalPrice.toLocaleString("en-IN")}`
+      }
+    };
+
+    console.log("Earth Travels - Itinerary Booking Request:", finalData);
+    setIsSubmitted(true);
+
+    const sheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+    if (sheetsUrl) {
+      try {
+        await fetch(sheetsUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(finalData),
+        });
+      } catch (err) {
+        console.error("Error submitting to Google Sheets:", err);
+      }
+    }
+  };
+
 
   useEffect(() => {
     if (!itinerary) return;
@@ -94,11 +141,11 @@ export default function KashmirItineraryPage() {
             ITINERARY · {itinerary.destination.toUpperCase()}
           </div>
           <div>
-            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-charcoal leading-none mb-2">{itinerary.tagline}</h1>
-            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-charcoal/90 leading-none">{itinerary.title}</h2>
+            <h1 className="hero-slide-up font-display text-4xl md:text-[80px] font-normal italic text-white leading-none mb-2" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>{itinerary.tagline}</h1>
+            <h2 className="hero-slide-up font-display text-2xl md:text-[48px] font-bold text-white/90 leading-none" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>{itinerary.title}</h2>
           </div>
-          <div className="hero-slide-up glass p-5 rounded-2xl border border-charcoal/10 max-w-4xl mt-4 bg-background/50 backdrop-blur-md">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x divide-charcoal/10">
+          <div className="hero-slide-up glass p-5 rounded-2xl border border-white/20 max-w-4xl mt-4 bg-charcoal/30 backdrop-blur-md">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x divide-white/20">
               {[
                 { label: "Duration", value: itinerary.duration },
                 { label: "Origin", value: "Mathura / Delhi" },
@@ -107,8 +154,8 @@ export default function KashmirItineraryPage() {
                 { label: "Starting at", value: `₹${itinerary.basePrice.toLocaleString("en-IN")}/person`, gold: true },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col gap-1 pt-2 md:pt-0">
-                  <span className="text-charcoal/40 font-sans text-[10px] uppercase">{item.label}</span>
-                  <span className={`text-xs md:text-sm font-semibold font-mono ${item.gold ? "text-[#D4A017]" : "text-charcoal"}`}>{item.value}</span>
+                  <span className="text-white/60 font-sans text-[10px] uppercase">{item.label}</span>
+                  <span className={`text-xs md:text-sm font-semibold font-mono ${item.gold ? "text-[#D4A017]" : "text-white"}`}>{item.value}</span>
                 </div>
               ))}
             </div>
@@ -245,57 +292,92 @@ export default function KashmirItineraryPage() {
           <aside className="w-full lg:w-80 shrink-0 sticky top-28 self-start mt-12 lg:mt-0">
             <GlassCard hover={false} className="p-6 md:p-8 bg-background/80 border border-charcoal/10 shadow-2xl rounded-[20px]">
               <h3 className="font-display text-xl font-bold text-charcoal mb-6 border-b border-charcoal/5 pb-4">Book This Package</h3>
-              <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-5">
-                <div className="flex flex-col gap-2">
-                  <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Departure Date</label>
-                  <input type="date" value={departureDate} onChange={(e) => handleDepartureChange(e.target.value)} min={new Date().toISOString().split("T")[0]} className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans" required />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Return Date ({itinerary.duration})</label>
-                  <input type="date" value={returnDate} onChange={(e) => setReturnDate(e.target.value)} min={departureDate || new Date().toISOString().split("T")[0]} className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans" required />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  {[{ label: "Adults", val: adults, set: setAdults, min: 1 }, { label: "Children", val: children, set: setChildren, min: 0 }].map(({ label, val, set, min }) => (
-                    <div key={label} className="flex flex-col gap-2">
-                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">{label}</label>
-                      <div className="flex items-center justify-between bg-white/5 border border-charcoal/10 rounded-xl px-2 py-1 h-[40px]">
-                        <button type="button" onClick={() => set((p: number) => Math.max(min, p - 1))} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">-</button>
-                        <span className="font-mono text-xs font-semibold text-charcoal/80">{val}</span>
-                        <button type="button" onClick={() => set((p: number) => p + 1)} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">+</button>
+               {!isSubmitted ? (
+                <form onSubmit={handleBookingSubmit} className="flex flex-col gap-5">
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Departure Date</label>
+                    <input type="date" value={departureDate} onChange={(e) => handleDepartureChange(e.target.value)} min={new Date().toISOString().split("T")[0]} className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans" required />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Return Date ({itinerary.duration})</label>
+                    <input type="date" value={returnDate} onChange={(e) => setReturnDate(e.target.value)} min={departureDate || new Date().toISOString().split("T")[0]} className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-2.5 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans" required />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    {[{ label: "Adults", val: adults, set: setAdults, min: 1 }, { label: "Children", val: children, set: setChildren, min: 0 }].map(({ label, val, set, min }) => (
+                      <div key={label} className="flex flex-col gap-2">
+                        <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">{label}</label>
+                        <div className="flex items-center justify-between bg-white/5 border border-charcoal/10 rounded-xl px-2 py-1 h-[40px]">
+                          <button type="button" onClick={() => set((p: number) => Math.max(min, p - 1))} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">-</button>
+                          <span className="font-mono text-xs font-semibold text-charcoal/80">{val}</span>
+                          <button type="button" onClick={() => set((p: number) => p + 1)} className="w-6 h-6 rounded flex items-center justify-center hover:bg-white/10 text-charcoal font-mono font-bold">+</button>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Sharing Class</label>
-                  <div className="flex flex-col gap-2.5 mt-1 pl-1">
-                    {[{ value: "twin", label: "Twin Sharing stay" }, { value: "double", label: "Double Room stay" }, { value: "single", label: "Single Supplement (+₹8,000)" }].map((opt) => (
-                      <label key={opt.value} className="flex items-center gap-2.5 text-xs text-charcoal/70 hover:text-charcoal cursor-pointer">
-                        <input type="radio" name="room" checked={roomType === opt.value} onChange={() => setRoomType(opt.value)} className="sr-only" />
-                        <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center transition-colors ${roomType === opt.value ? "border-[#D4A017] bg-[#D4A017]" : "border-charcoal/20"}`}>
-                          {roomType === opt.value && <span className="w-1.5 h-1.5 rounded-full bg-background" />}
-                        </span>
-                        <span>{opt.label}</span>
-                      </label>
                     ))}
                   </div>
-                </div>
-                <div className="pt-4 border-t border-charcoal/5 flex flex-col gap-2.5 text-xs text-charcoal/50 font-sans">
-                  <div className="flex justify-between"><span>Base Fare (Adults × {adults})</span><span>₹{(itinerary.basePrice * adults).toLocaleString("en-IN")}</span></div>
-                  {children > 0 && <div className="flex justify-between"><span>Child × {children}</span><span>₹{(Math.round(itinerary.basePrice * 0.65) * children).toLocaleString("en-IN")}</span></div>}
-                  {roomType === "single" && <div className="flex justify-between"><span>Single Supplement</span><span>+₹8,000</span></div>}
-                  <div className="pt-3 border-t border-charcoal/5 flex items-baseline justify-between">
-                    <span className="text-charcoal font-semibold">Total Cost</span>
-                    <span className="font-mono text-2xl font-black text-[#D4A017]">₹{totalPrice.toLocaleString("en-IN")}</span>
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">Sharing Class</label>
+                    <div className="flex flex-col gap-2.5 mt-1 pl-1">
+                      {[{ value: "twin", label: "Twin Sharing stay" }, { value: "double", label: "Double Room stay" }, { value: "single", label: "Single Supplement (+₹8,000)" }].map((opt) => (
+                        <label key={opt.value} className="flex items-center gap-2.5 text-xs text-charcoal/70 hover:text-charcoal cursor-pointer">
+                          <input type="radio" name="room" checked={roomType === opt.value} onChange={() => setRoomType(opt.value)} className="sr-only" />
+                          <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center transition-colors ${roomType === opt.value ? "border-[#D4A017] bg-[#D4A017]" : "border-charcoal/20"}`}>
+                            {roomType === opt.value && <span className="w-1.5 h-1.5 rounded-full bg-background" />}
+                          </span>
+                          <span>{opt.label}</span>
+                        </label>
+                      ))}
+                    </div>
                   </div>
+
+                  {/* Contact Info Inside Widget */}
+                  <div className="pt-4 border-t border-charcoal/5 flex flex-col gap-4">
+                    <div className="flex flex-col gap-1.5">
+                      <label className="font-mono text-[9px] text-charcoal/50 uppercase tracking-widest pl-1">Full Name</label>
+                      <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Your name" className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-3 py-2 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans h-[38px]" required />
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <label className="font-mono text-[9px] text-charcoal/50 uppercase tracking-widest pl-1">WhatsApp Number</label>
+                      <div className="relative">
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-charcoal/40 font-mono text-xs">+91</span>
+                        <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))} placeholder="Phone number" className="w-full bg-white/5 border border-charcoal/10 rounded-xl pl-11 pr-3 py-2 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-mono h-[38px]" required />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <label className="font-mono text-[9px] text-charcoal/50 uppercase tracking-widest pl-1">Email Address</label>
+                      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email address" className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-3 py-2 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans h-[38px]" required />
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-charcoal/5 flex flex-col gap-2.5 text-xs text-charcoal/50 font-sans">
+                    <div className="flex justify-between"><span>Base Fare (Adults × {adults})</span><span>₹{(itinerary.basePrice * adults).toLocaleString("en-IN")}</span></div>
+                    {children > 0 && <div className="flex justify-between"><span>Child × {children}</span><span>₹{(Math.round(itinerary.basePrice * 0.65) * children).toLocaleString("en-IN")}</span></div>}
+                    {roomType === "single" && <div className="flex justify-between"><span>Single Supplement</span><span>+₹8,000</span></div>}
+                    <div className="pt-3 border-t border-charcoal/5 flex items-baseline justify-between">
+                      <span className="text-charcoal font-semibold">Total Cost</span>
+                      <span className="font-mono text-2xl font-black text-[#D4A017]">₹{totalPrice.toLocaleString("en-IN")}</span>
+                    </div>
+                  </div>
+
+                  <button type="submit" className="gold-pulse-btn font-sans text-center text-xs font-bold py-3.5 mt-2 text-midnight rounded-full select-none" style={{ background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)" }}>
+                    Request Booking
+                  </button>
+                  <a href={whatsAppLink} target="_blank" rel="noopener noreferrer" className="text-center font-sans text-xs text-charcoal/50 hover:text-charcoal transition-colors block underline underline-offset-4 mt-1">
+                    or WhatsApp us →
+                  </a>
+                </form>
+              ) : (
+                <div className="text-center py-12 flex flex-col items-center select-none">
+                  <div className="w-12 h-12 bg-[#D4A017]/10 border border-[#D4A017] rounded-full flex items-center justify-center text-[#D4A017] text-2xl mb-4">✓</div>
+                  <h4 className="font-display text-lg font-bold text-charcoal mb-2">Request Received!</h4>
+                  <p className="font-sans text-[11px] text-charcoal/60 leading-relaxed mb-6">
+                    Thank you, <span className="font-bold text-[#D4A017]">{fullName}</span>. Our Mathura planners will design your custom {itinerary.destination} package and call you back shortly.
+                  </p>
+                  <button onClick={() => { setIsSubmitted(false); setFullName(""); setPhone(""); setEmail(""); }} className="btn-outline font-sans text-xs font-semibold py-2 px-4">
+                    Modify Request
+                  </button>
                 </div>
-                <Link href={`/quote?destination=${slug}&adults=${adults}&children=${children}&date=${departureDate}`} className="gold-pulse-btn font-sans text-center text-xs font-bold py-3.5 mt-2 text-midnight rounded-full" style={{ background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)" }}>
-                  Request Booking
-                </Link>
-                <a href={whatsAppLink} target="_blank" rel="noopener noreferrer" className="text-center font-sans text-xs text-charcoal/50 hover:text-charcoal transition-colors block underline underline-offset-4 mt-1">
-                  or WhatsApp us →
-                </a>
-              </form>
+              )}
+
             </GlassCard>
           </aside>
         </div>

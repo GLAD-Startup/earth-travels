@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { PACKAGES } from "@/lib/data/packages";
-
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -19,8 +18,6 @@ const CATEGORIES = [
 
 export default function PackageSlider() {
   const [activeCategory, setActiveCategory] = useState("all");
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
 
   const filteredPackages = PACKAGES.filter((pkg) => {
     if (activeCategory === "all") return true;
@@ -68,17 +65,23 @@ export default function PackageSlider() {
         {/* Swiper Slider */}
         <div className="relative w-full">
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={40}
             slidesPerView={1.1}
             grabCursor={true}
-            loop={false}
-            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-            onBeforeInit={(swiper) => {
-              // @ts-expect-error swiper navigation ref typing
-              swiper.params.navigation.prevEl = prevRef.current;
-              // @ts-expect-error swiper navigation ref typing
-              swiper.params.navigation.nextEl = nextRef.current;
+            loop={filteredPackages.length >= 3}
+            autoplay={
+              filteredPackages.length >= 3
+                ? {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }
+                : false
+            }
+            navigation={{
+              prevEl: ".swiper-prev-pkg",
+              nextEl: ".swiper-next-pkg",
             }}
             breakpoints={{
               640: { slidesPerView: 2.1 },
@@ -154,8 +157,7 @@ export default function PackageSlider() {
           {/* Minimalist Circular Navigation */}
           <div className="flex items-center gap-4 mt-16 w-full md:justify-end select-none">
             <button
-              ref={prevRef}
-              className="w-12 h-12 rounded-full border border-[#1a120a]/15 flex items-center justify-center transition-all duration-300 hover:bg-[#1a120a] hover:text-white hover:border-[#1a120a] active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#1a120a] disabled:hover:border-[#1a120a]/15 disabled:cursor-not-allowed group"
+              className="swiper-prev-pkg w-12 h-12 rounded-full border border-[#1a120a]/15 flex items-center justify-center transition-all duration-300 hover:bg-[#1a120a] hover:text-white hover:border-[#1a120a] active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#1a120a] disabled:hover:border-[#1a120a]/15 disabled:cursor-not-allowed group"
               aria-label="Previous package"
             >
               <svg className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
@@ -163,8 +165,7 @@ export default function PackageSlider() {
               </svg>
             </button>
             <button
-              ref={nextRef}
-              className="w-12 h-12 rounded-full border border-[#1a120a]/15 flex items-center justify-center transition-all duration-300 hover:bg-[#1a120a] hover:text-white hover:border-[#1a120a] active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#1a120a] disabled:hover:border-[#1a120a]/15 disabled:cursor-not-allowed group"
+              className="swiper-next-pkg w-12 h-12 rounded-full border border-[#1a120a]/15 flex items-center justify-center transition-all duration-300 hover:bg-[#1a120a] hover:text-white hover:border-[#1a120a] active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#1a120a] disabled:hover:border-[#1a120a]/15 disabled:cursor-not-allowed group"
               aria-label="Next package"
             >
               <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">

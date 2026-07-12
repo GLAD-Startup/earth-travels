@@ -89,25 +89,45 @@ export default function QuoteForm() {
     );
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const finalData = {
-      selectedDestinations,
-      departureCity,
-      dateFrom,
-      dateTo,
-      duration,
-      budgetTier,
-      travelType,
-      specialRequests,
-      fullName,
+      formType: "Custom Quote Planner",
+      name: fullName,
       phone: `+91 ${phone}`,
       email,
-      callbackTime,
+      meta: {
+        selectedDestinations: selectedDestinations.join(", "),
+        departureCity: departureCity || "Mathura",
+        dateFrom,
+        dateTo,
+        duration,
+        budgetTier,
+        travelType,
+        specialRequests,
+        callbackTime,
+      }
     };
     console.log("Earth Travels - Custom Tour Quote Request:", finalData);
     setIsSubmitted(true);
+
+    const sheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+    if (sheetsUrl) {
+      try {
+        await fetch(sheetsUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(finalData),
+        });
+      } catch (err) {
+        console.error("Error submitting to Google Sheets:", err);
+      }
+    }
   };
+
 
   const whatsAppLink = `https://wa.me/918941881111?text=${encodeURIComponent(
     `Hi, I'm interested in booking a custom tour for ${travelType} trip to ${selectedDestinations.join(
