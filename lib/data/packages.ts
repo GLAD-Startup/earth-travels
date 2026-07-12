@@ -34,7 +34,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Dal Lake Houseboat", "Gulmarg Gondola Phase 1", "Pahalgam Valley Walk"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "MMT Bestseller",
-    itineraryPage: "/itinerary/kashmir",
+    itineraryPage: "/itinerary/kashmir-7n8d",
   },
   {
     id: "kashmir-premium",
@@ -48,7 +48,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Premium Dal Lake Houseboat", "Gulmarg Gondola Phase 2", "Private Shikara Ride at Sunset"],
     inclusions: { flight: true, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Luxury Pick",
-    itineraryPage: "/itinerary/kashmir",
+    itineraryPage: "/itinerary/kashmir-premium",
   },
   {
     id: "kashmir-winter",
@@ -62,7 +62,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Gulmarg Ski Slopes", "Snowmobile Ride", "Pheran Cultural Evening"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Snow Special",
-    itineraryPage: "/itinerary/kashmir",
+    itineraryPage: "/itinerary/kashmir-winter",
   },
 
   // ── MALDIVES ──
@@ -78,7 +78,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Luxury Water Villa Stay", "Snorkeling Equipment Free", "Shared Speedboat Transfers"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "All Inclusive",
-    itineraryPage: "/itinerary/maldives",
+    itineraryPage: "/itinerary/maldives-4n5d",
   },
   {
     id: "maldives-budget",
@@ -92,7 +92,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Local Island Guesthouse", "Dolphin Watching Cruise", "Reef Snorkeling Trip"],
     inclusions: { flight: false, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Value for Money",
-    itineraryPage: "/itinerary/maldives",
+    itineraryPage: "/itinerary/maldives-budget",
   },
   {
     id: "maldives-dive",
@@ -106,7 +106,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Liveaboard Yacht Stay", "PADI Dive Certification", "Whale Shark Encounter"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Elite Adventure",
-    itineraryPage: "/itinerary/maldives",
+    itineraryPage: "/itinerary/maldives-dive",
   },
 
   // ── DUBAI ──
@@ -122,7 +122,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Burj Khalifa 124th Floor", "Desert Safari with BBQ", "Marina Dhow Cruise Dinner"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Best Value",
-    itineraryPage: "/itinerary/dubai",
+    itineraryPage: "/itinerary/dubai-5n6d",
   },
   {
     id: "dubai-luxury",
@@ -136,7 +136,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Burj Al Arab Tea Experience", "Private Desert Safari Dune Bash", "Atlantis Aquaventure Pass"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Ultra Luxury",
-    itineraryPage: "/itinerary/dubai",
+    itineraryPage: "/itinerary/dubai-luxury",
   },
   {
     id: "dubai-short",
@@ -150,7 +150,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Dubai Frame Entry", "Gold & Spice Souk Walk", "Dubai Mall Fountain Show"],
     inclusions: { flight: false, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Short Break",
-    itineraryPage: "/itinerary/dubai",
+    itineraryPage: "/itinerary/dubai-short",
   },
 
   // ── MALAYSIA ──
@@ -166,7 +166,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Petronas Twin Towers", "Batu Caves Temple", "Genting Highlands Cable Car"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Best Value",
-    itineraryPage: "/itinerary/malaysia-culture",
+    itineraryPage: "/itinerary/malaysia-4n5d",
   },
   {
     id: "malaysia-5n6d",
@@ -180,7 +180,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Petronas Twin Towers Access", "Langkawi Sky Bridge Cable Car", "Batu Caves Day Excursion"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Best Seller",
-    itineraryPage: "/itinerary/malaysia",
+    itineraryPage: "/itinerary/malaysia-5n6d",
   },
   {
     id: "malaysia-island",
@@ -194,7 +194,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Langkawi Eagle Square", "Penang Street Art Tour", "Island Hopping by Speedboat"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Island Special",
-    itineraryPage: "/itinerary/malaysia",
+    itineraryPage: "/itinerary/malaysia-island",
   },
 
   // ── THAILAND ──
@@ -210,7 +210,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Pattaya Coral Island Tour", "Bangkok Wat Pho & Marble Temple", "Speedboat Transfers"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Budget Friendly",
-    itineraryPage: "/itinerary/thailand",
+    itineraryPage: "/itinerary/thailand-5n6d",
   },
   {
     id: "thailand-phuket",
@@ -224,7 +224,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Phi Phi Island Day Cruise", "James Bond Island Tour", "Phang Nga Bay Kayaking"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Romantic Escape",
-    itineraryPage: "/itinerary/thailand",
+    itineraryPage: "/itinerary/thailand-phuket",
   },
   {
     id: "thailand-adventure",
@@ -238,7 +238,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Chiang Mai Elephant Sanctuary", "Doi Inthanon National Park", "Night Safari Bangkok"],
     inclusions: { flight: false, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Adventure Pack",
-    itineraryPage: "/itinerary/thailand",
+    itineraryPage: "/itinerary/thailand-adventure",
   },
 
   // ── BALI ──
@@ -254,7 +254,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Private Pool Villa Ubud", "Uluwatu Sunset Temple Tour", "Kintamani Volcano Trek"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Top Choice",
-    itineraryPage: "/itinerary/bali",
+    itineraryPage: "/itinerary/bali-6n7d",
   },
   {
     id: "bali-budget",
@@ -268,7 +268,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Tegallalang Rice Terraces", "Tanah Lot Sunset Temple", "Ubud Art & Craft Market"],
     inclusions: { flight: false, hotel: true, meals: false, visa: false, transfers: true, sightseeing: true },
     badge: "Super Saver",
-    itineraryPage: "/itinerary/bali",
+    itineraryPage: "/itinerary/bali-budget",
   },
   {
     id: "bali-surf",
@@ -282,7 +282,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Seminyak Beach Surf Lessons", "Luxury Spa Full Day Package", "Jimbaran Bay Candle Dinner"],
     inclusions: { flight: true, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Luxury Wellness",
-    itineraryPage: "/itinerary/bali",
+    itineraryPage: "/itinerary/bali-surf",
   },
 
   // ── KERALA ──
@@ -298,7 +298,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Munnar Eravikulam National Park", "Spice Plantations Thekkady", "Alleppey Houseboat Stay"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Best Seller",
-    itineraryPage: "/itinerary/kerala",
+    itineraryPage: "/itinerary/kerala-5n6d",
   },
   {
     id: "kerala-honeymoon",
@@ -312,7 +312,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Luxury Houseboat Stay", "Varkala Cliff Beach Sunset", "Ayurveda Spa Package"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Romantic Retreat",
-    itineraryPage: "/itinerary/kerala",
+    itineraryPage: "/itinerary/kerala-honeymoon",
   },
   {
     id: "kerala-wildlife",
@@ -326,7 +326,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Periyar Tiger Reserve Boat Safari", "Athirapally Falls Visit", "Wayanad Bamboo Treehouse"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Nature Explorer",
-    itineraryPage: "/itinerary/kerala",
+    itineraryPage: "/itinerary/kerala-wildlife",
   },
 
   // ── RAJASTHAN ──
@@ -342,7 +342,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Jaipur Amer Fort Walk", "Jodhpur Mehrangarh Castle", "Jaisalmer Desert Tent Camping"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Royal Special",
-    itineraryPage: "/itinerary/rajasthan",
+    itineraryPage: "/itinerary/rajasthan-7n8d",
   },
   {
     id: "rajasthan-palace",
@@ -356,7 +356,7 @@ export const PACKAGES: Package[] = [
     highlights: ["City Palace Udaipur Lake View", "Pushkar Camel Fair Experience", "Mehrangarh Fort Sunset"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Heritage Luxury",
-    itineraryPage: "/itinerary/rajasthan",
+    itineraryPage: "/itinerary/rajasthan-palace",
   },
   {
     id: "rajasthan-forts",
@@ -370,7 +370,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Jaipur Amer Fort Guide", "City Palace Udaipur Tour", "Lake Pichola Boat Cruise"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Heritage Special",
-    itineraryPage: "/itinerary/rajasthan",
+    itineraryPage: "/itinerary/rajasthan-forts",
   },
 
   // ── SINGAPORE ──
@@ -386,7 +386,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Sentosa Island Tour", "Kuala Lumpur City Sightseeing", "Gardens by the Bay Entry"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Best Seller",
-    itineraryPage: "/itinerary/singapore",
+    itineraryPage: "/itinerary/singapore-malaysia-6n7d",
   },
   {
     id: "singapore-luxury",
@@ -400,7 +400,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Marina Bay Sands SkyPark", "Universal Studios Singapore", "Night Safari Adventure"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "City Premium",
-    itineraryPage: "/itinerary/singapore",
+    itineraryPage: "/itinerary/singapore-luxury",
   },
   {
     id: "singapore-saver",
@@ -414,7 +414,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Merlion Park & City Tour", "Chinatown Heritage Walk", "Clarke Quay River Cruise"],
     inclusions: { flight: false, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Budget Pick",
-    itineraryPage: "/itinerary/singapore",
+    itineraryPage: "/itinerary/singapore-saver",
   },
 
   // ── EUROPE ──
@@ -430,7 +430,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Eiffel Tower 2nd Level Access", "Mt Titlis Cable Car", "Venice Gondola Ride"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Premium",
-    itineraryPage: "/itinerary/europe",
+    itineraryPage: "/itinerary/europe-9n10d",
   },
   {
     id: "europe-budget",
@@ -444,7 +444,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Big Ben & Westminster Walk", "Anne Frank House Amsterdam", "Grand Place Brussels"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Budget Europe",
-    itineraryPage: "/itinerary/europe",
+    itineraryPage: "/itinerary/europe-budget",
   },
   {
     id: "europe-eastern",
@@ -458,7 +458,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Prague Old Town Square", "Vienna Schoenbrunn Palace", "Budapest Thermal Baths"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Hidden Gems",
-    itineraryPage: "/itinerary/europe",
+    itineraryPage: "/itinerary/europe-eastern",
   },
 
   // ── VIETNAM ──
@@ -474,7 +474,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Halong Bay Overnight Cruise", "Hanoi Old Quarter Walk", "Hoi An Ancient Town Lanterns"],
     inclusions: { flight: false, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Trending",
-    itineraryPage: "/itinerary/vietnam",
+    itineraryPage: "/itinerary/vietnam-5n6d",
   },
   {
     id: "vietnam-south",
@@ -488,7 +488,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Cu Chi Tunnels Exploration", "Mekong Delta Boat Tour", "Phu Quoc Beach Day"],
     inclusions: { flight: false, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "South Vietnam",
-    itineraryPage: "/itinerary/vietnam",
+    itineraryPage: "/itinerary/vietnam-south",
   },
   {
     id: "vietnam-culture",
@@ -502,7 +502,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Hue Imperial Citadel Tour", "Da Nang Golden Bridge", "My Son Sanctuary UNESCO"],
     inclusions: { flight: false, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Culture Trip",
-    itineraryPage: "/itinerary/vietnam",
+    itineraryPage: "/itinerary/vietnam-culture",
   },
 
   // ── BAKU ──
@@ -518,7 +518,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Icherisheher (Old City) Walk", "Ateshgah (Fire Temple) Entrance", "Caspian Sea Boat Ride"],
     inclusions: { flight: false, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Top Rated",
-    itineraryPage: "/itinerary/baku",
+    itineraryPage: "/itinerary/baku-4n5d",
   },
   {
     id: "baku-premium",
@@ -532,7 +532,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Flame Towers Observation Deck", "Absheron Mud Volcanoes Tour", "Hillside Funicular Ride"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Premium Pick",
-    itineraryPage: "/itinerary/baku",
+    itineraryPage: "/itinerary/baku-premium",
   },
   {
     id: "baku-budget",
@@ -546,7 +546,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Baku City Tour", "Shopping at Nizami Street", "Caspian Sea Promenade Evening"],
     inclusions: { flight: false, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Value Deal",
-    itineraryPage: "/itinerary/baku",
+    itineraryPage: "/itinerary/baku-budget",
   },
 
   // ── TURKEY ──
@@ -562,7 +562,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Cappadocia Hot Air Balloon Sight", "Hagia Sophia Guided Entry", "Pamukkale Thermal Springs"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Bestseller",
-    itineraryPage: "/itinerary/turkey",
+    itineraryPage: "/itinerary/turkey-7n8d",
   },
   {
     id: "turkey-istanbul",
@@ -576,7 +576,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Topkapi Palace Tour", "Grand Bazaar Shopping", "Bosphorus Sunset Cruise"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "City Break",
-    itineraryPage: "/itinerary/turkey",
+    itineraryPage: "/itinerary/turkey-istanbul",
   },
   {
     id: "turkey-explorer",
@@ -590,7 +590,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Ephesus Ancient Ruins", "Antalya Old City Kaleici", "Turkish Hammam Spa"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Grand Tour",
-    itineraryPage: "/itinerary/turkey",
+    itineraryPage: "/itinerary/turkey-explorer",
   },
 
   // ── GOA ──
@@ -606,7 +606,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Calangute Beach Water Sports", "Basilica of Bom Jesus", "Mandovi River Cruise"],
     inclusions: { flight: false, hotel: true, meals: false, visa: false, transfers: true, sightseeing: true },
     badge: "Super Saver",
-    itineraryPage: "/itinerary/goa",
+    itineraryPage: "/itinerary/goa-4n5d",
   },
   {
     id: "goa-luxury",
@@ -620,7 +620,7 @@ export const PACKAGES: Package[] = [
     highlights: ["5-Star Beach Resort Stay", "Candlelight Dinner by Sea", "Private Beach Access"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Luxury Getaway",
-    itineraryPage: "/itinerary/goa",
+    itineraryPage: "/itinerary/goa-luxury",
   },
   {
     id: "goa-adventure",
@@ -634,7 +634,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Scuba Diving at Grande Island", "Baga Beach Parasailing", "Dudhsagar Waterfall Trek"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Action Packed",
-    itineraryPage: "/itinerary/goa",
+    itineraryPage: "/itinerary/goa-adventure",
   },
 
   // ── LADAKH ──
@@ -650,7 +650,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Pangong Lake Camping", "Khardung La Pass (17,582 ft)", "Nubra Valley Camel Ride"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Adventure Special",
-    itineraryPage: "/itinerary/ladakh",
+    itineraryPage: "/itinerary/ladakh-6n7d",
   },
   {
     id: "ladakh-trekker",
@@ -664,7 +664,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Markha Valley Trek (5 Days)", "Hemis National Park", "Stok Kangri Base Camp"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Trekker's Pick",
-    itineraryPage: "/itinerary/ladakh",
+    itineraryPage: "/itinerary/ladakh-trekker",
   },
   {
     id: "ladakh-bike",
@@ -678,7 +678,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Royal Enfield Manali-Leh Road Trip", "Khardung La Pass Crossing", "Nubra to Pangong Route"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: false, sightseeing: true },
     badge: "Thrill Seeker",
-    itineraryPage: "/itinerary/ladakh",
+    itineraryPage: "/itinerary/ladakh-bike",
   },
 
   // ── HIMACHAL ──
@@ -694,7 +694,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Hadimba Temple Manali", "Solang Valley Snow Sports", "Shimla Mall Road Walk"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Popular Hills",
-    itineraryPage: "/itinerary/himachal",
+    itineraryPage: "/itinerary/himachal-5n6d",
   },
   {
     id: "himachal-honeymoon",
@@ -708,7 +708,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Dalhousie Snow Point", "Dharamshala Dalai Lama Temple", "Khajjiar Meadow Valley"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Romantic",
-    itineraryPage: "/itinerary/himachal",
+    itineraryPage: "/itinerary/himachal-honeymoon",
   },
   {
     id: "himachal-spiti",
@@ -722,7 +722,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Spiti River Valley Jeep Safari", "Key Monastery Overnight Stay", "Chandratal Lake Trek"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Off-Beat Trail",
-    itineraryPage: "/itinerary/himachal",
+    itineraryPage: "/itinerary/himachal-spiti",
   },
 
   // ── UTTARAKHAND ──
@@ -738,7 +738,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Naini Lake Boating", "Kempty Falls Mussoorie", "Jim Corbett Safari Excursion"],
     inclusions: { flight: false, hotel: true, meals: false, visa: false, transfers: true, sightseeing: true },
     badge: "Hill Getaway",
-    itineraryPage: "/itinerary/uttarakhand",
+    itineraryPage: "/itinerary/uttarakhand-5n6d",
   },
   {
     id: "uttarakhand-char-dham",
@@ -752,7 +752,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Yamunotri Temple Darshan", "Gangotri Glacier Trek", "Kedarnath Helicopter Visit"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Pilgrimage Special",
-    itineraryPage: "/itinerary/uttarakhand",
+    itineraryPage: "/itinerary/uttarakhand-char-dham",
   },
   {
     id: "uttarakhand-adventure",
@@ -766,7 +766,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Ganga River White Water Rafting", "Rishikesh Camping Under Stars", "Valley of Flowers Trek"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Action Packed",
-    itineraryPage: "/itinerary/uttarakhand",
+    itineraryPage: "/itinerary/uttarakhand-adventure",
   },
 
   // ── ANDAMAN ──
@@ -782,7 +782,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Radhanagar Beach Sunset", "Cellular Jail Sound & Light Show", "Coral Reef Snorkeling"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Exotic Beaches",
-    itineraryPage: "/itinerary/andaman",
+    itineraryPage: "/itinerary/andaman-5n6d",
   },
   {
     id: "andaman-luxury",
@@ -796,7 +796,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Neil Island Nature Trail", "North Bay Glass Bottom Boat", "Sea Walking Experience"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Luxury Escape",
-    itineraryPage: "/itinerary/andaman",
+    itineraryPage: "/itinerary/andaman-luxury",
   },
   {
     id: "andaman-scuba",
@@ -810,7 +810,7 @@ export const PACKAGES: Package[] = [
     highlights: ["PADI Certified Dive in Havelock", "Neil Island Glass Bottom Boat", "Baratang Limestone Caves"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Dive Adventure",
-    itineraryPage: "/itinerary/andaman",
+    itineraryPage: "/itinerary/andaman-scuba",
   },
 
   // ── MAURITIUS ──
@@ -826,7 +826,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Chamarel Seven Colored Earth", "Ile Aux Cerfs Boat Cruise", "Pamplemousses Botanical Garden"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Romantic Escape",
-    itineraryPage: "/itinerary/mauritius",
+    itineraryPage: "/itinerary/mauritius-6n7d",
   },
   {
     id: "mauritius-luxury",
@@ -840,7 +840,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Private Catamaran Cruise", "Underwater Sea Walk", "5-Star Beach Resort Spa"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Ultra Luxury",
-    itineraryPage: "/itinerary/mauritius",
+    itineraryPage: "/itinerary/mauritius-luxury",
   },
   {
     id: "mauritius-adventure",
@@ -854,7 +854,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Black River Gorges National Park", "Zip Line Adventure Tour", "Deep Sea Fishing Charter"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Adventure Pack",
-    itineraryPage: "/itinerary/mauritius",
+    itineraryPage: "/itinerary/mauritius-adventure",
   },
 
   // ── SEYCHELLES ──
@@ -870,7 +870,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Mahe City Tour", "Anse Source d'Argent Beach visit", "Coco de Mer Forest Trail"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Pure Luxury",
-    itineraryPage: "/itinerary/seychelles",
+    itineraryPage: "/itinerary/seychelles-5n6d",
   },
   {
     id: "seychelles-honeymoon",
@@ -884,7 +884,7 @@ export const PACKAGES: Package[] = [
     highlights: ["La Digue Bicycle Island Tour", "Vallee de Mai UNESCO Forest", "Private Sunset Yacht Dinner"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Elite Honeymoon",
-    itineraryPage: "/itinerary/seychelles",
+    itineraryPage: "/itinerary/seychelles-honeymoon",
   },
   {
     id: "seychelles-diving",
@@ -898,7 +898,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Aldabra Atoll Diving", "Curieuse Island Giant Tortoises", "Sunset Yacht Cruise"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Dive Elite",
-    itineraryPage: "/itinerary/seychelles",
+    itineraryPage: "/itinerary/seychelles-diving",
   },
 
   // ── SWITZERLAND ──
@@ -914,7 +914,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Mt. Titlis Rotair Cable Car", "Lake Lucerne Cruise Pass", "Bahnhofstrasse Zurich Shopping"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Ultimate Alps",
-    itineraryPage: "/itinerary/switzerland",
+    itineraryPage: "/itinerary/switzerland-6n7d",
   },
   {
     id: "switzerland-trains",
@@ -928,7 +928,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Glacier Express Panoramic Ride", "Bernina Express to Italy", "Interlaken Jungfraujoch Excursion"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Scenic Route",
-    itineraryPage: "/itinerary/switzerland",
+    itineraryPage: "/itinerary/switzerland-trains",
   },
   {
     id: "switzerland-budget",
@@ -942,7 +942,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Bern Old Town & Bear Park", "Geneva Jet d'Eau Fountain", "Rhine Falls Schaffhausen"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Budget Alps",
-    itineraryPage: "/itinerary/switzerland",
+    itineraryPage: "/itinerary/switzerland-budget",
   },
 
   // ── UNITED KINGDOM ──
@@ -958,7 +958,7 @@ export const PACKAGES: Package[] = [
     highlights: ["London Eye Flight Pass", "Stonehenge Archeological Entrance", "Scenic Train to Edinburgh"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "MMT Signature",
-    itineraryPage: "/itinerary/united-kingdom",
+    itineraryPage: "/itinerary/united-kingdom-7n8d",
   },
   {
     id: "united-kingdom-scotland",
@@ -972,7 +972,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Edinburgh Castle Tour", "Loch Ness Monster Cruise", "Scottish Highlands Scenic Drive"],
     inclusions: { flight: true, hotel: true, meals: true, visa: true, transfers: true, sightseeing: true },
     badge: "Bestseller",
-    itineraryPage: "/itinerary/united-kingdom",
+    itineraryPage: "/itinerary/united-kingdom-scotland",
   },
   {
     id: "united-kingdom-budget",
@@ -986,7 +986,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Tower of London Entry", "Buckingham Palace Changing Guard", "Oxford Street & Covent Garden"],
     inclusions: { flight: true, hotel: true, meals: false, visa: true, transfers: true, sightseeing: true },
     badge: "Budget London",
-    itineraryPage: "/itinerary/united-kingdom",
+    itineraryPage: "/itinerary/united-kingdom-budget",
   },
 
   // ── SRI LANKA ──
@@ -1002,7 +1002,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Sigiriya Rock Fortress UNESCO", "Kandy Temple of the Tooth", "Colombo City Markets"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Heritage Tour",
-    itineraryPage: "/itinerary/sri-lanka",
+    itineraryPage: "/itinerary/sri-lanka-6n7d",
   },
   {
     id: "sri-lanka-beach",
@@ -1016,7 +1016,7 @@ export const PACKAGES: Package[] = [
     highlights: ["Yala National Park Jeep Safari", "Unawatuna Beach Snorkeling", "Galle Dutch Fort Walk"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Nature Pack",
-    itineraryPage: "/itinerary/sri-lanka",
+    itineraryPage: "/itinerary/sri-lanka-beach",
   },
   {
     id: "sri-lanka-beaches",
@@ -1030,6 +1030,6 @@ export const PACKAGES: Package[] = [
     highlights: ["Bentota Beach Water Sports", "Mirissa Whale Watching", "Galle Fort Sunset Walk"],
     inclusions: { flight: false, hotel: true, meals: true, visa: false, transfers: true, sightseeing: true },
     badge: "Beach Vibe",
-    itineraryPage: "/itinerary/sri-lanka",
+    itineraryPage: "/itinerary/sri-lanka-beaches",
   },
 ];

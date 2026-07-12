@@ -24,7 +24,7 @@ function DestinationGridWithSearch({ destinations }: { destinations: typeof DEST
   });
 
   return (
-    <RevealWrapper delay={0.1}>
+    <RevealWrapper delay={0.1} threshold={0}>
       <div id="destination-grid-section" className="flex flex-col gap-8">
         {/* Header + Search Row */}
         <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
@@ -189,7 +189,7 @@ export default function DestinationsPage() {
       <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-16 relative z-10">
         
         {/* 3D Globe */}
-        <RevealWrapper delay={0}>
+        <RevealWrapper delay={0} threshold={0.05}>
           <div className="rounded-2xl border border-charcoal/8 bg-gradient-to-br from-sand via-background to-sand p-6 md:p-10 relative overflow-hidden">
             <div
               className="absolute inset-0 pointer-events-none"
@@ -211,7 +211,7 @@ export default function DestinationsPage() {
         <DestinationGridWithSearch destinations={filteredDestinations} />
 
         {/* Bottom CTA Card */}
-        <RevealWrapper delay={0.2}>
+        <RevealWrapper delay={0.2} threshold={0.05}>
           <div className="relative rounded-3xl overflow-hidden shadow-2xl p-10 md:p-16 text-center flex flex-col items-center gap-6 mt-4 group bg-teal">
             <div className="absolute inset-0 bg-gradient-to-br from-teal via-[#09594d] to-espresso z-0 opacity-95" />
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-gold rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-ring" />
