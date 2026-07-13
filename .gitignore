@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Founder source images (moved to public/images/founder/ with clean filenames)
+# /NITESH_EARTH TRAVEL — removed; images are now tracked under public/images/founder/
