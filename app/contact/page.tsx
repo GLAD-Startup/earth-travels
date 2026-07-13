@@ -137,132 +137,123 @@ export default function ContactPage() {
           {/* LEFT: Contact details & Map (60% width equivalent) */}
           <div className="lg:col-span-7 flex flex-col gap-8 w-full">
             <GlassCard hover={false} className="p-8 bg-background/40 border border-charcoal/10 rounded-[20px] flex flex-col gap-6">
-              <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-2">
+              <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-6">
                 Get in Touch
               </h2>
-
-              <div className="flex flex-col gap-5 text-sm text-charcoal/80">
+              <div className="flex flex-col gap-6 text-sm text-charcoal/80 mt-4">
                 {/* Phone */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">📞</span>
-                  <div>
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Phone</span>
-                    <a
-                      href="tel:8941881111"
-                      className="font-mono text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors"
-                    >
-                      89418 81111
-                    </a>
+                <div className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-[#D4A017]/10 border border-[#D4A017]/20 flex items-center justify-center shrink-0 group-hover:bg-[#D4A017]/20 transition-colors">
+                    <svg className="w-5 h-5 text-[#D4A017]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   </div>
+                  <a
+                    href="tel:8941881111"
+                    className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide"
+                  >
+                    89418 81111
+                  </a>
                 </div>
 
                 {/* WhatsApp */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">💬</span>
-                  <div>
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">WhatsApp</span>
-                    <a
-                      href="https://wa.me/918941881111"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-base font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
-                    >
-                      +91 89418 81111
-                    </a>
+                <div className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 21.056c-1.637 0-3.238-.432-4.654-1.246l-.334-.194-3.456.906.924-3.37-.213-.339a9.588 9.588 0 01-1.463-5.068c0-5.283 4.295-9.58 9.58-9.58 2.562 0 4.968.997 6.78 2.809A9.529 9.529 0 0121.61 11.47c0 5.285-4.297 9.586-9.579 9.586zM7.228 18.067a7.518 7.518 0 004.802 1.705c4.152 0 7.534-3.382 7.534-7.535 0-2.016-.784-3.911-2.209-5.337a7.48 7.48 0 00-5.326-2.198c-4.15 0-7.53 3.38-7.53 7.53 0 1.58.411 3.12 1.196 4.484l.275.478-.549 2.002 2.052-.538.455.267zM16.143 14.61c-.244-.122-1.442-.71-1.666-.792-.224-.081-.387-.122-.549.122-.162.244-.63.792-.773.955-.142.163-.284.183-.528.061-.244-.122-1.03-.38-1.96-1.206-.723-.644-1.21-1.439-1.353-1.683-.142-.244-.015-.376.107-.498.11-.11.244-.284.366-.427.122-.142.162-.244.244-.407.081-.163.041-.305-.02-.427-.061-.122-.549-1.321-.752-1.81-.198-.475-.4-.411-.549-.419-.142-.008-.305-.01-.468-.01-.162 0-.427.061-.65.305-.224.244-.854.834-.854 2.034 0 1.2.875 2.36 1 2.522.122.163 1.72 2.625 4.168 3.682.583.252 1.038.403 1.393.516.586.186 1.12.16 1.542.097.472-.07 1.442-.589 1.645-1.159.203-.57.203-1.058.142-1.159-.061-.102-.224-.163-.468-.285z"/></svg>
                   </div>
+                  <a
+                    href="https://wa.me/918941881111"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-base md:text-lg font-bold text-emerald-500 hover:text-emerald-400 transition-colors tracking-wide"
+                  >
+                    +91 89418 81111
+                  </a>
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">📧</span>
-                  <div>
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Email</span>
-                    <a
-                      href={`mailto:${SITE_CONFIG.email}`}
-                      className="font-mono text-sm hover:text-[#D4A017] transition-colors"
-                    >
-                      {SITE_CONFIG.email}
-                    </a>
+                <div className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   </div>
+                  <a
+                    href={`mailto:${SITE_CONFIG.email}`}
+                    className="font-mono text-xs md:text-sm font-semibold hover:text-[#D4A017] transition-colors"
+                  >
+                    {SITE_CONFIG.email}
+                  </a>
                 </div>
 
                 {/* Address */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">📍</span>
-                  <div>
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Address</span>
-                    <p className="font-sans leading-relaxed">
-                      {SITE_CONFIG.address}
-                    </p>
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-red-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   </div>
+                  <p className="font-sans text-xs md:text-sm leading-relaxed pt-1.5 font-medium">
+                    {SITE_CONFIG.address}
+                  </p>
                 </div>
 
                 {/* Hours */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">🕐</span>
-                  <div>
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Business Hours</span>
-                    <p className="font-mono text-xs text-charcoal/70">
-                      Mon–Sat 10:00 AM – 7:30 PM IST (Sunday Closed)
-                    </p>
+                <div className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
+                  <p className="font-mono text-[10px] md:text-xs text-charcoal/70 font-semibold tracking-wide">
+                    Mon–Sat 10:00 AM – 7:30 PM IST (Sunday Closed)
+                  </p>
                 </div>
 
-                {/* Instagram */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">📸</span>
-                  <div className="flex flex-col gap-2">
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block">Instagram</span>
-                    <a
-                      href="https://instagram.com/niteshkhandelwal8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 group"
-                    >
-                      <svg className="w-4 h-4 text-[#E1306C] shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                      </svg>
-                      <span className="font-mono text-sm font-bold text-[#D4A017] group-hover:text-[#E1306C] transition-colors">@niteshkhandelwal8</span>
-                    </a>
-                    <a
-                      href="https://instagram.com/earthtravelsmathura"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 group"
-                    >
-                      <svg className="w-4 h-4 text-[#E1306C] shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                      </svg>
-                      <span className="font-mono text-sm font-bold text-[#D4A017] group-hover:text-[#E1306C] transition-colors">@earthtravelsmathura</span>
-                    </a>
-                  </div>
-                </div>
-
-                {/* Facebook */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">🌐</span>
-                  <div className="flex flex-col gap-2">
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block">Facebook</span>
+                {/* Social Media (Instagram + Facebook) */}
+                <div className="flex items-start gap-4 pt-2 border-t border-charcoal/10">
+                  <div className="flex flex-col gap-4 w-full">
+                    <div className="flex flex-col gap-3">
+                      <a
+                        href="https://instagram.com/niteshkhandelwal8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 group"
+                      >
+                        <div className="w-10 h-10 rounded-full bg-[#E1306C]/10 border border-[#E1306C]/20 flex items-center justify-center shrink-0 group-hover:bg-[#E1306C]/20 transition-colors">
+                          <svg className="w-5 h-5 text-[#E1306C]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                          </svg>
+                        </div>
+                        <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#E1306C] transition-colors">@niteshkhandelwal8</span>
+                      </a>
+                      <a
+                        href="https://instagram.com/earthtravelsmathura"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 group"
+                      >
+                        <div className="w-10 h-10 rounded-full bg-[#E1306C]/10 border border-[#E1306C]/20 flex items-center justify-center shrink-0 group-hover:bg-[#E1306C]/20 transition-colors">
+                          <svg className="w-5 h-5 text-[#E1306C]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                          </svg>
+                        </div>
+                        <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#E1306C] transition-colors">@earthtravelsmathura</span>
+                      </a>
+                    </div>
                     <a
                       href="https://www.facebook.com/share/1983aNQbfY/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 group"
+                      className="flex items-center gap-3 group"
                     >
-                      <svg className="w-4 h-4 text-[#1877F2] shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                      </svg>
-                      <span className="font-mono text-sm font-bold text-[#D4A017] group-hover:text-[#1877F2] transition-colors">Earth Travels</span>
+                      <div className="w-10 h-10 rounded-full bg-[#1877F2]/10 border border-[#1877F2]/20 flex items-center justify-center shrink-0 group-hover:bg-[#1877F2]/20 transition-colors">
+                        <svg className="w-5 h-5 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                      </div>
+                      <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#1877F2] transition-colors">Earth Travels</span>
                     </a>
                   </div>
                 </div>
               </div>
 
               {/* Status Badge */}
-
-              <div className="flex items-center gap-2 pt-4 border-t border-charcoal/5 text-xs font-sans">
+              <div className="flex items-center gap-2 pt-4 border-t border-charcoal/10 text-xs font-sans mt-2">
                 <span
-                  className={`w-2.5 h-2.5 rounded-full inline-block ${
+                  className={`w-2.5 h-2.5 rounded-full inline-block shrink-0 ${
                     isOpen ? "bg-green-500 animate-pulse" : "bg-red-500"
                   }`}
                 />

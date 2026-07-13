@@ -146,9 +146,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <p className="font-sans">&copy; {currentYear} Earth Travels. All rights reserved.</p>
-          <p className="font-sans">
-            Designed with ♥ by{" "}
-            <a href="https://gladstudio.net" target="_blank" rel="noopener noreferrer" className="text-[#e8a820] hover:text-[#f0c040] font-semibold transition-colors">Glad Studio</a>
+          <p className="font-sans flex items-center gap-1.5">
+            Designed by
+            <a href="https://gladstudio.net" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity flex items-center">
+              <img src="/images/website logo(black background compatible).png" alt="GLAD Studio" className="h-5 md:h-6 object-contain" />
+            </a>
           </p>
         </div>
       </div>
