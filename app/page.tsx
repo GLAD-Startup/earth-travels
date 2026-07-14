@@ -7,12 +7,12 @@ import {
   PackageSlider,
   SocialProof,
   FounderSection,
-  BehindEarthTravels,
   WhyEarthTravels,
   ClosingCTABanner,
   FlightExperience,
   TripFinder,
   PartnerCarousel,
+  Gallery,
 } from "@/components/home";
 import { RevealWrapper } from "@/components/ui";
 
@@ -87,14 +87,14 @@ export default function Home() {
         <FounderSection />
       </RevealWrapper>
 
-      {/* 7.5. Behind Earth Travels — Candid work & client stories */}
-      <RevealWrapper delay={0}>
-        <BehindEarthTravels />
-      </RevealWrapper>
-
       {/* 8. Social Proof Reviews */}
       <RevealWrapper delay={0.1}>
         <SocialProof />
+      </RevealWrapper>
+
+      {/* 8.5 Gallery Section */}
+      <RevealWrapper delay={0.1}>
+        <Gallery />
       </RevealWrapper>
 
       {/* 9. Final CTA Banner */}
