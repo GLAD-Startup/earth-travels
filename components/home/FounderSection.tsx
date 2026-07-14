@@ -68,12 +68,30 @@ export default function FounderSection() {
               <span className="font-mono text-[10px] text-[#e8a820] uppercase tracking-[0.3em] font-semibold block mb-6">
                 The Architect
               </span>
-              <h2 className="font-display text-5xl md:text-7xl font-normal leading-[1.1] tracking-[-0.02em]">
-                Nitesh<br />
-                <span className="italic text-[#e8a820]">Khandelwal</span>
-              </h2>
+
+              {/* Founder name + portrait thumbnail side-by-side */}
+              <div className="flex items-end gap-6">
+                <h2 className="font-display text-5xl md:text-7xl font-normal leading-[1.1] tracking-[-0.02em]">
+                  Nitesh<br />
+                  <span className="italic text-[#e8a820]">Khandelwal</span>
+                </h2>
+                {/* Portrait thumbnail — face-focused crop using objectPosition */}
+                <div className="relative w-[80px] h-[80px] md:w-[96px] md:h-[96px] rounded-full overflow-hidden border-2 border-[#e8a820]/40 shadow-lg shadow-[#e8a820]/10 shrink-0 mb-2">
+                  <Image
+                    src="/images/founder/nitesh-maldives-sunset-portrait.png"
+                    alt="Nitesh Khandelwal, founder of Earth Travels"
+                    fill
+                    sizes="96px"
+                    className="object-cover"
+                    style={{ objectPosition: "40% 70%" }}
+                    quality={85}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
               <p className="font-mono text-[9px] text-white/40 uppercase tracking-[0.2em] font-light mt-4">
-                Founder & Lead Designer
+                Founder &amp; Lead Designer
               </p>
             </div>
 
@@ -110,19 +128,20 @@ export default function FounderSection() {
             </div>
           </div>
 
-          {/* Right: Asymmetrical Image Collage */}
+          {/* Right: Asymmetrical Image Collage — real award photos */}
           <div className="w-full lg:w-7/12 relative h-[600px] lg:h-[700px] mt-12 lg:mt-0">
             
-            {/* Primary Award Image (TBO) - Large, offset left */}
+            {/* Primary Award Image (TBO.com) - Large, offset left */}
             <div className="award-image-1 absolute top-0 left-0 w-4/5 h-[400px] lg:h-[500px] z-10">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
-                  src="/images/award-1.png"
-                  alt="Nitesh Khandelwal receiving TBO.com Excellence Award"
+                  src="/images/founder/nitesh-tbo-excellence-award.png"
+                  alt="Nitesh Khandelwal receiving TBO.com Excellence Award — Travel Simplified recognition ceremony"
                   fill
                   sizes="(max-width: 1024px) 80vw, 50vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
                   quality={90}
+                  loading="lazy"
                 />
               </div>
               {/* Minimal Caption */}
@@ -134,16 +153,17 @@ export default function FounderSection() {
               </div>
             </div>
 
-            {/* Secondary Award Image (SGC) - Smaller, offset right, overlapping */}
+            {/* Secondary Award Image (SGC Leisures) - Smaller, offset right, overlapping */}
             <div className="award-image-2 absolute bottom-0 right-0 w-3/5 h-[300px] lg:h-[400px] z-20 bg-[#1a120a] p-4 lg:p-6 pb-0 pr-0">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
-                  src="/images/award-2.png"
-                  alt="Nitesh Khandelwal receiving SGC Leisures Industry Recognition"
+                  src="/images/founder/nitesh-sgc-leisures-award.png"
+                  alt="Nitesh Khandelwal receiving SGC Leisures Pvt Ltd Industry Recognition Award on stage"
                   fill
                   sizes="(max-width: 1024px) 60vw, 40vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
                   quality={90}
+                  loading="lazy"
                 />
               </div>
               <div className="absolute bottom-4 right-4 bg-[#1a120a]/80 backdrop-blur-sm px-4 py-2">

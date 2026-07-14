@@ -7,6 +7,7 @@ import {
   PackageSlider,
   SocialProof,
   FounderSection,
+  BehindEarthTravels,
   WhyEarthTravels,
   ClosingCTABanner,
   FlightExperience,
@@ -85,6 +86,11 @@ export default function Home() {
       {/* 7. Founder & Awards Section */}
       <RevealWrapper delay={0.1}>
         <FounderSection />
+      </RevealWrapper>
+
+      {/* 7.5. Behind Earth Travels — Candid work & client stories */}
+      <RevealWrapper delay={0}>
+        <BehindEarthTravels />
       </RevealWrapper>
 
       {/* 8. Social Proof Reviews */}
