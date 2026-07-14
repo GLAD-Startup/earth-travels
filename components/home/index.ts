@@ -13,5 +13,4 @@ export { default as FlightExperience } from "./FlightExperience";
 export { default as TripFinder } from "./TripFinder";
 export { default as PartnerCarousel } from "./PartnerCarousel";
 export { default as Gallery } from "./Gallery";
-export { default as BehindEarthTravels } from "./BehindEarthTravels";
 

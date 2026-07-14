@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { RevealWrapper } from "@/components/ui";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -142,61 +143,119 @@ export default function Gallery() {
   return (
     <section
       ref={containerRef}
-      className="relative overflow-hidden py-16 md:py-24 flex flex-col gap-6 md:gap-8 bg-[#fdf8f2] select-none"
+      className="relative overflow-hidden py-24 bg-[#fdf8f2] select-none"
     >
-      {/* Background elegant 'gallery' text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-        <span className="text-[14rem] md:text-[28rem] font-display font-semibold text-[#1a120a]/[0.03] tracking-wider leading-none">
+      {/* Background elegant 'gallery' text - positioned higher and darker */}
+      <div className="absolute top-[60px] md:top-[80px] left-0 right-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
+        <span className="text-[14rem] md:text-[28rem] font-display font-semibold text-[#1a120a]/[0.12] tracking-wider leading-none">
           gallery
         </span>
       </div>
 
-      {/* Row 1: Left to Right */}
-      <div className="relative w-full overflow-visible z-10">
-        <div
-          ref={row1Ref}
-          className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pl-[10vw]"
-        >
-          {row1Images.map((img, idx) => (
-            <div
-              key={`row1-${idx}`}
-              className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
-            >
-              <Image
-                src={img.src}
-                alt="Earth Travels Gallery 1"
-                fill
-                sizes="(max-width: 768px) 300px, 500px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                priority={idx < 3}
-              />
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-16 flex flex-col">
+        {/* Section Header (Above the carousels) */}
+        <RevealWrapper delay={0}>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div>
+              <span className="font-mono text-[10px] text-[#c4900f] uppercase tracking-[0.3em] font-semibold block mb-4">
+                Behind Earth Travels
+              </span>
+              <h2 className="font-display text-4xl md:text-6xl font-normal text-[#1a120a] leading-[1.05] tracking-[-0.02em]">
+                The Work Behind<br />
+                <span className="italic text-[#c4900f]">Every Journey</span>
+              </h2>
             </div>
-          ))}
+            <p className="font-sans text-sm md:text-base text-[#1a120a]/55 max-w-sm leading-[1.8] font-light md:text-right">
+              We don&apos;t sell destinations we&apos;ve only seen on a brochure.
+              Nitesh personally researches, inspects, and experiences every property
+              and route before recommending it to your family.
+            </p>
+          </div>
+        </RevealWrapper>
+      </div>
+
+      {/* Carousels Container */}
+      <div className="relative w-full py-8 overflow-hidden flex flex-col gap-6 md:gap-8">
+
+        {/* Row 1: Left to Right */}
+        <div className="relative w-full overflow-visible z-10">
+          <div
+            ref={row1Ref}
+            className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pl-[10vw]"
+          >
+            {row1Images.map((img, idx) => (
+              <div
+                key={`row1-${idx}`}
+                className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
+              >
+                <Image
+                  src={img.src}
+                  alt="Earth Travels Gallery 1"
+                  fill
+                  sizes="(max-width: 768px) 300px, 500px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority={idx < 3}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2: Right to Left */}
+        <div className="relative w-full overflow-visible z-10">
+          <div
+            ref={row2Ref}
+            className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pr-[10vw]"
+          >
+            {row2Images.map((img, idx) => (
+              <div
+                key={`row2-${idx}`}
+                className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
+              >
+                <Image
+                  src={img.src}
+                  alt="Earth Travels Gallery 2"
+                  fill
+                  sizes="(max-width: 768px) 300px, 500px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority={idx < 3}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Row 2: Right to Left */}
-      <div className="relative w-full overflow-visible z-10">
-        <div
-          ref={row2Ref}
-          className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pr-[10vw]"
-        >
-          {row2Images.map((img, idx) => (
-            <div
-              key={`row2-${idx}`}
-              className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
-            >
-              <Image
-                src={img.src}
-                alt="Earth Travels Gallery 2"
-                fill
-                sizes="(max-width: 768px) 300px, 500px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                priority={idx < 3}
-              />
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-16 flex flex-col">
+        {/* Bottom narrative line (Below the carousels) */}
+        <RevealWrapper delay={0.3}>
+          <div className="mt-16 pt-10 border-t border-[#1a120a]/8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              {/* Inline portrait */}
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#c4900f]/30 shrink-0">
+                <Image
+                  src="/images/founder/nitesh-maldives-sunset-portrait.png"
+                  alt="Nitesh Khandelwal, founder of Earth Travels"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                  style={{ objectPosition: "40% 70%" }}
+                  quality={80}
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <p className="font-sans text-sm font-semibold text-[#1a120a]">Nitesh Khandelwal</p>
+                <p className="font-mono text-[9px] text-[#1a120a]/40 uppercase tracking-widest font-semibold">
+                  Founder, Earth Travels · Mathura
+                </p>
+              </div>
             </div>
-          ))}
-        </div>
+            <p className="font-display text-base md:text-lg italic text-[#1a120a]/60 max-w-md text-center md:text-right leading-relaxed">
+              &ldquo;I visit every resort I recommend. Your family deserves nothing less than my personal guarantee.&rdquo;
+            </p>
+          </div>
+        </RevealWrapper>
       </div>
     </section>
   );
