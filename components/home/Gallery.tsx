@@ -146,8 +146,8 @@ export default function Gallery() {
       className="relative overflow-hidden py-24 bg-[#fdf8f2] select-none"
     >
       {/* Background elegant 'gallery' text - positioned higher and darker */}
-      <div className="absolute top-[60px] md:top-[80px] left-0 right-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-        <span className="text-[14rem] md:text-[28rem] font-display font-semibold text-[#1a120a]/[0.12] tracking-wider leading-none">
+      <div className="absolute top-[30px] md:top-[40px] left-0 right-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
+        <span className="text-[9rem] md:text-[18rem] font-display font-semibold text-[#1a120a]/[0.12] tracking-wider leading-none">
           gallery
         </span>
       </div>
