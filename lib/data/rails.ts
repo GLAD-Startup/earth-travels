@@ -7,61 +7,11 @@ export interface RailJourney {
   route: string;
   duration: string;
   startingPrice: number;
-  category: "luxury" | "scenic" | "heritage" | "europass";
+  category: "scenic" | "europass";
   season: string;
 }
 
 export const RAIL_JOURNEYS: RailJourney[] = [
-  // ── Luxury Trains ──────────────────────────────────────────
-  {
-    id: "palace-on-wheels",
-    name: "Palace on Wheels",
-    tagline: "Royal Rajasthan on Rails",
-    image: "/images/rails/palace_on_wheels.jpg",
-    operator: "RTDC",
-    route: "Delhi → Jaipur → Jaisalmer → Jodhpur → Udaipur → Agra → Delhi",
-    duration: "7N / 8D",
-    startingPrice: 450000,
-    category: "luxury",
-    season: "BEST: SEP – APR",
-  },
-  {
-    id: "maharajas-express",
-    name: "Maharajas' Express",
-    tagline: "The Most Luxurious Train in India",
-    image: "/images/rails/maharajas_express.jpg",
-    operator: "IRCTC",
-    route: "Delhi → Agra → Ranthambore → Jaipur → Delhi",
-    duration: "3N / 4D",
-    startingPrice: 320000,
-    category: "luxury",
-    season: "BEST: OCT – APR",
-  },
-  {
-    id: "deccan-odyssey",
-    name: "Deccan Odyssey",
-    tagline: "Maharashtra's Crown Jewel on Rails",
-    image: "/images/rails/deccan_odyssey.jpg",
-    operator: "Maharashtra Tourism",
-    route: "Mumbai → Sindhudurg → Goa → Kolhapur → Mumbai",
-    duration: "7N / 8D",
-    startingPrice: 780000,
-    category: "luxury",
-    season: "BEST: OCT – APR",
-  },
-  {
-    id: "golden-chariot",
-    name: "Golden Chariot",
-    tagline: "South India's Luxury Heritage Train",
-    image: "/images/rails/golden_chariot.jpg",
-    operator: "Karnataka Tourism",
-    route: "Bangalore → Mysore → Hampi → Goa → Bangalore",
-    duration: "3N / 4D",
-    startingPrice: 250000,
-    category: "luxury",
-    season: "BEST: OCT – MAR",
-  },
-
   // ── Scenic European Rail ───────────────────────────────────
   {
     id: "glacier-express",
@@ -172,55 +122,5 @@ export const RAIL_JOURNEYS: RailJourney[] = [
     startingPrice: 18000,
     category: "europass",
     season: "BEST: APR – OCT",
-  },
-
-  // ── Heritage Indian Rail ───────────────────────────────────
-  {
-    id: "toy-train-shimla",
-    name: "Toy Train Shimla",
-    tagline: "UNESCO Heritage Through the Himalayas",
-    image: "/images/rails/toy_train_shimla.jpg",
-    operator: "Indian Railways",
-    route: "Kalka → Shimla (96 km, 102 tunnels)",
-    duration: "1 Day",
-    startingPrice: 800,
-    category: "heritage",
-    season: "BEST: MAR – JUN",
-  },
-  {
-    id: "darjeeling-railway",
-    name: "Darjeeling Himalayan Railway",
-    tagline: "The Iconic Toy Train to the Hills",
-    image: "/images/rails/darjeeling_himalayan.jpg",
-    operator: "Indian Railways",
-    route: "NJP → Darjeeling (UNESCO Heritage)",
-    duration: "1 Day",
-    startingPrice: 1200,
-    category: "heritage",
-    season: "BEST: MAR – MAY, SEP – NOV",
-  },
-  {
-    id: "nilgiri-railway",
-    name: "Nilgiri Mountain Railway",
-    tagline: "Steam Through the Blue Mountains",
-    image: "/images/rails/nilgiri_railway.jpg",
-    operator: "Indian Railways",
-    route: "Mettupalayam → Coonoor → Ooty",
-    duration: "1 Day",
-    startingPrice: 600,
-    category: "heritage",
-    season: "BEST: APR – JUN, SEP – NOV",
-  },
-  {
-    id: "vande-bharat",
-    name: "Vande Bharat Express",
-    tagline: "India's Semi-High Speed Star",
-    image: "/images/rails/vande_bharat_express.jpg",
-    operator: "Indian Railways",
-    route: "Delhi → Varanasi (8 hrs, 160 km/h)",
-    duration: "1 Day",
-    startingPrice: 2200,
-    category: "heritage",
-    season: "BEST: YEAR ROUND",
   },
 ];

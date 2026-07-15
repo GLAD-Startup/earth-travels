@@ -7,10 +7,8 @@ import { RevealWrapper } from "@/components/ui";
 
 const TABS = [
   { id: "all", name: "All" },
-  { id: "luxury", name: "Luxury Trains" },
   { id: "scenic", name: "Scenic Routes" },
   { id: "europass", name: "Eurail & Swiss Pass" },
-  { id: "heritage", name: "Heritage" },
 ];
 
 export default function RailsPage() {
@@ -40,18 +38,16 @@ export default function RailsPage() {
 
   const categoryLabel = (cat: string) => {
     switch (cat) {
-      case "luxury": return "Luxury";
       case "scenic": return "Scenic";
       case "europass": return "Euro Pass";
-      case "heritage": return "Heritage";
       default: return cat;
     }
   };
 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>Rail Journeys — Luxury Trains & Euro Passes | Earth Travels</title>
-      <meta name="description" content="Explore luxury rail journeys from Earth Travels. Palace on Wheels, Maharajas Express, Eurail Global Pass, Swiss Travel Pass, and heritage Indian railways." />
+      <title>Rail Journeys — Scenic Routes & Euro Passes | Earth Travels</title>
+      <meta name="description" content="Explore scenic rail journeys and rail passes from Earth Travels. Eurail Global Pass, Swiss Travel Pass, Glacier Express, Bernina Express, and scenic European rail routes." />
 
       {/* 1. Page Hero */}
       <section className="relative h-[50vh] min-h-[350px] w-full flex items-center justify-center text-center overflow-hidden">
@@ -77,7 +73,7 @@ export default function RailsPage() {
           </RevealWrapper>
           <RevealWrapper delay={0.2}>
             <p className="font-sans text-base md:text-lg text-white/70 max-w-lg mx-auto">
-              From palatial Indian trains to unlimited Eurail passes — the world by rail.
+              From scenic alpine routes to unlimited Eurail passes — the world by rail.
             </p>
           </RevealWrapper>
         </div>
