@@ -268,7 +268,53 @@ export default function AboutPage() {
         </div>
         </div>
       </section>
- 
+
+      {/* 3.5 Our Workspace Section */}
+      <section className="relative z-10 bg-[#fdf8f2] border-b border-espresso/5">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+            <div className="lg:col-span-6 flex flex-col gap-4">
+              <span className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.2em] block">
+                Our Workspace
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-normal text-espresso leading-tight">
+                Step Inside Our Mathura Headquarters
+              </h2>
+            </div>
+            <div className="lg:col-span-6">
+              <p className="font-sans text-sm md:text-base text-espresso/70 leading-relaxed">
+                Located in the heart of Mathura at Krishna Plaza, our workspace is where your travel dreams are meticulously planned, documented, and brought to life. Drop in for a warm consultation with our expert travel planners.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: "/images/office image.jpg", alt: "Earth Travels Mathura Office Entrance", title: "Office Entrance" },
+              { src: "/images/office image 1.jpg", alt: "Earth Travels Consultation Workspace", title: "Consultation Lounge" },
+              { src: "/images/office image 2.jpg", alt: "Earth Travels Planning Desks", title: "Operations Desk" }
+            ].map((img, idx) => (
+              <RevealWrapper key={idx} delay={idx * 0.1}>
+                <GlassCard hover={true} className="p-3 bg-white/60 border border-espresso/10 rounded-[20px] group">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-espresso/5">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="mt-3 px-1 flex items-center justify-between">
+                    <span className="font-sans text-sm font-semibold text-espresso">{img.title}</span>
+                    <span className="font-mono text-[9px] text-[#D4A017] uppercase tracking-wider font-semibold">Mathura, UP</span>
+                  </div>
+                </GlassCard>
+              </RevealWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 4. What makes us different */}
       <section className="relative z-10 bg-[#fdf8f2] border-b border-espresso/5">
         <div className="max-w-7xl mx-auto px-6 py-24">
