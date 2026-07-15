@@ -38,6 +38,11 @@ const row1Images: GalleryImage[] = [
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/office image.jpg",
+    widthClass: "w-[300px] md:w-[410px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel4.png",
     widthClass: "w-[380px] md:w-[520px]",
     heightClass: "h-[180px] md:h-[260px]",
@@ -50,6 +55,11 @@ const row1Images: GalleryImage[] = [
   {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel6.png",
     widthClass: "w-[320px] md:w-[450px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
+    src: "/images/office image 2.jpg",
+    widthClass: "w-[280px] md:w-[390px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
@@ -78,6 +88,11 @@ const row2Images: GalleryImage[] = [
   {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel11.png",
     widthClass: "w-[360px] md:w-[500px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
+    src: "/images/office image 1.jpg",
+    widthClass: "w-[340px] md:w-[460px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
