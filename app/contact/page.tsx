@@ -141,15 +141,22 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-5 text-sm text-charcoal/80">
                 {/* Phone */}
-                <div className="flex items-start gap-4">
-                  <span className="text-xl select-none shrink-0 mt-0.5">📞</span>
-                  <div>
-                    <span className="font-mono text-[10px] text-charcoal/40 uppercase tracking-wider block mb-0.5">Phone</span>
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-[#D4A017]/10 border border-[#D4A017]/20 flex items-center justify-center shrink-0 group-hover:bg-[#D4A017]/20 transition-colors mt-0.5">
+                    <svg className="w-5 h-5 text-[#D4A017]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  </div>
+                  <div className="flex flex-col gap-1.5">
                     <a
                       href="tel:8941881111"
-                      className="font-mono text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors"
+                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide"
                     >
                       89418 81111
+                    </a>
+                    <a
+                      href="tel:9410857835"
+                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide"
+                    >
+                      94108 57835
                     </a>
                   </div>
                 </div>

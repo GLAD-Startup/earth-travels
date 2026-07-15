@@ -36,22 +36,22 @@ export default function Home() {
         <div className="relative w-full overflow-hidden bg-[#fdf8f2] py-6 border-y border-[#1a120a]/5 select-none z-10">
           <div className="flex w-max items-center animate-marquee whitespace-nowrap font-mono text-[12px] text-[#1a120a]/80 uppercase tracking-[0.15em]">
             <div className="flex items-center gap-12 mx-12">
-              <span>127+ Happy Travellers</span>
+              <span>15000+ Happy Travellers</span>
               <span className="text-[#c4900f]">★</span>
-              <span>50+ Destinations</span>
+              <span>150+ Destinations</span>
               <span className="text-[#c4900f]">★</span>
-              <span>10+ Years of Trust</span>
+              <span>15+ Years of Trust</span>
               <span className="text-[#c4900f]">★</span>
               <span>4.7★ Rated</span>
               <span className="text-[#c4900f]">★</span>
               <span>Visa Assistance Included</span>
             </div>
             <div className="flex items-center gap-12 mx-12">
-              <span>127+ Happy Travellers</span>
+              <span>15000+ Happy Travellers</span>
               <span className="text-[#c4900f]">★</span>
-              <span>50+ Destinations</span>
+              <span>150+ Destinations</span>
               <span className="text-[#c4900f]">★</span>
-              <span>10+ Years of Trust</span>
+              <span>15+ Years of Trust</span>
               <span className="text-[#c4900f]">★</span>
               <span>4.7★ Rated</span>
               <span className="text-[#c4900f]">★</span>

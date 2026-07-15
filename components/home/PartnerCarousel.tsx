@@ -42,10 +42,6 @@ export const PARTNERS: Partner[] = [
   { name: "Oberoi Hotels",      logo: "/logos/oberoi-hotels.png",     category: "hotel",     accentColor: "#1A3050" },
   // ── Platforms / Trust ─────────────────────────────────────────
   { name: "TripAdvisor",        logo: "/logos/tripadvisor.png",       category: "platform",  accentColor: "#34E0A1" },
-  { name: "Booking.com",        logo: "/logos/booking-com.png",       category: "platform",  accentColor: "#003580" },
-  { name: "Visa",               logo: "/logos/visa.png",              category: "payment",   accentColor: "#1A1F71" },
-  { name: "Mastercard",         logo: "/logos/mastercard.png",        category: "payment",   accentColor: "#EB001B" },
-  { name: "Allianz Travel",     logo: "/logos/allianz.png",           category: "insurance", accentColor: "#003781" },
 ];
 
 // ─────────────────────────────────────────────────────────────────

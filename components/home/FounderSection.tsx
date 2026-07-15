@@ -68,10 +68,25 @@ export default function FounderSection() {
               <span className="font-mono text-[10px] text-[#e8a820] uppercase tracking-[0.3em] font-semibold block mb-6">
                 The Architect
               </span>
-              <h2 className="font-display text-5xl md:text-7xl font-normal leading-[1.1] tracking-[-0.02em]">
-                Nitesh<br />
-                <span className="italic text-[#e8a820]">Khandelwal</span>
-              </h2>
+              {/* Founder name + portrait thumbnail side-by-side */}
+              <div className="flex items-end gap-6">
+                <h2 className="font-display text-5xl md:text-7xl font-normal leading-[1.1] tracking-[-0.02em]">
+                  Nitesh<br />
+                  <span className="italic text-[#e8a820]">Khandelwal</span>
+                </h2>
+                {/* Portrait thumbnail — face-focused crop using objectPosition */}
+                <div className="relative w-[110px] h-[110px] md:w-[130px] md:h-[130px] rounded-full overflow-hidden border-2 border-[#e8a820]/40 shadow-lg shadow-[#e8a820]/10 shrink-0 mb-2">
+                  <Image
+                    src="/images/profile.jpeg"
+                    alt="Nitesh Khandelwal, founder of Earth Travels"
+                    fill
+                    sizes="130px"
+                    className="object-cover"
+                    quality={90}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
               <p className="font-mono text-[9px] text-white/40 uppercase tracking-[0.2em] font-light mt-4">
                 Founder & Lead Designer
               </p>
@@ -93,15 +108,15 @@ export default function FounderSection() {
               </blockquote>
             </div>
 
-            {/* Editorial Stats Line */}
+             {/* Editorial Stats Line */}
             <div className="flex items-center gap-12 mt-4 pt-8 border-t border-white/10">
               <div className="flex flex-col">
-                <span className="font-mono text-3xl font-light text-[#e8a820]">10<span className="text-sm">+</span></span>
+                <span className="font-mono text-3xl font-light text-[#e8a820]">15<span className="text-sm">+</span></span>
                 <span className="font-sans text-[9px] text-white/40 uppercase tracking-widest font-semibold mt-1">Years</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-mono text-3xl font-light text-[#e8a820]">127<span className="text-sm">+</span></span>
-                <span className="font-sans text-[9px] text-white/40 uppercase tracking-widest font-semibold mt-1">Families</span>
+                <span className="font-mono text-3xl font-light text-[#e8a820]">15000<span className="text-sm">+</span></span>
+                <span className="font-sans text-[9px] text-white/40 uppercase tracking-widest font-semibold mt-1">Travellers</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-3xl font-light text-[#e8a820]">4.7<span className="text-sm">★</span></span>
@@ -110,45 +125,84 @@ export default function FounderSection() {
             </div>
           </div>
 
-          {/* Right: Asymmetrical Image Collage */}
-          <div className="w-full lg:w-7/12 relative h-[600px] lg:h-[700px] mt-12 lg:mt-0">
+          {/* Right: Premium Overlapping Photo Collage (Rotated scatter style) */}
+          <div className="w-full lg:w-7/12 relative h-[550px] sm:h-[650px] lg:h-[700px] mt-12 lg:mt-0 select-none">
             
-            {/* Primary Award Image (TBO) - Large, offset left */}
-            <div className="award-image-1 absolute top-0 left-0 w-4/5 h-[400px] lg:h-[500px] z-10">
-              <div className="relative w-full h-full overflow-hidden">
+            {/* 1. Main Award Photo (TBO.com) - Background center-left */}
+            <div className="absolute top-10 left-[5%] w-[52%] h-[350px] lg:h-[450px] z-10 rotate-[-2deg] rounded-2xl overflow-hidden border-4 border-[#221810] shadow-2xl hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+              <div className="relative w-full h-full">
                 <Image
-                  src="/images/award-1.png"
+                  src="/images/founder/nitesh-tbo-excellence-award.png"
                   alt="Nitesh Khandelwal receiving TBO.com Excellence Award"
                   fill
-                  sizes="(max-width: 1024px) 80vw, 50vw"
+                  sizes="(max-width: 1024px) 50vw, 35vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
                   quality={90}
                 />
               </div>
-              {/* Minimal Caption */}
               <div className="absolute -left-12 bottom-12 rotate-[-90deg] origin-bottom-left flex items-center gap-4">
                 <span className="w-8 h-[1px] bg-[#e8a820]" />
                 <span className="font-mono text-[8px] text-[#e8a820] uppercase tracking-[0.2em] whitespace-nowrap">
-                  TBO.com Excellence 2024
+                  TBO Excellence 2024
                 </span>
               </div>
             </div>
 
-            {/* Secondary Award Image (SGC) - Smaller, offset right, overlapping */}
-            <div className="award-image-2 absolute bottom-0 right-0 w-3/5 h-[300px] lg:h-[400px] z-20 bg-[#1a120a] p-4 lg:p-6 pb-0 pr-0">
-              <div className="relative w-full h-full overflow-hidden">
+            {/* 2. SGC Leisures Award Photo - Foreground bottom-right */}
+            <div className="absolute bottom-4 right-[2%] w-[46%] h-[240px] lg:h-[320px] z-20 rotate-[3deg] rounded-2xl overflow-hidden border-4 border-[#221810] shadow-2xl hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+              <div className="relative w-full h-full">
                 <Image
-                  src="/images/award-2.png"
-                  alt="Nitesh Khandelwal receiving SGC Leisures Industry Recognition"
+                  src="/images/founder/nitesh-sgc-leisures-award.png"
+                  alt="Nitesh Khandelwal receiving SGC Leisures Award"
                   fill
-                  sizes="(max-width: 1024px) 60vw, 40vw"
+                  sizes="(max-width: 1024px) 45vw, 30vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
                   quality={90}
                 />
               </div>
-              <div className="absolute bottom-4 right-4 bg-[#1a120a]/80 backdrop-blur-sm px-4 py-2">
+              <div className="absolute bottom-4 right-4 bg-[#1a120a]/80 backdrop-blur-sm px-4 py-2 border border-white/10 rounded-lg">
                 <span className="font-mono text-[8px] text-white uppercase tracking-[0.2em] whitespace-nowrap">
-                  SGC Leisures Award
+                  SGC Industry Honor
+                </span>
+              </div>
+            </div>
+
+            {/* 3. Trophy Photo (Full Trophy, object-contain) - Foreground top-right */}
+            <div className="absolute top-0 right-[4%] w-[32%] h-[200px] lg:h-[270px] z-20 rotate-[-4deg] bg-[#221810] p-2.5 rounded-2xl shadow-2xl border-2 border-[#e8a820]/40 flex items-center justify-center hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/trophy.jpg"
+                  alt="Dr. Ram Manohar Lohia MSME Tourism Award Trophy"
+                  fill
+                  sizes="(max-width: 1024px) 30vw, 20vw"
+                  className="object-contain transition-transform duration-700 hover:scale-105"
+                  quality={90}
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-white/10 w-[85%] text-center">
+                <span className="font-mono text-[7px] text-white uppercase tracking-[0.1em] whitespace-nowrap font-semibold block">
+                  MSME Regional Award
+                </span>
+              </div>
+            </div>
+
+            {/* 4. Certificate Photo (Travel License) - Foreground bottom-left */}
+            <div className="absolute bottom-6 left-0 w-[42%] h-[150px] lg:h-[200px] z-20 rotate-[4deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border-2 border-white/20 hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+              <div className="relative w-full h-full overflow-hidden rounded-xl">
+                <Image
+                  src="/images/certificate.jpg"
+                  alt="Official MSME Tourism Certificate of Appreciation"
+                  fill
+                  sizes="(max-width: 1024px) 40vw, 25vw"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                  quality={90}
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-white/10 w-[85%] text-center">
+                <span className="font-mono text-[7px] text-white uppercase tracking-[0.1em] whitespace-nowrap font-semibold block">
+                  MSME State Certificate
                 </span>
               </div>
             </div>
