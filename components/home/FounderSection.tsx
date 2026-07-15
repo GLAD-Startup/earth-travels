@@ -68,6 +68,7 @@ export default function FounderSection() {
               <span className="font-mono text-[10px] text-[#e8a820] uppercase tracking-[0.3em] font-semibold block mb-6">
                 The Architect
               </span>
+
               {/* Founder name + portrait thumbnail side-by-side */}
               <div className="flex items-end gap-6">
                 <h2 className="font-display text-5xl md:text-7xl font-normal leading-[1.1] tracking-[-0.02em]">
@@ -87,8 +88,9 @@ export default function FounderSection() {
                   />
                 </div>
               </div>
+
               <p className="font-mono text-[9px] text-white/40 uppercase tracking-[0.2em] font-light mt-4">
-                Founder & Lead Designer
+                Founder &amp; Lead Designer
               </p>
             </div>
 
@@ -138,6 +140,7 @@ export default function FounderSection() {
                   sizes="(max-width: 1024px) 50vw, 35vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
                   quality={90}
+                  loading="lazy"
                 />
               </div>
               <div className="absolute -left-12 bottom-12 rotate-[-90deg] origin-bottom-left flex items-center gap-4">
@@ -158,6 +161,7 @@ export default function FounderSection() {
                   sizes="(max-width: 1024px) 45vw, 30vw"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
                   quality={90}
+                  loading="lazy"
                 />
               </div>
               <div className="absolute bottom-4 right-4 bg-[#1a120a]/80 backdrop-blur-sm px-4 py-2 border border-white/10 rounded-lg">

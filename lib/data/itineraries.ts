@@ -2435,8 +2435,7 @@ export const ITINERARIES: Record<string, ItineraryData> = {
 
 // Variant-specific itinerary entries (indexed by package ID)
 // These extend ITINERARIES with unique content for each package variant
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const VARIANT_ITINERARIES: Record<string, any> = {
+export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
   "rajasthan-palace": {
     slug: "rajasthan-palace", destination: "Rajasthan", title: "Rajasthan Palace Luxury (Udaipur & Pushkar Heritage Tour)", duration: "6 Nights / 7 Days", heroImage: "/images/destinations/rajasthan_2.jpg", tagline: "City of Lakes, floating palaces, camel fairs and romantic Pushkar ghats", basePrice: 38000,
     days: [

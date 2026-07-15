@@ -314,35 +314,84 @@ export default function AboutPage() {
           </h2>
         </div>
  
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TEAM_MEMBERS.map((member, idx) => (
-            <RevealWrapper key={idx} delay={idx * 0.1}>
-              <GlassCard
-                hover={true}
-                className="p-6 md:p-8 bg-white/60 border border-espresso/10 hover:border-[#D4A017]/30 transition-all rounded-[20px] text-center flex flex-col items-center gap-4"
-              >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center bg-[#D4A017]/10 border border-[#D4A017]/35 text-[#D4A017] shadow shadow-gold/5 shrink-0 select-none">
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                    <circle cx="12" cy="7" r="4" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-sans text-base font-bold text-espresso leading-tight mb-1">
-                    {member.name}
-                  </h4>
-                  <span className="font-mono text-[10px] text-[#D4A017] uppercase tracking-widest block mb-3 font-semibold">
-                    {member.role}
-                  </span>
-                  {member.specialty && (
-                    <p className="font-sans text-xs text-espresso/50">
-                      Focus: <span className="text-espresso/80 font-medium">{member.specialty}</span>
-                    </p>
-                  )}
-                </div>
-              </GlassCard>
-            </RevealWrapper>
-          ))}
+        <div className="flex flex-col gap-12">
+          {/* Operations & Sales Group */}
+          <div>
+            <h3 className="font-mono text-xs text-espresso/40 uppercase tracking-[0.2em] block mb-6 text-center font-bold">
+              Operations & Sales
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {TEAM_MEMBERS.filter(m => m.role.includes('Operations') || m.role.includes('Sales')).map((member, idx) => (
+                <RevealWrapper key={idx} delay={idx * 0.1}>
+                  <GlassCard
+                    hover={true}
+                    className="p-6 bg-white/60 border border-espresso/10 hover:border-[#D4A017]/30 transition-all rounded-[20px] group"
+                  >
+                    <div className="flex flex-col items-center justify-center gap-4 text-center h-full">
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center bg-[#D4A017]/10 border border-[#D4A017]/35 text-[#D4A017] shadow-sm shadow-gold/5 shrink-0 select-none group-hover:scale-105 group-hover:bg-[#D4A017]/20 transition-all duration-300">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                          <circle cx="12" cy="7" r="4" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col items-center justify-center">
+                        <h4 className="font-sans text-base font-bold text-espresso leading-tight mb-1 group-hover:text-[#D4A017] transition-colors">
+                          {member.name}
+                        </h4>
+                        <span className="font-mono text-[10px] text-[#D4A017] uppercase tracking-widest font-semibold">
+                          {member.role}
+                        </span>
+                        {member.specialty && (
+                          <p className="font-sans text-xs text-espresso/50 mt-1">
+                            Focus: <span className="text-espresso/80 font-medium">{member.specialty}</span>
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </GlassCard>
+                </RevealWrapper>
+              ))}
+            </div>
+          </div>
+
+          {/* Accounts Group */}
+          <div>
+            <h3 className="font-mono text-xs text-espresso/40 uppercase tracking-[0.2em] block mb-6 text-center font-bold">
+              Accounts & Finance
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              {TEAM_MEMBERS.filter(m => m.role.includes('Account')).map((member, idx) => (
+                <RevealWrapper key={idx} delay={idx * 0.1}>
+                  <GlassCard
+                    hover={true}
+                    className="p-6 bg-white/60 border border-espresso/10 hover:border-[#D4A017]/30 transition-all rounded-[20px] group"
+                  >
+                    <div className="flex flex-col items-center justify-center gap-4 text-center h-full">
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center bg-[#D4A017]/10 border border-[#D4A017]/35 text-[#D4A017] shadow-sm shadow-gold/5 shrink-0 select-none group-hover:scale-105 group-hover:bg-[#D4A017]/20 transition-all duration-300">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                          <circle cx="12" cy="7" r="4" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col items-center justify-center">
+                        <h4 className="font-sans text-base font-bold text-espresso leading-tight mb-1 group-hover:text-[#D4A017] transition-colors">
+                          {member.name}
+                        </h4>
+                        <span className="font-mono text-[10px] text-[#D4A017] uppercase tracking-widest font-semibold">
+                          {member.role}
+                        </span>
+                        {member.specialty && (
+                          <p className="font-sans text-xs text-espresso/50 mt-1">
+                            Focus: <span className="text-espresso/80 font-medium">{member.specialty}</span>
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </GlassCard>
+                </RevealWrapper>
+              ))}
+            </div>
+          </div>
         </div>
         </div>
       </section>

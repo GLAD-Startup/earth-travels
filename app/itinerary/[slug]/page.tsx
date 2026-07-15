@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { gsap } from "gsap";
@@ -22,26 +22,28 @@ export default function ItineraryPage() {
   const packageBaseItinerary = matchedPackage ? ITINERARIES[matchedPackage.destinationId] : null;
 
   // Build the resolved itinerary
-  const itinerary = baseItinerary
-    ? baseItinerary
-    : matchedPackage && packageBaseItinerary
-    ? {
-        ...packageBaseItinerary,
-        slug: slugStr,
-        title: matchedPackage.name,
-        destination: matchedPackage.destination,
-        duration: `${matchedPackage.duration.nights} Nights / ${matchedPackage.duration.days} Days`,
-        heroImage: matchedPackage.image,
-        tagline: packageBaseItinerary.tagline,
-        basePrice: matchedPackage.pricePerPerson,
-        days: Array.from({ length: matchedPackage.duration.days }, (_, i) =>
-          packageBaseItinerary.days[i % packageBaseItinerary.days.length]
-            ? { ...packageBaseItinerary.days[i % packageBaseItinerary.days.length], dayNumber: i + 1 }
-            : packageBaseItinerary.days[packageBaseItinerary.days.length - 1]
-        ),
-        hotels: packageBaseItinerary.hotels,
-      }
-    : null;
+  const itinerary = useMemo(() => {
+    return baseItinerary
+      ? baseItinerary
+      : matchedPackage && packageBaseItinerary
+      ? {
+          ...packageBaseItinerary,
+          slug: slugStr,
+          title: matchedPackage.name,
+          destination: matchedPackage.destination,
+          duration: `${matchedPackage.duration.nights} Nights / ${matchedPackage.duration.days} Days`,
+          heroImage: matchedPackage.image,
+          tagline: packageBaseItinerary.tagline,
+          basePrice: matchedPackage.pricePerPerson,
+          days: Array.from({ length: matchedPackage.duration.days }, (_, i) =>
+            packageBaseItinerary.days[i % packageBaseItinerary.days.length]
+              ? { ...packageBaseItinerary.days[i % packageBaseItinerary.days.length], dayNumber: i + 1 }
+              : packageBaseItinerary.days[packageBaseItinerary.days.length - 1]
+          ),
+          hotels: packageBaseItinerary.hotels,
+        }
+      : null;
+  }, [baseItinerary, matchedPackage, packageBaseItinerary, slugStr]);
 
   // Booking Widget Form states
   const [departureDate, setDepartureDate] = useState("");

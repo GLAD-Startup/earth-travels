@@ -27,7 +27,6 @@ const row1Images: GalleryImage[] = [
     widthClass: "w-[200px] md:w-[280px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
-  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel2.png",
     widthClass: "w-[340px] md:w-[480px]",
     heightClass: "h-[180px] md:h-[260px]",
@@ -70,7 +69,6 @@ const row2Images: GalleryImage[] = [
     widthClass: "w-[300px] md:w-[420px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
-  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel9.png",
     widthClass: "w-[260px] md:w-[350px]",
     heightClass: "h-[180px] md:h-[260px]",
