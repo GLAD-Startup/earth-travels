@@ -93,6 +93,10 @@ const CERTIFICATIONS = [
   { name: "Marriott",                 logo: "/logos/marriott.png",          label: "Marriott Partner" },
   { name: "Emirates",                 logo: "/logos/emirates.png",          label: "Emirates Preferred" },
   { name: "Singapore Airlines",       logo: "/logos/singapore-airlines.png",label: "Singapore Airlines Partner" },
+  { name: "Oberoi Hotels",            logo: "/logos/oberoi-hotels.png",     label: "Oberoi Partner" },
+  { name: "Ritz-Carlton",             logo: "/logos/ritz-carlton.svg",      label: "Ritz-Carlton Partner" },
+  { name: "Rosewood Hotels",          logo: "/logos/rosewood.svg",          label: "Rosewood Partner" },
+  { name: "Centara Hotels",           logo: "/logos/centara.svg",           label: "Centara Partner" },
 ];
  
 const TESTIMONIALS = [

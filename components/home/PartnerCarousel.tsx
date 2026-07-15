@@ -40,6 +40,9 @@ export const PARTNERS: Partner[] = [
   { name: "Waldorf Astoria",    logo: "/logos/waldorf-astoria.png",   category: "hotel",     accentColor: "#B5924C" },
   { name: "Park Hyatt",         logo: "/logos/park-hyatt.png",        category: "hotel",     accentColor: "#2B2B2B" },
   { name: "Oberoi Hotels",      logo: "/logos/oberoi-hotels.png",     category: "hotel",     accentColor: "#1A3050" },
+  { name: "Ritz-Carlton",       logo: "/logos/ritz-carlton.svg",      category: "hotel",     accentColor: "#002D62" },
+  { name: "Rosewood Hotels",    logo: "/logos/rosewood.svg",          category: "hotel",     accentColor: "#221E1F" },
+  { name: "Centara Hotels",     logo: "/logos/centara.svg",           category: "hotel",     accentColor: "#0F2C59" },
   // ── Platforms / Trust ─────────────────────────────────────────
   { name: "TripAdvisor",        logo: "/logos/tripadvisor.png",       category: "platform",  accentColor: "#34E0A1" },
 ];
