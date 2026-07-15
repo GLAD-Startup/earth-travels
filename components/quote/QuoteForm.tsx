@@ -30,7 +30,7 @@ export default function QuoteForm() {
   const stepContainerRef = useRef<HTMLDivElement>(null);
   const progressLineRef = useRef<HTMLDivElement>(null);
   
-  const { isOpen } = useIsOpen();
+  const { isOpen, nextOpening } = useIsOpen();
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Form State
@@ -573,7 +573,7 @@ export default function QuoteForm() {
                     <span>
                       {isOpen
                         ? "Open now · We'll respond within 2 hours"
-                        : "We're closed · We'll respond first thing Monday 10 AM"}
+                        : `We're closed · We'll respond first thing ${nextOpening} 10 AM`}
                     </span>
                   </div>
 
