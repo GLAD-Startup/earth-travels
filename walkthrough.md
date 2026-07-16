@@ -134,6 +134,31 @@ We integrated the company's official brand logos (`logo.png` and `full logo.jpeg
 
 ---
 
+## 8. IATA Logo Centering
+
+We centered the circular logo container within the IATA Accredited Agent card on the About page.
+
+### Changes Made
+
+#### [app/about/page.tsx](file:///c:/Users/imsto/Desktop/Earth%20Travels/app/about/page.tsx)
+- Added the `mx-auto` utility class to the circular IATA logo wrapper `div` element. Since the card's inner wrapper is a block-level container, `mx-auto` correctly centers the fixed-width circular element (`w-24 h-24`) horizontally.
+
+---
+
+## 9. IATA Certification Branding
+
+We introduced premium indicators showing that the agency is IATA certified both in the navigation header and floating badge area.
+
+### Changes Made
+
+#### [components/ui/Navbar.tsx](file:///c:/Users/imsto/Desktop/Earth%20Travels/components/ui/Navbar.tsx)
+- Added a sub-label `IATA Accredited Agent` under the main "Earth Travels" brand title in the Navbar. Stylized in brand gold (`#e8a820` / `#c4900f`), uppercase tracking, and a monospaced font family to match the luxury aesthetic.
+
+#### [components/home/HeroSection.tsx](file:///c:/Users/imsto/Desktop/Earth%20Travels/components/home/HeroSection.tsx)
+- Added an interactive `IATA Certified` monospaced tag directly below the floating IATA logo badge. The badge has custom hover effects to dynamically scale, rotate, and swap accent color palettes on user hover.
+
+---
+
 ## Verification & Testing
 
 Using the JetSki Browser Agent, we verified the following states:

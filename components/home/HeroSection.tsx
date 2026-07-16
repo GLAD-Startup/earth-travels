@@ -133,16 +133,36 @@ export default function HeroSection() {
 
       </div>
       
-      {/* Floating No. 1 In Mathura Sticker Badge */}
-      <div className="absolute top-28 right-6 lg:right-16 w-24 h-24 md:w-36 md:h-36 z-20 pointer-events-auto transition-transform duration-700 hover:rotate-12 hover:scale-105">
-        <Image
-          src="/no1InMathura.png"
-          alt="No. 1 Travel Agent in Mathura"
-          width={150}
-          height={150}
-          className="object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)]"
-          priority
-        />
+      {/* Floating Trust Badges */}
+      <div className="absolute top-24 md:top-28 right-6 lg:right-16 flex flex-col gap-4 items-center z-20 pointer-events-auto">
+        {/* No. 1 in Mathura Badge */}
+        <div className="relative w-20 h-20 md:w-32 md:h-32 transition-transform duration-700 hover:rotate-12 hover:scale-105">
+          <Image
+            src="/no1InMathura.png"
+            alt="No. 1 Travel Agent in Mathura"
+            fill
+            sizes="(max-width: 768px) 80px, 128px"
+            className="object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.35)]"
+            priority
+          />
+        </div>
+        {/* IATA Accredited Agent Badge */}
+        <div className="relative flex flex-col items-center group mt-1">
+          <div className="relative w-16 h-16 md:w-24 md:h-24 bg-white rounded-full p-2.5 md:p-3.5 border border-[#e8a820]/40 shadow-lg shadow-black/30 flex items-center justify-center transition-all duration-700 hover:-rotate-12 hover:scale-105">
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/IATA logo.png"
+                alt="IATA Accredited Agent"
+                fill
+                sizes="(max-width: 768px) 64px, 96px"
+                className="object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]"
+              />
+            </div>
+          </div>
+          <span className="mt-2.5 bg-[#1a120a]/80 backdrop-blur-md text-[#e8a820] font-mono text-[8px] md:text-[9.5px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full border border-[#e8a820]/30 shadow-md transition-all duration-300 group-hover:bg-[#e8a820] group-hover:text-[#1a120a] group-hover:border-transparent select-none whitespace-nowrap">
+            IATA Certified
+          </span>
+        </div>
       </div>
 
     </section>

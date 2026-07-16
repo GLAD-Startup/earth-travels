@@ -75,18 +75,25 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Left: Brand name with Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 group">
             <img
               src="/images/logo_transparent.png"
               alt="Earth Travels Logo"
               className="w-14 h-14 md:w-[58px] md:h-[58px] object-contain"
             />
-            <span
-              className={`font-display text-3xl md:text-[32px] font-extrabold tracking-wide transition-colors duration-300 ${brandColorClass}`}
-              style={{ textShadow: "0 0 20px rgba(196, 144, 15, 0.15)" }}
-            >
-              Earth Travels
-            </span>
+            <div className="flex flex-col items-start justify-center">
+              <span
+                className={`font-display text-2xl md:text-3xl font-extrabold tracking-wide transition-colors duration-300 leading-none ${brandColorClass}`}
+                style={{ textShadow: "0 0 20px rgba(196, 144, 15, 0.15)" }}
+              >
+                Earth Travels
+              </span>
+              <span className={`font-mono text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-bold mt-1.5 transition-colors duration-300 ${
+                isScrolled ? "text-[#c4900f]" : isDarkHeroPage ? "text-[#e8a820]" : "text-[#c4900f]"
+              }`}>
+                IATA Accredited Agent
+              </span>
+            </div>
           </Link>
 
           {/* Center: Desktop navigation links */}

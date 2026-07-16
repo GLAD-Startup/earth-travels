@@ -571,7 +571,7 @@ export default function AboutPage() {
                 hover={true}
                 className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
               >
-                <div className="relative w-24 h-24 bg-white rounded-full p-4 border border-[#D4A017]/30 shadow-md shadow-gold/5 flex items-center justify-center shrink-0 mb-6 group-hover:scale-105 transition-transform duration-300">
+                <div className="relative w-24 h-24 mx-auto bg-white rounded-full p-4 border border-[#D4A017]/30 shadow-md shadow-gold/5 flex items-center justify-center shrink-0 mb-6 group-hover:scale-105 transition-transform duration-300">
                   <div className="relative w-full h-full">
                     <img
                       src="/images/IATA logo.png"
