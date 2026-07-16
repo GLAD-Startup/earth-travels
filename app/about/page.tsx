@@ -90,17 +90,26 @@ const TEAM_MEMBERS = [
 const CERTIFICATIONS = [
   { name: "TripAdvisor",              logo: "/logos/tripadvisor.png",        label: "TripAdvisor Listed" },
   { name: "Taj Hotels",               logo: "/logos/taj-hotels.png",        label: "Taj Hotels Partner" },
-  { name: "Marriott",                 logo: "/logos/marriott.png",          label: "Marriott Partner" },
+  { name: "Marriott",                 logo: "/logos/marriott.jpg",          label: "Marriott Partner" },
   { name: "Emirates",                 logo: "/logos/emirates.png",          label: "Emirates Preferred" },
   { name: "Singapore Airlines",       logo: "/logos/singapore-airlines.png",label: "Singapore Airlines Partner" },
   { name: "Oberoi Hotels",            logo: "/logos/oberoi-hotels.png",     label: "Oberoi Partner" },
-  { name: "Ritz-Carlton",             logo: "/logos/ritz-carlton.svg",      label: "Ritz-Carlton Partner" },
-  { name: "Rosewood Hotels",          logo: "/logos/rosewood.svg",          label: "Rosewood Partner" },
-  { name: "Centara Hotels",           logo: "/logos/centara.svg",           label: "Centara Partner" },
-  { name: "Hilton Hotels",            logo: "/logos/hilton.svg",            label: "Hilton Partner" },
-  { name: "Hyatt Hotels",             logo: "/logos/hyatt.svg",             label: "Hyatt Partner" },
-  { name: "Sheraton",                 logo: "/logos/sheraton.svg",          label: "Sheraton Partner" },
-  { name: "Shangri-La",               logo: "/logos/shangri-la.svg",        label: "Shangri-La Partner" },
+  { name: "Ritz-Carlton",             logo: "/logos/the-ritz-carlton-logo-png-transparent.png", label: "Ritz-Carlton Partner" },
+  { name: "Rosewood Hotels",          logo: "/logos/rosewood.png",          label: "Rosewood Partner" },
+  { name: "Centara Hotels",           logo: "/logos/centara-hotel-group-logo-png_seeklogo-344958.png", label: "Centara Partner" },
+  { name: "Hilton Hotels",            logo: "/logos/Hilton-logo-2026-1-600x500.jpg", label: "Hilton Partner" },
+  { name: "Hyatt Hotels",             logo: "/logos/Hyatt-Logo.wine.png",     label: "Hyatt Partner" },
+  { name: "Sheraton",                 logo: "/logos/sheraton-hotels-logo-11529406977kvwmlh14rx.png", label: "Sheraton Partner" },
+  { name: "Shangri-La",               logo: "/logos/shangri-la-hotel-logo-transparent-png-7.png", label: "Shangri-La Partner" },
+  { name: "Renaissance Hotels",       logo: "/logos/renaissance-hotels-resorts-logo-black-and-white.png", label: "Renaissance Partner" },
+  { name: "Scandic Hotels",           logo: "/logos/scandic.png",           label: "Scandic Partner" },
+  { name: "Hampton by Hilton",        logo: "/logos/kisspng-hampton-by-hilton-hilton-hotels-resorts-hilton-w-hilton-college-5b2379b41737a9.0081611315290515720951.jpg", label: "Hampton Partner" },
+  { name: "DoubleTree by Hilton",     logo: "/logos/kisspng-doubletree-by-hilton-chicago-magnificent-mile-doub-lynx-double-eleven-5b026e435af179.1602849415268859553725.jpg", label: "DoubleTree Partner" },
+  { name: "Holiday Inn",              logo: "/logos/holiday inn.jpg",        label: "Holiday Inn Partner" },
+  { name: "Embassy Suites",           logo: "/logos/embassy suites.png",     label: "Embassy Suites Partner" },
+  { name: "Comfort Hotels",           logo: "/logos/comfort_new_logo.png",   label: "Comfort Hotels Partner" },
+  { name: "Hanting Inns",             logo: "/logos/hanting inns.png",       label: "Hanting Inns Partner" },
+  { name: "Ji Hotel",                 logo: "/logos/Ji Hotel.webp",          label: "Ji Hotel Partner" },
 ];
  
 const TESTIMONIALS = [
@@ -562,7 +571,7 @@ export default function AboutPage() {
                 hover={true}
                 className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
               >
-                <div className="relative w-24 h-24 bg-white rounded-full p-4 border border-[#D4A017]/30 shadow-md shadow-gold/5 flex items-center justify-center shrink-0 mb-6 group-hover:scale-105 transition-transform duration-300">
+                <div className="relative w-24 h-24 mx-auto bg-white rounded-full p-4 border border-[#D4A017]/30 shadow-md shadow-gold/5 flex items-center justify-center shrink-0 mb-6 group-hover:scale-105 transition-transform duration-300">
                   <div className="relative w-full h-full">
                     <img
                       src="/images/IATA logo.png"
