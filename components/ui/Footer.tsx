@@ -35,9 +35,9 @@ export default function Footer() {
               <img
                 src="/images/logo_transparent.png"
                 alt="Earth Travels Logo"
-                className="w-12 h-12 object-contain"
+                className="w-16 h-16 object-contain"
               />
-              <span className="font-display text-2xl font-black text-white tracking-wide">
+              <span className="font-display text-3xl font-black text-white tracking-wide">
                 Earth Travels
               </span>
             </Link>
@@ -47,10 +47,26 @@ export default function Footer() {
             <p className="font-sans text-white/70 text-sm leading-relaxed max-w-xs mt-2">
               {SITE_CONFIG.address}
             </p>
-            <a href={`tel:${SITE_CONFIG.phone.replace(/\s/g, "")}`} className="font-mono text-sm font-semibold text-[#e8a820] hover:text-[#f0c040] transition-colors mt-1 block">
-              📞 {SITE_CONFIG.phone}
-            </a>
-
+            <div className="flex flex-col gap-1.5 mt-1">
+              <a
+                href="tel:8941881111"
+                className="flex items-center gap-2 font-mono text-sm font-semibold text-[#e8a820] hover:text-[#f0c040] transition-colors"
+              >
+                <svg className="w-4 h-4 text-[#e8a820] shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                89418 81111
+              </a>
+              <a
+                href="tel:9410857835"
+                className="flex items-center gap-2 font-mono text-sm font-semibold text-[#e8a820] hover:text-[#f0c040] transition-colors"
+              >
+                <svg className="w-4 h-4 text-[#e8a820] shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                94108 57835
+              </a>
+            </div>
           </div>
 
           {/* Column 2 */}

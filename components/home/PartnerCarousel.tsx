@@ -40,12 +40,15 @@ export const PARTNERS: Partner[] = [
   { name: "Waldorf Astoria",    logo: "/logos/waldorf-astoria.png",   category: "hotel",     accentColor: "#B5924C" },
   { name: "Park Hyatt",         logo: "/logos/park-hyatt.png",        category: "hotel",     accentColor: "#2B2B2B" },
   { name: "Oberoi Hotels",      logo: "/logos/oberoi-hotels.png",     category: "hotel",     accentColor: "#1A3050" },
+  { name: "Ritz-Carlton",       logo: "/logos/ritz-carlton.svg",      category: "hotel",     accentColor: "#002D62" },
+  { name: "Rosewood Hotels",    logo: "/logos/rosewood.svg",          category: "hotel",     accentColor: "#221E1F" },
+  { name: "Centara Hotels",     logo: "/logos/centara.svg",           category: "hotel",     accentColor: "#0F2C59" },
+  { name: "Hilton Hotels",      logo: "/logos/hilton.svg",            category: "hotel",     accentColor: "#003F87" },
+  { name: "Hyatt Hotels",       logo: "/logos/hyatt.svg",             category: "hotel",     accentColor: "#1A3263" },
+  { name: "Sheraton",           logo: "/logos/sheraton.svg",          category: "hotel",     accentColor: "#103E2B" },
+  { name: "Shangri-La",         logo: "/logos/shangri-la.svg",        category: "hotel",     accentColor: "#B5924C" },
   // ── Platforms / Trust ─────────────────────────────────────────
   { name: "TripAdvisor",        logo: "/logos/tripadvisor.png",       category: "platform",  accentColor: "#34E0A1" },
-  { name: "Booking.com",        logo: "/logos/booking-com.png",       category: "platform",  accentColor: "#003580" },
-  { name: "Visa",               logo: "/logos/visa.png",              category: "payment",   accentColor: "#1A1F71" },
-  { name: "Mastercard",         logo: "/logos/mastercard.png",        category: "payment",   accentColor: "#EB001B" },
-  { name: "Allianz Travel",     logo: "/logos/allianz.png",           category: "insurance", accentColor: "#003781" },
 ];
 
 // ─────────────────────────────────────────────────────────────────

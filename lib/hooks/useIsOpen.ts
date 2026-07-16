@@ -6,6 +6,7 @@ export default function useIsOpen() {
   const [status, setStatus] = useState({
     isOpen: false,
     statusText: "Closed · Opens Mon 10 AM",
+    nextOpening: "Monday",
   });
 
   useEffect(() => {
@@ -21,18 +22,28 @@ export default function useIsOpen() {
       const openMinutes = 10 * 60; // 10:00 AM
       const closeMinutes = 19 * 60 + 30; // 7:30 PM
 
-      // Open Monday-Saturday between 10:00 AM and 7:30 PM
+      let isOpen = false;
+      let statusText = "";
+      let nextOpening = "Monday";
+
       if (day >= 1 && day <= 6 && totalMinutes >= openMinutes && totalMinutes <= closeMinutes) {
-        setStatus({
-          isOpen: true,
-          statusText: "Open now · Closes 7:30 PM",
-        });
+        isOpen = true;
+        statusText = "Open now · Closes 7:30 PM";
       } else {
-        setStatus({
-          isOpen: false,
-          statusText: "Closed · Opens Mon 10 AM",
-        });
+        isOpen = false;
+        if (day >= 1 && day <= 5 && totalMinutes > closeMinutes) {
+          statusText = "Closed · Opens tomorrow 10 AM";
+          nextOpening = "tomorrow";
+        } else if (day >= 1 && day <= 6 && totalMinutes < openMinutes) {
+          statusText = "Closed · Opens today 10 AM";
+          nextOpening = "today";
+        } else {
+          statusText = "Closed · Opens Mon 10 AM";
+          nextOpening = "Monday";
+        }
       }
+
+      setStatus({ isOpen, statusText, nextOpening });
     };
 
     calculateStatus();

@@ -12,8 +12,8 @@ export const SITE_CONFIG = {
   hours: "Mon–Sat: 10AM – 7:30PM",
   rating: 4.7,
   reviews: 127,
-  destinations: 50,
-  yearsExperience: 10,
+  destinations: 150,
+  yearsExperience: 15,
 };
 
 

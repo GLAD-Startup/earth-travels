@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,6 +23,11 @@ const row1Images: GalleryImage[] = [
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/trophy.jpg",
+    widthClass: "w-[200px] md:w-[280px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel2.png",
     widthClass: "w-[340px] md:w-[480px]",
     heightClass: "h-[180px] md:h-[260px]",
@@ -30,6 +35,11 @@ const row1Images: GalleryImage[] = [
   {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel3.png",
     widthClass: "w-[240px] md:w-[320px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
+    src: "/images/office image.jpg",
+    widthClass: "w-[300px] md:w-[410px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
@@ -48,6 +58,11 @@ const row1Images: GalleryImage[] = [
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/office image 2.jpg",
+    widthClass: "w-[280px] md:w-[390px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel7.png",
     widthClass: "w-[260px] md:w-[360px]",
     heightClass: "h-[180px] md:h-[260px]",
@@ -61,6 +76,11 @@ const row2Images: GalleryImage[] = [
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/certificate.jpg",
+    widthClass: "w-[300px] md:w-[420px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel9.png",
     widthClass: "w-[260px] md:w-[350px]",
     heightClass: "h-[180px] md:h-[260px]",
@@ -68,6 +88,11 @@ const row2Images: GalleryImage[] = [
   {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel11.png",
     widthClass: "w-[360px] md:w-[500px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
+    src: "/images/office image 1.jpg",
+    widthClass: "w-[340px] md:w-[460px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
@@ -96,9 +121,15 @@ export default function Gallery() {
   const containerRef = useRef<HTMLDivElement>(null);
   const row1Ref = useRef<HTMLDivElement>(null);
   const row2Ref = useRef<HTMLDivElement>(null);
+  const [activeTab, setActiveTab] = useState<"all" | "destinations" | "office">("all");
 
   useEffect(() => {
     if (!containerRef.current || !row1Ref.current || !row2Ref.current) return;
+
+    // Refresh ScrollTrigger to account for element size changes
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
 
     // Row 1: Left to Right
     const anim1 = gsap.fromTo(
@@ -138,7 +169,33 @@ export default function Gallery() {
       anim2.scrollTrigger?.kill();
       anim2.kill();
     };
-  }, []);
+  }, [activeTab]);
+
+  // Dynamic filter logic
+  const filteredRow1 = row1Images.filter(img => {
+    const isOfficeOrAward = img.src.includes('office') || img.src.includes('trophy.jpg') || img.src.includes('certificate.jpg');
+    if (activeTab === "all") return true;
+    if (activeTab === "destinations") return !isOfficeOrAward;
+    if (activeTab === "office") return isOfficeOrAward;
+    return true;
+  });
+
+  const filteredRow2 = row2Images.filter(img => {
+    const isOfficeOrAward = img.src.includes('office') || img.src.includes('trophy.jpg') || img.src.includes('certificate.jpg');
+    if (activeTab === "all") return true;
+    if (activeTab === "destinations") return !isOfficeOrAward;
+    if (activeTab === "office") return isOfficeOrAward;
+    return true;
+  });
+
+  // Duplicate items if too few to ensure smooth infinite loop effect
+  const displayRow1 = filteredRow1.length > 0 && filteredRow1.length < 6 
+    ? [...filteredRow1, ...filteredRow1, ...filteredRow1] 
+    : filteredRow1;
+
+  const displayRow2 = filteredRow2.length > 0 && filteredRow2.length < 6 
+    ? [...filteredRow2, ...filteredRow2, ...filteredRow2] 
+    : filteredRow2;
 
   return (
     <section
@@ -165,6 +222,28 @@ export default function Gallery() {
                 <span className="italic text-[#c4900f]">Every Journey</span>
               </h2>
             </div>
+
+            {/* Tab Filter Group */}
+            <div className="flex flex-wrap gap-2 select-none md:mb-1">
+              {[
+                { id: "all", label: "All Photos" },
+                { id: "destinations", label: "Destinations" },
+                { id: "office", label: "Our Office" }
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as "all" | "destinations" | "office")}
+                  className={`px-5 py-2.5 rounded-full text-xs font-mono tracking-wider font-semibold transition-all duration-300 ${
+                    activeTab === tab.id
+                      ? "bg-[#c4900f] text-white shadow-md shadow-[#c4900f]/10"
+                      : "bg-white/60 border border-[#1a120a]/8 text-[#1a120a]/70 hover:bg-white hover:border-[#c4900f]/35 hover:text-[#c4900f]"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
             <p className="font-sans text-sm md:text-base text-[#1a120a]/55 max-w-sm leading-[1.8] font-light md:text-right">
               We don&apos;t sell destinations we&apos;ve only seen on a brochure.
               Nitesh personally researches, inspects, and experiences every property
@@ -183,7 +262,7 @@ export default function Gallery() {
             ref={row1Ref}
             className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pl-[10vw]"
           >
-            {row1Images.map((img, idx) => (
+            {displayRow1.map((img, idx) => (
               <div
                 key={`row1-${idx}`}
                 className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
@@ -193,7 +272,7 @@ export default function Gallery() {
                   alt="Earth Travels Gallery 1"
                   fill
                   sizes="(max-width: 768px) 300px, 500px"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`${img.src.includes('trophy.jpg') ? 'object-contain bg-white p-4' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
                   priority={idx < 3}
                 />
               </div>
@@ -207,7 +286,7 @@ export default function Gallery() {
             ref={row2Ref}
             className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pr-[10vw]"
           >
-            {row2Images.map((img, idx) => (
+            {displayRow2.map((img, idx) => (
               <div
                 key={`row2-${idx}`}
                 className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
@@ -217,7 +296,7 @@ export default function Gallery() {
                   alt="Earth Travels Gallery 2"
                   fill
                   sizes="(max-width: 768px) 300px, 500px"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`${img.src.includes('certificate.jpg') ? 'object-contain bg-white p-4' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
                   priority={idx < 3}
                 />
               </div>
@@ -232,15 +311,14 @@ export default function Gallery() {
           <div className="mt-16 pt-10 border-t border-[#1a120a]/8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               {/* Inline portrait */}
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#c4900f]/30 shrink-0">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-[#c4900f]/30 shrink-0">
                 <Image
-                  src="/images/founder/nitesh-maldives-sunset-portrait.png"
+                  src="/images/profile.jpeg"
                   alt="Nitesh Khandelwal, founder of Earth Travels"
                   fill
-                  sizes="48px"
+                  sizes="80px"
                   className="object-cover"
-                  style={{ objectPosition: "40% 70%" }}
-                  quality={80}
+                  quality={90}
                   loading="lazy"
                 />
               </div>

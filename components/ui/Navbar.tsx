@@ -79,10 +79,10 @@ export default function Navbar() {
             <img
               src="/images/logo_transparent.png"
               alt="Earth Travels Logo"
-              className="w-10 h-10 object-contain"
+              className="w-14 h-14 md:w-[58px] md:h-[58px] object-contain"
             />
             <span
-              className={`font-display text-[22px] font-extrabold tracking-wide transition-colors duration-300 ${brandColorClass}`}
+              className={`font-display text-3xl md:text-[32px] font-extrabold tracking-wide transition-colors duration-300 ${brandColorClass}`}
               style={{ textShadow: "0 0 20px rgba(196, 144, 15, 0.15)" }}
             >
               Earth Travels

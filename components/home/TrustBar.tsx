@@ -4,9 +4,9 @@ import React from "react";
 
 export default function TrustBar() {
   const stats = [
-    "127+ Happy Travellers",
-    "50+ Destinations",
-    "10+ Years of Excellence",
+    "15000+ Happy Travellers",
+    "150+ Destinations",
+    "15+ Years of Excellence",
     "4.7★ Rated on Directories",
     "Visa Assistance Included",
   ];

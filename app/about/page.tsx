@@ -88,20 +88,19 @@ const TEAM_MEMBERS = [
  * and currently active with the client before production launch.
  */
 const CERTIFICATIONS = [
-  { name: "IATA",                     logo: "/logos/qatar-airways.png",      label: "IATA Accredited Agent" },
-  { name: "Ministry of Tourism",      logo: "/logos/tripadvisor.png",        label: "Ministry of Tourism Approved" },
-  { name: "Booking.com",              logo: "/logos/booking-com.png",        label: "Booking.com Partner" },
   { name: "TripAdvisor",              logo: "/logos/tripadvisor.png",        label: "TripAdvisor Listed" },
-  { name: "Viator",                   logo: "/logos/visa.png",              label: "Viator Affiliate" },
-  { name: "JustDial",                 logo: "/logos/mastercard.png",        label: "JustDial Verified" },
-  { name: "Google",                   logo: "/logos/allianz.png",           label: "Google Verified Business" },
-  { name: "Allianz Travel",           logo: "/logos/allianz.png",           label: "Allianz Travel Insurance" },
-  { name: "Visa",                     logo: "/logos/visa.png",              label: "Visa Accepted" },
-  { name: "Mastercard",               logo: "/logos/mastercard.png",        label: "Mastercard Accepted" },
   { name: "Taj Hotels",               logo: "/logos/taj-hotels.png",        label: "Taj Hotels Partner" },
   { name: "Marriott",                 logo: "/logos/marriott.png",          label: "Marriott Partner" },
   { name: "Emirates",                 logo: "/logos/emirates.png",          label: "Emirates Preferred" },
   { name: "Singapore Airlines",       logo: "/logos/singapore-airlines.png",label: "Singapore Airlines Partner" },
+  { name: "Oberoi Hotels",            logo: "/logos/oberoi-hotels.png",     label: "Oberoi Partner" },
+  { name: "Ritz-Carlton",             logo: "/logos/ritz-carlton.svg",      label: "Ritz-Carlton Partner" },
+  { name: "Rosewood Hotels",          logo: "/logos/rosewood.svg",          label: "Rosewood Partner" },
+  { name: "Centara Hotels",           logo: "/logos/centara.svg",           label: "Centara Partner" },
+  { name: "Hilton Hotels",            logo: "/logos/hilton.svg",            label: "Hilton Partner" },
+  { name: "Hyatt Hotels",             logo: "/logos/hyatt.svg",             label: "Hyatt Partner" },
+  { name: "Sheraton",                 logo: "/logos/sheraton.svg",          label: "Sheraton Partner" },
+  { name: "Shangri-La",               logo: "/logos/shangri-la.svg",        label: "Shangri-La Partner" },
 ];
  
 const TESTIMONIALS = [
@@ -156,9 +155,9 @@ const TESTIMONIALS = [
 ];
  
 export default function AboutPage() {
-  const [count1, ref1] = useCountUp<HTMLSpanElement>({ target: 127, duration: 1500 });
-  const [count2, ref2] = useCountUp<HTMLSpanElement>({ target: 50, duration: 1500 });
-  const [count3, ref3] = useCountUp<HTMLSpanElement>({ target: 10, duration: 1500 });
+  const [count1, ref1] = useCountUp<HTMLSpanElement>({ target: 15000, duration: 1500 });
+  const [count2, ref2] = useCountUp<HTMLSpanElement>({ target: 150, duration: 1500 });
+  const [count3, ref3] = useCountUp<HTMLSpanElement>({ target: 15, duration: 1500 });
   const [count4, ref4] = useCountUp<HTMLSpanElement>({ target: 4.7, duration: 1500, decimals: 1 });
   const [mounted, setMounted] = useState(false);
 
@@ -277,7 +276,53 @@ export default function AboutPage() {
         </div>
         </div>
       </section>
- 
+
+      {/* 3.5 Our Workspace Section */}
+      <section className="relative z-10 bg-[#fdf8f2] border-b border-espresso/5">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+            <div className="lg:col-span-6 flex flex-col gap-4">
+              <span className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.2em] block">
+                Our Workspace
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-normal text-espresso leading-tight">
+                Step Inside Our Mathura Headquarters
+              </h2>
+            </div>
+            <div className="lg:col-span-6">
+              <p className="font-sans text-sm md:text-base text-espresso/70 leading-relaxed">
+                Located in the heart of Mathura at Krishna Plaza, our workspace is where your travel dreams are meticulously planned, documented, and brought to life. Drop in for a warm consultation with our expert travel planners.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: "/images/office image.jpg", alt: "Earth Travels Mathura Office Entrance", title: "Office Entrance" },
+              { src: "/images/office image 1.jpg", alt: "Earth Travels Consultation Workspace", title: "Consultation Lounge" },
+              { src: "/images/office image 2.jpg", alt: "Earth Travels Planning Desks", title: "Operations Desk" }
+            ].map((img, idx) => (
+              <RevealWrapper key={idx} delay={idx * 0.1}>
+                <GlassCard hover={true} className="p-3 bg-white/60 border border-espresso/10 rounded-[20px] group">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-espresso/5">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="mt-3 px-1 flex items-center justify-between">
+                    <span className="font-sans text-sm font-semibold text-espresso">{img.title}</span>
+                    <span className="font-mono text-[9px] text-[#D4A017] uppercase tracking-wider font-semibold">Mathura, UP</span>
+                  </div>
+                </GlassCard>
+              </RevealWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 4. What makes us different */}
       <section className="relative z-10 bg-[#fdf8f2] border-b border-espresso/5">
         <div className="max-w-7xl mx-auto px-6 py-24">
@@ -495,6 +540,93 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 6.5. Accreditations & Credentials Grid */}
+      <section className="relative z-10 bg-[#fdf8f2] border-b border-espresso/5 py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.2em] block mb-2">
+              Verified Standards
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-espresso">
+              Accreditations & Recognition
+            </h2>
+            <p className="font-sans text-xs md:text-sm text-espresso/60 mt-3 max-w-lg mx-auto">
+              Our travel standards are audited and certified globally and locally for your family&apos;s absolute peace of mind.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1: IATA */}
+            <RevealWrapper delay={0.1}>
+              <GlassCard
+                hover={true}
+                className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
+              >
+                <div className="relative w-24 h-24 bg-white rounded-full p-4 border border-[#D4A017]/30 shadow-md shadow-gold/5 flex items-center justify-center shrink-0 mb-6 group-hover:scale-105 transition-transform duration-300">
+                  <div className="relative w-full h-full">
+                    <img
+                      src="/images/IATA logo.png"
+                      alt="IATA Certified Logo"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <h3 className="font-sans text-lg font-bold text-espresso mb-2">
+                  IATA Accredited Agent
+                </h3>
+                <p className="font-sans text-xs md:text-sm text-espresso/70 leading-relaxed">
+                  Certified by the International Air Transport Association, enabling direct ticketing with major global airlines and compliance with strict travel security guidelines.
+                </p>
+              </GlassCard>
+            </RevealWrapper>
+
+            {/* Card 2: Trophy */}
+            <RevealWrapper delay={0.2}>
+              <GlassCard
+                hover={true}
+                className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
+              >
+                <div className="relative w-full h-48 rounded-xl overflow-hidden border border-[#e8a820]/30 bg-white p-2 shadow-sm shrink-0 mb-6 flex items-center justify-center">
+                  <img
+                    src="/images/trophy.jpg"
+                    alt="Dr. Ram Manohar Lohia Tourism Award Trophy"
+                    className="h-full object-contain transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-espresso mb-2">
+                  State Tourism Award Trophy
+                </h3>
+                <p className="font-sans text-xs md:text-sm text-espresso/70 leading-relaxed">
+                  The Dr. Ram Manohar Lohia Small Industries Promotion Regional Award (2015–16) trophy, recognizing Earth Travels as an outstanding service provider in the tourism sector.
+                </p>
+              </GlassCard>
+            </RevealWrapper>
+
+            {/* Card 3: Certificate */}
+            <RevealWrapper delay={0.3}>
+              <GlassCard
+                hover={true}
+                className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
+              >
+                <div className="relative w-full h-48 rounded-xl overflow-hidden border border-espresso/5 shadow-sm shrink-0 mb-6">
+                  <img
+                    src="/images/certificate.jpg"
+                    alt="UP Government MSME Certificate of Appreciation"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                <h3 className="font-sans text-lg font-bold text-espresso mb-2">
+                  Government Certificate
+                </h3>
+                <p className="font-sans text-xs md:text-sm text-espresso/70 leading-relaxed">
+                  Official Certificate of Appreciation (प्रशस्ति-पत्र) issued by the Department of Micro, Small & Medium Enterprises (MSME) & Export Promotion, Government of Uttar Pradesh.
+                </p>
+              </GlassCard>
+            </RevealWrapper>
+          </div>
+        </div>
+      </section>
+
       {/* 7. Trusted & Certified — Auto-scrolling logo carousel */}
       <section className="relative z-10 bg-[#fdf8f2] text-center border-b border-espresso/5 overflow-hidden">
         <div className="py-20 px-6">
@@ -518,7 +650,7 @@ export default function AboutPage() {
                 loop={true}
                 className="cert-carousel"
               >
-                {CERTIFICATIONS.map((cert, idx) => (
+                {[...CERTIFICATIONS, ...CERTIFICATIONS, ...CERTIFICATIONS].map((cert, idx) => (
                   <SwiperSlide key={`${cert.name}-${idx}`} className="!w-auto">
                     <div className="flex items-center gap-3 px-5 py-3.5 rounded-2xl border border-espresso/8 bg-white/60 shadow-sm hover:shadow-md hover:border-[#D4A017]/25 transition-all duration-300 select-none">
                       <img
@@ -560,12 +692,21 @@ export default function AboutPage() {
             Planning your next trip? Let&apos;s talk.
           </h2>
  
-          <a
-            href="tel:8941881111"
-            className="font-mono text-2xl md:text-[32px] font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors select-all mt-1"
-          >
-            89418 81111
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-1">
+            <a
+              href="tel:8941881111"
+              className="font-mono text-2xl md:text-[32px] font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors select-all"
+            >
+              89418 81111
+            </a>
+            <span className="hidden sm:inline text-[#D4A017]/30 text-2xl font-light">|</span>
+            <a
+              href="tel:9410857835"
+              className="font-mono text-2xl md:text-[32px] font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors select-all"
+            >
+              94108 57835
+            </a>
+          </div>
  
           {/* Action triggers */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full sm:w-auto">
@@ -584,7 +725,10 @@ export default function AboutPage() {
                 background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
               }}
             >
-              💬 WhatsApp Us
+              <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.45 5.489.002 9.961-4.467 9.964-9.948.002-2.654-1.03-5.15-2.906-7.029C16.45 1.748 13.957.718 11.31.718c-5.49 0-9.966 4.469-9.969 9.95-.001 1.905.517 3.5 1.498 5.1l-.989 3.613 3.707-.977zm12.39-7.12c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.174.2-.298.3-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.568-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              </svg>
+              WhatsApp Us
             </a>
           </div>
  
