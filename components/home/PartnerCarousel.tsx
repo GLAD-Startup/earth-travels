@@ -43,6 +43,10 @@ export const PARTNERS: Partner[] = [
   { name: "Ritz-Carlton",       logo: "/logos/ritz-carlton.svg",      category: "hotel",     accentColor: "#002D62" },
   { name: "Rosewood Hotels",    logo: "/logos/rosewood.svg",          category: "hotel",     accentColor: "#221E1F" },
   { name: "Centara Hotels",     logo: "/logos/centara.svg",           category: "hotel",     accentColor: "#0F2C59" },
+  { name: "Hilton Hotels",      logo: "/logos/hilton.svg",            category: "hotel",     accentColor: "#003F87" },
+  { name: "Hyatt Hotels",       logo: "/logos/hyatt.svg",             category: "hotel",     accentColor: "#1A3263" },
+  { name: "Sheraton",           logo: "/logos/sheraton.svg",          category: "hotel",     accentColor: "#103E2B" },
+  { name: "Shangri-La",         logo: "/logos/shangri-la.svg",        category: "hotel",     accentColor: "#B5924C" },
   // ── Platforms / Trust ─────────────────────────────────────────
   { name: "TripAdvisor",        logo: "/logos/tripadvisor.png",       category: "platform",  accentColor: "#34E0A1" },
 ];

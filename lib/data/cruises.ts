@@ -12,6 +12,7 @@ export interface Cruise {
 }
 
 export const CRUISES: Cruise[] = [
+  // ── Domestic Cruises ─────────────────────────────────────────
   {
     id: "mumbai-goa",
     name: "Mumbai to Goa",
@@ -47,6 +48,68 @@ export const CRUISES: Cruise[] = [
     startingPrice: 28000,
     category: "domestic",
     season: "BEST: NOV – APR",
+  },
+
+  // ── International Cruises ────────────────────────────────────
+  {
+    id: "genting-dream",
+    name: "Genting Dream",
+    tagline: "Asia's Premier Luxury Mega-Resort Cruise",
+    image: "/images/cruises/genting dream.jpg",
+    cruiseLine: "Resorts World Cruises",
+    route: "Singapore → Kuala Lumpur → Penang → Singapore",
+    duration: "3N / 4D",
+    startingPrice: 38000,
+    category: "international",
+    season: "BEST: YEAR ROUND",
+  },
+  {
+    id: "disney-cruise",
+    name: "Disney Cruise Line",
+    tagline: "The Most Magical Voyage on the Seven Seas",
+    image: "/images/cruises/disney cruise line.jpg",
+    cruiseLine: "Disney Cruise Line",
+    route: "Port Canaveral → Nassau (Bahamas) → Castaway Cay",
+    duration: "4N / 5D",
+    startingPrice: 95000,
+    category: "international",
+    season: "BEST: YEAR ROUND",
+  },
+  {
+    id: "royal-caribbean-ocean",
+    name: "Royal Caribbean Voyage",
+    tagline: "Ultimate Adventure on the World's Largest Ships",
+    image: "/images/cruises/royal caribbean.jpg",
+    cruiseLine: "Royal Caribbean",
+    route: "Miami → Perfect Day at CocoCay → Nassau → Miami",
+    duration: "3N / 4D",
+    startingPrice: 58000,
+    category: "international",
+    season: "BEST: YEAR ROUND",
+  },
+  {
+    id: "norwegian-breakaway",
+    name: "Norwegian Breakaway",
+    tagline: "Freestyle Cruising at its Finest",
+    image: "/images/cruises/norwegian breakaway cruise.avif",
+    cruiseLine: "Norwegian Cruise Line",
+    route: "New York → Bermuda → New York",
+    duration: "7N / 8D",
+    startingPrice: 85000,
+    category: "international",
+    season: "BEST: APR – OCT",
+  },
+  {
+    id: "caribbean-paradise",
+    name: "Caribbean Paradise",
+    tagline: "Sun-Drenched Island Hopping & Coral Reefs",
+    image: "/images/cruises/caribbean cruise.jpg",
+    cruiseLine: "Carnival Cruise Line",
+    route: "Miami → Cozumel (Mexico) → Belize City → Miami",
+    duration: "5N / 6D",
+    startingPrice: 48000,
+    category: "international",
+    season: "BEST: DEC – APR",
   },
   {
     id: "western-mediterranean",
@@ -108,11 +171,13 @@ export const CRUISES: Cruise[] = [
     category: "international",
     season: "BEST: NOV – APR",
   },
+
+  // ── River Cruises ────────────────────────────────────────────
   {
     id: "ganges-river",
     name: "Ganges River Cruise",
     tagline: "Spiritual Journey Through Sacred India",
-    image: "/images/cruises/ganges_river.jpg",
+    image: "/images/cruises/ganga river cruise.avif",
     cruiseLine: "Antara Cruises",
     route: "Kolkata → Murshidabad → Mayapur → Varanasi",
     duration: "7N / 8D",
