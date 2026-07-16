@@ -13,6 +13,7 @@ const TABS = [
 
 export default function RailsPage() {
   const [activeTab, setActiveTab] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
 
@@ -32,8 +33,13 @@ export default function RailsPage() {
   }, []);
 
   const filteredJourneys = RAIL_JOURNEYS.filter((rail) => {
-    if (activeTab === "all") return true;
-    return rail.category === activeTab;
+    const matchesTab = activeTab === "all" || rail.category === activeTab;
+    const matchesSearch =
+      rail.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      rail.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      rail.route.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      rail.operator.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesTab && matchesSearch;
   });
 
   const categoryLabel = (cat: string) => {
@@ -104,85 +110,128 @@ export default function RailsPage() {
       {/* 3. Main Content */}
       <section className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-16 relative z-10">
         <RevealWrapper delay={0}>
-          <div className="border-l-2 border-accent pl-4 mb-2">
-            <span className="font-sans text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
-              Journeys on Rails
-            </span>
-            <h2 className="font-display text-2xl font-bold text-charcoal">
-              Rail Experiences ({filteredJourneys.length})
-            </h2>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-2">
+            <div className="border-l-2 border-accent pl-4">
+              <span className="font-sans text-[10px] text-charcoal/40 uppercase tracking-widest block mb-0.5">
+                Journeys on Rails
+              </span>
+              <h2 className="font-display text-2xl font-bold text-charcoal">
+                Rail Experiences ({filteredJourneys.length})
+              </h2>
+            </div>
+
+            {/* Search Input */}
+            <div className="relative w-full md:w-80">
+              <input
+                type="text"
+                placeholder="Search trains, passes, or routes..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2.5 pl-10 pr-4 rounded-xl border border-charcoal/10 bg-white/60 focus:bg-white focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent font-sans text-sm transition-all duration-300 placeholder:text-charcoal/40"
+              />
+              <svg
+                className="absolute left-3 top-3 w-4 h-4 text-charcoal/40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
           </div>
         </RevealWrapper>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          {filteredJourneys.map((rail) => (
-            <div
-              key={rail.id}
-              className="bg-surface border border-charcoal/8 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft hover:border-accent/20 group flex flex-col"
-            >
-              {/* Image */}
-              <div className="relative h-[220px] w-full overflow-hidden">
-                <img
-                  src={rail.image}
-                  alt={rail.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 select-none"
-                />
-                {/* Category badge */}
-                <span className="absolute top-3.5 left-3.5 z-10 px-3 py-1.5 rounded-full bg-black/45 backdrop-blur-sm text-white font-sans text-[10px] font-semibold tracking-wider uppercase">
-                  {categoryLabel(rail.category)}
-                </span>
-                {/* Duration badge */}
-                <span className="absolute top-3.5 right-3.5 z-10 px-3 py-1.5 rounded-full bg-accent/90 backdrop-blur-sm text-white font-sans text-[10px] font-semibold tracking-wider">
-                  {rail.duration}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="p-5 flex-grow flex flex-col justify-between">
-                <div className="mb-4">
-                  <h3 className="font-display text-xl font-bold text-charcoal mb-1 leading-none group-hover:text-accent transition-colors">
-                    {rail.name}
-                  </h3>
-                  <p className="font-sans text-sm text-charcoal/55 leading-relaxed italic line-clamp-2 mb-2">
-                    {rail.tagline}
-                  </p>
-                  {/* Operator */}
-                  <span className="inline-block px-2.5 py-1 rounded-md bg-accent/8 text-accent font-sans text-[10px] font-bold tracking-wider uppercase mb-2">
-                    {rail.operator}
-                  </span>
-                  {/* Route */}
-                  <p className="font-sans text-xs text-charcoal/50 leading-relaxed flex items-start gap-1.5 mt-1">
-                    <svg className="w-3.5 h-3.5 mt-0.5 shrink-0 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.8}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                    {rail.route}
-                  </p>
-                  <span className="font-sans text-[11px] text-accent font-semibold tracking-wider uppercase mt-2 block">
-                    {rail.season}
-                  </span>
-                </div>
-
-                {/* Price Row */}
-                <div className="pt-4 border-t border-charcoal/5 flex items-center justify-between mt-auto">
-                  <span className="font-sans text-accent font-bold text-sm">
-                    From ₹{rail.startingPrice.toLocaleString("en-IN")}
-                  </span>
-                  <Link
-                    href="/contact"
-                    className="text-accent font-sans text-xs font-semibold hover:underline flex items-center gap-1 group/btn"
-                  >
-                    Enquire Now
-                    <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
+        {filteredJourneys.length === 0 ? (
+          <RevealWrapper delay={0.1}>
+            <div className="flex flex-col items-center justify-center text-center py-20 bg-surface/50 border border-dashed border-charcoal/15 rounded-3xl p-8 max-w-lg mx-auto w-full">
+              <span className="text-4xl mb-4">🚂</span>
+              <h3 className="font-display text-lg font-bold text-charcoal mb-1">No journeys found</h3>
+              <p className="font-sans text-xs text-charcoal/60 leading-relaxed">
+                We couldn&apos;t find any rail routes matching &ldquo;{searchQuery}&rdquo;. Try checking the spelling or exploring another category.
+              </p>
+              <button
+                onClick={() => { setSearchQuery(""); setActiveTab("all"); }}
+                className="mt-6 px-5 py-2.5 rounded-full text-xs font-sans font-semibold bg-accent text-white hover:bg-accent/90 transition-all duration-300"
+              >
+                Reset Filters
+              </button>
             </div>
-          ))}
-        </div>
+          </RevealWrapper>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            {filteredJourneys.map((rail) => (
+              <div
+                key={rail.id}
+                className="bg-surface border border-charcoal/8 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft hover:border-accent/20 group flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative h-[220px] w-full overflow-hidden">
+                  <img
+                    src={rail.image}
+                    alt={rail.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 select-none"
+                  />
+                  {/* Category badge */}
+                  <span className="absolute top-3.5 left-3.5 z-10 px-3 py-1.5 rounded-full bg-black/45 backdrop-blur-sm text-white font-sans text-[10px] font-semibold tracking-wider uppercase">
+                    {categoryLabel(rail.category)}
+                  </span>
+                  {/* Duration badge */}
+                  <span className="absolute top-3.5 right-3.5 z-10 px-3 py-1.5 rounded-full bg-accent/90 backdrop-blur-sm text-white font-sans text-[10px] font-semibold tracking-wider">
+                    {rail.duration}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="p-5 flex-grow flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h3 className="font-display text-xl font-bold text-charcoal mb-1 leading-none group-hover:text-accent transition-colors">
+                      {rail.name}
+                    </h3>
+                    <p className="font-sans text-xs text-charcoal/50 leading-relaxed mb-3">
+                      {rail.tagline}
+                    </p>
+                    <div className="flex flex-col gap-1.5 font-sans text-[11px] text-charcoal/70">
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        <span>Route: <span className="font-semibold text-charcoal">{rail.route}</span></span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        <span>Operator: <span className="font-semibold text-charcoal">{rail.operator}</span></span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        <span className="font-mono text-[9px] text-accent font-semibold">{rail.season}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Price Row */}
+                  <div className="pt-4 border-t border-charcoal/5 flex items-center justify-between mt-auto">
+                    <span className="font-sans text-accent font-bold text-sm">
+                      From ₹{rail.startingPrice.toLocaleString("en-IN")}
+                    </span>
+                    <Link
+                      href="/contact"
+                      className="text-accent font-sans text-xs font-semibold hover:underline flex items-center gap-1 group/btn"
+                    >
+                      Enquire Now
+                      <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Bottom CTA Card */}
         <RevealWrapper delay={0.2}>
