@@ -3287,6 +3287,817 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
       { name: "Le Méridien Beach Plaza Monaco", rating: "★★★★", type: "Private Beach Hotel", location: "Monte Carlo", image: "/images/destinations/monaco_3.jpg" }
     ]
   },
+
+// ── MOROCCO ITINERARIES ──
+  "morocco-7n8d": {
+    slug: "morocco-7n8d",
+    destination: "Morocco",
+    title: "Morocco Imperial Cities & Sahara Desert Safari",
+    duration: "7 Nights / 8 Days",
+    heroImage: "/images/destinations/morocco_1.jpg",
+    tagline: "Imperial Palaces, Sahara Dunes & Blue Medina Alleys",
+    basePrice: 58500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Casablanca & Transfer to Rabat",
+        tag: "CASABLANCA & RABAT",
+        tagline: "Visit Hassan II Mosque and drive to the Royal Capital.",
+        activities: [
+          { icon: "🕌", title: "Hassan II Mosque Tour", description: "World's 7th largest mosque built over the Atlantic Ocean." },
+          { icon: "🏰", title: "Kasbah of the Udayas Rabat", description: "12th-century blue and white fortress overlooking the Bou Regreg river." }
+        ],
+        tip: "Hassan II Mosque allows non-Muslim visitors during official tour hours only.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Chefchaouen — The Blue Pearl of Morocco",
+        tag: "CHEFCHAOUEN",
+        tagline: "Stroll blue-washed cobbled streets in the Rif Mountains.",
+        activities: [
+          { icon: "💙", title: "Blue Medina Photography Walk", description: "Explore iconic cobalt-blue alleys and arches." },
+          { icon: "☕", title: "Outa el-Hammam Square Tea", description: "Mint tea at a rooftop café overlooking the Grand Mosque." }
+        ],
+        tip: "Wear contrasting yellow or white clothing for striking photo contrast against blue walls.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Fes UNESCO Medina & Leather Tannery",
+        tag: "FES MEDINA",
+        tagline: "Step into the world's largest car-free urban area.",
+        activities: [
+          { icon: "👞", title: "Chouara Tannery Viewpoint", description: "Observe centuries-old leather dyeing vats from leather shop terraces." },
+          { icon: "🏛️", title: "Al-Qarawiyyin University", description: "Visit the world's oldest continually operating university (859 AD)." }
+        ],
+        tip: "Hold fresh mint leaves under your nose at Chouara Tannery for natural scent relief.",
+        image: "/images/destinations/morocco_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Atlas Mountains Drive to Merzouga Sahara",
+        tag: "SAHARA DESERT",
+        tagline: "Cross the Ziz Valley palm oases into the golden sand dunes of Erg Chebbi.",
+        activities: [
+          { icon: "🐪", title: "Sunset Sahara Camel Trek", description: "Ride camels across 150-meter-high golden sand dunes." },
+          { icon: "⛺", title: "Luxury Desert Camp Check-in", description: "Glamping tent with en-suite bath, Berbere drumming, and stargazing." }
+        ],
+        tip: "Charge your camera equipment before entering the desert camp.",
+        image: "/images/destinations/morocco_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Todra Gorge & Dades Valley Road of 1,000 Kasbahs",
+        tag: "TODRA GORGE",
+        tagline: "Drive between 300-meter sheer red limestone canyon walls.",
+        activities: [
+          { icon: "⛰️", title: "Todra Gorge Canyon Walk", description: "Walk along the clear glacial river flanked by massive red cliffs." },
+          { icon: "🏰", title: "Kasbah Taourirt Ouarzazate", description: "Historic clay fortress known as Morocco's Hollywood." }
+        ],
+        tip: "Ouarzazate is famous for filming Gladiator, Game of Thrones, and The Mummy.",
+        image: "/images/destinations/morocco_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Aït Benhaddou UNESCO Fort & High Atlas Pass",
+        tag: "AÏT BENHADDOU",
+        tagline: "Cross Tizi n'Tichka mountain pass into Marrakech.",
+        activities: [
+          { icon: "🏰", title: "Aït Benhaddou Ksar Guided Walk", description: "Earthen mud-brick fortified village on the ancient caravan route." }
+        ],
+        tip: "Cross the stepping stones over the river for the most iconic view of Aït Benhaddou.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Marrakech Medina, Souks & Jemaa el-Fnaa",
+        tag: "MARRAKECH",
+        tagline: "Snake charmers, spice markets, and Majorelle Garden.",
+        activities: [
+          { icon: "🌿", title: "Jardin Majorelle & YSL Museum", description: "Cobalt blue botanical gardens restored by Yves Saint Laurent." },
+          { icon: "🎪", title: "Jemaa el-Fnaa Night Market", description: "Vibrant square with food stalls, storytellers, and acrobats." }
+        ],
+        tip: "Bargaining is expected in Marrakech souks — start offer around 50% of asking price.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 8,
+        title: "Departure from Marrakech",
+        tag: "DEPARTURE",
+        tagline: "Final Moroccan pastries and airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Marrakech Menara Airport Transfer", description: "Transfer to Marrakech Menara Airport." }
+        ],
+        tip: "Menara Airport has won international architecture awards for its lattice sunscreens.",
+        image: "/images/destinations/morocco_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Riad Kniza Marrakech", rating: "★★★★★", type: "Historic Luxury Riad", location: "Marrakech Medina", image: "/images/destinations/morocco_1.jpg" },
+      { name: "Merzouga Luxury Desert Camp", rating: "★★★★★", type: "Glamping Safari", location: "Erg Chebbi, Sahara", image: "/images/destinations/morocco_2.jpg" }
+    ]
+  },
+  "morocco-luxury": {
+    slug: "morocco-luxury",
+    destination: "Morocco",
+    title: "Morocco Luxury Riad Retreat (Marrakech, Fes & High Atlas)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/morocco_2.jpg",
+    tagline: "5-Star Palace Riads, Private Atlas Drivers & Sahara Glamping",
+    basePrice: 78000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Marrakech & 5-Star Riad Check-in",
+        tag: "MARRAKECH LUXURY",
+        tagline: "Check into a restored royal courtyard riad with private dip pool.",
+        activities: [
+          { icon: "🚘", title: "Chauffeur Airport Transfer", description: "Private luxury Mercedes transfer." },
+          { icon: "🍹", title: "Rooftop Mint Tea Welcome", description: "Traditional tea ceremony looking out over Koutoubia Mosque." }
+        ],
+        tip: "Moroccan riads feature inner courtyard gardens designed for secluded tranquility.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Marrakech Heritage & El Badi Palace",
+        tag: "PALACE TOUR",
+        tagline: "Exclusive private access to Bahia Palace and Saadian Tombs.",
+        activities: [
+          { icon: "🏰", title: "Bahia Palace & Courtyards", description: "Zellij tilework, carved cedar ceilings, and jasmine gardens." }
+        ],
+        tip: "Visit Bahia Palace early at 8:30 AM before tour groups arrive.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "High Atlas Mountains & Kasbah Tamadot",
+        tag: "HIGH ATLAS",
+        tagline: "Drive into Richard Branson's luxury mountain retreat.",
+        activities: [
+          { icon: "⛰️", title: "Berber Village Private Walk", description: "Guided walk through walnut groves with local village elder." }
+        ],
+        tip: "High Atlas air is cool year-round — bring a light cashmere layer.",
+        image: "/images/destinations/morocco_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Fly / Helicopter to Sahara Desert Camp",
+        tag: "SAHARA VIP",
+        tagline: "Private desert charter to Erg Chebbi dunes.",
+        activities: [
+          { icon: "⛺", title: "VIP Sahara Camp Stay", description: "Private heated tent, plush king bed, and private stargazing deck." }
+        ],
+        tip: "Sahara stargazing is crystal clear under dark desert night skies.",
+        image: "/images/destinations/morocco_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Fes Imperial City & Royal Golf",
+        tag: "FES PALACE",
+        tagline: "Check into Fes's most historic boutique palazzo.",
+        activities: [
+          { icon: "🕌", title: "Fes Royal Palace Golden Gates", description: "Photograph the 7 brass royal palace doors." }
+        ],
+        tip: "Fes ceramics are famous for cobalt blue lead-free glaze.",
+        image: "/images/destinations/morocco_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Hammam Spa & Gourmet Tagine Dining",
+        tag: "MOROCCAN SPA",
+        tagline: "Authentic Black Soap Argan Hammam treatment.",
+        activities: [
+          { icon: "💆", title: "Royal Hammam & Argan Massage", description: "Exfoliating eucalyptus soap scrub and Argan oil massage." }
+        ],
+        tip: "Pure Moroccan Argan oil is extracted exclusively in southwestern Morocco.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Casablanca",
+        tag: "DEPARTURE",
+        tagline: "Chauffeur transfer to Casablanca Airport.",
+        activities: [
+          { icon: "✈️", title: "Casablanca Airport Transfer", description: "Executive airport send-off." }
+        ],
+        tip: "Casablanca Airport has VIP fast-track customs lanes.",
+        image: "/images/destinations/morocco_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "La Mamounia Marrakech", rating: "★★★★★", type: "Royal Palace Hotel", location: "Marrakech", image: "/images/destinations/morocco_1.jpg" },
+      { name: "Riad Fes - Relais & Châteaux", rating: "★★★★★", type: "Luxury Riad", location: "Fes Medina", image: "/images/destinations/morocco_3.jpg" }
+    ]
+  },
+  "morocco-express": {
+    slug: "morocco-express",
+    destination: "Morocco",
+    title: "Marrakech & Chefchaouen Highlights",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/morocco_3.jpg",
+    tagline: "Blue Alleys, Palm Groves & Medina Souks",
+    basePrice: 49000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Marrakech",
+        tag: "MARRAKECH",
+        tagline: "Check into your traditional Medina Riad.",
+        activities: [
+          { icon: "🏨", title: "Riad Check-in", description: "Traditional mint tea welcome." }
+        ],
+        tip: "Riads are hidden behind unassuming alley doors.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Marrakech Palaces & Souks",
+        tag: "SOUKS",
+        tagline: "Explore leather goods, brass lamps, and spices.",
+        activities: [
+          { icon: "🛍️", title: "Souk Semmarine Shopping", description: "Browse traditional Moroccan crafts." }
+        ],
+        tip: "Keep a paper map handy inside the Medina.",
+        image: "/images/destinations/morocco_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Drive to Chefchaouen",
+        tag: "BLUE CITY",
+        tagline: "Ascend into the blue mountain town.",
+        activities: [
+          { icon: "💙", title: "Spanish Mosque Sunset Viewpoint", description: "Short hill walk for sunset views over Chefchaouen." }
+        ],
+        tip: "Sunset from the Spanish Mosque is a must-see.",
+        image: "/images/destinations/morocco_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Chefchaouen Blue Street Walk",
+        tag: "CHEFCHAOUEN",
+        tagline: "Photograph famous blue doors and staircases.",
+        activities: [
+          { icon: "📸", title: "Ras El Maa Waterfall Walk", description: "Natural spring where locals wash carpets." }
+        ],
+        tip: "Respect local privacy when photographing residents.",
+        image: "/images/destinations/morocco_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure via Tangier / Casablanca",
+        tag: "DEPARTURE",
+        tagline: "Airport transfer for return flight.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Private car transfer." }
+        ],
+        tip: "Confirm departure airport location.",
+        image: "/images/destinations/morocco_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Riad Cherifa Chefchaouen", rating: "★★★★", type: "Boutique Riad", location: "Chefchaouen", image: "/images/destinations/morocco_3.jpg" }
+    ]
+  },
+
+// ── MONTENEGRO ITINERARIES ──
+  "montenegro-5n6d": {
+    slug: "montenegro-5n6d",
+    destination: "Montenegro",
+    title: "Montenegro Fjord & Coastal Citadels (Kotor, Budva & Perast)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/montenegro_1.jpg",
+    tagline: "Fjord-Like Bay of Kotor & Venetian Coastal Citadels",
+    basePrice: 58000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Tivat / Kotor & Bay Sunset",
+        tag: "BAY OF KOTOR",
+        tagline: "Land on the Adriatic coast framed by 1,000-meter fjord cliffs.",
+        activities: [
+          { icon: "✈️", title: "Tivat Airport Transfer to Kotor", description: "15-minute coastal drive to Kotor Old Town." },
+          { icon: "🏰", title: "Kotor UNESCO Citadel Evening Walk", description: "Walk Venetian stone walls built between the 9th and 19th centuries." }
+        ],
+        tip: "Kotor Old Town is completely pedestrianized.",
+        image: "/images/destinations/montenegro_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Kotor Fortress Hike & Perast Boat Cruise",
+        tag: "PERAST",
+        tagline: "Hike 1,350 stone steps to San Giovanni Fortress and visit Our Lady of the Rocks.",
+        activities: [
+          { icon: "🥾", title: "San Giovanni Fortress Hike", description: "Climb steps for iconic views over the winding Bay of Kotor." },
+          { icon: "⛵", title: "Our Lady of the Rocks Island Boat", description: "Boat ride to an artificial islet created by seamen dropping rocks." }
+        ],
+        tip: "Start San Giovanni climb before 8:30 AM to beat midday sun and cruise crowds.",
+        image: "/images/destinations/montenegro_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Budva Old Town & Mogren Beach",
+        tag: "BUDVA RIVIERA",
+        tagline: "2,500-year-old medieval coastal walled city and sandy beaches.",
+        activities: [
+          { icon: "🏖️", title: "Mogren Beach Walk", description: "Scenic wooden pathway along cliffs to twin sandy coves." },
+          { icon: "🏰", title: "Budva Citadel Museum", description: "View ancient Greek amphorae and Venetian fortress walls." }
+        ],
+        tip: "Budva features vibrant evening seaside nightlife.",
+        image: "/images/destinations/montenegro_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Lovćen National Park & Serpentines Drive",
+        tag: "LOVĆEN",
+        tagline: "Drive 25 hair-pin turns looking over the entire Adriatic coastline.",
+        activities: [
+          { icon: "⛰️", title: "Njegoš Mausoleum Viewpoint", description: "Mausoleum perched atop Lovćen's second-highest peak (1,657m)." },
+          { icon: "🧀", title: "Njegusi Village Smokehouse", description: "Sample famous Montenegrin prosciutto (pršut) and smoked cheese." }
+        ],
+        tip: "The 461 steps to Njegoš Mausoleum offer views of 80% of Montenegro on clear days.",
+        image: "/images/destinations/montenegro_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Skadar Lake Boat Safari & Wine Tasting",
+        tag: "SKADAR LAKE",
+        tagline: "Southern Europe's largest lake overflowing with water lilies and pelicans.",
+        activities: [
+          { icon: "🦜", title: "Skadar Lake Boat Tour", description: "Cruise through water lily carpets in search of rare Dalmatian pelicans." },
+          { icon: "🍷", title: "Virpazar Boutique Winery", description: "Taste local Vranac red wine paired with fresh lake carp." }
+        ],
+        tip: "Skadar Lake is home to over 280 species of wild birds.",
+        image: "/images/destinations/montenegro_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Tivat Airport",
+        tag: "DEPARTURE",
+        tagline: "Final coastal espresso and airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Tivat Airport Transfer", description: "Transfer for departure flight." }
+        ],
+        tip: "Tivat Airport is just 10 minutes from Porto Montenegro.",
+        image: "/images/destinations/montenegro_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Boutique Hotel Astoria Kotor", rating: "★★★★★", type: "Venetian Palace Hotel", location: "Kotor Old Town", image: "/images/destinations/montenegro_1.jpg" },
+      { name: "Avalal Resort & Villas Budva", rating: "★★★★", type: "Beachfront Resort", location: "Budva", image: "/images/destinations/montenegro_2.jpg" }
+    ]
+  },
+  "montenegro-luxury": {
+    slug: "montenegro-luxury",
+    destination: "Montenegro",
+    title: "Montenegro Ultra-Luxury Resort & Yacht Escapes (Sveti Stefan & Porto Montenegro)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/montenegro_2.jpg",
+    tagline: "Private Islet Resorts, Superyacht Marinas & Blue Caves",
+    basePrice: 95000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Tivat & Chauffeur to Sveti Stefan",
+        tag: "SVETI STEFAN",
+        tagline: "Check into Montenegro's iconic 15th-century private islet resort.",
+        activities: [
+          { icon: "🚘", title: "Chauffeur Airport Transfer", description: "Private Mercedes transfer from Tivat Airport." },
+          { icon: "🥂", title: "Sunset Cocktails at Villa Miločer", description: "Drinks overlooking Queen's Beach pine cove." }
+        ],
+        tip: "Queen's Beach features pink sand and crystal-clear swimming coves.",
+        image: "/images/destinations/montenegro_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Yacht Charter to Blue Cave & Mamula",
+        tag: "PRIVATE YACHT",
+        tagline: "Full-day motor yacht charter to glowing sea caves.",
+        activities: [
+          { icon: "⛵", title: "Blue Cave Swim", description: "Swim inside a natural sea cave illuminated by iridescent blue light." },
+          { icon: "🏰", title: "Mamula Island Fortress Visit", description: "Explore the restored 19th-century island fortress resort." }
+        ],
+        tip: "Sunlight inside Blue Cave turns water glowing turquoise between 11:00 AM and 1:00 PM.",
+        image: "/images/destinations/montenegro_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Porto Montenegro Superyacht Marina Day",
+        tag: "PORTO MONTENEGRO",
+        tagline: "Stroll Monaco of the Balkans marina boutiques.",
+        activities: [
+          { icon: "🛥️", title: "Porto Montenegro Marina Walk", description: "Browse luxury designer boutiques along superyacht docks." },
+          { icon: "🏊", title: "Buddha-Bar Beach Club Pool", description: "64-meter infinity pool extending over the Bay of Kotor." }
+        ],
+        tip: "Porto Montenegro features top waterfront Asian fusion dining.",
+        image: "/images/destinations/montenegro_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Private Helicopter Flight over Durmitor National Park",
+        tag: "HELICOPTER SAFARI",
+        tagline: "Soar over Europe's deepest canyon (Tara River Canyon).",
+        activities: [
+          { icon: "🚁", title: "Panoramic Helicopter Flight", description: "Fly over Tara Canyon and Black Lake." }
+        ],
+        tip: "Tara River Canyon drops 1,300 meters — second only to Grand Canyon.",
+        image: "/images/destinations/montenegro_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Luštica Bay & Private Beach Club",
+        tag: "LUŠTICA BAY",
+        tagline: "Relax at Chedi Luštica Bay resort.",
+        activities: [
+          { icon: "💆", title: "Chedi Asian Spa Session", description: "Holistic herbal massage." }
+        ],
+        tip: "Luštica Peninsula is famous for organic olive oil production.",
+        image: "/images/destinations/montenegro_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Perast Private Evening & Michelin Dining",
+        tag: "PERAST PALACES",
+        tagline: "Sunset dining overlooking Verige Strait.",
+        activities: [
+          { icon: "🍽️", title: "Seafood Fine Dining", description: "Fresh Adriatic wild sea bass paired with Krstač white wine." }
+        ],
+        tip: "Perast features 16 Baroque palaces built during maritime golden age.",
+        image: "/images/destinations/montenegro_1.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Tivat",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to Tivat Airport.",
+        activities: [
+          { icon: "✈️", title: "Chauffeur Airport Transfer", description: "Return transfer for flight home." }
+        ],
+        tip: "Fast-track lounge access included at Tivat Airport.",
+        image: "/images/destinations/montenegro_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Aman Sveti Stefan", rating: "★★★★★", type: "Private Islet Resort", location: "Sveti Stefan", image: "/images/destinations/montenegro_2.jpg" },
+      { name: "Regent Porto Montenegro", rating: "★★★★★", type: "Superyacht Marina Hotel", location: "Tivat", image: "/images/destinations/montenegro_1.jpg" }
+    ]
+  },
+  "montenegro-adventure": {
+    slug: "montenegro-adventure",
+    destination: "Montenegro",
+    title: "Montenegro Mountains & National Parks (Durmitor & Tara Canyon)",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/montenegro_3.jpg",
+    tagline: "Europe's Deepest Canyon Rafting & Alpine Glacial Lakes",
+    basePrice: 49500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive & Drive to Žabljak (Durmitor)",
+        tag: "DURMITOR",
+        tagline: "Ascend into Montenegro's highest mountain town.",
+        activities: [
+          { icon: "🚙", title: "Scenic Mountain Drive", description: "Drive past Piva Canyon and high alpine plateaus." }
+        ],
+        tip: "Žabljak sits at 1,456 meters elevation — crisp mountain air guaranteed.",
+        image: "/images/destinations/montenegro_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Black Lake (Crno Jezero) & Pine Forest Trek",
+        tag: "BLACK LAKE",
+        tagline: "Walk around twin glacial lakes under Medjed Peak.",
+        activities: [
+          { icon: "🌲", title: "Black Lake Trail Walk", description: "3.5km loop trail through dense black pine forests." }
+        ],
+        tip: "Rent a wooden rowboat on Black Lake for peaceful water photography.",
+        image: "/images/destinations/montenegro_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Tara River Canyon Rafting",
+        tag: "TARA RAFTING",
+        tagline: "Raft white waters through Europe's deepest canyon.",
+        activities: [
+          { icon: "🚣", title: "Tara River Rafting Tour", description: "Guided rafting under Đurđevića Tara Bridge." }
+        ],
+        tip: "Neoprene suits and safety helmets provided for all rafts.",
+        image: "/images/destinations/montenegro_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Durmitor Ring Scenic Drive & Return to Coast",
+        tag: "DURMITOR RING",
+        tagline: "Drive 85km panoramic ring road past mountain peaks.",
+        activities: [
+          { icon: "⛰️", title: "Sedlo Pass Viewpoint", description: "Stand at 1,907 meters surrounded by dramatic limestone ridges." }
+        ],
+        tip: "Sedlo Pass is one of the highest paved roads in the Balkans.",
+        image: "/images/destinations/montenegro_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure via Podgorica / Tivat",
+        tag: "DEPARTURE",
+        tagline: "Airport transfer for return flight.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to airport." }
+        ],
+        tip: "Confirm departure airport location.",
+        image: "/images/destinations/montenegro_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Hotel Soa Durmitor", rating: "★★★★", type: "Alpine Lodge", location: "Žabljak", image: "/images/destinations/montenegro_3.jpg" }
+    ]
+  },
+
+// ── ITALY ITINERARIES ──
+  "italy-7n8d": {
+    slug: "italy-7n8d",
+    destination: "Italy",
+    title: "Italian Grand Highlights (Rome, Florence & Venice)",
+    duration: "7 Nights / 8 Days",
+    heroImage: "/images/destinations/italy_1.jpg",
+    tagline: "La Dolce Vita, Renaissance Art & Amalfi Coastline",
+    basePrice: 89000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Rome & Trevi Fountain Sunset",
+        tag: "ROME",
+        tagline: "Check into the Eternal City and toss a coin into Trevi Fountain.",
+        activities: [
+          { icon: "✈️", title: "Rome Fiumicino Airport Transfer", description: "Private transfer to your central hotel." },
+          { icon: "⛲", title: "Trevi Fountain & Spanish Steps Stroll", description: "Evening walk through Baroque piazzas." }
+        ],
+        tip: "Toss a coin with your right hand over left shoulder into Trevi Fountain to ensure return to Rome.",
+        image: "/images/destinations/italy_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Colosseum, Roman Forum & Vatican Museums",
+        tag: "ANCIENT ROME",
+        tagline: "Walk the arena floor of gladiators and gaze at the Sistine Chapel ceiling.",
+        activities: [
+          { icon: "🏛️", title: "Colosseum & Forum VIP Tour", description: "Skip-the-line access to ancient Rome's amphitheater." },
+          { icon: "🎨", title: "Sistine Chapel & St. Peter's Basilica", description: "Michelangelo's masterpiece ceiling and St. Peter's Square." }
+        ],
+        tip: "Vatican City dress code requires covered knees and shoulders.",
+        image: "/images/destinations/italy_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "High-Speed Frecciarossa Train to Florence",
+        tag: "FLORENCE",
+        tagline: "Reach the birthplace of the Renaissance in 90 minutes.",
+        activities: [
+          { icon: "🚄", title: "High-Speed Train to Florence", description: "Comfortable 1.5-hour train through Tuscan hills." },
+          { icon: "⛪", title: "Florence Duomo (Santa Maria del Fiore)", description: "Marvel at Brunelleschi's red brick dome." }
+        ],
+        tip: "Climb Giotto's Campanile for the best photo looking directly at Brunelleschi's Dome.",
+        image: "/images/destinations/italy_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Uffizi Gallery & Ponte Vecchio",
+        tag: "RENAISSANCE ART",
+        tagline: "See Botticelli's 'Birth of Venus' and Michelangelo's 'David'.",
+        activities: [
+          { icon: "🖼️", title: "Uffizi Gallery Guided Tour", description: "Masterpieces by Da Vinci, Botticelli, and Raphael." },
+          { icon: "🌉", title: "Ponte Vecchio Sunset Walk", description: "Historic medieval stone bridge lined with goldsmith shops." }
+        ],
+        tip: "Piazzale Michelangelo offers the famous panoramic postcard view over Florence.",
+        image: "/images/destinations/italy_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Train to Venice & Grand Canal Water Taxi",
+        tag: "VENICE",
+        tagline: "Glides past marble palaces into the Floating City.",
+        activities: [
+          { icon: "🚄", title: "High-Speed Train to Venice", description: "2-hour train across Northern Italy." },
+          { icon: "🚤", title: "Grand Canal Private Water Taxi", description: "Arrive at your hotel dock via wooden water taxi." }
+        ],
+        tip: "Water taxis deliver you right to your hotel's canal doorway.",
+        image: "/images/destinations/italy_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "St. Mark's Basilica & Gondola Ride",
+        tag: "VENICE CANALS",
+        tagline: "Private gondola navigation through quiet canal backwaters.",
+        activities: [
+          { icon: "⛵", title: "Traditional Venetian Gondola Ride", description: "Serenade ride through narrow canals under Rialto Bridge." },
+          { icon: "🏛️", title: "Doge's Palace & Bridge of Sighs", description: "Walk the secret chambers and prisoner bridge." }
+        ],
+        tip: "Gondola fares are standardized — confirm rate (80-100 EUR) before boarding.",
+        image: "/images/destinations/italy_2.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Murano & Burano Glass Blowing Islands",
+        tag: "BURANO",
+        tagline: "Vibrant rainbow-colored lace fishing houses and glassblowers.",
+        activities: [
+          { icon: "🎨", title: "Burano Island Color Walk", description: "Photograph brightly painted fisherman cottages." },
+          { icon: "💎", title: "Murano Glassmaster Demo", description: "Watch master glassblowers shape hot glass into art." }
+        ],
+        tip: "Try Risotto al Nero di Seppia (squid ink risotto) in Burano.",
+        image: "/images/destinations/italy_2.jpg"
+      },
+      {
+        dayNumber: 8,
+        title: "Departure from Venice Marco Polo Airport",
+        tag: "DEPARTURE",
+        tagline: "Water taxi transfer to Marco Polo Airport.",
+        activities: [
+          { icon: "✈️", title: "Venice Airport Transfer", description: "Water taxi or shuttle to Venice Marco Polo Airport." }
+        ],
+        tip: "Buy authentic Italian cantucci almond biscotti at Venice Airport.",
+        image: "/images/destinations/italy_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Hotel Artemide Rome", rating: "★★★★★", type: "Luxury Hotel", location: "Rome Centre", image: "/images/destinations/italy_1.jpg" },
+      { name: "Hotel Splendid Venice", rating: "★★★★★", type: "Canal Hotel", location: "St. Mark's, Venice", image: "/images/destinations/italy_2.jpg" }
+    ]
+  },
+  "italy-amalfi": {
+    slug: "italy-amalfi",
+    destination: "Italy",
+    title: "Amalfi Coast & Capri Luxury Romance (Positano & Ravello)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/italy_2.jpg",
+    tagline: "Cliffside Positano Hotels, Capri Blue Grotto & Limoncello",
+    basePrice: 115000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Naples & Private Chauffeur to Positano",
+        tag: "POSITANO",
+        tagline: "Drive the breathtaking coastal bends into pastel Positano.",
+        activities: [
+          { icon: "🚘", title: "Naples to Positano Private Transfer", description: "Scenic cliffside drive past Sorrento." },
+          { icon: "🍸", title: "Cliffside Sunset Aperitivo", description: "Sip Aperol Spritz overlooking Positano's cascading pink villas." }
+        ],
+        tip: "Positano has thousands of steep stairs — wear comfortable flat sandals or sneakers.",
+        image: "/images/destinations/italy_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Boat Charter to Capri & Blue Grotto",
+        tag: "CAPRI",
+        tagline: "Sail around the Faraglioni rock formations and Blue Grotto.",
+        activities: [
+          { icon: "🚤", title: "Capri Private Boat Charter", description: "Full-day boat cruise with private skipper around Capri." },
+          { icon: "💙", title: "Blue Grotto Rowing Boat", description: "Row inside the luminous sapphire sea cave." }
+        ],
+        tip: "Capri Anacapri chairlift to Monte Solaro offers 360-degree views of the Bay of Naples.",
+        image: "/images/destinations/italy_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Path of the Gods (Sentiero degli Dei) Trek",
+        tag: "PATH OF THE GODS",
+        tagline: "Hike ancient cliff paths suspension-high above the Tyrrhenian Sea.",
+        activities: [
+          { icon: "🥾", title: "Path of the Gods Guided Walk", description: "6km trail from Bomerano to Nocelle with coastal panoramas." }
+        ],
+        tip: "Stop at Shepherd's Hut on the trail for freshly squeezed lemonade.",
+        image: "/images/destinations/italy_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Ravello Gardens & Villa Cimbrone Terrace of Infinity",
+        tag: "RAVELLO",
+        tagline: "Visit the quiet hill town famous for classical music and infinity views.",
+        activities: [
+          { icon: "🏛️", title: "Villa Cimbrone Infinity Terrace", description: "Marble bust statues overlooking the sea from 350 meters altitude." }
+        ],
+        tip: "Ravello is quieter than Positano and ideal for romantic lunches.",
+        image: "/images/destinations/italy_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Amalfi Town & Authentic Limoncello Tasting",
+        tag: "AMALFI TOWN",
+        tagline: "Explore St. Andrew's Cathedral and organic lemon groves.",
+        activities: [
+          { icon: "🍋", title: "Lemon Grove Tour & Tasting", description: "Walk Sfusato Amalfitano lemon orchards and sample authentic Limoncello." }
+        ],
+        tip: "Amalfi lemons are so sweet you can eat them raw with sugar.",
+        image: "/images/destinations/italy_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Spa & Michelin Fine Dining",
+        tag: "LUXURY SPA",
+        tagline: "Cliffside spa massage and Michelin-starred seafood dinner.",
+        activities: [
+          { icon: "💆", title: "Cliffside Sea Spa", description: "Hydrotherapy pool overlooking Positano bay." }
+        ],
+        tip: "La Sponda in Positano is lit by 400 candles every evening.",
+        image: "/images/destinations/italy_2.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure via Naples",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to Naples Airport.",
+        activities: [
+          { icon: "✈️", title: "Naples Airport Transfer", description: "Return transfer for flight home." }
+        ],
+        tip: "Try authentic Neapolitan Margherita pizza at Naples airport before departure.",
+        image: "/images/destinations/italy_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Le Sirenuse Positano", rating: "★★★★★", type: "Ultra-Luxury Cliffside", location: "Positano", image: "/images/destinations/italy_2.jpg" },
+      { name: "Belmond Hotel Caruso Ravello", rating: "★★★★★", type: "Palace Hotel", location: "Ravello", image: "/images/destinations/italy_3.jpg" }
+    ]
+  },
+  "italy-tuscany": {
+    slug: "italy-tuscany",
+    destination: "Italy",
+    title: "Tuscany Wine & Heritage Escape (Siena, San Gimignano & Pisa)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/italy_3.jpg",
+    tagline: "Chianti Vineyards, Medieval Towers & Leaning Tower of Pisa",
+    basePrice: 72000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Florence & Drive to Tuscan Villa",
+        tag: "TUSCANY",
+        tagline: "Check into a historic Tuscan estate amidst cypress trees.",
+        activities: [
+          { icon: "🚘", title: "Florence to Tuscany Transfer", description: "Drive through rolling Chianti vineyards." }
+        ],
+        tip: "Tuscan villas offer peaceful country surroundings.",
+        image: "/images/destinations/italy_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Chianti Wine Route & Vineyard Lunch",
+        tag: "CHIANTI",
+        tagline: "Taste Chianti Classico DOCG wines at a 15th-century castle winery.",
+        activities: [
+          { icon: "🍷", title: "Castle Winery Tasting", description: "Sample Gran Selezione wines paired with pecorino cheese and prosciutto." }
+        ],
+        tip: "Look for the Black Rooster (Gallo Nero) seal for authentic Chianti Classico.",
+        image: "/images/destinations/italy_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Siena Medieval Citadel & Piazza del Campo",
+        tag: "SIENA",
+        tagline: "Explore the shell-shaped brick square famous for Palio horse races.",
+        activities: [
+          { icon: "🏰", title: "Piazza del Campo Walk", description: "Sit at outdoor cafes in one of Europe's greatest medieval squares." }
+        ],
+        tip: "Try Siena's Panforte fruit cake baked since medieval times.",
+        image: "/images/destinations/italy_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "San Gimignano Medieval Towers & World Best Gelato",
+        tag: "SAN GIMIGNANO",
+        tagline: "Visit Manhattan of the Middle Ages with 14 standing stone towers.",
+        activities: [
+          { icon: "🍦", title: "Gelateria Dondoli Tasting", description: "Taste award-winning World Champion gelato." }
+        ],
+        tip: "Gelateria Dondoli's Saffron & Vernaccia flavor is world-famous.",
+        image: "/images/destinations/italy_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Pisa Leaning Tower & Square of Miracles",
+        tag: "PISA",
+        tagline: "Photograph the famous leaning bell tower of Pisa.",
+        activities: [
+          { icon: "🏛️", title: "Pisa Leaning Tower Ascent", description: "Climb 294 marble steps inside the leaning tower." }
+        ],
+        tip: "Book Leaning Tower climb tickets weeks ahead — entry numbers are strictly limited.",
+        image: "/images/destinations/italy_1.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Florence / Pisa Airport",
+        tag: "DEPARTURE",
+        tagline: "Final espresso and airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to airport." }
+        ],
+        tip: "Confirm departure airport.",
+        image: "/images/destinations/italy_3.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Castello di Casole Tuscany", rating: "★★★★★", type: "Luxury Castle Estate", location: "Tuscany", image: "/images/destinations/italy_3.jpg" }
+    ]
+  },
 };
 
 
