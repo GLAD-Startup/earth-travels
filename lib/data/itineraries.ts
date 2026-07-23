@@ -2484,7 +2484,7 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
       { dayNumber: 3, title: "Old Goa Heritage & Spice Plantation Lunch", tag: "OLD GOA", tagline: "UNESCO World Heritage churches and a colonial spice estate lunch in the jungle.", activities: [{ icon: "⛪", title: "Basilica of Bom Jesus — UNESCO Site", description: "16th century church housing the body of St. Francis Xavier — incorrupt after 450 years." }, { icon: "🌶️", title: "Spice Plantation Guided Tour & Lunch", description: "Walk through vanilla, pepper, cinnamon and cardamom. Lunch served on banana leaf." }, { icon: "🚢", title: "Mandovi River Sunset Cruise", description: "Evening cruise with live Goan folk music, dinner and Konkani dancers on board." }], tip: "The spice plantation lunch is a full Goan thali — arrive hungry.", image: "/images/destinations/goa_2.jpg" },
       { dayNumber: 4, title: "Private Yacht Cruise to Offshore Islands", tag: "YACHT CRUISE", tagline: "Your private catamaran, a deserted sandbank, snorkeling and an onboard BBQ.", activities: [{ icon: "⛵", title: "Private Yacht Charter (Full Day)", description: "6-hour private catamaran with crew — sail to Grand Island, Bat Island and sea caves." }, { icon: "🤿", title: "Snorkeling at Grande Island", description: "Goa's best snorkeling site — parrotfish, sea turtles and soft coral gardens." }, { icon: "🍖", title: "Onboard BBQ & Sundowner Cocktails", description: "Fresh catch BBQ and cocktails served by your crew on the open deck." }], tip: "Grand Island snorkeling is best in October–March — visibility up to 10 metres.", image: "/images/destinations/goa_2.jpg" },
       { dayNumber: 5, title: "Candlelight Dinner by the Sea", tag: "ROMANCE", tagline: "The most romantic evening in Goa — private table on the beach, stars overhead.", activities: [{ icon: "🕯️", title: "Private Candlelight Beach Dinner", description: "Your resort sets a personal table on the sand — 4-course dinner with wine pairing." }, { icon: "🦞", title: "Goa Lobster Thermidor & Tiger Prawns", description: "Resort chef cooks the freshest local lobster and butter garlic prawns to order." }, { icon: "🌊", title: "Moonlit Beach Walk", description: "After dinner, walk barefoot along the beach under the stars — the Arabian Sea glows." }], tip: "Request a new moon date for your beach dinner — the sky is clearest and most star-filled.", image: "/images/destinations/goa_2.jpg" },
-      { dayNumber: 6, title: "Departure from Goa", tag: "DEPARTURE", tagline: "Last beach breakfast and airport send-off.", activities: [{ icon: "🍳", title: "Breakfast by the Sea", description: "Final resort breakfast with ocean views — eggs, tropical fruits and fresh-baked bread." }, { icon: "✈️", title: "Airport Transfer", description: "Private air-conditioned car to Goa International Airport." }], tip: "Goa has two airports: Dabolim (old) and Mopa (new) — confirm which one with your airline.", image: "/images/destinations/goa_2.jpg" },
+{ dayNumber: 6, title: "Departure from Goa", tag: "DEPARTURE", tagline: "Last beach breakfast and airport send-off.", activities: [{ icon: "🍳", title: "Breakfast by the Sea", description: "Final resort breakfast with ocean views — eggs, tropical fruits and fresh-baked bread." }, { icon: "✈️", title: "Airport Transfer", description: "Private air-conditioned car to Goa International Airport." }], tip: "Goa has two airports: Dabolim (old) and Mopa (new) — confirm which one with your airline.", image: "/images/destinations/goa_2.jpg" },
     ],
     hotels: [{ name: "Park Hyatt Goa Resort & Spa", rating: "★★★★★", type: "Luxury Beach Resort", location: "Cansaulim, South Goa", image: "/images/destinations/goa_2.jpg" }],
   },
@@ -2498,6 +2498,794 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
       { dayNumber: 5, title: "Kayaking at Mandovi & Departure", tag: "DEPARTURE", tagline: "Morning mangrove kayak, last beach shack breakfast and airport transfer.", activities: [{ icon: "🛶", title: "Mandovi Mangrove Kayaking", description: "Early morning guided kayak through Goa's tidal mangroves — kingfishers and mudskippers." }, { icon: "🍳", title: "Beach Shack Breakfast", description: "Goa's famous breakfast — banana pancakes, masala omelette and freshly squeezed lime soda." }, { icon: "✈️", title: "Airport Transfer", description: "Taxi to Goa International Airport." }], tip: "Try Infantaria bakery in Calangute for the best croissants and quiches in North Goa.", image: "/images/destinations/goa_3.jpg" },
     ],
     hotels: [{ name: "Park Calangute Resort Goa", rating: "★★★★", type: "Beach Resort", location: "Calangute, North Goa", image: "/images/destinations/goa_3.jpg" }],
+  },
+
+// ── PHILIPPINES ITINERARIES ──
+  "philippines-7n8d": {
+    slug: "philippines-7n8d",
+    destination: "Philippines",
+    title: "Philippines Island Hopping (El Nido, Coron & Boracay)",
+    duration: "7 Nights / 8 Days",
+    heroImage: "/images/destinations/philippines_1.jpg",
+    tagline: "7,000 Islands of Emerald Lagoons & White Beaches",
+    basePrice: 48500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Manila & Flight to El Nido, Palawan",
+        tag: "EL NIDO",
+        tagline: "Land in Manila and take a short flight to Palawan's crown jewel, El Nido.",
+        activities: [
+          { icon: "✈️", title: "Manila Airport Transit", description: "Seamless connection to Lio Airport, El Nido." },
+          { icon: "🏨", title: "Resort Check-in", description: "Check into your beachfront eco-resort overlooking Bacuit Bay." },
+          { icon: "🌅", title: "Las Cabañas Beach Sunset", description: "Relax at Las Cabañas beach with tropical cocktails as the sun sets over limestone karsts." }
+        ],
+        tip: "El Nido eco-regulations forbid single-use plastics — bring your reusable water bottle.",
+        image: "/images/destinations/philippines_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "El Nido Tour A — Big Lagoon & Secret Lagoon",
+        tag: "BIG LAGOON",
+        tagline: "Kayak through towering marble cliffs into emerald-green hidden lagoons.",
+        activities: [
+          { icon: "🛶", title: "Big Lagoon Kayaking", description: "Glide through the shallow turquoise gateway into the inner lagoon." },
+          { icon: "🏊", title: "Shimizu Island Snorkeling", description: "Snorkel with hawksbill turtles and vibrant coral reefs." },
+          { icon: "🏖️", title: "Seven Commandos Beach Lunch", description: "Fresh grilled seafood BBQ served under coconut palms." }
+        ],
+        tip: "Rent a clear kayak for breathtaking photo ops inside the Big Lagoon.",
+        image: "/images/destinations/philippines_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "El Nido Tour C — Hidden Beach & Matinloc Shrine",
+        tag: "HIDDEN BEACH",
+        tagline: "Swim through a tiny cliff gap to reveal a pristine concealed white sand cove.",
+        activities: [
+          { icon: "🏖️", title: "Hidden Beach Exploration", description: "Famous filming location with crystal waters surrounded by sharp limestone towers." },
+          { icon: "⛪", title: "Matinloc Shrine Viewpoint", description: "Ascend the rock steps for panoramic 360-degree views of Bacuit Archipelago." },
+          { icon: "🤿", title: "Star Beach Reef Dive", description: "Pristine snorkeling spot teeming with clownfish and sea anemones." }
+        ],
+        tip: "Wear reef shoes — the limestone rocks near Matinloc Shrine can be sharp.",
+        image: "/images/destinations/philippines_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Ferry to Coron & Kayangan Lake",
+        tag: "CORON",
+        tagline: "Travel to Coron, home to the cleanest lake in Asia and WWII shipwrecks.",
+        activities: [
+          { icon: "🛳️", title: "Fast Ferry to Coron", description: "3-hour scenic catamaran ride across the Sulu Sea." },
+          { icon: "🏞️", title: "Kayangan Lake Trek & Swim", description: "Walk up 150 steps to the iconic postcard viewpoint, then swim in hyper-clear brackish water." },
+          { icon: "♨️", title: "Maquinit Hot Springs Evening", description: "Soak in natural saltwater thermal springs right on the coastline." }
+        ],
+        tip: "Maquinit Springs is best enjoyed right at dusk when the evening air cools.",
+        image: "/images/destinations/philippines_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Coron Reefs & Twin Lagoons",
+        tag: "TWIN LAGOONS",
+        tagline: "Swim beneath underwater rock arches separating warm ocean water from cool freshwater.",
+        activities: [
+          { icon: "🏊", title: "Twin Lagoons Swim", description: "Pass under a submerged limestone arch into a serene hidden cove." },
+          { icon: "🐠", title: "Siete Pecados Marine Park", description: "Coron's richest marine sanctuary with dense coral gardens." },
+          { icon: "⚓", title: "Skeleton Shipwreck Snorkel", description: "Snorkel over a shallow WWII Japanese freighter covered in corals." }
+        ],
+        tip: "Wear a life vest in Twin Lagoons — the water layers shift temperature dramatically.",
+        image: "/images/destinations/philippines_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Flight to Boracay & White Beach Sunset",
+        tag: "BORACAY",
+        tagline: "Fly to Boracay — world-famous for powder-soft white sand beaches.",
+        activities: [
+          { icon: "✈️", title: "Flight to Caticlan / Boracay", description: "Short flight to Caticlan followed by 10-minute speed boat to Boracay Island." },
+          { icon: "🏖️", title: "Station 1 White Beach Stroll", description: "Walk barefoot on sand so fine it never gets hot under the sun." },
+          { icon: "⛵", title: "Paraw Sailing at Sunset", description: "Board a traditional outrigger sailboat for a magical golden-hour sail." }
+        ],
+        tip: "Station 1 has the finest sand and quietest beach lounges.",
+        image: "/images/destinations/philippines_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Boracay Watersports & D'Mall Evening",
+        tag: "BORACAY VIBES",
+        tagline: "Thrilling ocean sports and lively tropical nightlife.",
+        activities: [
+          { icon: "🪂", title: "Parasailing over Boracay", description: "Fly 150 meters above the turquoise coastline." },
+          { icon: "🤿", title: "Crocodile Island Snorkeling", description: "Boat excursion to Boracay's top offshore coral reef." },
+          { icon: "🛍️", title: "D'Mall Dining & Fire Dancers", description: "Enjoy fresh seafood dinner accompanied by live acoustic music on the beach." }
+        ],
+        tip: "Try the famous Mango Graham Shake at Jonah's Fruit Shake stand in Station 1.",
+        image: "/images/destinations/philippines_3.jpg"
+      },
+      {
+        dayNumber: 8,
+        title: "Departure via Manila",
+        tag: "DEPARTURE",
+        tagline: "Final tropical breakfast and flight home.",
+        activities: [
+          { icon: "🍳", title: "Beachside Breakfast", description: "Savor fresh Philippine mangoes and longganisa breakfast sausage." },
+          { icon: "✈️", title: "Caticlan to Manila Flight & Transfer", description: "Transfer to Manila International Airport for departure." }
+        ],
+        tip: "Buy dried mangoes at Manila airport as authentic souvenirs for friends and family.",
+        image: "/images/destinations/philippines_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "El Nido Resorts Miniloc Island", rating: "★★★★★", type: "Eco-Luxury Resort", location: "El Nido, Palawan", image: "/images/destinations/philippines_1.jpg" },
+      { name: "Discovery Shores Boracay", rating: "★★★★★", type: "Luxury Beachfront", location: "Station 1, Boracay", image: "/images/destinations/philippines_3.jpg" }
+    ]
+  },
+  "philippines-luxury": {
+    slug: "philippines-luxury",
+    destination: "Philippines",
+    title: "Philippines Luxury Escape (Bohol Chocolate Hills & Overwater Resorts)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/philippines_2.jpg",
+    tagline: "Private Catamarans, Tarsier Sanctuaries & Overwater Villas",
+    basePrice: 68000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive in Manila & Flight to Bohol",
+        tag: "BOHOL",
+        tagline: "Check into Panglao Island's top 5-star beachfront resort.",
+        activities: [
+          { icon: "✈️", title: "Private Transfer to Panglao", description: "Air-conditioned luxury SUV transfer from Tagbilaran Airport." },
+          { icon: "🍹", title: "Welcome Sunset Cocktail", description: "Cocktails overlooking the Bohol Sea infinity pool." }
+        ],
+        tip: "Panglao Island features some of the clearest diving waters in Southeast Asia.",
+        image: "/images/destinations/philippines_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Bohol Countryside & Chocolate Hills",
+        tag: "CHOCOLATE HILLS",
+        tagline: "Marvel at 1,200 symmetrical geological mounds and cute mini tarsier primates.",
+        activities: [
+          { icon: "⛰️", title: "Chocolate Hills Viewpoint", description: "Panoramic look over green grass mounds that turn brown in dry season." },
+          { icon: "🐒", title: "Philippine Tarsier Sanctuary", description: "See the world's smallest primate with huge nocturnal eyes." },
+          { icon: "🚢", title: "Loboc River Cruise Lunch", description: "Floating buffet lunch with live acoustic music down the jungle river." }
+        ],
+        tip: "Maintain complete silence at the tarsier sanctuary as tarsiers are extremely sensitive to noise.",
+        image: "/images/destinations/philippines_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Balicasag Island Dolphin & Turtle Safari",
+        tag: "BALICASAG",
+        tagline: "Private speedboat safari to swim alongside wild sea turtles.",
+        activities: [
+          { icon: "🐬", title: "Dolphin Watching at Dawn", description: "Spot wild spinner dolphins leaping near Virgin Island." },
+          { icon: "🐢", title: "Balicasag Turtle Snorkel", description: "Guided swim in a marine sanctuary overflowing with sea turtles." }
+        ],
+        tip: "Dolphins appear earliest around 6:00 AM — early departure is rewarded.",
+        image: "/images/destinations/philippines_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Fly to El Nido Luxury Water Villa",
+        tag: "WATER VILLA",
+        tagline: "Check into an exclusive private island overwater villa in Palawan.",
+        activities: [
+          { icon: "✈️", title: "Private Air Charter to El Nido", description: "Scenic flight across the Philippine archipelago." },
+          { icon: "🏡", title: "Overwater Bungalow Check-in", description: "Step directly from your deck into crystal clear lagoon waters." }
+        ],
+        tip: "Request complimentary paddleboards directly at your villa dock.",
+        image: "/images/destinations/philippines_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Private Catamaran Charter in Bacuit Bay",
+        tag: "PRIVATE CATAMARAN",
+        tagline: "Tailored private island hopping away from all tour crowds.",
+        activities: [
+          { icon: "⛵", title: "Full-Day Private Catamaran", description: "Sail to pristine deserted sandbars with personal chef on board." },
+          { icon: "🥂", title: "Champagne Beach Picnic", description: "Gourmet seafood and wine served under private canopy." }
+        ],
+        tip: "Ask your skipper to visit Cadlao Lagoon at high tide.",
+        image: "/images/destinations/philippines_1.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Spa Day & Sunset Dining",
+        tag: "WELLNESS",
+        tagline: "Traditional Hilot massage and private candlelight beach dinner.",
+        activities: [
+          { icon: "💆", title: "Traditional Philippine Hilot Massage", description: "Healing massage using warm coconut oil and banana leaves." },
+          { icon: "🕯️", title: "Private Beach Candlelight Dinner", description: "4-course dinner set directly on the ocean shore." }
+        ],
+        tip: "Hilot massage is renowned for releasing muscle tension after swimming.",
+        image: "/images/destinations/philippines_2.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure via Manila",
+        tag: "DEPARTURE",
+        tagline: "Final ocean dip and airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Manila Connection & Flight Home", description: "Flight from El Nido to Manila for international departure." }
+        ],
+        tip: "Manila Airport Terminal 3 has executive lounges for relaxing before long-haul flights.",
+        image: "/images/destinations/philippines_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Amorita Resort Bohol", rating: "★★★★★", type: "Luxury Cliffside Resort", location: "Panglao, Bohol", image: "/images/destinations/philippines_2.jpg" },
+      { name: "El Nido Resorts Lagen Island", rating: "★★★★★", type: "Overwater Villa Resort", location: "El Nido, Palawan", image: "/images/destinations/philippines_1.jpg" }
+    ]
+  },
+  "philippines-cebu": {
+    slug: "philippines-cebu",
+    destination: "Philippines",
+    title: "Philippines Coastal Explorer (Cebu Whale Sharks & Kawasan Falls)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/philippines_3.jpg",
+    tagline: "Swim with Whale Sharks & Jump Off Turquoise Waterfalls",
+    basePrice: 34500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Cebu & City Heritage Tour",
+        tag: "CEBU CITY",
+        tagline: "Explore the oldest Spanish city in the Philippines.",
+        activities: [
+          { icon: "⛪", title: "Magellan's Cross & Basilica del Santo Niño", description: "Visit the 1521 historic wooden cross planted by Ferdinand Magellan." },
+          { icon: "🏰", title: "Fort San Pedro", description: "Spanish military defense fort built in 1565." }
+        ],
+        tip: "Try Cebu's world-famous Lechon (roast pork) for dinner — Anthony Bourdain called it the best in the world.",
+        image: "/images/destinations/philippines_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Oslob Whale Shark Swimming",
+        tag: "WHALE SHARKS",
+        tagline: "Swim inches away from gentle ocean giants.",
+        activities: [
+          { icon: "🐋", title: "Oslob Whale Shark Encounter", description: "Snorkel next to 30-foot gentle whale sharks in clear coastal waters." },
+          { icon: "🏝️", title: "Sumilon Island Sandbar", description: "Relax on a shifting white sandbar surrounded by turquoise reef." }
+        ],
+        tip: "Sunscreen is prohibited in Oslob to protect the whale sharks — wear a rashguard instead.",
+        image: "/images/destinations/philippines_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Kawasan Falls Canyoneering Adventure",
+        tag: "KAWASAN FALLS",
+        tagline: "Jump off 10-meter cliffs into electric-blue jungle pools.",
+        activities: [
+          { icon: "🧗", title: "Badian Canyoneering", description: "3-hour guided river trek, cliff jumping, and natural water slides." },
+          { icon: "🌊", title: "Kawasan Main Waterfall Swim", description: "Relax under the famous 3-tier gushing turquoise waterfall." }
+        ],
+        tip: "Guides provide full safety helmets and life jackets for all cliff jumps.",
+        image: "/images/destinations/philippines_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Moalboal Sardine Run & Sea Turtles",
+        tag: "SARDINE RUN",
+        tagline: "Witness millions of shimmering sardines swimming in giant swirling underwater formations.",
+        activities: [
+          { icon: "🐟", title: "Moalboal Sardine Run Snorkel", description: "Snorkel right off Panagsama Beach where millions of sardines gather in wall formations." },
+          { icon: "🐢", title: "Talisay Point Turtle Swim", description: "Swim alongside resident green sea turtles grazing on sea grass." }
+        ],
+        tip: "The sardine run is accessible just 20 meters from shore — no boat required.",
+        image: "/images/destinations/philippines_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Pescador Island Snorkeling & Return to Cebu",
+        tag: "PESCADOR",
+        tagline: "Explore an offshore marine sanctuary with deep drop-off coral walls.",
+        activities: [
+          { icon: "🐠", title: "Pescador Island Reef Tour", description: "Coral wall snorkeling with colorful reef fish and dolphin sightings." }
+        ],
+        tip: "Pescador Cathedral is a famous underwater cave for advanced scuba divers.",
+        image: "/images/destinations/philippines_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Cebu Airport Departure",
+        tag: "DEPARTURE",
+        tagline: "Last souvenir shopping and departure flight.",
+        activities: [
+          { icon: "✈️", title: "Cebu Mactan Airport Transfer", description: "Transfer to Mactan-Cebu International Airport." }
+        ],
+        tip: "Mactan Airport is renowned for its wooden architecture and duty-free shopping.",
+        image: "/images/destinations/philippines_3.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Radisson Blu Hotel Cebu", rating: "★★★★★", type: "City Hotel", location: "Cebu City", image: "/images/destinations/philippines_3.jpg" },
+      { name: "Pescadores Seaview Suites Moalboal", rating: "★★★★", type: "Beach Resort", location: "Moalboal, Cebu", image: "/images/destinations/philippines_3.jpg" }
+    ]
+  },
+
+// ── MALTA ITINERARIES ──
+  "malta-5n6d": {
+    slug: "malta-5n6d",
+    destination: "Malta",
+    title: "Malta Mediterranean Heritage (Valletta, Mdina & Blue Lagoon)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/malta_1.jpg",
+    tagline: "Sun-Drenched Citadel of Knights & Blue Lagoons",
+    basePrice: 54000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Malta & Valletta Grand Harbour Sunset",
+        tag: "VALLETTA",
+        tagline: "Check into Europe's smallest UNESCO capital city.",
+        activities: [
+          { icon: "✈️", title: "Malta Airport Transfer", description: "Private car from Luqa Airport to Valletta." },
+          { icon: "🏰", title: "Upper Barrakka Gardens", description: "Panoramic views across the Grand Harbour and the Three Cities at sunset." }
+        ],
+        tip: "Watch the Saluting Battery cannon fired daily at 12:00 PM and 4:00 PM.",
+        image: "/images/destinations/malta_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Valletta UNESCO City Walking Tour",
+        tag: "KNIGHTS OF MALTA",
+        tagline: "Discover Baroque palaces and Caravaggio masterpieces.",
+        activities: [
+          { icon: "⛪", title: "St. John's Co-Cathedral", description: "Marvel at the gold leaf interior and Caravaggio's 'Beheading of Saint John'." },
+          { icon: "🏛️", title: "Grandmaster's Palace & Armoury", description: "Tour the historic seat of the Knights of St. John." }
+        ],
+        tip: "St. John's Cathedral requires covered shoulders and flat shoes to protect marble floors.",
+        image: "/images/destinations/malta_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Mdina — The Silent City & Rabat Catacombs",
+        tag: "MDINA",
+        tagline: "Step back 4,000 years inside Malta's pristine medieval hilltop citadel.",
+        activities: [
+          { icon: "🏰", title: "Mdina Gate & Citadel Walk", description: "Famous Game of Thrones filming location with car-free cobblestone streets." },
+          { icon: "🍰", title: "Fontanella Tea Garden", description: "Famous chocolate cake with 180-degree cliffside views of the Maltese countryside." }
+        ],
+        tip: "Visit Mdina after 6:00 PM when day-trippers leave — the warm street lamps are enchanting.",
+        image: "/images/destinations/malta_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Comino Island & Blue Lagoon Boat Cruise",
+        tag: "BLUE LAGOON",
+        tagline: "Swim in swimming-pool-clear turquoise Mediterranean waters.",
+        activities: [
+          { icon: "⛵", title: "Comino Speedboat Cruise", description: "Sail to the uninhabited island of Comino." },
+          { icon: "🏊", title: "Blue Lagoon Swimming & Snorkeling", description: "Swim in luminous crystal-clear ocean waters surrounded by white sand." }
+        ],
+        tip: "Arrive at Blue Lagoon by 9:30 AM before commercial cruise boats dock.",
+        image: "/images/destinations/malta_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Marsaxlokk Fishing Village & Blue Grotto",
+        tag: "MARSAXLOKK",
+        tagline: "Traditional painted Luzzu boats and dramatic sea caves.",
+        activities: [
+          { icon: "🛶", title: "Marsaxlokk Market & Harbor", description: "Stroll along colorful traditional fishing boats with Osiris eye motifs." },
+          { icon: "🌊", title: "Blue Grotto Boat Caves Tour", description: "Small boat tour inside glowing azure sea caves." }
+        ],
+        tip: "Blue Grotto sunlight reflections are brightest between 10:00 AM and 1:00 PM.",
+        image: "/images/destinations/malta_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Malta",
+        tag: "DEPARTURE",
+        tagline: "Final Maltese pastizzi pastry breakfast and airport transfer.",
+        activities: [
+          { icon: "🥐", title: "Pastizzi & Coffee Breakfast", description: "Sample famous flaky ricotta pastizzi pastries." },
+          { icon: "✈️", title: "Malta International Airport Transfer", description: "Return transfer to Luqa Airport." }
+        ],
+        tip: "Buy Maltese honey ring cookies (Qagħaq tal-Għasel) at the airport for sweet souvenirs.",
+        image: "/images/destinations/malta_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Phoenicia Malta", rating: "★★★★★", type: "Historic Palace Hotel", location: "Valletta", image: "/images/destinations/malta_1.jpg" },
+      { name: "AX The Palace Sliema", rating: "★★★★★", type: "Boutique Hotel", location: "Sliema, Malta", image: "/images/destinations/malta_2.jpg" }
+    ]
+  },
+  "malta-luxury": {
+    slug: "malta-luxury",
+    destination: "Malta",
+    title: "Malta Luxury & Gozo Island Retreat (Palace Hotels & Private Yacht)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/malta_2.jpg",
+    tagline: "Private Yachts, Gozo Citadels & 5-Star Boutique Palaces",
+    basePrice: 85000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive in Valletta & 5-Star Check-In",
+        tag: "VALLETTA PALACE",
+        tagline: "Check into a restored 16th-century Maltese aristocratic palace.",
+        activities: [
+          { icon: "🚘", title: "Chauffeur Airport Transfer", description: "Private Mercedes transfer from Malta Airport." },
+          { icon: "🍷", title: "Wine Tasting Welcome", description: "Sample vintage Maltese Girgentina wines." }
+        ],
+        tip: "Maltese indigenous grapes (Gellewza and Girgentina) are produced in limited quantities.",
+        image: "/images/destinations/malta_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Yacht Charter to Comino & Gozo",
+        tag: "PRIVATE YACHT",
+        tagline: "Full-day luxury yacht navigation across the Maltese Archipelago.",
+        activities: [
+          { icon: "⛵", title: "Private Motor Yacht Charter", description: "Cruise to Crystal Lagoon and Santa Maria Sea Caves." },
+          { icon: "🥂", title: "Seafood Lunch on Board", description: "Fresh Mediterranean sea bass paired with prosecco." }
+        ],
+        tip: "Crystal Lagoon is quieter and deeper than Blue Lagoon — ideal for swimming off the yacht deck.",
+        image: "/images/destinations/malta_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Gozo Island Exploration & Victoria Citadel",
+        tag: "GOZO",
+        tagline: "Discover Malta's greener, tranquil sister island of Gozo.",
+        activities: [
+          { icon: "⛴️", title: "Private Ferry to Gozo", description: "Cross the Gozo Channel past Comino Island." },
+          { icon: "🏰", title: "Victoria Citadel", description: "Explore the fortified hill town with 360-degree views across Gozo." },
+          { icon: "🏖️", title: "Ramla Bay Red Sand Beach", description: "Relax on Gozo's famous orange-red sand bay." }
+        ],
+        tip: "Gozo cheeselets (Gbejniet) with black pepper are a local gourmet delicacy.",
+        image: "/images/destinations/malta_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Ancient Megalithic Temples & Blue Grotto",
+        tag: "UNESCO ANCIENT",
+        tagline: "Visit temples older than the Egyptian Pyramids (3,600 BC).",
+        activities: [
+          { icon: "🏛️", title: "Ħaġar Qim & Mnajdra Temples", description: "UNESCO World Heritage prehistoric stone temples overlooking the sea." }
+        ],
+        tip: "Ħaġar Qim's megaliths weigh up to 20 tons and align precisely with the summer solstice.",
+        image: "/images/destinations/malta_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Mdina Private Evening & Michelin Dining",
+        tag: "MICHELIN DINING",
+        tagline: "Exclusive private tour of the Silent City followed by Michelin-starred dining.",
+        activities: [
+          { icon: "🕯️", title: "Private Night Walk of Mdina", description: "Experience medieval alleys illuminated by gas lamps." },
+          { icon: "🍽️", title: "Michelin Star Dinner", description: "Fine dining inside a historic Maltese palazzo." }
+        ],
+        tip: "De Mondion in Mdina holds a Michelin Star and overlooks the entire Maltese island.",
+        image: "/images/destinations/malta_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Spa & Leisure Day in St. Julian's",
+        tag: "WELLNESS",
+        tagline: "Relaxation at a luxury seaside spa resort.",
+        activities: [
+          { icon: "💆", title: "Thalassotherapy Sea Spa", description: "Hydrotherapy salt scrub and marine massage." }
+        ],
+        tip: "St. Julian's Bay features top waterfront cocktail lounges.",
+        image: "/images/destinations/malta_2.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Malta",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to Malta International Airport.",
+        activities: [
+          { icon: "✈️", title: "Chauffeur Airport Transfer", description: "Executive airport transfer for flight home." }
+        ],
+        tip: "Tax-free shopping is available at Malta Airport for non-EU destinations.",
+        image: "/images/destinations/malta_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Iniala Harbour House", rating: "★★★★★", type: "Ultra-Luxury Palace", location: "Valletta", image: "/images/destinations/malta_1.jpg" },
+      { name: "Kempinski Hotel San Lawrenz Gozo", rating: "★★★★★", type: "Luxury Country Resort", location: "Gozo", image: "/images/destinations/malta_3.jpg" }
+    ]
+  },
+  "malta-coastal": {
+    slug: "malta-coastal",
+    destination: "Malta",
+    title: "Malta Coastal Highlights & Marsaxlokk Bay",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/malta_3.jpg",
+    tagline: "Fishing Villages, Sea Caves & Golden Bays",
+    basePrice: 42000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive in Sliema / St. Julian's",
+        tag: "COASTAL CHECK-IN",
+        tagline: "Check into your seaside hotel overlooking Sliema promenade.",
+        activities: [
+          { icon: "🏖️", title: "Sliema Promenade Sunset Stroll", description: "Walk the 3km seaside promenade looking across to Valletta." }
+        ],
+        tip: "Take the 10-minute Sliema Ferry across Marsamxett Harbour to Valletta.",
+        image: "/images/destinations/malta_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Golden Bay & Popeye Village Coast",
+        tag: "GOLDEN BAY",
+        tagline: "Malta's premier sandy beach and film set village.",
+        activities: [
+          { icon: "🏖️", title: "Golden Bay Beach Swim", description: "Relax on golden sand dunes between rocky headlands." },
+          { icon: "🎬", title: "Popeye Village Viewpoint", description: "Photograph the colorful wooden film set built for Robin Williams' 1980 movie." }
+        ],
+        tip: "Sunset at Golden Bay is widely considered the best on the main island.",
+        image: "/images/destinations/malta_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Three Cities & Grand Harbour Boat Tour",
+        tag: "THREE CITIES",
+        tagline: "Explore Birgu (Vittoriosa), Senglea, and Cospicua aboard a wooden dgħajsa boat.",
+        activities: [
+          { icon: "⛵", title: "Traditional Dgħajsa Harbour Cruise", description: "Cross the harbour in a traditional wooden water taxi." },
+          { icon: "🏰", title: "Fort St. Angelo Tour", description: "Explore the Grand Master's medieval fortress overlooking Valletta." }
+        ],
+        tip: "Birgu's narrow lanes are filled with flowering bougainvillea and historic stone doorways.",
+        image: "/images/destinations/malta_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Marsaxlokk Sunday Fish Market & St. Peter's Pool",
+        tag: "ST PETERS POOL",
+        tagline: "Natural limestone swimming hole and vibrant coastal market.",
+        activities: [
+          { icon: "🛍️", title: "Marsaxlokk Waterfront Market", description: "Browse fresh fish stalls, lace, and local olive oil." },
+          { icon: "🏊", title: "St. Peter's Pool Cliff Jump", description: "Swim in a horseshoe-shaped natural rock pool with jade waters." }
+        ],
+        tip: "St. Peter's Pool has flat ledge rocks ideal for sunbathing.",
+        image: "/images/destinations/malta_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Malta",
+        tag: "DEPARTURE",
+        tagline: "Final coastal breakfast and airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Malta Airport Transfer", description: "Transfer to Malta Airport for return flight." }
+        ],
+        tip: "Leave 2 hours before flight time during peak morning traffic hours.",
+        image: "/images/destinations/malta_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Palace Sliema", rating: "★★★★", type: "City Beach Hotel", location: "Sliema", image: "/images/destinations/malta_3.jpg" }
+    ]
+  },
+
+// ── MONACO ITINERARIES ──
+  "monaco-4n5d": {
+    slug: "monaco-4n5d",
+    destination: "Monaco",
+    title: "Monaco & French Riviera Glamour (Monte Carlo & Cannes)",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/monaco_1.jpg",
+    tagline: "Ultra-Luxury Riviera, Harbor Superyachts & Monte Carlo",
+    basePrice: 98000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Nice & Transfer to Monaco",
+        tag: "MONACO",
+        tagline: "Drive along the breathtaking Middle Corniche cliff road into the Principality of Monaco.",
+        activities: [
+          { icon: "🚘", title: "Nice to Monaco Transfer", description: "Scenic 30-minute coastal drive passing Villefranche-sur-Mer." },
+          { icon: "🏨", title: "Monte Carlo Luxury Hotel Check-in", description: "Check into your hotel overlooking Casino Square or Port Hercule." },
+          { icon: "🥂", title: "Port Hercule Harbour Walk", description: "Stroll along multi-million dollar superyachts docked at the Marina." }
+        ],
+        tip: "Monaco is compact (2 sq km) — almost everything in Monte Carlo is walkable.",
+        image: "/images/destinations/monaco_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Monte Carlo Casino Square & Prince's Palace",
+        tag: "MONTE CARLO",
+        tagline: "Experience the epitome of European glamour and royal history.",
+        activities: [
+          { icon: "🏰", title: "Prince's Palace Change of Guard", description: "Watch the Carabiniers du Prince ceremony at 11:55 AM on Palace Square." },
+          { icon: "🎰", title: "Casino de Monte-Carlo Visit", description: "Tour the Belle Époque atrium and gaming rooms featured in James Bond films." },
+          { icon: "🌺", title: "Princess Grace Rose Garden Walk", description: "Stroll through 4,000 rose bushes planted in memory of Princess Grace." }
+        ],
+        tip: "Casino de Monte-Carlo requires formal dress after 7:00 PM (jacket for men).",
+        image: "/images/destinations/monaco_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Éze Medieval Village & Fragonard Perfumery",
+        tag: "FRENCH RIVIERA",
+        tagline: "Visit an eagle's-nest medieval village suspended 400 meters above the Mediterranean.",
+        activities: [
+          { icon: "🏰", title: "Éze Village Botanical Garden", description: "Exotic garden with cacti set inside 12th-century castle ruins." },
+          { icon: "🌸", title: "Fragonard Perfume Factory Tour", description: "Learn secret French perfume crafting techniques and create your own fragrance." }
+        ],
+        tip: "Wear comfortable walking shoes for Éze's steep stone steps.",
+        image: "/images/destinations/monaco_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Day Trip to Cannes & Promenade des Anglais",
+        tag: "CANNES",
+        tagline: "Walk the Red Carpet of Cannes Film Festival and Nice's palm-lined seafront.",
+        activities: [
+          { icon: "🎬", title: "Palais des Festivals Cannes", description: "Step on the famous red carpet steps of the Cannes Film Festival." },
+          { icon: "🛍️", title: "Boulevard de la Croisette Shopping", description: "Luxury boutique shopping along Cannes' beachfront avenue." }
+        ],
+        tip: "Try Socca (chickpea pancake) in Old Nice on your way back.",
+        image: "/images/destinations/monaco_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Oceanographic Museum & Departure",
+        tag: "DEPARTURE",
+        tagline: "Visit Jacques Cousteau's cliffside oceanarium before your return flight.",
+        activities: [
+          { icon: "🐠", title: "Oceanographic Museum of Monaco", description: "Aquarium carved into the face of the Rock of Monaco overlooking the sea." },
+          { icon: "✈️", title: "Private Transfer to Nice Airport", description: "Return transfer to Nice Côte d'Azur Airport." }
+        ],
+        tip: "Nice Airport has executive duty-free shopping for French wines and fashion.",
+        image: "/images/destinations/monaco_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Hôtel Hermitage Monte-Carlo", rating: "★★★★★", type: "Palace Hotel", location: "Monte Carlo", image: "/images/destinations/monaco_1.jpg" },
+      { name: "Fairmont Monte Carlo", rating: "★★★★★", type: "Luxury Seafront Hotel", location: "Monte Carlo", image: "/images/destinations/monaco_2.jpg" }
+    ]
+  },
+  "monaco-grandprix": {
+    slug: "monaco-grandprix",
+    destination: "Monaco",
+    title: "Ultra-Luxury Monte Carlo Grand Prix & Yacht Experience",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/monaco_2.jpg",
+    tagline: "Private Helicopters, Superyachts & Hôtel de Paris",
+    basePrice: 165000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Helicopter Transfer from Nice to Monaco",
+        tag: "HELICOPTER ARRIVAL",
+        tagline: "Soar over the Côte d'Azur coastline on a 7-minute private helicopter flight.",
+        activities: [
+          { icon: "🚁", title: "Nice to Monaco Heli Transfer", description: "7-minute flight landing at Monacair Heliport on the ocean's edge." },
+          { icon: "🏨", title: "Hôtel de Paris Monte-Carlo Check-in", description: "Check into the iconic 5-star palace hotel directly on Casino Square." }
+        ],
+        tip: "Helicopter transfers bypass all coastal highway traffic completely.",
+        image: "/images/destinations/monaco_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Monaco Formula 1 Circuit Track Walk",
+        tag: "F1 CIRCUIT",
+        tagline: "Walk the legendary hairpin turns of the world's most famous street circuit.",
+        activities: [
+          { icon: "🏎️", title: "Grand Prix Circuit Tour", description: "Walk Sainte-Dévote, Casino Square Hairpin, and the famous Tunnel." },
+          { icon: "🏎️", title: "HSH Prince of Monaco Car Collection", description: "Tour 100+ vintage classic cars and F1 racing cars owned by the Prince." }
+        ],
+        tip: "The Fairmont Hairpin is the slowest turn in Formula 1 racing.",
+        image: "/images/destinations/monaco_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "VIP Superyacht Deck Pass & Champagne Bar",
+        tag: "VIP YACHT",
+        tagline: "Spend the day on a 45-meter superyacht moored in Port Hercule.",
+        activities: [
+          { icon: "🚤", title: "Tender Transfer to Superyacht", description: "Private tender boat out to your moored charter yacht." },
+          { icon: "🥂", title: "Champagne & Caviar Deck Bar", description: "Unlimited Dom Pérignon and Beluga caviar served by private yacht crew." }
+        ],
+        tip: "Yacht deck passes offer the ultimate vantage point in Monaco.",
+        image: "/images/destinations/monaco_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Private Riviera Speedboat Charter to Saint-Tropez",
+        tag: "SAINT TROPEZ",
+        tagline: "Cruise along the French Riviera to the glamorous resort of Saint-Tropez.",
+        activities: [
+          { icon: "🚤", title: "Private Offshore Speedboat Charter", description: "Cruise past Cap Ferrat and Saint-Raphaël to Pampelonne Beach." },
+          { icon: "🍽️", title: "Club 55 Beach Lunch", description: "Famous jet-set beach club lunch on Pampelonne sand." }
+        ],
+        tip: "Book Club 55 weeks in advance as celebrities frequent this beach club during summer.",
+        image: "/images/destinations/monaco_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Le Louis XV Michelin 3-Star Dining",
+        tag: "ALAIN DUCASSE",
+        tagline: "Dine at Chef Alain Ducasse's legendary 3-Michelin Star restaurant.",
+        activities: [
+          { icon: "🍷", title: "Private Wine Cellar Tour", description: "Tour Hôtel de Paris's private wine cellar containing 350,000 rare bottles." },
+          { icon: "🍽️", title: "3-Star Michelin Dinner", description: "Gourmet Riviera gastronomy under gold chandeliers." }
+        ],
+        tip: "The wine cellar hosted Winston Churchill's victory celebration in 1945.",
+        image: "/images/destinations/monaco_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Helicopter Transfer to Nice Airport",
+        tag: "DEPARTURE",
+        tagline: "Final VIP helicopter flight over the Riviera.",
+        activities: [
+          { icon: "🚁", title: "Helicopter Transfer to Nice Airport", description: "7-minute helicopter transfer back to Nice Côte d'Azur Airport." }
+        ],
+        tip: "Helicopter check-in luggage is transferred straight to your international flight.",
+        image: "/images/destinations/monaco_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Hôtel de Paris Monte-Carlo", rating: "★★★★★", type: "Ultra-Luxury Palace", location: "Place du Casino, Monaco", image: "/images/destinations/monaco_2.jpg" },
+      { name: "Monte-Carlo Beach Hotel", rating: "★★★★★", type: "Seaside Resort", location: "Monaco Coast", image: "/images/destinations/monaco_1.jpg" }
+    ]
+  },
+  "monaco-express": {
+    slug: "monaco-express",
+    destination: "Monaco",
+    title: "Monaco & Côte d'Azur Coastal Highlights",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/monaco_3.jpg",
+    tagline: "Cliffside Palaces, Sea Walks & Riviera Magic",
+    basePrice: 74000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive in Monaco & Japanese Garden",
+        tag: "MONACO COAST",
+        tagline: "Check in and stroll the zen Japanese Garden by the sea.",
+        activities: [
+          { icon: "🚘", title: "Nice Airport Transfer to Monaco", description: "Private car along the Grande Corniche road." },
+          { icon: "🌿", title: "Japanese Garden (Jardin Japonais)", description: "Authentic Zen garden designed by Yasuo Beppu." }
+        ],
+        tip: "The Japanese garden was blessed by a Shinto priest and uses imported Japanese stones.",
+        image: "/images/destinations/monaco_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Rock of Monaco (Le Rocher) & Old Town",
+        tag: "LE ROCHER",
+        tagline: "Explore the medieval alleys of Monaco's old quarter.",
+        activities: [
+          { icon: "🏰", title: "Monaco Cathedral (St. Nicholas)", description: "Visit the resting place of Princess Grace Kelly and Prince Rainier III." },
+          { icon: "🏛️", title: "Old Town Cobblestone Walk", description: "Charming souvenir shops, creperies, and ocean lookouts." }
+        ],
+        tip: "Monaco Cathedral is open daily with free entry.",
+        image: "/images/destinations/monaco_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Cap d'Ail Coastal Path Walk to Mala Beach",
+        tag: "CAP D'AIL",
+        tagline: "Walk the scenic rock path along turquoise waters into Plage de la Mala.",
+        activities: [
+          { icon: "🥾", title: "Sentier du Littoral Coastal Path", description: "Dramatic 2km cliffside walking trail right at the sea spray level." },
+          { icon: "🏖️", title: "Plage de la Mala Cove Swim", description: "Secluded pebble and sand cove surrounded by sheer white cliffs." }
+        ],
+        tip: "La Mala beach features two exclusive private beach clubs with sun lounger rentals.",
+        image: "/images/destinations/monaco_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure from Monaco",
+        tag: "DEPARTURE",
+        tagline: "Final Riviera breakfast and airport send-off.",
+        activities: [
+          { icon: "✈️", title: "Private Transfer to Nice Airport", description: "Return transfer to Nice Airport." }
+        ],
+        tip: "Confirm departure terminal (Terminal 1 or 2) with driver.",
+        image: "/images/destinations/monaco_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Le Méridien Beach Plaza Monaco", rating: "★★★★", type: "Private Beach Hotel", location: "Monte Carlo", image: "/images/destinations/monaco_3.jpg" }
+    ]
   },
 };
 
