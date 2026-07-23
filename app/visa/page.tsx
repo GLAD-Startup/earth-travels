@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import Link from "next/link";
 import { GlassCard, RevealWrapper } from "@/components/ui";
 
 interface VisaCategory {
