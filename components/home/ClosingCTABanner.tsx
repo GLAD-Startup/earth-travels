@@ -161,25 +161,35 @@ export default function ClosingCTABanner() {
           </p>
         </RevealWrapper>
 
-        <RevealWrapper delay={0.4} className="mb-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+        <RevealWrapper delay={0.4} className="mb-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
           <a
-            href="tel:8941881111"
-            className="flex items-center gap-3 font-mono text-2xl md:text-4xl font-bold text-[#c4900f] hover:text-[#1a120a] transition-all duration-300 hover:scale-105 select-all underline underline-offset-8 decoration-[#c4900f]/30 hover:decoration-[#c4900f] drop-shadow-md"
+            href="tel:+918941088111"
+            className="flex items-center gap-2 font-mono text-xl md:text-3xl font-bold text-[#c4900f] hover:text-[#1a120a] transition-all duration-300 hover:scale-105 select-all underline underline-offset-8 decoration-[#c4900f]/30 hover:decoration-[#c4900f] drop-shadow-md"
           >
-            <svg className="w-7 h-7 md:w-9 md:h-9 text-[#c4900f] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6 md:w-8 md:h-8 text-[#c4900f] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
             </svg>
-            89418 81111
+            +91 89410 88111
           </a>
-          <span className="hidden sm:inline text-[#c4900f]/30 text-3xl font-light">|</span>
+          <span className="hidden sm:inline text-[#c4900f]/30 text-2xl font-light">|</span>
           <a
-            href="tel:9410857835"
-            className="flex items-center gap-3 font-mono text-2xl md:text-4xl font-bold text-[#c4900f] hover:text-[#1a120a] transition-all duration-300 hover:scale-105 select-all underline underline-offset-8 decoration-[#c4900f]/30 hover:decoration-[#c4900f] drop-shadow-md"
+            href="tel:+918941881111"
+            className="flex items-center gap-2 font-mono text-xl md:text-3xl font-bold text-[#c4900f] hover:text-[#1a120a] transition-all duration-300 hover:scale-105 select-all underline underline-offset-8 decoration-[#c4900f]/30 hover:decoration-[#c4900f] drop-shadow-md"
           >
-            <svg className="w-7 h-7 md:w-9 md:h-9 text-[#c4900f] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6 md:w-8 md:h-8 text-[#c4900f] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
             </svg>
-            94108 57835
+            +91 89418 81111
+          </a>
+          <span className="hidden sm:inline text-[#c4900f]/30 text-2xl font-light">|</span>
+          <a
+            href="tel:+919410857835"
+            className="flex items-center gap-2 font-mono text-xl md:text-3xl font-bold text-[#c4900f] hover:text-[#1a120a] transition-all duration-300 hover:scale-105 select-all underline underline-offset-8 decoration-[#c4900f]/30 hover:decoration-[#c4900f] drop-shadow-md"
+          >
+            <svg className="w-6 h-6 md:w-8 md:h-8 text-[#c4900f] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            +91 94108 57835
           </a>
         </RevealWrapper>
 

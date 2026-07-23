@@ -169,6 +169,12 @@ export default function AboutPage() {
   const [count3, ref3] = useCountUp<HTMLSpanElement>({ target: 15, duration: 1500 });
   const [count4, ref4] = useCountUp<HTMLSpanElement>({ target: 4.7, duration: 1500, decimals: 1 });
   const [mounted, setMounted] = useState(false);
+  const [selectedCert, setSelectedCert] = useState<{
+    title: string;
+    badge: string;
+    src: string;
+    desc: string;
+  } | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -176,9 +182,6 @@ export default function AboutPage() {
  
   return (
     <div className="bg-parchment min-h-screen text-espresso select-none relative z-0 isolate">
-      <title>About Us — Our Story & Credentials | Earth Travels</title>
-      <meta name="description" content="Discover Earth Travels story. Founded in Mathura, UP, we help local families design and execute stress-free domestic and international trips." />
-      
       {/* 1. Hero (60vh) — Full-bleed travel landscape */}
       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-center overflow-hidden border-b border-espresso/5">
         
@@ -553,85 +556,106 @@ export default function AboutPage() {
       <section className="relative z-10 bg-[#fdf8f2] border-b border-espresso/5 py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.2em] block mb-2">
-              Verified Standards
+            <span className="font-mono text-xs text-[#D4A017] uppercase tracking-[0.2em] block mb-2 font-bold">
+              VERIFIED STANDARDS & HONORS
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-espresso">
               Accreditations & Recognition
             </h2>
-            <p className="font-sans text-xs md:text-sm text-espresso/60 mt-3 max-w-lg mx-auto">
-              Our travel standards are audited and certified globally and locally for your family&apos;s absolute peace of mind.
+            <p className="font-sans text-xs md:text-sm text-espresso/70 mt-3 max-w-xl mx-auto leading-relaxed">
+              Our travel standards are audited and certified globally and locally. Click any certificate to inspect official document details.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1: IATA */}
-            <RevealWrapper delay={0.1}>
-              <GlassCard
-                hover={true}
-                className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
-              >
-                <div className="relative w-24 h-24 mx-auto bg-white rounded-full p-4 border border-[#D4A017]/30 shadow-md shadow-gold/5 flex items-center justify-center shrink-0 mb-6 group-hover:scale-105 transition-transform duration-300">
-                  <div className="relative w-full h-full">
-                    <img
-                      src="/images/IATA logo.png"
-                      alt="IATA Certified Logo"
-                      className="w-full h-full object-contain"
-                    />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "IATA Agency Certificate",
+                badge: "Code: 14352726",
+                src: "/images/IATA.jpeg",
+                desc: "Official International Air Transport Association (IATA) Accreditation Certificate authorizing direct global airline ticketing.",
+              },
+              {
+                title: "IndiGo Award (2016-17)",
+                badge: "IndiGo Partner Award",
+                src: "/images/Indigo 2016-17.jpeg",
+                desc: "Recognized by IndiGo Airlines for exceptional sales performance and volume growth across domestic flight routes.",
+              },
+              {
+                title: "IndiGo Award (2018-19)",
+                badge: "IndiGo Top Agent",
+                src: "/images/Indigo 2018-19.jpeg",
+                desc: "Awarded for consecutive top sales performance by IndiGo Airlines, establishing Earth Travels as a regional leader.",
+              },
+              {
+                title: "SOTC PSA Agreement",
+                badge: "SOTC PSA Partner",
+                src: "/images/SOTC.jpeg",
+                desc: "Official Preferred Sales Agent (PSA) agreement certificate with SOTC Travel Limited for holiday packages.",
+              },
+              {
+                title: "Centara Hotels Partnership",
+                badge: "Hospitality Partner",
+                src: "/images/Centara.jpeg",
+                desc: "Certified luxury hospitality partner agreement with Centara Hotels & Resorts for international resort bookings.",
+              },
+              {
+                title: "TBO Travel Accreditation",
+                badge: "TBO Certified Agent",
+                src: "/images/tbo.jpeg",
+                desc: "Official travel partner accreditation with Travel Boutique Online (TBO), providing global hotel & API access.",
+              },
+              {
+                title: "State Tourism Award Trophy",
+                badge: "Government Trophy",
+                src: "/images/trophy.jpg",
+                desc: "Dr. Ram Manohar Lohia Regional Tourism Award trophy recognizing Earth Travels as an outstanding service provider.",
+              },
+              {
+                title: "UP MSME Certificate",
+                badge: "Government Certified",
+                src: "/images/certificate.jpg",
+                desc: "Official Certificate of Appreciation (प्रशस्ति-पत्र) issued by the Department of MSME, Govt of Uttar Pradesh.",
+              },
+            ].map((cert, idx) => (
+              <RevealWrapper key={idx} delay={idx * 0.05}>
+                <GlassCard
+                  hover={true}
+                  onClick={() => setSelectedCert(cert)}
+                  className="p-5 bg-white/80 border border-espresso/10 rounded-[24px] flex flex-col h-full justify-between group cursor-pointer hover:shadow-xl hover:border-[#D4A017]/50 transition-all duration-300"
+                >
+                  <div className="flex flex-col gap-3">
+                    <div className="relative w-full h-56 rounded-2xl overflow-hidden border border-espresso/10 bg-white p-2 shadow-sm flex items-center justify-center group-hover:scale-102 transition-transform duration-500">
+                      <img
+                        src={cert.src}
+                        alt={cert.title}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-mono font-bold gap-1.5 backdrop-blur-[2px]">
+                        🔍 Click to Expand
+                      </div>
+                    </div>
+
+                    <span className="w-fit font-mono text-[10px] font-bold text-[#D4A017] uppercase tracking-wider bg-[#D4A017]/10 border border-[#D4A017]/20 px-2.5 py-0.5 rounded-full mt-1">
+                      {cert.badge}
+                    </span>
+
+                    <h3 className="font-sans text-base font-bold text-espresso leading-snug group-hover:text-[#D4A017] transition-colors">
+                      {cert.title}
+                    </h3>
+
+                    <p className="font-sans text-xs text-espresso/70 leading-relaxed">
+                      {cert.desc}
+                    </p>
                   </div>
-                </div>
-                <h3 className="font-sans text-lg font-bold text-espresso mb-2">
-                  IATA Accredited Agent
-                </h3>
-                <p className="font-sans text-xs md:text-sm text-espresso/70 leading-relaxed">
-                  Certified by the International Air Transport Association, enabling direct ticketing with major global airlines and compliance with strict travel security guidelines.
-                </p>
-              </GlassCard>
-            </RevealWrapper>
 
-            {/* Card 2: Trophy */}
-            <RevealWrapper delay={0.2}>
-              <GlassCard
-                hover={true}
-                className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
-              >
-                <div className="relative w-full h-48 rounded-xl overflow-hidden border border-[#e8a820]/30 bg-white p-2 shadow-sm shrink-0 mb-6 flex items-center justify-center">
-                  <img
-                    src="/images/trophy.jpg"
-                    alt="Dr. Ram Manohar Lohia Tourism Award Trophy"
-                    className="h-full object-contain transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
-                <h3 className="font-sans text-lg font-bold text-espresso mb-2">
-                  State Tourism Award Trophy
-                </h3>
-                <p className="font-sans text-xs md:text-sm text-espresso/70 leading-relaxed">
-                  The Dr. Ram Manohar Lohia Small Industries Promotion Regional Award (2015–16) trophy, recognizing Earth Travels as an outstanding service provider in the tourism sector.
-                </p>
-              </GlassCard>
-            </RevealWrapper>
-
-            {/* Card 3: Certificate */}
-            <RevealWrapper delay={0.3}>
-              <GlassCard
-                hover={true}
-                className="p-8 bg-white/60 border border-espresso/10 rounded-[24px] flex flex-col h-full items-center text-center"
-              >
-                <div className="relative w-full h-48 rounded-xl overflow-hidden border border-espresso/5 shadow-sm shrink-0 mb-6">
-                  <img
-                    src="/images/certificate.jpg"
-                    alt="UP Government MSME Certificate of Appreciation"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
-                <h3 className="font-sans text-lg font-bold text-espresso mb-2">
-                  Government Certificate
-                </h3>
-                <p className="font-sans text-xs md:text-sm text-espresso/70 leading-relaxed">
-                  Official Certificate of Appreciation (प्रशस्ति-पत्र) issued by the Department of Micro, Small & Medium Enterprises (MSME) & Export Promotion, Government of Uttar Pradesh.
-                </p>
-              </GlassCard>
-            </RevealWrapper>
+                  <span className="font-mono text-[11px] font-bold text-[#D4A017] group-hover:underline inline-flex items-center gap-1 pt-3 border-t border-espresso/5 mt-3">
+                    View Full Certificate →
+                  </span>
+                </GlassCard>
+              </RevealWrapper>
+            ))}
           </div>
         </div>
       </section>
@@ -740,10 +764,59 @@ export default function AboutPage() {
               WhatsApp Us
             </a>
           </div>
- 
         </div>
       </section>
- 
+
+      {/* Certificate Lightbox Preview Modal */}
+      {selectedCert && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md transition-all duration-300 animate-fadeIn"
+          onClick={() => setSelectedCert(null)}
+        >
+          <div
+            className="relative bg-white border border-[#D4A017]/30 rounded-3xl p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col gap-5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4 border-b border-espresso/10 pb-4">
+              <div>
+                <span className="font-mono text-xs font-bold text-[#D4A017] uppercase tracking-wider bg-[#D4A017]/10 border border-[#D4A017]/20 px-3 py-1 rounded-full">
+                  {selectedCert.badge}
+                </span>
+                <h3 className="font-display text-2xl font-bold text-espresso mt-2">
+                  {selectedCert.title}
+                </h3>
+              </div>
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-espresso font-bold flex items-center justify-center transition-colors shrink-0"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="relative w-full max-h-[60vh] h-[450px] bg-gray-50 rounded-2xl overflow-hidden border border-espresso/10 p-3 flex items-center justify-center">
+              <img
+                src={selectedCert.src}
+                alt={selectedCert.title}
+                className="max-w-full max-h-full object-contain shadow-md rounded-lg"
+              />
+            </div>
+
+            <p className="font-sans text-sm text-espresso/80 leading-relaxed bg-[#fdf8f2] p-4 rounded-2xl border border-espresso/5">
+              {selectedCert.desc}
+            </p>
+
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="px-6 py-2.5 rounded-full font-sans text-xs font-bold bg-[#1a120a] text-white hover:bg-[#D4A017] hover:text-[#1a120a] transition-all"
+              >
+                Close Preview
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

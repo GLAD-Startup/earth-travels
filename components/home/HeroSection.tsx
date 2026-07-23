@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 import Image from "next/image";
+import InteractiveHero3DLogo from "./InteractiveHero3DLogo";
 
 const IMAGES = [
   "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1600&q=80",
@@ -43,7 +44,7 @@ export default function HeroSection() {
   const headline3Words = "Remembers".split(" ");
 
   return (
-    <section className="relative h-[100vh] min-h-[750px] w-full flex flex-col justify-end items-start overflow-hidden bg-[#1a120a] pb-24 md:pb-32">
+    <section className="relative h-[100vh] min-h-[850px] w-full flex flex-col justify-end items-start overflow-hidden bg-[#1a120a] pb-16 md:pb-24 pt-24 md:pt-32">
       {/* Background Images Crossfader with CSS Ken Burns */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#1a120a]">
         {IMAGES.map((imgUrl, i) => (
@@ -72,10 +73,15 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#1a120a] via-[#1a120a]/40 to-transparent z-[1] pointer-events-none" />
 
       {/* Main Content Area */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-start gap-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-start gap-6">
         
+        {/* Interactive 3D Center Logo (One line, spacious clearance below header) */}
+        <div className="w-full flex justify-center mt-12 md:mt-20 mb-4 md:mb-6">
+          <InteractiveHero3DLogo />
+        </div>
+
         {/* Eyebrow Label */}
-        <div className="overflow-hidden mb-[-10px]">
+        <div className="overflow-hidden mb-[-4px]">
           <span className="hero-subtext inline-block font-mono text-xs md:text-sm font-semibold text-[#e8a820] tracking-[0.3em] uppercase">
             Mathura&apos;s Premier Travel Designer
           </span>
@@ -161,6 +167,24 @@ export default function HeroSection() {
           </div>
           <span className="mt-2.5 bg-[#1a120a]/80 backdrop-blur-md text-[#e8a820] font-mono text-[8px] md:text-[9.5px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full border border-[#e8a820]/30 shadow-md transition-all duration-300 group-hover:bg-[#e8a820] group-hover:text-[#1a120a] group-hover:border-transparent select-none whitespace-nowrap">
             IATA Certified
+          </span>
+        </div>
+
+        {/* SOTC Preferred Partner Badge */}
+        <div className="relative flex flex-col items-center group mt-1">
+          <div className="relative w-16 h-16 md:w-24 md:h-24 bg-white rounded-full p-2 md:p-3 border border-[#e8a820]/40 shadow-lg shadow-black/30 flex items-center justify-center transition-all duration-700 hover:rotate-12 hover:scale-105">
+            <div className="relative w-full h-full rounded-full overflow-hidden">
+              <Image
+                src="/images/sotc.jpg"
+                alt="SOTC Travel Partner"
+                fill
+                sizes="(max-width: 768px) 64px, 96px"
+                className="object-contain"
+              />
+            </div>
+          </div>
+          <span className="mt-2.5 bg-[#1a120a]/80 backdrop-blur-md text-[#e8a820] font-mono text-[8px] md:text-[9.5px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full border border-[#e8a820]/30 shadow-md transition-all duration-300 group-hover:bg-[#e8a820] group-hover:text-[#1a120a] group-hover:border-transparent select-none whitespace-nowrap">
+            Preferred Sales Agent
           </span>
         </div>
       </div>
