@@ -4098,6 +4098,692 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
       { name: "Castello di Casole Tuscany", rating: "★★★★★", type: "Luxury Castle Estate", location: "Tuscany", image: "/images/destinations/italy_3.jpg" }
     ]
   },
+
+// ── OMAN ITINERARIES ──
+  "oman-5n6d": {
+    slug: "oman-5n6d",
+    destination: "Oman",
+    title: "Oman Wonders (Muscat, Nizwa Fort & Wahiba Sands Desert)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/oman_1.jpg",
+    tagline: "Sultanate of Emerald Wadis, Grand Mosques & Sahara Dunes",
+    basePrice: 46000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Muscat & Muttrah Corniche Sunset",
+        tag: "MUSCAT",
+        tagline: "Check into Oman's peaceful white capital on the Gulf of Oman.",
+        activities: [
+          { icon: "✈️", title: "Muscat International Airport Transfer", description: "Private transfer to your seaside hotel." },
+          { icon: "🛍️", title: "Muttrah Souq & Corniche Walk", description: "Explore incense, frankincense burners, and silver Omani daggers (Khanjar)." }
+        ],
+        tip: "Muttrah Souq is best visited after 5:00 PM when frankincense burners are lit.",
+        image: "/images/destinations/oman_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Sultan Qaboos Grand Mosque & Royal Opera House",
+        tag: "GRAND MOSQUE",
+        tagline: "Marvel at 21-ton Persian carpets and Swarovski crystal chandeliers.",
+        activities: [
+          { icon: "🕌", title: "Sultan Qaboos Grand Mosque Tour", description: "Walk the white marble prayer halls and hand-woven carpet." },
+          { icon: "🏛️", title: "Royal Opera House Muscat", description: "Guided tour of Arabia's premier performing arts venue." }
+        ],
+        tip: "Mosque visiting hours are strictly 8:00 AM – 11:00 AM (closed Fridays to non-Muslims).",
+        image: "/images/destinations/oman_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Nizwa Fort & Jabreen Castle",
+        tag: "NIZWA FORT",
+        tagline: "Explore 17th-century circular cannon towers and date palm oases.",
+        activities: [
+          { icon: "🏰", title: "Nizwa Fort Circular Tower Ascent", description: "Climb the 30-meter-high fortress tower overlooking the Aravalli-like Hajar Mountains." },
+          { icon: "🛍️", title: "Nizwa Silver Souq Walk", description: "Browse hand-crafted Omani silver jewelry and date tasting." }
+        ],
+        tip: "Visit Nizwa on Friday morning to catch the authentic traditional goat market.",
+        image: "/images/destinations/oman_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Wahiba Sands Desert Safari & Bedouin Camp",
+        tag: "WAHIBA SANDS",
+        tagline: "Drive 4x4 vehicles across 100-meter golden sand dunes.",
+        activities: [
+          { icon: "🚙", title: "Dune Bashing Safari", description: "Thrilling 4x4 navigation over rolling desert dunes." },
+          { icon: "🐪", title: "Sunset Camel Ride & Bedouin Tea", description: "Traditional Omani dates and cardamom coffee under the stars." }
+        ],
+        tip: "Deflate tires to 15 PSI for safe sand driving.",
+        image: "/images/destinations/oman_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Wadi Bani Khalid Emerald Pools & Return to Muscat",
+        tag: "WADI BANI KHALID",
+        tagline: "Swim in crystal-clear freshwater canyon pools framed by date palms.",
+        activities: [
+          { icon: "🏊", title: "Wadi Bani Khalid Swim", description: "Swim in warm turquoise natural rock pools." },
+          { icon: "🌊", title: "Muqul Cave Exploration", description: "Walk the limestone cave system above the pools." }
+        ],
+        tip: "Wear conservative swimwear (t-shirt and shorts over swimsuit) in public wadis.",
+        image: "/images/destinations/oman_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Muscat",
+        tag: "DEPARTURE",
+        tagline: "Final Omani date cake breakfast and airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Muscat Airport Transfer", description: "Private transfer to Muscat International Airport." }
+        ],
+        tip: "Muscat Airport duty-free sells authentic Amouage luxury Omani perfumes.",
+        image: "/images/destinations/oman_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Shangri-La Barr Al Jissah Muscat", rating: "★★★★★", type: "Luxury Beach Resort", location: "Muscat", image: "/images/destinations/oman_1.jpg" },
+      { name: "Desert Nights Camp Wahiba", rating: "★★★★★", type: "Luxury Desert Glamping", location: "Wahiba Sands", image: "/images/destinations/oman_2.jpg" }
+    ]
+  },
+  "oman-luxury": {
+    slug: "oman-luxury",
+    destination: "Oman",
+    title: "Oman Luxury Resort & Mountain Escape (Alila Jabal Akhdar & Shangri-La)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/oman_2.jpg",
+    tagline: "Green Mountain Cliff Resorts, Sunset Catamarans & Private Wadis",
+    basePrice: 75000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Muscat & Private Resort Check-In",
+        tag: "MUSCAT LUXURY",
+        tagline: "Check into a private cove cliffside resort in Muscat.",
+        activities: [
+          { icon: "🚘", title: "Chauffeur Airport Transfer", description: "Private luxury Mercedes transfer." },
+          { icon: "🍸", title: "Private Beach Sunset Aperitivo", description: "Cocktails overlooking the Gulf of Oman." }
+        ],
+        tip: "Muscat resort coves feature private reefs for snorkeling.",
+        image: "/images/destinations/oman_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Catamaran Cruise & Dolphin Safari",
+        tag: "DOLPHIN SAFARI",
+        tagline: "Spot wild spinner dolphins leap along the coastline.",
+        activities: [
+          { icon: "🐬", title: "Dolphin Watching & Snorkeling", description: "Private catamaran charter to Bandar Khayran cove." }
+        ],
+        tip: "Bandar Khayran has calm fjord-like waters perfect for paddleboarding.",
+        image: "/images/destinations/oman_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Ascend to Jabal Akhdar (Green Mountain)",
+        tag: "JABAL AKHDAR",
+        tagline: "Drive 2,000 meters above sea level to Alila Jabal Akhdar cliff resort.",
+        activities: [
+          { icon: "⛰️", title: "Cliffside Resort Check-in", description: "Unobstructed views into a 1,000-meter deep gorge." }
+        ],
+        tip: "Jabal Akhdar mountain temperature is 15°C cooler than Muscat.",
+        image: "/images/destinations/oman_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Damask Rose Terraces & Diana's Point",
+        tag: "ROSE TERRACES",
+        tagline: "Walk terraced rose villages where Princess Diana stood.",
+        activities: [
+          { icon: "🌹", title: "Rose Water Distillery Visit", description: "See traditional Omani rose water extraction from April blooms." }
+        ],
+        tip: "April is peak Damask rose blooming season on Jabal Akhdar.",
+        image: "/images/destinations/oman_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Private Wadi Shab Canyon Hike & Cave Swim",
+        tag: "WADI SHAB",
+        tagline: "Trek through palm oases and swim inside a hidden waterfall cave.",
+        activities: [
+          { icon: "🏊", title: "Hidden Waterfall Cave Swim", description: "Swim through a narrow keyhole rock into a subterranean waterfall pool." }
+        ],
+        tip: "Bring a waterproof bag (dry bag) for your phone during the cave swim.",
+        image: "/images/destinations/oman_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Alila Spa & Stargazing Dining",
+        tag: "MOUNTAIN SPA",
+        tagline: "Frankincense spa scrub and private cliffside dinner.",
+        activities: [
+          { icon: "💆", title: "Omani Frankincense Massage", description: "Healing massage using native Omani Boswellia sacra resin oil." }
+        ],
+        tip: "Omani frankincense is considered the highest grade in the world.",
+        image: "/images/destinations/oman_2.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Muscat",
+        tag: "DEPARTURE",
+        tagline: "Chauffeur transfer to Muscat International Airport.",
+        activities: [
+          { icon: "✈️", title: "Muscat Airport Transfer", description: "Return transfer for flight home." }
+        ],
+        tip: "Muscat Airport lounge access included.",
+        image: "/images/destinations/oman_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Alila Jabal Akhdar", rating: "★★★★★", type: "Ultra-Luxury Cliff Resort", location: "Jabal Akhdar", image: "/images/destinations/oman_2.jpg" },
+      { name: "The Chedi Muscat", rating: "★★★★★", type: "Boutique Beach Resort", location: "Muscat", image: "/images/destinations/oman_1.jpg" }
+    ]
+  },
+  "oman-adventure": {
+    slug: "oman-adventure",
+    destination: "Oman",
+    title: "Oman Coastal & Wadi Canyon Explorer (Bimmah Sinkhole & Sur)",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/oman_3.jpg",
+    tagline: "Turquoise Sinkholes, Dhow Shipyards & Sea Turtles",
+    basePrice: 38000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Muscat & Coastal Drive to Bimmah Sinkhole",
+        tag: "BIMMAH SINKHOLE",
+        tagline: "Swim in Hawiyat Najm (Meteor Fall) turquoise limestone sinkhole.",
+        activities: [
+          { icon: "🏊", title: "Bimmah Sinkhole Swim", description: "Descend concrete steps into 20-meter deep emerald saltwater pool." }
+        ],
+        tip: "Little doctor fish in the sinkhole provide natural foot exfoliation while you swim.",
+        image: "/images/destinations/oman_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Sur Dhow Shipyard & Ras al Jinz Turtle Sanctuary",
+        tag: "TURTLE SANCTUARY",
+        tagline: "See green sea turtles nesting on Arabian beaches.",
+        activities: [
+          { icon: "⛵", title: "Sur Wooden Dhow Shipyard", description: "Watch craftsmen build traditional wooden Omani dhow ships without nails." },
+          { icon: "🐢", title: "Ras al Jinz Night Turtle Tour", description: "Guided night walk to observe giant green sea turtles laying eggs." }
+        ],
+        tip: "Flash photography is forbidden at Ras al Jinz to avoid disorienting mother turtles.",
+        image: "/images/destinations/oman_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Wadi Tiwi 4x4 Off-Road & Palm Groves",
+        tag: "WADI TIWI",
+        tagline: "Drive 4x4 vehicles past cliffside villages and banana plantations.",
+        activities: [
+          { icon: "🚙", title: "Wadi Tiwi Off-Road Drive", description: "Navigate narrow stone tracks between emerald pools." }
+        ],
+        tip: "Wadi Tiwi requires experienced 4x4 drivers due to steep narrow passes.",
+        image: "/images/destinations/oman_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Return to Muscat & Muttrah Fort",
+        tag: "MUTTRAH FORT",
+        tagline: "Climb 16th-century Portuguese fortress overlooking Muscat harbor.",
+        activities: [
+          { icon: "🏰", title: "Muttrah Fort Sunset Walk", description: "Panoramic harbor views from Portuguese cannon turrets." }
+        ],
+        tip: "Muttrah Fort is lit with warm spotlights after dark.",
+        image: "/images/destinations/oman_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Muscat Departure",
+        tag: "DEPARTURE",
+        tagline: "Airport transfer for return flight.",
+        activities: [
+          { icon: "✈️", title: "Muscat Airport Transfer", description: "Transfer to airport." }
+        ],
+        tip: "Confirm departure terminal.",
+        image: "/images/destinations/oman_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Sur Grand Hotel", rating: "★★★★", type: "Coastal Hotel", location: "Sur", image: "/images/destinations/oman_3.jpg" }
+    ]
+  },
+
+// ── QATAR ITINERARIES ──
+  "qatar-4n5d": {
+    slug: "qatar-4n5d",
+    destination: "Qatar",
+    title: "Doha City & Desert Inland Sea Experience",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/qatar_1.jpg",
+    tagline: "Futuristic Skyline, Souq Waqif Heritage & Desert Inland Sea",
+    basePrice: 42000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Doha & Souq Waqif Evening",
+        tag: "DOHA & SOUQ WAQIF",
+        tagline: "Check into your hotel and explore Doha's vibrant heritage souq.",
+        activities: [
+          { icon: "✈️", title: "Hamad International Airport Transfer", description: "Private car from World's Best Airport to central Doha." },
+          { icon: "🛍️", title: "Souq Waqif Evening Walk", description: "Explore falcon souq, spice lanes, and Arabian horse stables." }
+        ],
+        tip: "Souq Waqif comes alive after sunset with outdoor cafes and shisha lounges.",
+        image: "/images/destinations/qatar_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Museum of Islamic Art & Doha Corniche",
+        tag: "MUSEUM OF ISLAMIC ART",
+        tagline: "Tour I.M. Pei's architectural icon on its own private island.",
+        activities: [
+          { icon: "🏛️", title: "Museum of Islamic Art Tour", description: "1,400 years of Islamic metalwork, ceramics, and manuscripts." },
+          { icon: "⛵", title: "Traditional Dhow Sunset Cruise", description: "Sail along Doha Corniche with West Bay skyscraper skyline views." }
+        ],
+        tip: "The park behind MIA offers the classic postcard photo of Doha's skyline.",
+        image: "/images/destinations/qatar_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Khor Al Adaid (Inland Sea) Desert Safari",
+        tag: "INLAND SEA",
+        tagline: "Drive dunes where the desert sand meets the turquoise sea.",
+        activities: [
+          { icon: "🚙", title: "4x4 Sand Dune Bashing", description: "Adrenaline dune drive down steep slip-faces." },
+          { icon: "🏖️", title: "Inland Sea Swim & BBQ", description: "Swim in calm sea waters bordering Saudi Arabia." }
+        ],
+        tip: "Khor Al Adaid is one of only two places in the world where desert dunes meet the ocean.",
+        image: "/images/destinations/qatar_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Katara Cultural Village & The Pearl-Qatar",
+        tag: "THE PEARL",
+        tagline: "Walk Mediterranean-style luxury marinas and Venetian canals.",
+        activities: [
+          { icon: "🏛️", title: "Katara Cultural Village & Amphitheatre", description: "Greek-Roman style outdoor amphitheatre by the sea." },
+          { icon: "🛥️", title: "Qanat Quartier Venetian Walk", description: "Pastel-colored buildings and Rialto-style bridges on The Pearl." }
+        ],
+        tip: "Qanat Quartier on The Pearl has authentic Italian gelaterias.",
+        image: "/images/destinations/qatar_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "National Museum of Qatar & Departure",
+        tag: "DEPARTURE",
+        tagline: "Visit Jean Nouvel's Desert Rose museum building before flight.",
+        activities: [
+          { icon: "🌺", title: "National Museum of Qatar Tour", description: "Interactive galleries inside desert rose crystal architecture." },
+          { icon: "✈️", title: "Hamad Airport Transfer", description: "Transfer to Hamad International Airport." }
+        ],
+        tip: "Hamad Airport features a tropical indoor garden (Orchard) and duty-free shopping.",
+        image: "/images/destinations/qatar_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Sharq Village & Spa, a Ritz-Carlton Hotel", rating: "★★★★★", type: "Arabian Palace Resort", location: "Doha", image: "/images/destinations/qatar_1.jpg" },
+      { name: "Souq Waqif Boutique Hotels by Tivoli", rating: "★★★★★", type: "Heritage Hotel", location: "Souq Waqif", image: "/images/destinations/qatar_2.jpg" }
+    ]
+  },
+  "qatar-luxury": {
+    slug: "qatar-luxury",
+    destination: "Qatar",
+    title: "Qatar Ultra-Luxury Escape (The Pearl-Qatar & Katara Cultural Village)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/qatar_2.jpg",
+    tagline: "Riviera Marinas, Private Beach Clubs & VIP Desert Camps",
+    basePrice: 68000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Doha & 5-Star Marina Check-In",
+        tag: "THE PEARL LUXURY",
+        tagline: "Check into Marsa Malaz Kempinski on its private island.",
+        activities: [
+          { icon: "🚘", title: "Chauffeur Airport Transfer", description: "Private luxury Limousine transfer from Hamad Airport." },
+          { icon: "🥂", title: "Private Beach Club Welcome", description: "Sunset drinks overlooking Porto Arabia marina." }
+        ],
+        tip: "Marsa Malaz Kempinski features 11 restaurant venues and private beach access.",
+        image: "/images/destinations/qatar_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Yacht Charter to Banana Island",
+        tag: "BANANA ISLAND",
+        tagline: "Overwater villa luxury 20 minutes off the Doha coast.",
+        activities: [
+          { icon: "⛵", title: "Private Catamaran Charter", description: "Cruise to Anantara Banana Island Resort." },
+          { icon: "🏊", title: "Surf Pool & Overwater Dining", description: "Fresh seafood lunch served above clear waters." }
+        ],
+        tip: "Banana Island features Qatar's only overwater bungalow villas.",
+        image: "/images/destinations/qatar_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "VIP Desert Safari & Regency Sealine Camp",
+        tag: "VIP DESERT",
+        tagline: "Luxury desert glamping with private butler service.",
+        activities: [
+          { icon: "⛺", title: "Regency Sealine Luxury Camp", description: "Air-conditioned luxury tent on the beach with Arabian BBQ." }
+        ],
+        tip: "Camp features private bonfire and traditional oud music performance.",
+        image: "/images/destinations/qatar_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Msheireb Downtown & Place Vendôme Luxury Shopping",
+        tag: "PLACE VENDÔME",
+        tagline: "Shop French Renaissance-inspired luxury mall with dancing fountains.",
+        activities: [
+          { icon: "🛍️", title: "Place Vendôme Mall Walk", description: "High-end fashion boutiques and canal water show." }
+        ],
+        tip: "Place Vendôme's 3D water fountain show runs hourly after 7:00 PM.",
+        image: "/images/destinations/qatar_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Spa & Michelin Fine Dining",
+        tag: "LUXURY SPA",
+        tagline: "Hamman spa treatment and Michelin-star chef dining.",
+        activities: [
+          { icon: "💆", title: "Guinot Royal Spa Session", description: "Deep tissue massage and gold facial." }
+        ],
+        tip: "Doha features restaurants by Alain Ducasse and Nobu Matsuhisa.",
+        image: "/images/destinations/qatar_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Doha",
+        tag: "DEPARTURE",
+        tagline: "Chauffeur transfer to Hamad International Airport.",
+        activities: [
+          { icon: "✈️", title: "Hamad Airport VIP Lounge Transfer", description: "Al Mourjan Business Class Lounge access." }
+        ],
+        tip: "Al Mourjan Lounge features quiet sleeping rooms and full dining.",
+        image: "/images/destinations/qatar_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Marsa Malaz Kempinski The Pearl", rating: "★★★★★", type: "Ultra-Luxury Island Resort", location: "The Pearl-Qatar", image: "/images/destinations/qatar_2.jpg" },
+      { name: "The St. Regis Doha", rating: "★★★★★", type: "Beachfront Luxury Hotel", location: "West Bay", image: "/images/destinations/qatar_1.jpg" }
+    ]
+  },
+  "qatar-stopover": {
+    slug: "qatar-stopover",
+    destination: "Qatar",
+    title: "Doha Stopover & Cultural Highlights",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/qatar_3.jpg",
+    tagline: "Museums, Corniche Cruises & Souq Alleyways",
+    basePrice: 29500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Doha & West Bay Promenade",
+        tag: "WEST BAY",
+        tagline: "Check into central city hotel overlooking West Bay towers.",
+        activities: [
+          { icon: "🏨", title: "Hotel Check-in", description: "City view room check-in." }
+        ],
+        tip: "Doha Metro is clean, fast, and connects directly to the airport.",
+        image: "/images/destinations/qatar_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "National Museum & Souq Waqif",
+        tag: "CULTURE DAY",
+        tagline: "Explore desert rose architecture and traditional souq spice lanes.",
+        activities: [
+          { icon: "🏛️", title: "National Museum Tour", description: "Explore Qatari heritage galleries." }
+        ],
+        tip: "Souq Waqif has excellent traditional Qatari restaurants.",
+        image: "/images/destinations/qatar_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Doha Corniche Sunset Dhow & Msheireb",
+        tag: "CORNICHE",
+        tagline: "Walk the 7km waterfront promenade.",
+        activities: [
+          { icon: "⛵", title: "Sunset Dhow Cruise", description: "1-hour boat sail." }
+        ],
+        tip: "Dhow boats dock near the Pearl Monument on the Corniche.",
+        image: "/images/destinations/qatar_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure from Hamad Airport",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport for flight.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to Hamad Airport." }
+        ],
+        tip: "Allow 3 hours before international flights.",
+        image: "/images/destinations/qatar_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Mövenpick Hotel Doha", rating: "★★★★", type: "City Hotel", location: "Corniche", image: "/images/destinations/qatar_1.jpg" }
+    ]
+  },
+
+// ── ABU DHABI ITINERARIES ──
+  "abu-dhabi-4n5d": {
+    slug: "abu-dhabi-4n5d",
+    destination: "Abu Dhabi",
+    title: "Abu Dhabi Grand Highlights (Grand Mosque, Louvre & Yas Island)",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/abu_dhabi_1.jpg",
+    tagline: "Grand Mosque Architecture, Louvre Dome & Yas Island",
+    basePrice: 48000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrival in Abu Dhabi & Sheikh Zayed Grand Mosque Sunset",
+        tag: "GRAND MOSQUE",
+        tagline: "Visit the world's most magnificent white marble architectural masterpiece.",
+        activities: [
+          { icon: "✈️", title: "Abu Dhabi International Airport Transfer", description: "Private car transfer to your hotel." },
+          { icon: "🕌", title: "Sheikh Zayed Grand Mosque VIP Tour", description: "Marvel at 82 domes, 24k gold chandeliers, and reflective pools." }
+        ],
+        tip: "Arrive at Grand Mosque at 4:30 PM to catch daylight, sunset, and illuminated night lighting.",
+        image: "/images/destinations/abu_dhabi_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Louvre Abu Dhabi & Qasr Al Watan Palace",
+        tag: "LOUVRE & PALACE",
+        tagline: "Explore Jean Nouvel's floating dome museum and the Presidential Palace.",
+        activities: [
+          { icon: "🏛️", title: "Louvre Abu Dhabi Tour", description: "Gaze up at the 'Rain of Light' dome filtering sunlight over sea galleries." },
+          { icon: "🏰", title: "Qasr Al Watan Presidential Palace", description: "Walk white granite domes, royal library, and evening light show." }
+        ],
+        tip: "Qasr Al Watan light show (Palace in Motion) starts 30 minutes after sunset.",
+        image: "/images/destinations/abu_dhabi_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Yas Island — Ferrari World & Warner Bros World",
+        tag: "YAS ISLAND",
+        tagline: "Ride the world's fastest roller coaster at 240 km/h.",
+        activities: [
+          { icon: "🏎️", title: "Ferrari World Abu Dhabi", description: "Ride Formula Rossa coaster reaching 240 km/h in 4.9 seconds." },
+          { icon: "🎬", title: "Warner Bros. World Abu Dhabi", description: "Explore Gotham City, Metropolis, and Cartoon Junction indoor zones." }
+        ],
+        tip: "Fast Pass tickets are recommended on weekends to skip coaster queues.",
+        image: "/images/destinations/abu_dhabi_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Emirates Palace & Corniche Beach Stroll",
+        tag: "EMIRATES PALACE",
+        tagline: "Sip 24-karat gold leaf cappuccino inside the 3-billion-dollar palace hotel.",
+        activities: [
+          { icon: "☕", title: "Emirates Palace Gold Cappuccino", description: "Signature coffee dusted with real 24k gold flakes at Le Café." },
+          { icon: "🏖️", title: "Abu Dhabi Corniche Beach Walk", description: "Walk 8km landscaped waterfront path looking at Marina Mall." }
+        ],
+        tip: "Smart casual dress code enforced inside Emirates Palace hotel lobby.",
+        image: "/images/destinations/abu_dhabi_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Abu Dhabi",
+        tag: "DEPARTURE",
+        tagline: "Final Middle Eastern breakfast and airport send-off.",
+        activities: [
+          { icon: "✈️", title: "Abu Dhabi Airport Transfer", description: "Transfer to Abu Dhabi International Airport (Zayed International)." }
+        ],
+        tip: "Zayed International Airport (Terminal A) features world-class shopping.",
+        image: "/images/destinations/abu_dhabi_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Emirates Palace Mandarin Oriental", rating: "★★★★★", type: "Ultra-Luxury Palace", location: "Corniche", image: "/images/destinations/abu_dhabi_3.jpg" },
+      { name: "W Abu Dhabi - Yas Island", rating: "★★★★★", type: "F1 Trackside Hotel", location: "Yas Island", image: "/images/destinations/abu_dhabi_3.jpg" }
+    ]
+  },
+  "abu-dhabi-luxury": {
+    slug: "abu-dhabi-luxury",
+    destination: "Abu Dhabi",
+    title: "Abu Dhabi Palace & Desert Resort Luxury (Emirates Palace & Qasr Al Sarab)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/abu_dhabi_2.jpg",
+    tagline: "Gold Cappuccinos, Desert Fortresses & Private Falconry",
+    basePrice: 85000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Abu Dhabi & Emirates Palace VIP Check-In",
+        tag: "EMIRATES PALACE",
+        tagline: "Check into a 5-star suite inside Abu Dhabi's most famous palace hotel.",
+        activities: [
+          { icon: "🚘", title: "Chauffeur Airport Transfer", description: "Private luxury SUV transfer from Zayed International Airport." },
+          { icon: "🍹", title: "Private Beach Sunbed Service", description: "Personal butler service on Emirates Palace private beach." }
+        ],
+        tip: "Resort spans 1.3km of private white sand beach.",
+        image: "/images/destinations/abu_dhabi_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Louvre Kayaking & Art Tour",
+        tag: "LOUVRE KAYAK",
+        tagline: "Kayak under Louvre Abu Dhabi's floating dome at sunrise.",
+        activities: [
+          { icon: "🛶", title: "Louvre Abu Dhabi Sunrise Kayak", description: "Paddle around museum sea walls under the steel dome." }
+        ],
+        tip: "Sunrise kayaking tours run at 6:00 AM on weekends.",
+        image: "/images/destinations/abu_dhabi_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Drive into Liwa Desert & Qasr Al Sarab Fortress Resort",
+        tag: "QASR AL SARAB",
+        tagline: "Check into Anantara's luxury fortress resort in the Empty Quarter (Rub' al Khali).",
+        activities: [
+          { icon: "🏜️", title: "Empty Quarter Desert Arrival", description: "Drive into world's largest continuous sand desert." }
+        ],
+        tip: "Rub' al Khali features sand dunes over 250 meters high.",
+        image: "/images/destinations/abu_dhabi_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Sunset Falconry & Saluki Dog Demonstration",
+        tag: "FALCONRY VIP",
+        tagline: "Experience royal Omani and Bedouin hunting falconry traditions.",
+        activities: [
+          { icon: "🦅", title: "Private Falconry & Saluki Show", description: "Watch falcons swoop and Arabian Saluki hounds run desert dunes." }
+        ],
+        tip: "Falcons hold revered status in UAE heritage and have their own passports.",
+        image: "/images/destinations/abu_dhabi_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Anantara Desert Spa & Private Dune Candlelight Dinner",
+        tag: "DESERT ROMANCE",
+        tagline: "Couples spa session and private dining under Arabian stars.",
+        activities: [
+          { icon: "🕯️", title: "Private Dune Candlelight Dinner", description: "4-course dinner set on top of a solitary desert dune." }
+        ],
+        tip: "Stargazing telescopes provided at desert camp.",
+        image: "/images/destinations/abu_dhabi_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Abu Dhabi",
+        tag: "DEPARTURE",
+        tagline: "Chauffeur transfer to Zayed International Airport.",
+        activities: [
+          { icon: "✈️", title: "Airport VIP Transfer", description: "Executive airport transfer for flight home." }
+        ],
+        tip: "Fast-track security and lounge access included.",
+        image: "/images/destinations/abu_dhabi_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Qasr Al Sarab Desert Resort by Anantara", rating: "★★★★★", type: "Desert Fortress Resort", location: "Liwa Desert", image: "/images/destinations/abu_dhabi_2.jpg" },
+      { name: "Emirates Palace Mandarin Oriental", rating: "★★★★★", type: "Ultra-Luxury Palace", location: "Abu Dhabi", image: "/images/destinations/abu_dhabi_3.jpg" }
+    ]
+  },
+  "abu-dhabi-family": {
+    slug: "abu-dhabi-family",
+    destination: "Abu Dhabi",
+    title: "Yas Island Ultimate Family Theme Park Adventure",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/abu_dhabi_3.jpg",
+    tagline: "Ferrari World, Yas Waterworld & SeaWorld Parks",
+    basePrice: 36000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Abu Dhabi & Yas Island Check-In",
+        tag: "YAS ISLAND",
+        tagline: "Check into your resort right next to Yas Marina F1 Circuit.",
+        activities: [
+          { icon: "🏨", title: "Yas Hotel Check-in", description: "Check into family suite with theme park passes." }
+        ],
+        tip: "Yas Island hotels include multi-park entry passes.",
+        image: "/images/destinations/abu_dhabi_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Ferrari World & Yas Waterworld",
+        tag: "THEME PARKS",
+        tagline: "Full day of coaster thrill rides and water slides.",
+        activities: [
+          { icon: "🏎️", title: "Ferrari World Coasters", description: "Formula Rossa and Flying Aces." },
+          { icon: "🏊", title: "Yas Waterworld Slides", description: "Dawwama hydro-magnetic tornado water slide." }
+        ],
+        tip: "Yas Waterworld provides free towel rentals for hotel guests.",
+        image: "/images/destinations/abu_dhabi_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "SeaWorld Abu Dhabi & Yas Marina Evening",
+        tag: "SEAWORLD",
+        tagline: "Explore 8 immersive ocean realms and Endless Ocean aquarium.",
+        activities: [
+          { icon: "🐠", title: "SeaWorld Abu Dhabi Tour", description: "World's largest multi-species aquarium housing 68,000 marine animals." }
+        ],
+        tip: "SeaWorld Abu Dhabi is fully indoors and air-conditioned.",
+        image: "/images/destinations/abu_dhabi_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure from Abu Dhabi",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to airport." }
+        ],
+        tip: "Yas Island is only 10 minutes from Zayed International Airport.",
+        image: "/images/destinations/abu_dhabi_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Hilton Abu Dhabi Yas Island", rating: "★★★★★", type: "Family Resort", location: "Yas Island", image: "/images/destinations/abu_dhabi_3.jpg" }
+    ]
+  },
 };
 
 
