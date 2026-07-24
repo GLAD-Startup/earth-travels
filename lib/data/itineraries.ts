@@ -7847,6 +7847,353 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
     hotels: [
       { name: "Nidhivan Sarovar Portico", rating: "★★★★", type: "Resort Hotel", location: "Vrindavan", image: "/images/destinations/mathura_1.jpg" }
     ]
+  },
+
+  // ── JAPAN ──
+  "japan-golden-route": {
+    slug: "japan-golden-route",
+    destination: "Japan",
+    title: "Japan Golden Route (Tokyo, Kyoto, Osaka & Mount Fuji)",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/japan_1.jpg",
+    tagline: "Mount Fuji Lake Views, Fushimi Inari Torii Gates & Shibuya Crossing",
+    basePrice: 125000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Tokyo & Shibuya Crossing Evening",
+        tag: "TOKYO WELCOME",
+        tagline: "Land in Tokyo and experience world's busiest pedestrian crossing.",
+        activities: [
+          { icon: "✈️", title: "Narita / Haneda Airport Pick-up", description: "Private car transfer to Tokyo hotel." },
+          { icon: "🏙️", title: "Shibuya Crossing & Hachiko Statue", description: "Walk the iconic intersection and visit the faithful Hachiko monument." }
+        ],
+        tip: "Enjoy authentic ramen at Ichiran Shibuya.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Tokyo Skytree, Senso-ji Temple & Akihabara",
+        tag: "TOKYO HIGHLIGHTS",
+        tagline: "Traditional temples alongside futuristic tower views.",
+        activities: [
+          { icon: "🏯", title: "Senso-ji Asakusa Temple", description: "Tokyo's oldest Buddhist temple and Nakamise shopping street." },
+          { icon: "🏙️", title: "Tokyo Skytree Observation Deck", description: "360-degree panoramic view of Tokyo metropolis." }
+        ],
+        tip: "Try green tea matcha ice cream in Asakusa.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Mount Fuji & Lake Kawaguchiko Day Excursion",
+        tag: "MOUNT FUJI",
+        tagline: "Unobstructed views of Japan's sacred volcano summit.",
+        activities: [
+          { icon: "🗻", title: "Mount Fuji 5th Station", description: "Drive up 2,300m above sea level on Mt Fuji." },
+          { icon: "🚢", title: "Lake Kawaguchiko Cable Car & Cruise", description: "Panoramic ropeway cruise across mirror-like lake." }
+        ],
+        tip: "Clear views of Mount Fuji are best in the early morning.",
+        image: "/images/destinations/japan_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Shinkansen Bullet Train to Kyoto & Fushimi Inari",
+        tag: "BULLET TRAIN & KYOTO",
+        tagline: "Ride 300 km/h bullet train to ancient capital Kyoto.",
+        activities: [
+          { icon: "🚅", title: "Shinkansen Bullet Train Ride", description: "High speed train journey from Tokyo to Kyoto." },
+          { icon: "⛩️", title: "Fushimi Inari Taisha Sunset Walk", description: "Hike beneath thousands of vermilion torii gates up Mount Inari." }
+        ],
+        tip: "Fushimi Inari is open 24 hours - evening twilight walk is magical.",
+        image: "/images/destinations/japan_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Kyoto Golden Pavilion & Arashiyama Bamboo Grove",
+        tag: "KYOTO TEMPLES",
+        tagline: "Zen gardens, golden temples and bamboo forests.",
+        activities: [
+          { icon: "✨", title: "Kinkaku-ji (Golden Pavilion)", description: "Zen temple covered in pure gold leaf overlooking reflecting pond." },
+          { icon: "🎋", title: "Arashiyama Bamboo Grove", description: "Stroll through towering green bamboo stalks." }
+        ],
+        tip: "Visit Togetsukyo Bridge for scenic river scenery.",
+        image: "/images/destinations/japan_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Osaka Castle & Dotonbori Street Food",
+        tag: "OSAKA NIGHTS",
+        tagline: "Explore Osaka's foodie capital and neon nightlife.",
+        activities: [
+          { icon: "🏯", title: "Osaka Castle Park", description: "Historic 16th-century samurai fortress and moat." },
+          { icon: "🍡", title: "Dotonbori Glico Man Street Food Tour", description: "Taste fresh Takoyaki octopus balls and Okonomiyaki." }
+        ],
+        tip: "Dotonbori neon signs light up after dark.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Osaka / Kansai Airport",
+        tag: "DEPARTURE",
+        tagline: "Transfer to Kansai International Airport.",
+        activities: [
+          { icon: "✈️", title: "Kansai Airport Transfer", description: "Private drive to KIX airport." }
+        ],
+        tip: "Sayonara!",
+        image: "/images/destinations/japan_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Ritz-Carlton Kyoto", rating: "★★★★★", type: "Luxury Riverside Hotel", location: "Kyoto", image: "/images/destinations/japan_1.jpg" }
+    ]
+  },
+  "japan-cultural-heritage": {
+    slug: "japan-cultural-heritage",
+    destination: "Japan",
+    title: "Japan Ancient Shrines, Geisha Traditions & Kyoto Temples",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/japan_2.jpg",
+    tagline: "Fushimi Inari Torii Gates, Gion Tea Ceremony & Nara Deer Park",
+    basePrice: 145000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Kyoto & Gion Geisha District Walk",
+        tag: "KYOTO HERITAGE",
+        tagline: "Arrive in Kyoto and stroll historic wooden machiya streets.",
+        activities: [
+          { icon: "✈️", title: "Kyoto Hotel Check-in", description: "Check into traditional Ryokan style luxury hotel." },
+          { icon: "👘", title: "Gion Evening Heritage Walk", description: "Spot real Geikas and Maikos walking to evening appointments." }
+        ],
+        tip: "Respect privacy of Geishas - photography without permission is prohibited in Gion private lanes.",
+        image: "/images/destinations/japan_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Fushimi Inari Shrine & Traditional Tea Ceremony",
+        tag: "SHRINES & TEA",
+        tagline: "Sacred vermilion gates and private green tea ceremony.",
+        activities: [
+          { icon: "⛩️", title: "Fushimi Inari Taisha Morning Walk", description: "Hike up Mount Inari under 10,000 red gates." },
+          { icon: "🍵", title: "Private Kimono Tea Ceremony", description: "Authentic Matcha tea preparation in traditional tea house." }
+        ],
+        tip: "Wearing a traditional Kimono enhances the cultural experience.",
+        image: "/images/destinations/japan_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Nara Park Sacred Deer & Todai-ji Great Buddha",
+        tag: "NARA PARK",
+        tagline: "Bow to free-roaming sacred deer and see giant bronze Buddha.",
+        activities: [
+          { icon: "🦌", title: "Nara Park Bowing Deer", description: "Feed shika senbei crackers to friendly free-roaming deer." },
+          { icon: "🗿", title: "Todai-ji Temple Great Buddha", description: "World's largest wooden building housing 15m bronze Buddha." }
+        ],
+        tip: "Nara deer will bow their heads when offered crackers.",
+        image: "/images/destinations/japan_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Kyoto Kiyomizu-dera Temple & Ninenzaka Alley",
+        tag: "UNESCO TEMPLES",
+        tagline: "Wooden temple balcony offering views over cherry blossom canopy.",
+        activities: [
+          { icon: "🏯", title: "Kiyomizu-dera Wooden Stage", description: "Historic temple constructed without a single nail." }
+        ],
+        tip: "Drink from Otowa Waterfall for health and fortune.",
+        image: "/images/destinations/japan_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Shinkansen to Tokyo & Imperial Palace Gardens",
+        tag: "TOKYO ROYAL",
+        tagline: "Bullet train to Tokyo and Imperial Palace bridge view.",
+        activities: [
+          { icon: "🚅", title: "Bullet Train Ride", description: "Executive seat bullet train." },
+          { icon: "🏛️", title: "Tokyo Imperial Palace East Gardens", description: "Walk through former Edo Castle stone walls." }
+        ],
+        tip: "Imperial Palace gardens are gorgeous in autumn and spring.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Tokyo",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to Haneda or Narita airport." }
+        ],
+        tip: "Domo arigato gozaimasu!",
+        image: "/images/destinations/japan_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Kyoto Ryokan Hoshinoya", rating: "★★★★★", type: "Ultra Luxury Traditional Ryokan", location: "Arashiyama, Kyoto", image: "/images/destinations/japan_2.jpg" }
+    ]
+  },
+  "japan-tokyo-adventure": {
+    slug: "japan-tokyo-adventure",
+    destination: "Japan",
+    title: "Japan Modern Tokyo Neon, Shibuya & Bullet Train Express",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/japan_3.jpg",
+    tagline: "Shibuya Crossing, Harajuku Street Fashion & Shinkansen Express",
+    basePrice: 98000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Tokyo & Shibuya Crossing Night",
+        tag: "SHIBUYA",
+        tagline: "Check into central Tokyo hotel.",
+        activities: [
+          { icon: "✈️", title: "Airport Pick-up", description: "Transfer to Tokyo hotel." },
+          { icon: "🏙️", title: "Shibuya Sky Observation", description: "Open air rooftop view 230m above Shibuya crossing." }
+        ],
+        tip: "Shibuya Sky sunset views sell out early - pre-book tickets.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Harajuku Takeshita Street & Meiji Shrine",
+        tag: "HARAJUKU",
+        tagline: "Pop culture street fashion & tranquil forest shrine.",
+        activities: [
+          { icon: "🛍️", title: "Takeshita Street Harajuku", description: "Crazy colorful crepes, vintage shops, and cosplay fashion." },
+          { icon: "⛩️", title: "Meiji Jingu Shrine", description: "Serene shinto shrine inside 170-acre forest." }
+        ],
+        tip: "Try giant rainbow cotton candy in Harajuku.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Akihabara Electric Town & TeamLab Planets",
+        tag: "ANIME & DIGITAL ART",
+        tagline: "Immersive digital art museum and anime shopping.",
+        activities: [
+          { icon: "🎨", title: "TeamLab Planets Immersive Art", description: "Body-immersive digital art installation walking through water." },
+          { icon: "🎮", title: "Akihabara Electric Town Tour", description: "Multi-floor arcade centers, manga, and electronics stores." }
+        ],
+        tip: "Wear shorts for TeamLab Planets as water reaches knee level in some rooms.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Mount Fuji Day Trip & Hakone Hot Springs",
+        tag: "HAKONE ONEN",
+        tagline: "Hakone hot spring bath and Mount Fuji cable car.",
+        activities: [
+          { icon: "♨️", title: "Hakone Onsen Thermal Bath", description: "Relaxing natural hot spring bath." }
+        ],
+        tip: "Onsen bathing is done unclothed - separate baths for men and women.",
+        image: "/images/destinations/japan_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Tokyo",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to Haneda / Narita airport." }
+        ],
+        tip: "Safe flight home!",
+        image: "/images/destinations/japan_3.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Keio Plaza Hotel Tokyo", rating: "★★★★", type: "Shinjuku Skyscraper Hotel", location: "Shinjuku, Tokyo", image: "/images/destinations/japan_3.jpg" }
+    ]
+  },
+  "japan": {
+    slug: "japan",
+    destination: "Japan",
+    title: "Japan Mount Fuji & Ancient Shrines",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/japan_1.jpg",
+    tagline: "Mount Fuji Lake Views, Fushimi Inari Torii Gates & Shibuya Crossing",
+    basePrice: 125000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Tokyo",
+        tag: "TOKYO",
+        tagline: "Experience Shibuya crossing.",
+        activities: [
+          { icon: "✈️", title: "Airport Pick-up", description: "Transfer to Tokyo hotel." }
+        ],
+        tip: "Eat ramen at Ichiran.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Tokyo Skytree & Senso-ji",
+        tag: "TOKYO TEMPLE",
+        tagline: "Visit Senso-ji temple.",
+        activities: [
+          { icon: "🏯", title: "Senso-ji Asakusa", description: "Ancient Buddhist temple." }
+        ],
+        tip: "Walk Nakamise street.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Mount Fuji Excursion",
+        tag: "MOUNT FUJI",
+        tagline: "View Mount Fuji volcano.",
+        activities: [
+          { icon: "🗻", title: "Mount Fuji 5th Station", description: "2,300m above sea level." }
+        ],
+        tip: "Best morning clear view.",
+        image: "/images/destinations/japan_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Bullet Train to Kyoto",
+        tag: "KYOTO",
+        tagline: "Ride Shinkansen bullet train.",
+        activities: [
+          { icon: "🚅", title: "Shinkansen Bullet Train", description: "300 km/h train to Kyoto." },
+          { icon: "⛩️", title: "Fushimi Inari Torii Gates", description: "10,000 red gates walk." }
+        ],
+        tip: "Evening walk is peaceful.",
+        image: "/images/destinations/japan_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Arashiyama Bamboo & Golden Pavilion",
+        tag: "GOLDEN PAVILION",
+        tagline: "Visit Kinkaku-ji temple.",
+        activities: [
+          { icon: "✨", title: "Kinkaku-ji Golden Temple", description: "Gold leaf covered temple." }
+        ],
+        tip: "Walk bamboo grove.",
+        image: "/images/destinations/japan_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Osaka Castle & Street Food",
+        tag: "OSAKA",
+        tagline: "Osaka Castle and Dotonbori food.",
+        activities: [
+          { icon: "🏯", title: "Osaka Castle", description: "Historic samurai fortress." }
+        ],
+        tip: "Try Takoyaki octopus balls.",
+        image: "/images/destinations/japan_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Osaka",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive to Kansai airport." }
+        ],
+        tip: "Sayonara!",
+        image: "/images/destinations/japan_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Ritz-Carlton Kyoto", rating: "★★★★★", type: "Luxury Hotel", location: "Kyoto", image: "/images/destinations/japan_1.jpg" }
+    ]
   }
 };
 

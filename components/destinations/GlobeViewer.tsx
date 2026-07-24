@@ -51,6 +51,7 @@ const MARKERS: Marker[] = [
   { name: "Kenya", lat: -1.2921, lon: 36.8219, packagesCount: 3, startingPrice: 115000, description: "Masai Mara Safari & Kilimanjaro Views", region: "islands" },
   { name: "Varanasi", lat: 25.3176, lon: 82.9739, packagesCount: 3, startingPrice: 15500, description: "Sacred Ganges Ghats & Evening Aarti", region: "india" },
   { name: "Mathura & Vrindavan", lat: 27.4924, lon: 77.6737, packagesCount: 3, startingPrice: 11500, description: "Birthplace of Lord Krishna & Bankey Bihari", region: "india" },
+  { name: "Japan", lat: 35.6762, lon: 139.6503, packagesCount: 3, startingPrice: 125000, description: "Mount Fuji, Fushimi Inari & Shibuya", region: "southeast-asia" },
 ];
 
 

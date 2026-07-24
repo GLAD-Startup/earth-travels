@@ -431,4 +431,14 @@ export const DESTINATIONS: Destination[] = [
     region: "india",
     packageCount: 3,
   },
+  {
+    id: "japan",
+    name: "Japan",
+    tagline: "Mount Fuji, Cherry Blossoms, Ancient Shrines & Bullet Trains",
+    image: "/images/destinations/japan_1.jpg",
+    season: "BEST: MAR – MAY, SEP – NOV",
+    startingPrice: 125000,
+    region: "southeast-asia",
+    packageCount: 3,
+  },
 ];
