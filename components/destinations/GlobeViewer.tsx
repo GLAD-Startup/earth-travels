@@ -50,6 +50,7 @@ const MARKERS: Marker[] = [
   { name: "Pondicherry", lat: 11.9416, lon: 79.8083, packagesCount: 3, startingPrice: 16500, description: "French Quarter & Promenade Beach", region: "india" },
   { name: "Kenya", lat: -1.2921, lon: 36.8219, packagesCount: 3, startingPrice: 115000, description: "Masai Mara Safari & Kilimanjaro Views", region: "islands" },
   { name: "Varanasi", lat: 25.3176, lon: 82.9739, packagesCount: 3, startingPrice: 15500, description: "Sacred Ganges Ghats & Evening Aarti", region: "india" },
+  { name: "Mathura & Vrindavan", lat: 27.4924, lon: 77.6737, packagesCount: 3, startingPrice: 11500, description: "Birthplace of Lord Krishna & Bankey Bihari", region: "india" },
 ];
 
 

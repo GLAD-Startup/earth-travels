@@ -421,4 +421,14 @@ export const DESTINATIONS: Destination[] = [
     region: "india",
     packageCount: 3,
   },
+  {
+    id: "mathura-vrindavan",
+    name: "Mathura & Vrindavan",
+    tagline: "Birthplace of Lord Krishna, Bankey Bihari Temple & Yamuna Ghats",
+    image: "/images/destinations/mathura_1.jpg",
+    season: "BEST: OCT – MAR, AUG (JANMASTHAMI)",
+    startingPrice: 11500,
+    region: "india",
+    packageCount: 3,
+  },
 ];

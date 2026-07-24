@@ -7565,6 +7565,288 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
     hotels: [
       { name: "Suryauday Haveli", rating: "★★★★", type: "Ghatside Haveli", location: "Varanasi", image: "/images/destinations/varanasi_1.jpg" }
     ]
+  },
+
+  // ── MATHURA & VRINDAVAN ──
+  "mathura-spiritual": {
+    slug: "mathura-spiritual",
+    destination: "Mathura & Vrindavan",
+    title: "Mathura & Vrindavan Sacred Pilgrimage Tour",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/mathura_1.jpg",
+    tagline: "Shri Krishna Janmabhoomi, Bankey Bihari Temple & Prem Mandir",
+    basePrice: 11500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Mathura & Shri Krishna Janmabhoomi",
+        tag: "BIRTHPLACE",
+        tagline: "Arrive in Mathura and visit the sacred Janmasthan temple complex.",
+        activities: [
+          { icon: "✈️", title: "Delhi / Agra Pick-up & Drive to Mathura", description: "Private drive to Mathura hotel." },
+          { icon: "🛕", title: "Shri Krishna Janmabhoomi Temple", description: "Visit Garbha Griha (birth cell) and Keshavdeo Temple." }
+        ],
+        tip: "Security is strict at Janmabhoomi - leave cameras and electronic gadgets in hotel room.",
+        image: "/images/destinations/mathura_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Vrindavan Bankey Bihari & ISKCON Temple",
+        tag: "VRINDAVAN DARSHAN",
+        tagline: "Darshan of Bankey Bihari Ji and devotional kirtan at ISKCON.",
+        activities: [
+          { icon: "🪔", title: "Bankey Bihari Temple Darshan", description: "Experience curtain-pulling Jhanki darshan of Lord Krishna." },
+          { icon: "🎶", title: "ISKCON Vrindavan Hare Krishna Kirtan", description: "Enchanting singing and dancing at Sri Sri Krishna Balaram Temple." }
+        ],
+        tip: "Beware of monkeys in Vrindavan alleys - secure your glasses and mobile phone.",
+        image: "/images/destinations/mathura_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Prem Mandir Lighting & Vishram Ghat Yamuna Aarti",
+        tag: "LIGHTING & AARTI",
+        tagline: "Grand Prem Mandir illuminated gardens and evening Yamuna Aarti.",
+        activities: [
+          { icon: "✨", title: "Prem Mandir Musical Fountain & Lighting", description: "Stunning white Italian marble temple with color-changing light display." },
+          { icon: "⛵", title: "Vishram Ghat Evening Yamuna Aarti", description: "Traditional river priest ceremony and floating oil lamps." }
+        ],
+        tip: "Prem Mandir lighting starts at 7:00 PM every evening.",
+        image: "/images/destinations/mathura_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Peda Tasting & Departure",
+        tag: "DEPARTURE",
+        tagline: "Taste famous Mathura Pedas before departure.",
+        activities: [
+          { icon: "🍬", title: "Mathura Peda Tasting & Shopping", description: "Buy authentic Brijwasan Mathura pedas." },
+          { icon: "✈️", title: "Departure Transfer", description: "Transfer back to Delhi airport / station." }
+        ],
+        tip: "Radhe Radhe!",
+        image: "/images/destinations/mathura_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Nidhivan Sarovar Portico", rating: "★★★★", type: "Pilgrimage Resort Hotel", location: "Vrindavan", image: "/images/destinations/mathura_1.jpg" }
+    ]
+  },
+  "mathura-goverdhan": {
+    slug: "mathura-goverdhan",
+    destination: "Mathura & Vrindavan",
+    title: "Mathura, Vrindavan & Goverdhan Parikrama Trail",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/mathura_2.jpg",
+    tagline: "Goverdhan Hill Parikrama, Radha Kund, Barsana & Nandgaon",
+    basePrice: 14500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Vrindavan & Vaishno Devi Temple",
+        tag: "VRINDAVAN",
+        tagline: "Check into Vrindavan hotel and evening temple visit.",
+        activities: [
+          { icon: "🚗", title: "Drive to Vrindavan", description: "Transfer to hotel." },
+          { icon: "🛕", title: "Mata Vaishno Devi Temple Vrindavan", description: "Giant 141ft statue and cave replica." }
+        ],
+        tip: "Enjoy vegetarian satvik thali.",
+        image: "/images/destinations/mathura_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Goverdhan Hill Parikrama & Radha Kund",
+        tag: "GOVERDHAN",
+        tagline: "21 km sacred Goverdhan Parikrama drive / battery car.",
+        activities: [
+          { icon: "🏔️", title: "Goverdhan Parikrama", description: "Visit Mukharbind, Dan Ghati Temple & Mansi Ganga." },
+          { icon: "🌊", title: "Radha Kund & Shyam Kund", description: "Sacred holy tanks surrounded by ashrams." }
+        ],
+        tip: "Battery e-rickshaws are available for full Parikrama comfortably.",
+        image: "/images/destinations/mathura_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Barsana Radha Rani Temple & Nandgaon",
+        tag: "BARSANA & NANDGAON",
+        tagline: "Visit birthplace of Shri Radha Rani.",
+        activities: [
+          { icon: "👑", title: "Barsana Shriji Temple Hill Climb", description: "Climb steps to hilltop Radha Rani temple." },
+          { icon: "🏰", title: "Nandgaon Nand Bhawan", description: "Childhood home of Lord Krishna." }
+        ],
+        tip: "Barsana offers spectacular panoramic views of Brij countryside.",
+        image: "/images/destinations/mathura_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Gokul & Raman Reti Heritage",
+        tag: "GOKUL",
+        tagline: "Play in sacred white sand of Raman Reti.",
+        activities: [
+          { icon: "⏳", title: "Raman Reti Sand Temple", description: "Roll and walk in sacred white sand where Krishna played." }
+        ],
+        tip: "Deer park at Raman Reti is great for families.",
+        image: "/images/destinations/mathura_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport / railway station.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to Delhi." }
+        ],
+        tip: "Jai Shri Krishna!",
+        image: "/images/destinations/mathura_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Ananda Castle Hotel Vrindavan", rating: "★★★★", type: "Heritage Resort", location: "Vrindavan", image: "/images/destinations/mathura_2.jpg" }
+    ]
+  },
+  "mathura-luxury": {
+    slug: "mathura-luxury",
+    destination: "Mathura & Vrindavan",
+    title: "Mathura Vrindavan Heritage Resort & VIP Temple Sanctuary",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/mathura_3.jpg",
+    tagline: "Nidhivan Sarovar Stay, Private Yamuna Bajra Cruise & Escorted VIP Temple Passes",
+    basePrice: 26500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Private Chauffeur & Nidhivan Sarovar Resort Check-in",
+        tag: "LUXURY RESORT",
+        tagline: "4-star luxury resort stay with manicured gardens.",
+        activities: [
+          { icon: "🚘", title: "Private SUV Pick-up", description: "Private luxury chauffeur from Delhi." },
+          { icon: "🏨", title: "Suite Check-in & High Tea", description: "Luxury resort suite check-in." }
+        ],
+        tip: "Enjoy organic satvik gourmet buffet dinner.",
+        image: "/images/destinations/mathura_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Escorted Bankey Bihari & ISKCON VIP Darshan",
+        tag: "VIP DARSHAN",
+        tagline: "Priority temple entry with private priest guide.",
+        activities: [
+          { icon: "🪔", title: "Escorted Bankey Bihari VIP Entry", description: "Skip line temple darshan and holy tulsi mala offering." },
+          { icon: "🌸", title: "ISKCON Temple Special Raj Bhog Prasadam", description: "Private dining room prasadam lunch." }
+        ],
+        tip: "Private priest guide accompanies you throughout.",
+        image: "/images/destinations/mathura_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Private Yamuna River Bajra Sunset Cruise",
+        tag: "PRIVATE CRUISE",
+        tagline: "Exclusive decorated Bajra boat cruise on River Yamuna.",
+        activities: [
+          { icon: "⛵", title: "Private Decorated Bajra Boat", description: "Glide past Mathura's 25 ghats with private flute music." },
+          { icon: "🪔", title: "Private Yamuna Aarti Ceremony", description: "Personal priest performing custom river aarti for your family." }
+        ],
+        tip: "Sunset photography over Yamuna river is stunning.",
+        image: "/images/destinations/mathura_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Private Goverdhan & Radha Kund VIP Excursion",
+        tag: "GOVERDHAN VIP",
+        tagline: "Private golf cart Parikrama.",
+        activities: [
+          { icon: "🚙", title: "Private AC Vehicle to Goverdhan", description: "Chauffeur drive to Goverdhan." },
+          { icon: "🛺", title: "Golf Cart Parikrama Experience", description: "Comfortable private electric cart ride around Goverdhan." }
+        ],
+        tip: "Visit Kusum Sarovar stone cenotaphs.",
+        image: "/images/destinations/mathura_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Ayurvedic Spa & Prem Mandir Private View Terrace",
+        tag: "SPA & LIGHTING",
+        tagline: "Herbal wellness massage and Prem Mandir VIP seats.",
+        activities: [
+          { icon: "💆", title: "Resort Herbal Oil Spa", description: "Aromatherapy relaxation treatment." },
+          { icon: "✨", title: "Prem Mandir VIP Terrace View", description: "Exclusive view of evening light show." }
+        ],
+        tip: "Deepest spiritual relaxation.",
+        image: "/images/destinations/mathura_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure via Delhi",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to Delhi airport.",
+        activities: [
+          { icon: "✈️", title: "Private Airport Transfer", description: "Luxury vehicle drive back to Delhi." }
+        ],
+        tip: "Complimentary Mathura peda gift hamper provided at checkout.",
+        image: "/images/destinations/mathura_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Nidhivan Sarovar Portico Vrindavan", rating: "★★★★", type: "Luxury Pilgrimage Resort", location: "Vrindavan", image: "/images/destinations/mathura_3.jpg" }
+    ]
+  },
+  "mathura-vrindavan": {
+    slug: "mathura-vrindavan",
+    destination: "Mathura & Vrindavan",
+    title: "Mathura & Vrindavan Sacred Pilgrimage",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/mathura_1.jpg",
+    tagline: "Birthplace of Lord Krishna, Bankey Bihari & Prem Mandir",
+    basePrice: 11500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Mathura",
+        tag: "MATHURA",
+        tagline: "Visit Shri Krishna Janmabhoomi.",
+        activities: [
+          { icon: "✈️", title: "Delhi / Agra Pick-up", description: "Drive to Mathura." },
+          { icon: "🛕", title: "Shri Krishna Janmabhoomi", description: "Visit Lord Krishna birthplace temple." }
+        ],
+        tip: "Strict security check.",
+        image: "/images/destinations/mathura_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Vrindavan Bankey Bihari",
+        tag: "VRINDAVAN",
+        tagline: "Darshan at Bankey Bihari temple.",
+        activities: [
+          { icon: "🪔", title: "Bankey Bihari Temple", description: "Morning darshan." },
+          { icon: "🎶", title: "ISKCON Vrindavan", description: "Kirtan at ISKCON temple." }
+        ],
+        tip: "Beware of monkeys in lanes.",
+        image: "/images/destinations/mathura_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Prem Mandir & Yamuna Aarti",
+        tag: "PREM MANDIR",
+        tagline: "Prem Mandir evening lighting show.",
+        activities: [
+          { icon: "✨", title: "Prem Mandir Lighting", description: "Stunning illuminated marble temple." },
+          { icon: "⛵", title: "Yamuna Aarti", description: "Evening river ceremony." }
+        ],
+        tip: "Lighting starts at 7 PM.",
+        image: "/images/destinations/mathura_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to Delhi." }
+        ],
+        tip: "Radhe Radhe!",
+        image: "/images/destinations/mathura_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Nidhivan Sarovar Portico", rating: "★★★★", type: "Resort Hotel", location: "Vrindavan", image: "/images/destinations/mathura_1.jpg" }
+    ]
   }
 };
 
