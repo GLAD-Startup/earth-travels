@@ -47,6 +47,9 @@ const MARKERS: Marker[] = [
   { name: "Bhutan", lat: 27.5142, lon: 90.4336, packagesCount: 3, startingPrice: 38500, description: "Tiger's Nest & Himalayan Happiness", region: "islands" },
   { name: "Nepal", lat: 27.7172, lon: 85.3240, packagesCount: 3, startingPrice: 28500, description: "Himalayan Peaks & Everest Base Camp", region: "islands" },
   { name: "Ooty", lat: 11.4102, lon: 76.6950, packagesCount: 3, startingPrice: 14500, description: "Queen of Nilgiri Hill Stations & Toy Train", region: "india" },
+  { name: "Pondicherry", lat: 11.9416, lon: 79.8083, packagesCount: 3, startingPrice: 16500, description: "French Quarter & Promenade Beach", region: "india" },
+  { name: "Kenya", lat: -1.2921, lon: 36.8219, packagesCount: 3, startingPrice: 115000, description: "Masai Mara Safari & Kilimanjaro Views", region: "islands" },
+  { name: "Varanasi", lat: 25.3176, lon: 82.9739, packagesCount: 3, startingPrice: 15500, description: "Sacred Ganges Ghats & Evening Aarti", region: "india" },
 ];
 
 

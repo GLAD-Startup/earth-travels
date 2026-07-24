@@ -6665,6 +6665,1157 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
     hotels: [
       { name: "Gem Park Ooty", rating: "★★★★", type: "Hill View Hotel", location: "Ooty", image: "/images/destinations/ooty_1.jpg" }
     ]
+  },
+
+  // ── KERALA ──
+  "kerala-backwaters": {
+    slug: "kerala-backwaters",
+    destination: "Kerala",
+    title: "Kerala Backwaters & Houseboat Cruise (Alleppey & Kumarakom)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/kerala_1.jpg",
+    tagline: "Overnight Houseboat Cruise, Kumarakom Kayaking & Marari Beach",
+    basePrice: 19500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Kochi & Fort Kochi Heritage Walk",
+        tag: "KOCHI WELCOME",
+        tagline: "Land in Cochin and explore historic Fort Kochi.",
+        activities: [
+          { icon: "✈️", title: "Kochi Airport Transfer", description: "Private transfer to Fort Kochi." },
+          { icon: "🎣", title: "Chinese Fishing Nets at Sunset", description: "Iconic 14th-century cantilevered fishing nets along Fort Kochi beach." }
+        ],
+        tip: "Dine on fresh grilled sea bass at Fort Kochi beachside food stalls.",
+        image: "/images/destinations/kerala_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Kochi to Munnar Tea Plantation Drive",
+        tag: "MUNNAR HILLS",
+        tagline: "Drive through Cheeyappara & Valara waterfalls up to misty Munnar.",
+        activities: [
+          { icon: "🍃", title: "Tea Estate Viewpoints", description: "Endless rolling green tea plantations." }
+        ],
+        tip: "Enjoy hot cardamom tea amidst mountain mist.",
+        image: "/images/destinations/kerala_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Munnar Tea Museum & Eravikulam National Park",
+        tag: "TEA & WILDLIFE",
+        tagline: "Spot endangered Nilgiri Tahr mountain goats.",
+        activities: [
+          { icon: "🐐", title: "Eravikulam Tahrs Safari", description: "Guided park drive up Rajamalai peak." },
+          { icon: "☕", title: "KDHP Tea Museum Tour", description: "Witness historic tea processing machinery." }
+        ],
+        tip: "Buy single-estate green tea leaves at factory prices.",
+        image: "/images/destinations/kerala_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Alleppey Luxury Houseboat Overnight Cruise",
+        tag: "HOUSEBOAT CRUISE",
+        tagline: "Board your private traditional Kettuvallam houseboat.",
+        activities: [
+          { icon: "⛵", title: "Private Houseboat Check-in", description: "Cruising palm-fringed backwater canals of Vembanad Lake." },
+          { icon: "🍲", title: "Karimeen Pollichathu Dinner", description: "Fresh pearl spot fish cooked in banana leaf on board." }
+        ],
+        tip: "Watching quiet village backwater life from the open deck is pure bliss.",
+        image: "/images/destinations/kerala_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Marari Beach Relaxation & Sunset",
+        tag: "MARARI BEACH",
+        tagline: "Unwind on white sand Marari beach.",
+        activities: [
+          { icon: "🏖️", title: "Marari White Sand Beach", description: "Relax under coconut palms along quiet Arabian Sea coast." }
+        ],
+        tip: "Try traditional Ayurvedic foot massage on the beach resort.",
+        image: "/images/destinations/kerala_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Kochi",
+        tag: "DEPARTURE",
+        tagline: "Transfer to Kochi airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Private drive back to Kochi airport." }
+        ],
+        tip: "Buy banana chips and Kerala spices before departing.",
+        image: "/images/destinations/kerala_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Spice Coast Cruises Houseboat", rating: "★★★★★", type: "Luxury Backwater Houseboat", location: "Alleppey", image: "/images/destinations/kerala_1.jpg" }
+    ]
+  },
+  "kerala-hills-wildlife": {
+    slug: "kerala-hills-wildlife",
+    destination: "Kerala",
+    title: "Kerala Misty Tea Hills & Wildlife Safari (Munnar & Thekkady)",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/kerala_2.jpg",
+    tagline: "Munnar Tea Estates, Periyar Elephant Boat Safari & Kathakali Show",
+    basePrice: 17500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Kochi & Drive to Munnar",
+        tag: "MUNNAR",
+        tagline: "Scenic drive through Cardamom hills.",
+        activities: [
+          { icon: "🚗", title: "Mountain Highway Drive", description: "Pass waterfalls and spice gardens." }
+        ],
+        tip: "Cool weather starts as you cross 1,000 meters altitude.",
+        image: "/images/destinations/kerala_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Munnar Sightseeing & Mattupetty Dam",
+        tag: "MUNNAR LAKES",
+        tagline: "Boating on Mattupetty Dam & Echo Point.",
+        activities: [
+          { icon: "🚤", title: "Speedboat at Mattupetty", description: "Mountain lake boating." },
+          { icon: "🐘", title: "Elephant Arrival Point", description: "Gentle giant viewing." }
+        ],
+        tip: "Echo your name at Echo Point cliff.",
+        image: "/images/destinations/kerala_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Drive to Thekkady & Periyar Wildlife Boat Safari",
+        tag: "THEKKADY",
+        tagline: "Periyar Tiger Reserve boat safari on Periyar Lake.",
+        activities: [
+          { icon: "🚢", title: "Periyar Wildlife Boat Safari", description: "Spot wild elephant herds, bison, and otters at water's edge." },
+          { icon: "🎭", title: "Kathakali & Kalaripayattu Show", description: "Traditional martial art and classical dance theater." }
+        ],
+        tip: "Arrive 30 minutes early for the boat safari ticket queue.",
+        image: "/images/destinations/kerala_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Spice Plantation Tour & Drive to Alleppey",
+        tag: "SPICE TOUR",
+        tagline: "Smell fresh cardamom, pepper, and cinnamon.",
+        activities: [
+          { icon: "🌿", title: "Guided Organic Spice Garden Tour", description: "Learn how ayurvedic herbs and spices are grown." },
+          { icon: "⛵", title: "Alleppey Sunset Shikara Boat", description: "2-hour backwater evening canal boat ride." }
+        ],
+        tip: "Buy fresh black pepper directly from estate growers.",
+        image: "/images/destinations/kerala_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Kochi",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive to Cochin International Airport." }
+        ],
+        tip: "Safe travels home!",
+        image: "/images/destinations/kerala_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Fragrant Nature Munnar", rating: "★★★★", type: "Hill Resort", location: "Munnar", image: "/images/destinations/kerala_2.jpg" }
+    ]
+  },
+  "kerala-luxury": {
+    slug: "kerala-luxury",
+    destination: "Kerala",
+    title: "Kerala Royal Ayurvedic Wellness & Backwater Retreat",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/kerala_3.jpg",
+    tagline: "Kumarakom Lake Resort Pool Villa, Ayurvedic Rejuvenation Spa & Lake Cruise",
+    basePrice: 38000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Private Chauffeur & Kumarakom Lake Resort Check-in",
+        tag: "LUXURY RETREAT",
+        tagline: "Award-winning heritage resort on Vembanad Lake.",
+        activities: [
+          { icon: "🚘", title: "Private SUV Airport Transfer", description: "Luxury transfer from Kochi airport." },
+          { icon: "🏡", title: "Meandering Pool Villa Check-in", description: "Traditional Keralite teakwood heritage villa." }
+        ],
+        tip: "Enjoy sunset flute music performance on the lakeside lawn.",
+        image: "/images/destinations/kerala_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Ayurvedic Spa & Sunset Lake Cruise",
+        tag: "AYURVEDIC SPA",
+        tagline: "Abhyangam 4-hand oil therapy.",
+        activities: [
+          { icon: "💆", title: "Royal Abhyangam Spa", description: "Herbal oil massage therapy by master masseurs." },
+          { icon: "⛵", title: "Private Sunset Lake Cruise", description: "Champagne cruise across Vembanad Lake." }
+        ],
+        tip: "Ayurvedic consultations are included with resident doctors.",
+        image: "/images/destinations/kerala_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Private Luxury Houseboat Expedition",
+        tag: "HOUSEBOAT VIP",
+        tagline: "Air-conditioned glass-walled suite houseboat.",
+        activities: [
+          { icon: "🛳️", title: "Private Luxury Houseboat Boarding", description: "Chef-prepared gourmet seafood dining on board." }
+        ],
+        tip: "Watch fishermen cast Chinese nets as dusk falls.",
+        image: "/images/destinations/kerala_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Brunton Boatyard Fort Kochi Stay",
+        tag: "FORT KOCHI LUXURY",
+        tagline: "Colonial British-Dutch architecture hotel on Kochi harbor.",
+        activities: [
+          { icon: "🏛️", title: "Brunton Boatyard Check-in", description: "Sea-facing rooms overlooking harbor ships." }
+        ],
+        tip: "Dine at History restaurant specializing in 32 historical Kochi ethnic cuisines.",
+        image: "/images/destinations/kerala_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Private Heritage Walk & High Tea",
+        tag: "HERITAGE WALK",
+        tagline: "Private historian guide through Jew Town & Synagogue.",
+        activities: [
+          { icon: "🕍", title: "Paradesi Synagogue & Mattancherry Palace", description: "Explore antique markets and spice warehouses." }
+        ],
+        tip: "Shop for vintage brassware and colonial antiques.",
+        image: "/images/destinations/kerala_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Ayurvedic Rejuvenation & Beachside Dining",
+        tag: "WELLNESS & DINING",
+        tagline: "Shirodhara therapy and beachfront dinner.",
+        activities: [
+          { icon: "💆", title: "Shirodhara Oil Therapy", description: "Warm herbal oil poured continuously on forehead." },
+          { icon: "🍽️", title: "Seafood Beach Candlelight Dinner", description: "Fresh lobsters under palm stars." }
+        ],
+        tip: "Deepest relaxation experience.",
+        image: "/images/destinations/kerala_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure via Kochi",
+        tag: "DEPARTURE",
+        tagline: "Private airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Private Airport Transfer", description: "Luxury transfer to airport." }
+        ],
+        tip: "VIP airport lounge access included.",
+        image: "/images/destinations/kerala_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Kumarakom Lake Resort", rating: "★★★★★", type: "Ultra Luxury Heritage Resort", location: "Kumarakom", image: "/images/destinations/kerala_3.jpg" }
+    ]
+  },
+
+  // ── PONDICHERRY ──
+  "pondicherry-express": {
+    slug: "pondicherry-express",
+    destination: "Pondicherry",
+    title: "Pondicherry French Quarter & Coastal Heritage",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/pondicherry_1.jpg",
+    tagline: "White Town French Architecture Walking Tour, Promenade Beach & Auroville",
+    basePrice: 16500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Pondicherry & White Town Walk",
+        tag: "FRENCH QUARTER",
+        tagline: "Check into colonial villa and stroll mustard yellow boulevards.",
+        activities: [
+          { icon: "✈️", title: "Chennai / Pondicherry Transfer", description: "Private drive to White Town hotel." },
+          { icon: "🏛️", title: "French Quarter Heritage Stroll", description: "Mustard yellow villas, wrought-iron balconies & bougainvillea." }
+        ],
+        tip: "Dine on crepes and croissants at Baker Street bakery.",
+        image: "/images/destinations/pondicherry_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Promenade Beach Sunrise & Sri Aurobindo Ashram",
+        tag: "PROMENADE & ASHRAM",
+        tagline: "Sunrise over Bay of Bengal and spiritual serenity.",
+        activities: [
+          { icon: "🌅", title: "Rock Beach Sunrise Walk", description: "Pedestrian-only seaside promenade at dawn." },
+          { icon: "🧘", title: "Sri Aurobindo Ashram Visit", description: "Quiet meditation at the Samadhi flower courtyard." }
+        ],
+        tip: "Rock Beach is closed to motor vehicles in morning and evening for walking.",
+        image: "/images/destinations/pondicherry_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Auroville Matrimandir & Eco Tour",
+        tag: "AUROVILLE",
+        tagline: "Visit the global experimental township and golden Matrimandir dome.",
+        activities: [
+          { icon: "🔮", title: "Matrimandir Golden Dome Viewpoint", description: "Walk through shaded banyan paths to the iconic golden globe." },
+          { icon: "🛍️", title: "Auroville Visitors Centre Boutiques", description: "Handmade spirulina, incense, and organic cotton clothing." }
+        ],
+        tip: "Pre-book Matrimandir inner chamber meditation pass 3 days in advance.",
+        image: "/images/destinations/pondicherry_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Paradise Beach Boat Cruise & French Cafe Crawl",
+        tag: "PARADISE BEACH",
+        tagline: "Boat ride through Chunnambar backwaters to isolated beach.",
+        activities: [
+          { icon: "🚤", title: "Chunnambar Boat Cruise to Paradise Beach", description: "White sand beach accessible only by boat." },
+          { icon: "🍕", title: "Heritage French Cafe Crawl", description: "Wood-fired pizzas at Cafe Extrablatt & Coromandel Cafe." }
+        ],
+        tip: "Enjoy sea breeze dining at Villa Shanti garden restaurant.",
+        image: "/images/destinations/pondicherry_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure to Chennai",
+        tag: "DEPARTURE",
+        tagline: "Transfer back to Chennai airport.",
+        activities: [
+          { icon: "✈️", title: "Chennai Airport Transfer", description: "Drive along East Coast Road (ECR)." }
+        ],
+        tip: "Stop at Mahabalipuram shore temple en route if flying from Chennai.",
+        image: "/images/destinations/pondicherry_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Palais de Mahe - CGH Earth", rating: "★★★★★", type: "French Heritage Hotel", location: "White Town, Pondicherry", image: "/images/destinations/pondicherry_1.jpg" }
+    ]
+  },
+  "pondicherry-surf-boho": {
+    slug: "pondicherry-surf-boho",
+    destination: "Pondicherry",
+    title: "Pondicherry Surfing, Paradise Beach & Boho Vibe",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/pondicherry_2.jpg",
+    tagline: "Serenity Beach Surf Lesson, Chunnambar Boat & Cafe Crawl",
+    basePrice: 13500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Pondicherry & Serenity Beach Sunset",
+        tag: "SERENITY BEACH",
+        tagline: "Check into beach bungalow and enjoy evening waves.",
+        activities: [
+          { icon: "🏖️", title: "Serenity Beach Check-in", description: "Surfers' paradise beach on northern coast." }
+        ],
+        tip: "Try fresh coconut water at surf shack cafes.",
+        image: "/images/destinations/pondicherry_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Morning Surfing School & Auroville Bakery",
+        tag: "SURFING LESSON",
+        tagline: "Learn to catch waves with certified ISA surf instructors.",
+        activities: [
+          { icon: "🏄", title: "Kallialay Surf School Lesson", description: "2-hour beginner surf lesson in warm Bay of Bengal waves." },
+          { icon: "🥐", title: "Auroville Bakery Breakfast", description: "Freshly baked artisan quiches and croissants." }
+        ],
+        tip: "Renting a scooter is the best way to explore Pondy beaches.",
+        image: "/images/destinations/pondicherry_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Paradise Beach Speedboat & Boho Shopping",
+        tag: "PARADISE BEACH",
+        tagline: "Speedboat ride and boho chic shopping.",
+        activities: [
+          { icon: "🚤", title: "Chunnambar Boat to Paradise Island", description: "Golden sand beach and palm hammocks." },
+          { icon: "🛍️", title: "Mission Street Boho Shopping", description: "Handicrafts, aromatherapy oils, and French pottery." }
+        ],
+        tip: "Watch sunset from the Rock Beach sea wall.",
+        image: "/images/destinations/pondicherry_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport / railway station.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer for onward journey." }
+        ],
+        tip: "Au revoir!",
+        image: "/images/destinations/pondicherry_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Dune Eco Village Resort", rating: "★★★★", type: "Beach Eco Resort", location: "Serenity Beach", image: "/images/destinations/pondicherry_2.jpg" }
+    ]
+  },
+  "pondicherry-luxury": {
+    slug: "pondicherry-luxury",
+    destination: "Pondicherry",
+    title: "Pondicherry Villa Shanti & Luxury Colonial Haven",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/pondicherry_3.jpg",
+    tagline: "La Villa French Quarter Boutique Stay, Wine Tasting & Auroville Meditation",
+    basePrice: 28500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Private Chauffeur & La Villa Check-in",
+        tag: "COLONIAL BOUTIQUE",
+        tagline: "19th-century French mansion restored into luxury boutique sanctuary.",
+        activities: [
+          { icon: "🚘", title: "Private SUV Pick-up", description: "Chauffeur transfer from Chennai airport." },
+          { icon: "🏛️", title: "La Villa Suite Check-in", description: "Private courtyard pool suite in White Town." }
+        ],
+        tip: "Welcome French champagne served on arrival.",
+        image: "/images/destinations/pondicherry_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Architectural Tour & Gastronomy Dining",
+        tag: "FRENCH GASTRONOMY",
+        tagline: "Guided walk with local historian and 5-course wine dinner.",
+        activities: [
+          { icon: "🍷", title: "Villa Shanti 5-Course French Dinner", description: "French-Tamil fusion gastronomy paired with French wines." }
+        ],
+        tip: "Try grilled jumbo prawns with saffron butter sauce.",
+        image: "/images/destinations/pondicherry_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Auroville Matrimandir Inner Chamber Meditation",
+        tag: "AUROVILLE MEDITATION",
+        tagline: "Exclusive entry to the crystal meditation inner chamber.",
+        activities: [
+          { icon: "🔮", title: "Matrimandir Crystal Chamber Entry", description: "Silent meditation around the world's largest optically pure crystal sphere." }
+        ],
+        tip: "Absolute silence inside the white marble chamber is deeply transcendent.",
+        image: "/images/destinations/pondicherry_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Private Yacht Cruise & Ayurvedic Spa",
+        tag: "YACHT & SPA",
+        tagline: "Private yacht along coastal backwaters and spa treatment.",
+        activities: [
+          { icon: "⛵", title: "Private Yacht Backwater Cruise", description: "Champagne cruise through mangrove estuaries." },
+          { icon: "💆", title: "French Aromatherapy Massage", description: "Essential oil wellness therapy." }
+        ],
+        tip: "Sunset views over the ocean from the yacht deck.",
+        image: "/images/destinations/pondicherry_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Private Pottery Workshop & French Bistro High Tea",
+        tag: "POTTERY & TEA",
+        tagline: "Hands-on glazed ceramic workshop in Golden Bridge Pottery.",
+        activities: [
+          { icon: "🏺", title: "Golden Bridge Pottery Workshop", description: "Create your own clay souvenir with master potter." },
+          { icon: "☕", title: "High Tea at Cafe des Arts", description: "Artisan pastries and French press coffee." }
+        ],
+        tip: "Your handcrafted pottery will be fired and delivered to your hotel.",
+        image: "/images/destinations/pondicherry_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure via Chennai",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to Chennai airport.",
+        activities: [
+          { icon: "✈️", title: "Private Airport Transfer", description: "Luxury vehicle drive back to Chennai." }
+        ],
+        tip: "VIP lounge access included.",
+        image: "/images/destinations/pondicherry_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "La Villa Heritage Hotel", rating: "★★★★★", type: "Ultra Luxury French Boutique", location: "White Town", image: "/images/destinations/pondicherry_3.jpg" }
+    ]
+  },
+
+  // ── KENYA ──
+  "kenya-safari-5n6d": {
+    slug: "kenya-safari-5n6d",
+    destination: "Kenya",
+    title: "Kenya Masai Mara & Lake Nakuru Big Five Safari",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/kenya_1.jpg",
+    tagline: "Masai Mara Big Five Game Drives, Flamingo Lakes & Masai Cultural Village",
+    basePrice: 115000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Nairobi & Drive to Great Rift Valley",
+        tag: "NAIROBI & RIFT VALLEY",
+        tagline: "Land in Jomo Kenyatta Airport and drive down the Rift Valley escarpment.",
+        activities: [
+          { icon: "✈️", title: "Nairobi Airport Pick-up", description: "4x4 Land Cruiser safari vehicle pick-up." },
+          { icon: "🏔️", title: "Great Rift Valley Viewpoint", description: "Panoramic view of volcanic valley floor." }
+        ],
+        tip: "Keep camera ready for baboons along the escarpment road.",
+        image: "/images/destinations/kenya_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Drive to Masai Mara National Reserve",
+        tag: "MASAI MARA",
+        tagline: "Arrive in world-famous safari haven and afternoon game drive.",
+        activities: [
+          { icon: "🦁", title: "Masai Mara Afternoon Game Drive", description: "Spot lions, cheetahs, and elephants across golden savannas." }
+        ],
+        tip: "The Mara has the highest density of wild big cats in Africa.",
+        image: "/images/destinations/kenya_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Full Day Big Five Game Drive in Masai Mara",
+        tag: "BIG FIVE SAFARI",
+        tagline: "Full day tracking lions, leopards, rhinos, buffalo, and elephants.",
+        activities: [
+          { icon: "🦏", title: "Full Day Game Drive with Picnic", description: "Drive to Mara River where wildebeest and hippos congregate." },
+          { icon: "🦛", title: "Mara River Hippo & Crocodile Spotting", description: "Guided riverbank walk with armed park ranger." }
+        ],
+        tip: "Bush picnic lunch under an acacia tree surrounded by wildlife.",
+        image: "/images/destinations/kenya_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Masai Village Experience & Drive to Lake Nakuru",
+        tag: "MASAI CULTURAL",
+        tagline: "Jump dance with Masai warriors and drive to Lake Nakuru.",
+        activities: [
+          { icon: "💃", title: "Traditional Masai Manyatta Village Tour", description: "Learn about traditional Masai culture, fire-making & beadwork." },
+          { icon: "🦩", title: "Lake Nakuru National Park Check-in", description: "Famous pink flamingo lake and sanctuary for white rhinos." }
+        ],
+        tip: "Lake Nakuru is one of the best places in Kenya to spot leopards in fever trees.",
+        image: "/images/destinations/kenya_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Lake Nakuru Morning Safari & Drive to Nairobi",
+        tag: "NAIROBI RETURN",
+        tagline: "Morning rhino search drive and return to Nairobi.",
+        activities: [
+          { icon: "🦏", title: "Rhino Sanctuary Game Drive", description: "Close encounters with endangered black and white rhinoceroses." }
+        ],
+        tip: "Dine at the legendary Carnivore Restaurant in Nairobi.",
+        image: "/images/destinations/kenya_1.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Nairobi Giraffe Centre & Departure",
+        tag: "DEPARTURE",
+        tagline: "Hand-feed endangered Rothschild giraffes before airport transfer.",
+        activities: [
+          { icon: "🦒", title: "Giraffe Centre Visit", description: "Feed giraffes from an elevated wooden platform." },
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to JKIA airport." }
+        ],
+        tip: "Safe trip home from Kenya! Hakuna Matata!",
+        image: "/images/destinations/kenya_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Mara Serena Safari Lodge", rating: "★★★★★", type: "Luxury Safari Lodge", location: "Masai Mara", image: "/images/destinations/kenya_1.jpg" }
+    ]
+  },
+  "kenya-luxury": {
+    slug: "kenya-luxury",
+    destination: "Kenya",
+    title: "Kenya Ultra-Luxury Giraffe Manor & Mara Serena Safari",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/kenya_3.jpg",
+    tagline: "Giraffe Manor Breakfast, Hot Air Balloon Safari & Kilimanjaro Luxury Lodge",
+    basePrice: 195000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Nairobi & Giraffe Manor Stay",
+        tag: "GIRAFFE MANOR",
+        tagline: "World-famous boutique hotel where giraffes poke heads through windows.",
+        activities: [
+          { icon: "🚘", title: "Private SUV Pick-up", description: "Private luxury chauffeur from JKIA airport." },
+          { icon: "🦒", title: "Giraffe Manor Afternoon Tea", description: "Feed Rothschild giraffes from the Manor terrace." }
+        ],
+        tip: "Giraffe Manor is one of the world's most sought-after hotel stays.",
+        image: "/images/destinations/kenya_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Breakfast with Giraffes & Fly to Masai Mara",
+        tag: "MANOR BREAKFAST",
+        tagline: "Giraffes join you at the breakfast table followed by bush flight.",
+        activities: [
+          { icon: "🥞", title: "Giraffe Breakfast Experience", description: "Feed giraffes through historic manor windows." },
+          { icon: "🛩️", title: "Bush Plane Flight to Masai Mara", description: "45-minute scenic flight to Mara airstrip." }
+        ],
+        tip: "Aerial views of the Great Rift Valley from the bush plane.",
+        image: "/images/destinations/kenya_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Hot Air Balloon Safari over Masai Mara",
+        tag: "BALLOON SAFARI",
+        tagline: "Dawn hot air balloon flight over Mara savannas followed by champagne breakfast.",
+        activities: [
+          { icon: "🎈", title: "Sunrise Hot Air Balloon Flight", description: "Float silently above herds of wildebeest and hunting lions." },
+          { icon: "🍾", title: "Bush Champagne Breakfast", description: "Full cooked breakfast in the open savanna." }
+        ],
+        tip: "An unforgettable lifetime bucket list experience.",
+        image: "/images/destinations/kenya_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Fly to Amboseli National Park (Mount Kilimanjaro Views)",
+        tag: "AMBOSELI",
+        tagline: "Fly to Amboseli facing snow-capped Mount Kilimanjaro.",
+        activities: [
+          { icon: "🛩️", title: "Private Bush Flight to Amboseli", description: "Land right beneath Mount Kilimanjaro peak." },
+          { icon: "🐘", title: "Amboseli Elephant Herd Safari", description: "Watch giant bull elephants walking with Kilimanjaro backdrop." }
+        ],
+        tip: "Kilimanjaro mountain peaks are clearest during early morning and late afternoon.",
+        image: "/images/destinations/kenya_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Amboseli Observation Hill & Luxury Spa",
+        tag: "KILIMANJARO VIEWS",
+        tagline: "360-degree view of swamps, elephants, and volcano.",
+        activities: [
+          { icon: "🏔️", title: "Observation Hill Hike", description: "Look out across swamp waters filled with wallowing hippos." },
+          { icon: "💆", title: "Savanna Spa Massage", description: "Relaxing massage treatment on your private lodge deck." }
+        ],
+        tip: "Sundowner drinks overlooking the African sunset.",
+        image: "/images/destinations/kenya_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Fly back to Nairobi & Karen Blixen Museum",
+        tag: "NAIROBI VIP",
+        tagline: "Fly back to Nairobi and visit Out of Africa estate.",
+        activities: [
+          { icon: "🏛️", title: "Karen Blixen Museum Tour", description: "Colonial farmhouse featured in the film Out of Africa." }
+        ],
+        tip: "Dine at Hemingways Nairobi fine dining restaurant.",
+        image: "/images/destinations/kenya_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Nairobi",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Private Airport Transfer", description: "Transfer to Jomo Kenyatta International Airport." }
+        ],
+        tip: "Asante Sana!",
+        image: "/images/destinations/kenya_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Giraffe Manor Nairobi", rating: "★★★★★", type: "Ultra Luxury Sanctuary", location: "Nairobi", image: "/images/destinations/kenya_3.jpg" }
+    ]
+  },
+  "kenya-amboseli": {
+    slug: "kenya-amboseli",
+    destination: "Kenya",
+    title: "Kenya Amboseli Elephant & Great Rift Valley Trail",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/kenya_2.jpg",
+    tagline: "Amboseli Elephant Herds, Lake Naivasha Boat Safari & Great Rift Valley",
+    basePrice: 98000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Nairobi & Drive to Lake Naivasha",
+        tag: "LAKE NAIVASHA",
+        tagline: "Drive to freshwater Rift Valley lake.",
+        activities: [
+          { icon: "✈️", title: "Nairobi Pick-up", description: "Transfer to Lake Naivasha resort." },
+          { icon: "🚤", title: "Naivasha Sunset Boat Safari", description: "Spot fish eagles diving for fish and hippo pods." }
+        ],
+        tip: "Crescent Island walking safari allows walking right next to wild giraffes and zebras.",
+        image: "/images/destinations/kenya_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Crescent Island Walking Safari & Drive to Amboseli",
+        tag: "WALKING SAFARI",
+        tagline: "Walk amongst wild animals without predators.",
+        activities: [
+          { icon: "🦓", title: "Crescent Island Guided Foot Safari", description: "Walk among herds of wildebeest, waterbucks, and giraffes." },
+          { icon: "🚙", title: "Drive to Amboseli National Park", description: "Drive southeast towards Tanzania border." }
+        ],
+        tip: "One of the few places in East Africa where foot safaris are safe and accessible.",
+        image: "/images/destinations/kenya_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Full Day Game Safari under Mt. Kilimanjaro",
+        tag: "KILIMANJARO SAFARI",
+        tagline: "Iconic photography of elephants with snow peak backdrop.",
+        activities: [
+          { icon: "🐘", title: "Amboseli Big Elephant Safari", description: "Observe world's largest free-ranging elephant herds." }
+        ],
+        tip: "Amboseli has over 1,500 elephants in protected breeding families.",
+        image: "/images/destinations/kenya_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Amboseli Sunrise & Return to Nairobi",
+        tag: "NAIROBI",
+        tagline: "Sunrise view over Kilimanjaro and return drive.",
+        activities: [
+          { icon: "🌅", title: "Sunrise Safari Game Drive", description: "Pre-breakfast morning game drive." }
+        ],
+        tip: "Visit Kazuri beads artisan workshop in Nairobi.",
+        image: "/images/destinations/kenya_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to Nairobi airport." }
+        ],
+        tip: "Safe flight!",
+        image: "/images/destinations/kenya_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Amboseli Serena Safari Lodge", rating: "★★★★", type: "Safari Lodge", location: "Amboseli", image: "/images/destinations/kenya_2.jpg" }
+    ]
+  },
+
+  // ── VARANASI ──
+  "varanasi-spiritual": {
+    slug: "varanasi-spiritual",
+    destination: "Varanasi",
+    title: "Varanasi Sacred Ganges & Kashi Vishwanath Spiritual Tour",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/varanasi_1.jpg",
+    tagline: "Ganga Aarti VIP Seating, Sunrise Boat Cruise & Kashi Vishwanath Temple",
+    basePrice: 15500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Varanasi & Evening Ganga Aarti Ceremony",
+        tag: "GANGA AARTI",
+        tagline: "Land in Lal Bahadur Shastri Airport and witness divine river ceremony.",
+        activities: [
+          { icon: "✈️", title: "Varanasi Airport Transfer", description: "Private car transfer to your ghats hotel." },
+          { icon: "🪔", title: "Dashashwamedh Ghat Evening Aarti VIP Seats", description: "Chanting priests, brass oil lamps, bells and floating diyas on the Ganges." }
+        ],
+        tip: "Watching Ganga Aarti from a wooden boat on the river provides the best vantage point.",
+        image: "/images/destinations/varanasi_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Sunrise Ganges Boat Ride & Kashi Vishwanath Corridor",
+        tag: "SUNRISE BOAT & TEMPLE",
+        tagline: "Subah-e-Banaras morning boat cruise past ancient 84 ghats.",
+        activities: [
+          { icon: "🚣", title: "Sunrise Bajra Boat Cruise", description: "Witness morning bathing rituals, yoga, and prayers along Assi to Manikarnika Ghat." },
+          { icon: "🛕", title: "Kashi Vishwanath Temple Darshan", description: "Visit the revered Jyotirlinga temple via the newly constructed grand corridor." }
+        ],
+        tip: "Taste authentic Banarasi kachori sabzi and hot jalebi for morning breakfast.",
+        image: "/images/destinations/varanasi_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Sarnath Excursion & Buddhist Stupa",
+        tag: "SARNATH",
+        tagline: "Visit the sacred site where Lord Buddha preached his first sermon.",
+        activities: [
+          { icon: "☸️", title: "Dhamek Stupa Sarnath", description: "Massive 43-meter cylindrical stone stupa dating to 500 AD." },
+          { icon: "🦁", title: "Sarnath Archaeological Museum", description: "See the original 250 BC Ashoka Lion Capital of India." }
+        ],
+        tip: "Sarnath is just 10 km from Varanasi city center.",
+        image: "/images/destinations/varanasi_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Banarasi Silk Weaving Village & Street Food Crawl",
+        tag: "SILK & CUISINE",
+        tagline: "Handloom silk saree weavers and Banaras culinary delicacies.",
+        activities: [
+          { icon: "🧵", title: "Handloom Silk Weaving Workshop", description: "Watch master weavers create gold zari Banarasi sarees." },
+          { icon: "🍧", title: "Banaras Malaiyyo & Paan Tasting", description: "Savor winter saffron foam sweet Malaiyyo and famous Banarasi Paan." }
+        ],
+        tip: "Buy authentic silk sarees directly from government weaver cooperatives.",
+        image: "/images/destinations/varanasi_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Varanasi",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport / railway station.",
+        activities: [
+          { icon: "✈️", title: "Varanasi Airport Transfer", description: "Private car transfer to airport." }
+        ],
+        tip: "Har Har Mahadev!",
+        image: "/images/destinations/varanasi_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Taj Nadesar Palace Varanasi", rating: "★★★★★", type: "Royal Heritage Palace", location: "Varanasi", image: "/images/destinations/varanasi_1.jpg" }
+    ]
+  },
+  "varanasi-express": {
+    slug: "varanasi-express",
+    destination: "Varanasi",
+    title: "Varanasi Ghats, Silk Bazaars & Heritage Walk",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/varanasi_2.jpg",
+    tagline: "Assi Ghat Morning Yoga, Manikarnika Walk & Banaras Food Crawl",
+    basePrice: 12500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Varanasi & Assi Ghat Walk",
+        tag: "ASSI GHAT",
+        tagline: "Check into heritage hotel near Assi Ghat.",
+        activities: [
+          { icon: "✈️", title: "Airport Pick-up", description: "Transfer to hotel." },
+          { icon: "☕", title: "Pizzeria Vaatika Cafe at Assi Ghat", description: "Wood-fired apple pie and coffee overlooking the river." }
+        ],
+        tip: "Assi Ghat is known for music performance and bohemian spirit.",
+        image: "/images/destinations/varanasi_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Subah-e-Banaras & Alleyways Heritage Tour",
+        tag: "HERITAGE WALK",
+        tagline: "Explore narrow labyrinthine alleys (Galis) of ancient Banaras.",
+        activities: [
+          { icon: "🧘", title: "Subah-e-Banaras Morning Aarti", description: "Dawn Vedic chanting and classical raga performance at Assi Ghat." },
+          { icon: "🚶", title: "Old City Alleyway Walk", description: "Explore 3,000-year-old narrow lanes filled with temples and shrines." }
+        ],
+        tip: "Navigating Banaras galis on foot is the true way to experience the city.",
+        image: "/images/destinations/varanasi_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Ganga Evening Boat Ride & Silk Bazaars",
+        tag: "GANGA BOAT & SILK",
+        tagline: "Sunset boat ride and shopping in Vishwanath Gali.",
+        activities: [
+          { icon: "⛵", title: "Sunset River Cruise", description: "Glide past illuminated stone ghats as evening sets." },
+          { icon: "🛍️", title: "Vishwanath Gali Shopping", description: "Shop for brass statues, rudraksha beads, and wooden toys." }
+        ],
+        tip: "Try Blue Lassi near Manikarnika Ghat with 80 fruit flavors.",
+        image: "/images/destinations/varanasi_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to airport." }
+        ],
+        tip: "Safe travels!",
+        image: "/images/destinations/varanasi_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Suryauday Haveli - CGH Earth", rating: "★★★★", type: "Ghatside Heritage Haveli", location: "Shivala Ghat, Varanasi", image: "/images/destinations/varanasi_2.jpg" }
+    ]
+  },
+  "varanasi-luxury": {
+    slug: "varanasi-luxury",
+    destination: "Varanasi",
+    title: "Varanasi BrijRama Palace Royal Heritage Experience",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/varanasi_3.jpg",
+    tagline: "18th Century BrijRama Palace Stay, Private Bajra Cruise & Shehnai Recital",
+    basePrice: 32000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Private Boat Arrival & BrijRama Palace Check-in",
+        tag: "ROYAL PALACE",
+        tagline: "18th-century palace hotel accessible directly from the Ganges river by private boat.",
+        activities: [
+          { icon: "🚘", title: "Private SUV Airport Transfer", description: "Chauffeur transfer to river jetty." },
+          { icon: "⛵", title: "Private Bajra Boat Royal Welcome", description: "Marigold flower welcome cruise across to Darbhanga Ghat palace." }
+        ],
+        tip: "BrijRama Palace features one of the oldest working elevator lifts in South Asia.",
+        image: "/images/destinations/varanasi_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Ganga Aarti & Classical Shehnai Evening",
+        tag: "PRIVATE AARTI & MUSIC",
+        tagline: "Reserved terrace seating for Ganga Aarti and live classical sitar.",
+        activities: [
+          { icon: "🪔", title: "Palace Terrace Aarti View", description: "Watch Ganga Aarti from private elevated palace terrace." },
+          { icon: "🎶", title: "Private Banaras Gharana Classical Recital", description: "Private music performance by traditional Shehnai masters." }
+        ],
+        tip: "Varanasi is a UNESCO Creative City of Music.",
+        image: "/images/destinations/varanasi_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Private Kashi Vishwanath VIP Darshan & Sarnath",
+        tag: "VIP DARSHAN",
+        tagline: "Escorted VIP entrance to Kashi Vishwanath temple.",
+        activities: [
+          { icon: "🛕", title: "Kashi Vishwanath VIP Entry", description: "Skip line temple darshan." },
+          { icon: "🚗", title: "Private Chauffeur Tour of Sarnath", description: "Private guided tour of Buddhist ruins." }
+        ],
+        tip: "Special morning Rudrabhishek pooja can be arranged.",
+        image: "/images/destinations/varanasi_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Private Bajra Sunset Dinner Cruise",
+        tag: "SUNSET CRUISE",
+        tagline: "Dining on board private traditional wooden Bajra boat.",
+        activities: [
+          { icon: "🍽️", title: "Gourmet Candlelight Dinner on Ganges", description: "Curated 4-course vegetarian royal feast served while floating past illuminated ghats." }
+        ],
+        tip: "Pure magic as 84 ghats light up under moonlit sky.",
+        image: "/images/destinations/varanasi_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Master Weaver Silk Workshop & Heritage Spa",
+        tag: "SILK & SPA",
+        tagline: "Private visit to National Award winning silk artisan.",
+        activities: [
+          { icon: "🧵", title: "Master Weaver Private Studio Visit", description: "Private custom saree ordering." },
+          { icon: "💆", title: "Palace Ayurvedic Spa", description: "Herbal massage in palace spa sanctuary." }
+        ],
+        tip: "Custom handwoven sarees can be shipped worldwide.",
+        image: "/images/destinations/varanasi_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure via Varanasi",
+        tag: "DEPARTURE",
+        tagline: "Private boat transfer and airport drive.",
+        activities: [
+          { icon: "✈️", title: "Private Airport Transfer", description: "Private boat to jetty and chauffeur drive to airport." }
+        ],
+        tip: "VIP airport lounge access included.",
+        image: "/images/destinations/varanasi_3.jpg"
+      }
+    ],
+    hotels: [
+      { name: "BrijRama Palace - Heritage Hotel", rating: "★★★★★", type: "Ultra Luxury Palace on Ghats", location: "Darbhanga Ghat, Varanasi", image: "/images/destinations/varanasi_3.jpg" }
+    ]
+  },
+
+  // ── BASE DESTINATION ITINERARIES ──
+  "pondicherry": {
+    slug: "pondicherry",
+    destination: "Pondicherry",
+    title: "Pondicherry French Quarter & Promenade Beach",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/pondicherry_1.jpg",
+    tagline: "White Town French Architecture, Promenade Beach & Auroville",
+    basePrice: 16500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Pondicherry",
+        tag: "PONDICHERRY",
+        tagline: "Stroll mustard yellow boulevards.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to White Town hotel." }
+        ],
+        tip: "Enjoy French cafes.",
+        image: "/images/destinations/pondicherry_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Promenade Beach & Ashram",
+        tag: "PROMENADE",
+        tagline: "Sunrise at Rock Beach.",
+        activities: [
+          { icon: "🌅", title: "Rock Beach Sunrise", description: "Morning walk along ocean sea wall." }
+        ],
+        tip: "Visit Sri Aurobindo Ashram.",
+        image: "/images/destinations/pondicherry_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Auroville Matrimandir",
+        tag: "AUROVILLE",
+        tagline: "Golden dome view point.",
+        activities: [
+          { icon: "🔮", title: "Matrimandir View", description: "Walk through green gardens to golden dome." }
+        ],
+        tip: "Shop at Auroville boutiques.",
+        image: "/images/destinations/pondicherry_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Paradise Beach Cruise",
+        tag: "PARADISE BEACH",
+        tagline: "Boat cruise to paradise beach.",
+        activities: [
+          { icon: "🚤", title: "Paradise Beach Boat", description: "Boat ride across backwaters to beach." }
+        ],
+        tip: "Try wood-fired pizza.",
+        image: "/images/destinations/pondicherry_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to airport." }
+        ],
+        tip: "Au revoir!",
+        image: "/images/destinations/pondicherry_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Palais de Mahe", rating: "★★★★★", type: "French Heritage Hotel", location: "Pondicherry", image: "/images/destinations/pondicherry_1.jpg" }
+    ]
+  },
+  "kenya": {
+    slug: "kenya",
+    destination: "Kenya",
+    title: "Kenya Masai Mara Safari & Wildlife",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/kenya_1.jpg",
+    tagline: "Masai Mara Big Five Safari, Lake Nakuru & Giraffe Sanctuary",
+    basePrice: 115000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Nairobi",
+        tag: "NAIROBI",
+        tagline: "Arrive in Nairobi.",
+        activities: [
+          { icon: "✈️", title: "Airport Pick-up", description: "Transfer to Nairobi hotel." }
+        ],
+        tip: "Rest before safari.",
+        image: "/images/destinations/kenya_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Drive to Masai Mara",
+        tag: "MASAI MARA",
+        tagline: "Afternoon game drive in Masai Mara.",
+        activities: [
+          { icon: "🦁", title: "Masai Mara Safari", description: "Spot lions and giraffes." }
+        ],
+        tip: "Keep camera ready.",
+        image: "/images/destinations/kenya_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Full Day Safari",
+        tag: "BIG FIVE",
+        tagline: "Full day tracking Big Five animals.",
+        activities: [
+          { icon: "🦏", title: "Big Five Safari", description: "Drive to Mara river." }
+        ],
+        tip: "Bush picnic lunch.",
+        image: "/images/destinations/kenya_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Lake Nakuru Flamingo Sanctuary",
+        tag: "LAKE NAKURU",
+        tagline: "Rhino sanctuary drive.",
+        activities: [
+          { icon: "🦩", title: "Lake Nakuru Safari", description: "Spot rhinos and flamingos." }
+        ],
+        tip: "Great leopard spotting.",
+        image: "/images/destinations/kenya_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Giraffe Centre & Departure",
+        tag: "DEPARTURE",
+        tagline: "Feed giraffes and airport transfer.",
+        activities: [
+          { icon: "🦒", title: "Giraffe Centre", description: "Feed Rothschild giraffes." }
+        ],
+        tip: "Hakuna Matata!",
+        image: "/images/destinations/kenya_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Mara Serena Safari Lodge", rating: "★★★★★", type: "Safari Lodge", location: "Masai Mara", image: "/images/destinations/kenya_1.jpg" }
+    ]
+  },
+  "varanasi": {
+    slug: "varanasi",
+    destination: "Varanasi",
+    title: "Varanasi Sacred Ganges & Kashi Vishwanath",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/varanasi_1.jpg",
+    tagline: "Ganga Aarti, Sunrise Ganges Cruise & Ancient Ghats",
+    basePrice: 15500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Varanasi & Ganga Aarti",
+        tag: "GANGA AARTI",
+        tagline: "Witness evening Ganga Aarti ceremony.",
+        activities: [
+          { icon: "🪔", title: "Ganga Aarti VIP View", description: "Oil lamps and prayers along the river." }
+        ],
+        tip: "Best viewed from boat.",
+        image: "/images/destinations/varanasi_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Sunrise Boat Ride & Vishwanath Temple",
+        tag: "SUNRISE BOAT",
+        tagline: "Morning boat ride past 84 ghats.",
+        activities: [
+          { icon: "🚣", title: "Sunrise Boat Ride", description: "Cruising along sacred Ganges." }
+        ],
+        tip: "Visit Kashi Vishwanath Corridor.",
+        image: "/images/destinations/varanasi_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Sarnath Excursion",
+        tag: "SARNATH",
+        tagline: "Visit Buddhist Dhamek Stupa.",
+        activities: [
+          { icon: "☸️", title: "Dhamek Stupa Sarnath", description: "Ancient Buddhist stone stupa." }
+        ],
+        tip: "10 km from Varanasi.",
+        image: "/images/destinations/varanasi_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Banarasi Silk Weaving & Food Crawl",
+        tag: "SILK & FOOD",
+        tagline: "Watch saree weaving and taste street food.",
+        activities: [
+          { icon: "🧵", title: "Silk Saree Workshop", description: "Watch handloom silk weavers." }
+        ],
+        tip: "Taste Malaiyyo sweet.",
+        image: "/images/destinations/varanasi_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to airport." }
+        ],
+        tip: "Har Har Mahadev!",
+        image: "/images/destinations/varanasi_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Suryauday Haveli", rating: "★★★★", type: "Ghatside Haveli", location: "Varanasi", image: "/images/destinations/varanasi_1.jpg" }
+    ]
   }
 };
 
