@@ -41,6 +41,12 @@ const MARKERS: Marker[] = [
   { name: "Seychelles", lat: -4.68, lon: 55.45, packagesCount: 1, startingPrice: 85000, description: "Pristine Tropical Paradise", region: "islands" },
   { name: "Switzerland", lat: 46.80, lon: 8.23, packagesCount: 1, startingPrice: 115000, description: "Lakes, Gorges, and Alpine Peaks", region: "europe" },
   { name: "United Kingdom", lat: 51.50, lon: -0.12, packagesCount: 1, startingPrice: 85000, description: "Royalty, Castles, and Green Fields", region: "europe" },
+  { name: "Hong Kong", lat: 22.3193, lon: 114.1694, packagesCount: 3, startingPrice: 52000, description: "Victoria Harbour & Disneyland", region: "southeast-asia" },
+  { name: "Macau", lat: 22.1987, lon: 113.5439, packagesCount: 3, startingPrice: 45000, description: "UNESCO Heritage & Cotai Strip", region: "southeast-asia" },
+  { name: "Meghalaya", lat: 25.5788, lon: 91.8933, packagesCount: 3, startingPrice: 18500, description: "Living Root Bridges & Dawki Waters", region: "india" },
+  { name: "Bhutan", lat: 27.5142, lon: 90.4336, packagesCount: 3, startingPrice: 38500, description: "Tiger's Nest & Himalayan Happiness", region: "islands" },
+  { name: "Nepal", lat: 27.7172, lon: 85.3240, packagesCount: 3, startingPrice: 28500, description: "Himalayan Peaks & Everest Base Camp", region: "islands" },
+  { name: "Ooty", lat: 11.4102, lon: 76.6950, packagesCount: 3, startingPrice: 14500, description: "Queen of Nilgiri Hill Stations & Toy Train", region: "india" },
 ];
 
 

@@ -3748,7 +3748,7 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
     destination: "Montenegro",
     title: "Montenegro Mountains & National Parks (Durmitor & Tara Canyon)",
     duration: "4 Nights / 5 Days",
-    heroImage: "/images/destinations/montenegro_3.jpg",
+    heroImage: "/images/destinations/montenegro.webp",
     tagline: "Europe's Deepest Canyon Rafting & Alpine Glacial Lakes",
     basePrice: 49500,
     days: [
@@ -4784,6 +4784,1888 @@ export const VARIANT_ITINERARIES: Record<string, ItineraryData> = {
       { name: "Hilton Abu Dhabi Yas Island", rating: "★★★★★", type: "Family Resort", location: "Yas Island", image: "/images/destinations/abu_dhabi_3.jpg" }
     ]
   },
+  "hong-kong-express": {
+    slug: "hong-kong-express",
+    destination: "Hong Kong",
+    title: "Hong Kong Skyline & Disneyland Highlights",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/hong_kong_1.jpg",
+    tagline: "Victoria Harbour Star Ferry, Peak Tram & Magical Day at Disneyland",
+    basePrice: 52000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Hong Kong & Victoria Harbour Evening",
+        tag: "HARBOUR VIEW",
+        tagline: "Check into your hotel and enjoy Tsim Sha Tsui Promenade.",
+        activities: [
+          { icon: "✈️", title: "Hong Kong Airport Transfer", description: "Private car transfer to your hotel." },
+          { icon: "⛴️", title: "Star Ferry Crossing", description: "Ride the iconic Star Ferry across Victoria Harbour." }
+        ],
+        tip: "Watch the Symphony of Lights at 8 PM from the waterfront.",
+        image: "/images/destinations/hong_kong_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Victoria Peak & Central District",
+        tag: "SKYLINE",
+        tagline: "Historical Peak Tram ride to Sky Terrace 428.",
+        activities: [
+          { icon: "🚋", title: "Peak Tram Ride", description: "Ascend Victoria Peak on the famous funicular train." },
+          { icon: "🏙️", title: "Sky Terrace 428 Views", description: "Panoramic skyline views over Hong Kong Island." }
+        ],
+        tip: "Take the Central-Mid-Levels Escalator up through Soho.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Full Day at Hong Kong Disneyland",
+        tag: "DISNEYLAND",
+        tagline: "Magic and adventures across 7 immersive themed lands.",
+        activities: [
+          { icon: "🏰", title: "Disneyland Park Entry", description: "Full day access to rides, shows, and parades." }
+        ],
+        tip: "Catch the Momentous fireworks display over the castle.",
+        image: "/images/destinations/hong_kong_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Lantau Island Giant Buddha & Cable Car",
+        tag: "LANTAU",
+        tagline: "Ride the Ngong Ping 360 cable car to the Bronze Buddha.",
+        activities: [
+          { icon: "🈴", title: "Tian Tan Giant Buddha", description: "Visit the massive bronze seated Buddha." },
+          { icon: "🟤", title: "Ngong Ping Cable Car", description: "Scenic aerial ride across Tung Chung Bay." }
+        ],
+        tip: "Try local street snacks in Tai O Fishing Village.",
+        image: "/images/destinations/hong_kong_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Hong Kong",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Express Transfer", description: "Seamless airport transfer." }
+        ],
+        tip: "In-town check-in is available at Kowloon & Hong Kong stations.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Kowloon Shangri-La", rating: "★★★★★", type: "Harbour View Luxury", location: "Tsim Sha Tsui", image: "/images/destinations/hong_kong_1.jpg" }
+    ]
+  },
+  "hong-kong-luxury": {
+    slug: "hong-kong-luxury",
+    destination: "Hong Kong",
+    title: "Hong Kong Luxury Skyline & Peninsula Helicopter Tour",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/hong_kong_2.jpg",
+    tagline: "Peninsula Harbour View Suite, Private Helicopter Flight & Michelin Dining",
+    basePrice: 88000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Helicopter Transfer & Peninsula Check-in",
+        tag: "LUXURY WELCOME",
+        tagline: "Rolls-Royce transfer and Victoria Harbour suite.",
+        activities: [
+          { icon: "🚘", title: "Peninsula Rolls-Royce Transfer", description: "Private airport transfer in custom green Rolls-Royce Phantom." },
+          { icon: "🥂", title: "Harbour Suite Check-in", description: "Champagne welcome at The Peninsula Hong Kong." }
+        ],
+        tip: "Enjoy afternoon tea in The Peninsula's grand lobby.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Helicopter Flight & Michelin Dining",
+        tag: "HELICOPTER & MICHELIN",
+        tagline: "Fly above Hong Kong Island and dine at Lung King Heen.",
+        activities: [
+          { icon: "🚁", title: "Helicopter Skyline Flight", description: "Private flight over Hong Kong harbour, Victoria Peak, and beaches." },
+          { icon: "🍽️", title: "3-Star Michelin Dim Sum Dinner", description: "Exclusive tasting menu at 3-Michelin starred Lung King Heen." }
+        ],
+        tip: "The helipad is located directly on The Peninsula's roof.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Private Yacht Cruise to Repulse Bay",
+        tag: "PRIVATE YACHT",
+        tagline: "Sail across Victoria Harbour to Hong Kong Island's southern beaches.",
+        activities: [
+          { icon: "🛥️", title: "Luxury Yacht Charter", description: "Half-day private yacht cruise to Deep Water Bay & Stanley Market." }
+        ],
+        tip: "Sunset drinks on deck offer unbeatable skyline views.",
+        image: "/images/destinations/hong_kong_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "VIP Peak Experience & Luxury Shopping",
+        tag: "VIP PEAK",
+        tagline: "Private peak tram compartment and personal shopping host.",
+        activities: [
+          { icon: "🚋", title: "VIP Peak Tram Tour", description: "Fast-track access to Sky Terrace 428." },
+          { icon: "🛍️", title: "Landmark Central Shopping", description: "Personal shopper experience at luxury fashion flagships." }
+        ],
+        tip: "Visit Felix Bar for drinks crafted by world-class mixologists.",
+        image: "/images/destinations/hong_kong_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Lantau Helicopter & Tian Tan Buddha VIP Tour",
+        tag: "LANTAU VIP",
+        tagline: "Private cable car crystal cabin and exclusive temple access.",
+        activities: [
+          { icon: "🈴", title: "Private Tian Tan Buddha Tour", description: "Exclusive access to temple chambers and crystal cable car." }
+        ],
+        tip: "Enjoy private tea tasting at Ngong Ping Village.",
+        image: "/images/destinations/hong_kong_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Hong Kong",
+        tag: "DEPARTURE",
+        tagline: "Luxury transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Chauffeur Airport Transfer", description: "Private luxury vehicle to HKIA VIP terminal." }
+        ],
+        tip: "Relax at Cathay Pacific's The Pier First Class Lounge.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Peninsula Hong Kong", rating: "★★★★★", type: "Ultra Luxury Heritage", location: "Kowloon", image: "/images/destinations/hong_kong_2.jpg" }
+    ]
+  },
+  "hong-kong-macau-combo": {
+    slug: "hong-kong-macau-combo",
+    destination: "Hong Kong",
+    title: "Hong Kong & Macau Dual Heritage Explorer",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/hong_kong_3.jpg",
+    tagline: "TurboJET Ferry to Macau, Ruins of St. Paul's & Victoria Peak",
+    basePrice: 68000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Hong Kong & Tsim Sha Tsui",
+        tag: "HONG KONG",
+        tagline: "Check in and explore Victoria Harbour.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to Kowloon hotel." },
+          { icon: "⛴️", title: "Star Ferry & Avenue of Stars", description: "Evening promenade walk along the harbor." }
+        ],
+        tip: "Great photo spot at the Bruce Lee statue on Avenue of Stars.",
+        image: "/images/destinations/hong_kong_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Victoria Peak & Disneyland Day",
+        tag: "DISNEYLAND & PEAK",
+        tagline: "Peak tram morning and magical afternoon at Disneyland.",
+        activities: [
+          { icon: "🚋", title: "Victoria Peak Tram", description: "Morning visit to Victoria Peak lookout." },
+          { icon: "🏰", title: "Disneyland Access", description: "Afternoon and evening at Disneyland Hong Kong." }
+        ],
+        tip: "Take the MTR Disneyland Resort Line train.",
+        image: "/images/destinations/hong_kong_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "TurboJET High-Speed Ferry to Macau",
+        tag: "TURBOJET",
+        tagline: "Cross the Pearl River Delta to Macau.",
+        activities: [
+          { icon: "⛴️", title: "High-Speed TurboJET Ferry", description: "1-hour luxury ferry ride to Macau Outer Harbour." },
+          { icon: "🏨", title: "The Venetian Macao Check-in", description: "Check into suite on the Cotai Strip." }
+        ],
+        tip: "Have your passport handy for Macau border control.",
+        image: "/images/destinations/macau_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Ruins of St. Paul's & Senado Square UNESCO Tour",
+        tag: "MACAU HERITAGE",
+        tagline: "Explore Portuguese cobblestone historic district.",
+        activities: [
+          { icon: "🏛️", title: "Ruins of St. Paul's", description: "17th-century church facade." },
+          { icon: "🏰", title: "Senado Square & A-Ma Temple", description: "UNESCO World Heritage historic walk." }
+        ],
+        tip: "Try authentic Macanese pork chop buns.",
+        image: "/images/destinations/macau_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Wynn Palace SkyCab & Cotai Strip",
+        tag: "COTAI LUXURY",
+        tagline: "Cable car performance lake and Venetian gondola.",
+        activities: [
+          { icon: "🎡", title: "Wynn Palace SkyCab", description: "Fountain lake cable car ride." },
+          { icon: "🚣", title: "Venetian Canal Gondola", description: "Classic gondola ride through indoor canals." }
+        ],
+        tip: "Visit The Londoner Macau big ben clock tower replica.",
+        image: "/images/destinations/macau_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "HK-Zhuhai-Macau Bridge Bus Back to Hong Kong",
+        tag: "SEA BRIDGE",
+        tagline: "Cross the world's longest sea-crossing bridge.",
+        activities: [
+          { icon: "🚌", title: "HZMB Bridge Shuttle Bus", description: "Cross the 55km sea bridge back to Hong Kong." }
+        ],
+        tip: "Spectacular ocean views from the bridge highway.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Hong Kong",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to HKIA for your flight home." }
+        ],
+        tip: "Duty-free shopping at HKIA before boarding.",
+        image: "/images/destinations/hong_kong_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Kowloon Hotel Hong Kong", rating: "★★★★", type: "City Hotel", location: "Kowloon", image: "/images/destinations/hong_kong_1.jpg" },
+      { name: "The Venetian Macao", rating: "★★★★★", type: "Luxury Resort", location: "Cotai Strip", image: "/images/destinations/macau_1.jpg" }
+    ]
+  },
+  "macau-4n5d": {
+    slug: "macau-4n5d",
+    destination: "Macau",
+    title: "Macau Heritage & Cotai Strip Highlights",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/macau_1.jpg",
+    tagline: "Ruins of St. Paul's, Venetian Gondola & Macau Tower",
+    basePrice: 45000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Macau & Venetian Cotai Strip",
+        tag: "COTAI STRIP",
+        tagline: "Check into your Cotai resort and ride the Venetian Gondola.",
+        activities: [
+          { icon: "🏨", title: "Cotai Resort Check-in", description: "Check into luxury suite on the Cotai Strip." },
+          { icon: "🚣", title: "Venetian Gondola Ride", description: "Indoor canal ride with serenading gondoliers." }
+        ],
+        tip: "Walk through the indoor replica of St. Mark's Square.",
+        image: "/images/destinations/macau_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Ruins of St. Paul's & UNESCO Historic Centre",
+        tag: "HERITAGE",
+        tagline: "Explore Portuguese colonial history and Senado Square.",
+        activities: [
+          { icon: "🏛️", title: "Ruins of St. Paul's", description: "17th-century facade of Church of St. Paul." },
+          { icon: "🏰", title: "Monte Fort & Senado Square", description: "Panoramic views and Portuguese azulejo tile streets." }
+        ],
+        tip: "Sample fresh Macanese Portuguese egg tarts near St. Paul's.",
+        image: "/images/destinations/macau_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Wynn Palace SkyCab & Macau Tower Skywalk",
+        tag: "LUXURY & THRILLS",
+        tagline: "Cable car over performance lake and panoramic tower view.",
+        activities: [
+          { icon: "🎡", title: "Wynn Palace SkyCab", description: "Cable car over dancing fountain lake." },
+          { icon: "🗼", title: "Macau Tower Observation Deck", description: "Panoramic view 223m above the harbor." }
+        ],
+        tip: "The Wynn Palace SkyCab is complimentary for visitors.",
+        image: "/images/destinations/macau_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Coloane Village & Hac Sa Beach",
+        tag: "COASTAL ESCAPE",
+        tagline: "Peaceful coastal village and black sand beach walk.",
+        activities: [
+          { icon: "🏖️", title: "Hac Sa Black Sand Beach", description: "Relax at Macau's natural black sand shoreline." },
+          { icon: "🥧", title: "Lord Stow's Bakery", description: "Visit the original birthplace of Macanese egg tarts." }
+        ],
+        tip: "Coloane offers a tranquil contrast to Cotai's high energy.",
+        image: "/images/destinations/macau_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Macau",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport or ferry terminal.",
+        activities: [
+          { icon: "✈️", title: "Departure Transfer", description: "Transfer to Macau International Airport or Taipa Ferry." }
+        ],
+        tip: "HK-Zhuhai-Macau Bridge bus option is fast and scenic.",
+        image: "/images/destinations/macau_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Venetian Macao", rating: "★★★★★", type: "Luxury Resort", location: "Cotai Strip", image: "/images/destinations/macau_1.jpg" }
+    ]
+  },
+  "macau-luxury": {
+    slug: "macau-luxury",
+    destination: "Macau",
+    title: "Macau Ultra-Luxury Casino & Resort Escape (The Londoner & Wynn Palace)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/macau_2.jpg",
+    tagline: "The Londoner Suites, Wynn SkyCab VIP & Robuchon Michelin Dining",
+    basePrice: 79000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Macau & The Londoner Suites Check-in",
+        tag: "LUXURY SUITES",
+        tagline: "Limousine transfer and British-inspired luxury suite.",
+        activities: [
+          { icon: "🚘", title: "Limousine Airport Transfer", description: "Private luxury chauffeur from Macau Airport." },
+          { icon: "🏨", title: "The Londoner Macau Check-in", description: "Stay in David Beckham-designed suites." }
+        ],
+        tip: "Watch the Big Ben light show outside the resort at 7:30 PM.",
+        image: "/images/destinations/macau_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Robuchon au Dôme 3-Star Michelin Lunch",
+        tag: "MICHELIN DINING",
+        tagline: "Dine inside the glass dome of Grand Lisboa at 238 metres.",
+        activities: [
+          { icon: "🍽️", title: "Robuchon au Dôme Michelin Gastronomy", description: "French fine dining with panoramic city views." }
+        ],
+        tip: "Dress code is smart elegant — book 30 days in advance.",
+        image: "/images/destinations/macau_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Wynn Palace SkyCab & Performance Lake VIP Access",
+        tag: "WYNN PALACE",
+        tagline: "VIP cable car flight and private fountain viewing.",
+        activities: [
+          { icon: "🎡", title: "Wynn Palace SkyCab VIP Suite", description: "Private gondola over the 8-acre performance lake." }
+        ],
+        tip: "Evening shows feature classic opera and light spectacles.",
+        image: "/images/destinations/macau_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Private UNESCO Heritage Architecture Tour",
+        tag: "HERITAGE VIP",
+        tagline: "Private historian guide through St. Paul's and Mandarin's House.",
+        activities: [
+          { icon: "🏛️", title: "Mandarin's House & St. Paul's VIP Tour", description: "Private guided historical walk." }
+        ],
+        tip: "Mandarin's House is a 4,000 sq meter traditional Chinese mansion.",
+        image: "/images/destinations/macau_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Spa Day & Private Cotai Yacht Dinner",
+        tag: "WELLNESS & SPA",
+        tagline: "Award-winning spa rituals and private evening dinner.",
+        activities: [
+          { icon: "💆", title: "Forbes 5-Star Spa Treatment", description: "2-hour signature wellness session." }
+        ],
+        tip: "Unwind at the infinity pool overlooking Cotai Strip.",
+        image: "/images/destinations/macau_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Macau",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Limousine Airport Transfer", description: "Private transfer to airport or ferry terminal." }
+        ],
+        tip: "Helicopter service directly to HKIA is available.",
+        image: "/images/destinations/macau_3.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Londoner Macao", rating: "★★★★★", type: "Ultra Luxury Suite Resort", location: "Cotai Strip", image: "/images/destinations/macau_2.jpg" }
+    ]
+  },
+  "macau-adventure": {
+    slug: "macau-adventure",
+    destination: "Macau",
+    title: "Macau Thrill & Coastal Heritage (Macau Tower Skywalk & Coloane Village)",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/macau_3.jpg",
+    tagline: "Macau Tower AJ Hackett Bungee, Skywalk & Coloane Village",
+    basePrice: 38000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Macau & Macau Tower Skywalk",
+        tag: "MACAU TOWER",
+        tagline: "Check in and head up to Macau Tower 233m outdoor ledge.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to hotel." },
+          { icon: "🧗", title: "AJ Hackett Skywalk 233m", description: "Walk around the outer rim of Macau Tower without handrails." }
+        ],
+        tip: "Bungee jumping option available for extreme thrill seekers.",
+        image: "/images/destinations/macau_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Historic Ruins of St. Paul's & Monte Fort Hike",
+        tag: "HISTORIC HIKE",
+        tagline: "Climb Monte Fort for fortress views over Macau and China.",
+        activities: [
+          { icon: "🏛️", title: "Ruins of St. Paul's", description: "Historical monument walk." },
+          { icon: "🏰", title: "Monte Fort Rampart Hike", description: "Hike up the 17th-century fortress hill." }
+        ],
+        tip: "Visit the Macau Museum inside the fort.",
+        image: "/images/destinations/macau_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Coloane Coastal Trail & Hac Sa Black Sand Beach",
+        tag: "COASTAL TRAIL",
+        tagline: "Scenic nature walk along Coloane's rugged coast.",
+        activities: [
+          { icon: "🥾", title: "Coloane Trail Hike", description: "8km nature trail with South China Sea views." },
+          { icon: "🏖️", title: "Hac Sa Beach Sunset", description: "Walk along the famous black sand beach." }
+        ],
+        tip: "Eat freshly baked Lord Stow's egg tarts warm from the oven.",
+        image: "/images/destinations/macau_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure from Macau",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to airport or ferry." }
+        ],
+        tip: "Duty-free Portuguese wine makes a great souvenir.",
+        image: "/images/destinations/macau_3.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Grand Coloane Resort", rating: "★★★★", type: "Beachfront Resort", location: "Coloane Island", image: "/images/destinations/macau_1.jpg" }
+    ]
+  },
+  "hong-kong": {
+    slug: "hong-kong",
+    destination: "Hong Kong",
+    title: "Hong Kong Skyline, Peak Tram & Disneyland",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/hong_kong_1.jpg",
+    tagline: "Victoria Harbour Lights, Peak Skyline & Magical Theme Park Moments",
+    basePrice: 52000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Hong Kong & Victoria Harbour Evening",
+        tag: "VICTORIA HARBOUR",
+        tagline: "Check into your hotel and enjoy the Symphony of Lights.",
+        activities: [
+          { icon: "✈️", title: "Hong Kong Airport Transfer", description: "Private transfer to Kowloon hotel." },
+          { icon: "⛴️", title: "Star Ferry & Harbour Cruise", description: "Iconic Star Ferry ride across Victoria Harbour." }
+        ],
+        tip: "Watch the Symphony of Lights light show from Tsim Sha Tsui Promenade at 8 PM.",
+        image: "/images/destinations/hong_kong_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Victoria Peak Tram & Central District Tour",
+        tag: "VICTORIA PEAK",
+        tagline: "Ride the historical Peak Tram to Sky Terrace 428.",
+        activities: [
+          { icon: "🚋", title: "Peak Tram Ride", description: "Ascend Victoria Peak on the historic funicular railway." },
+          { icon: "🏙️", title: "Sky Terrace 428 View", description: "Panoramic 360-degree views of Hong Kong skyscrapers." }
+        ],
+        tip: "Grab lunch in Soho and take the Central-Mid-Levels Escalator.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Hong Kong Disneyland Day Experience",
+        tag: "DISNEYLAND",
+        tagline: "Full day of magic at World of Frozen & Castle of Magical Dreams.",
+        activities: [
+          { icon: "🏰", title: "Disneyland Theme Park Access", description: "Full day park entry with ride access." }
+        ],
+        tip: "Stay for the Momentous night light and fireworks show over the castle.",
+        image: "/images/destinations/hong_kong_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Lantau Island & Tian Tan Giant Buddha",
+        tag: "LANTAU ISLAND",
+        tagline: "Ngong Ping 360 cable car to the majestic Bronze Buddha.",
+        activities: [
+          { icon: "🈴", title: "Tian Tan Buddha", description: "Climb the 268 steps to the Giant Buddha." },
+          { icon: "🟤", title: "Ngong Ping 360 Cable Car", description: "Crystal cabin ride over Tung Chung Bay." }
+        ],
+        tip: "Try traditional vegetarian dim sum at Po Lin Monastery.",
+        image: "/images/destinations/hong_kong_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Hong Kong",
+        tag: "DEPARTURE",
+        tagline: "Transfer to HKIA for your flight home.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Private transfer to Hong Kong International Airport." }
+        ],
+        tip: "Use the Airport Express in-town check-in service at Kowloon Station.",
+        image: "/images/destinations/hong_kong_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Peninsula Hong Kong", rating: "★★★★★", type: "Ultra Luxury", location: "Kowloon", image: "/images/destinations/hong_kong_2.jpg" }
+    ]
+  },
+  "macau": {
+    slug: "macau",
+    destination: "Macau",
+    title: "Macau UNESCO Heritage & Cotai Strip Grandeur",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/macau_1.jpg",
+    tagline: "Portuguese Cobblestone Streets, Venetian Canals & SkyCab Lake Show",
+    basePrice: 45000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Macau & Venetian Cotai Strip",
+        tag: "COTAI STRIP",
+        tagline: "Check into your Cotai resort and ride the Venetian Gondola.",
+        activities: [
+          { icon: "🏨", title: "Cotai Resort Check-in", description: "Check into luxury suite on the Cotai Strip." },
+          { icon: "🚣", title: "Venetian Gondola Ride", description: "Indoor canal ride with serenading gondoliers." }
+        ],
+        tip: "Walk through the indoor replica of St. Mark's Square under illuminated skies.",
+        image: "/images/destinations/macau_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Ruins of St. Paul's & UNESCO Historic Centre",
+        tag: "HERITAGE",
+        tagline: "Explore Portuguese colonial history and Senado Square.",
+        activities: [
+          { icon: "🏛️", title: "Ruins of St. Paul's", description: "17th-century facade of Church of St. Paul." },
+          { icon: "🏰", title: "Monte Fort & Senado Square", description: "Panoramic views and Portuguese azulejo tile streets." }
+        ],
+        tip: "Sample fresh Macanese Portuguese egg tarts near St. Paul's.",
+        image: "/images/destinations/macau_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Wynn Palace SkyCab & Macau Tower Skywalk",
+        tag: "LUXURY & THRILLS",
+        tagline: "Cable car over performance lake and panoramic tower view.",
+        activities: [
+          { icon: "🎡", title: "Wynn Palace SkyCab", description: "Cable car over dancing fountain lake." },
+          { icon: "🗼", title: "Macau Tower Skywalk", description: "High-altitude walk 233m above the harbor." }
+        ],
+        tip: "The Wynn Palace SkyCab is complimentary for visitors.",
+        image: "/images/destinations/macau_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Coloane Village & Hac Sa Beach",
+        tag: "COASTAL ESCAPE",
+        tagline: "Peaceful coastal village and black sand beach walk.",
+        activities: [
+          { icon: "🏖️", title: "Hac Sa Black Sand Beach", description: "Relax at Macau's natural black sand shoreline." },
+          { icon: "🥧", title: "Lord Stow's Bakery", description: "Visit the original birthplace of Macanese egg tarts." }
+        ],
+        tip: "Coloane offers a tranquil contrast to Cotai's high energy.",
+        image: "/images/destinations/macau_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Macau",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport or ferry terminal.",
+        activities: [
+          { icon: "✈️", title: "Departure Transfer", description: "Transfer to Macau International Airport or Taipa Ferry." }
+        ],
+        tip: "HK-Zhuhai-Macau Bridge bus option is fast and scenic.",
+        image: "/images/destinations/macau_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Venetian Macao", rating: "★★★★★", type: "Luxury Resort", location: "Cotai Strip", image: "/images/destinations/macau_1.jpg" }
+    ]
+  },
+  "meghalaya-explorer": {
+    slug: "meghalaya-explorer",
+    destination: "Meghalaya",
+    title: "Meghalaya Clouds & Living Root Bridges (Shillong, Cherrapunji & Dawki)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/meghalaya_1.jpg",
+    tagline: "Double Decker Living Root Bridges, Crystal Dawki River & Seven Sisters Waterfalls",
+    basePrice: 18500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Guwahati & Scenic Drive to Shillong",
+        tag: "SHILLONG",
+        tagline: "Drive past blue Umiam Lake into the Scotland of the East.",
+        activities: [
+          { icon: "✈️", title: "Guwahati Airport Transfer", description: "Private vehicle pick-up from Lokpriya Gopinath Bordoloi Airport." },
+          { icon: "🌊", title: "Umiam Lake (Barapani) Viewpoint", description: "Stop at the vast water reservoir surrounded by Khasi pine hills." }
+        ],
+        tip: "Enjoy momos and hot tea at Police Bazar in Shillong evening.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Shillong to Cherrapunji (Sohra) Waterfalls",
+        tag: "CHERRAPUNJI",
+        tagline: "Explore Nohkalikai, Seven Sisters Waterfalls & Mawsmai Cave.",
+        activities: [
+          { icon: "🌊", title: "Nohkalikai Falls View", description: "India's tallest plunge waterfall (340m drop)." },
+          { icon: "⛰️", title: "Mawsmai Cave Exploration", description: "Guided walk through natural limestone formations." }
+        ],
+        tip: "Nohkalikai looks most dramatic in late morning light.",
+        image: "/images/destinations/meghalaya_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Nongriat Double Decker Living Root Bridge Trek",
+        tag: "ROOT BRIDGES",
+        tagline: "Trek 3,000 steps down into lush jungle bio-engineering wonders.",
+        activities: [
+          { icon: "🌁", title: "Double Decker Living Root Bridge", description: "Marvel at 200-year-old living rubber tree root architecture." },
+          { icon: "🏊", title: "Rainbow Falls Swim", description: "Clear turquoise natural pool at the base of Rainbow Falls." }
+        ],
+        tip: "Carry bamboo walking sticks and plenty of water for the return ascent.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Dawki Umngot River & Mawlynnong Cleanest Village",
+        tag: "CRYSTAL DAWKI",
+        tagline: "Boating on glass-like transparent waters bordering Bangladesh.",
+        activities: [
+          { icon: "🚣", title: "Umngot River Crystal Boat Ride", description: "Experience boats floating on clear glass waters." },
+          { icon: "🏡", title: "Mawlynnong Asia's Cleanest Village", description: "Walk through bamboo-lined flower gardens and skywalk view." }
+        ],
+        tip: "Winter months (Nov–Feb) offer the highest water transparency at Dawki.",
+        image: "/images/destinations/meghalaya_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Shillong Laitlum Canyons & Elephant Falls",
+        tag: "LAITLUM CANYONS",
+        tagline: "Standing on the edge of the End of Hills mist valley.",
+        activities: [
+          { icon: "🏔️", title: "Laitlum Canyons Viewpoint", description: "Dramatic gorges and green rolling Khasi hills." },
+          { icon: "🌊", title: "Elephant Falls Walk", description: "Three-tiered mountain waterfall surrounded by ferns." }
+        ],
+        tip: "Laitlum Canyons gets foggy quickly — visit before 2 PM.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure to Guwahati",
+        tag: "DEPARTURE",
+        tagline: "Transfer to Guwahati Airport.",
+        activities: [
+          { icon: "✈️", title: "Guwahati Airport Transfer", description: "Private drive back to GAH airport." }
+        ],
+        tip: "Stop by Kamakhya Temple if time permits before flight.",
+        image: "/images/destinations/meghalaya_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Ri Kynjai Resort", rating: "★★★★★", type: "Pine Lake Resort", location: "Umiam Lake, Shillong", image: "/images/destinations/meghalaya_3.jpg" }
+    ]
+  },
+  "meghalaya-adventure": {
+    slug: "meghalaya-adventure",
+    destination: "Meghalaya",
+    title: "Meghalaya Cave Explorer & Canyoning Adventure",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/meghalaya_2.jpg",
+    tagline: "Limestone Cave Spelunking, Wei Sawdong Trek & Kongthong Whistling Village",
+    basePrice: 22000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Shillong & Elephant Falls",
+        tag: "SHILLONG",
+        tagline: "Arrive in Shillong and gear up for cave adventures.",
+        activities: [
+          { icon: "✈️", title: "Airport Pick-up", description: "Transfer from Guwahati to Shillong." },
+          { icon: "🌊", title: "Elephant Falls & Peak Visit", description: "Warm-up hike to Shillong Peak viewpoint." }
+        ],
+        tip: "Pack headlamps and sturdy water shoes for cave expeditions.",
+        image: "/images/destinations/meghalaya_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Arwah Cave & Wei Sawdong 3-Tiered Waterfall",
+        tag: "CAVES & FALLS",
+        tagline: "Spelunking through fossilized limestone caverns.",
+        activities: [
+          { icon: "🦣", title: "Arwah Cave Fossils", description: "Discover millions-of-years-old crustacean fossils in cave walls." },
+          { icon: "🌊", title: "Wei Sawdong Waterfall Trek", description: "Steep bamboo trail hike to emerald 3-tiered pools." }
+        ],
+        tip: "Wei Sawdong trail is steep — take your time descending.",
+        image: "/images/destinations/meghalaya_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Krem Liat Prah Cave Expedition & Kongthong",
+        tag: "CAVE EXPEDITION",
+        tagline: "Explore South Asia's longest cave system and whistling village.",
+        activities: [
+          { icon: "🔦", title: "Limestone Cave Trek", description: "Guided spelunking with headlamps and safety harness." },
+          { icon: "🎵", title: "Kongthong Whistling Village", description: "Village where mothers assign unique melodic tunes instead of names." }
+        ],
+        tip: "Listen to locals call each other using unique musical tunes.",
+        image: "/images/destinations/meghalaya_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Dawki River Kayaking & Cliff Jumping",
+        tag: "WATER ADVENTURE",
+        tagline: "Kayaking and cliff jumping in crystal clear Umngot waters.",
+        activities: [
+          { icon: "🛶", title: "Dawki Kayaking", description: "Self-paddle kayak tour along the clear river canyon." },
+          { icon: "🏊", title: "Cliff Jumping", description: "Guided cliff jumps into deep natural pools." }
+        ],
+        tip: "Life jackets are provided and mandatory.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure via Guwahati",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to Guwahati." }
+        ],
+        tip: "Buy local Khasi orange honey before leaving.",
+        image: "/images/destinations/meghalaya_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Polo Orchid Resort Cherrapunjee", rating: "★★★★", type: "Cliffside Resort", location: "Cherrapunji", image: "/images/destinations/meghalaya_2.jpg" }
+    ]
+  },
+  "meghalaya-luxury": {
+    slug: "meghalaya-luxury",
+    destination: "Meghalaya",
+    title: "Meghalaya Luxury Pine Retreat & Resort Escape",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/meghalaya_3.jpg",
+    tagline: "Ri Kynjai Lake Cottages, Private Valley Helicopter Tour & Dawki Glamping",
+    basePrice: 34500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Chauffeur Transfer & Ri Kynjai Lake Resort",
+        tag: "LUXURY RESORT",
+        tagline: "Khasi thatch architecture over Umiam Lake.",
+        activities: [
+          { icon: "🚘", title: "Private Chauffeur Pick-up", description: "Luxury SUV transfer to Ri Kynjai Resort." },
+          { icon: "🏡", title: "Pine Cottage Check-in", description: "Private lakeside cottage with glass balcony." }
+        ],
+        tip: "Enjoy traditional Khasi herbal spa rituals.",
+        image: "/images/destinations/meghalaya_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Umiam Lake Sunset Cruise & Spa",
+        tag: "LAKE & SPA",
+        tagline: "Private pontoon boat ride across Barapani Lake.",
+        activities: [
+          { icon: "🛥️", title: "Private Sunset Pontoon Cruise", description: "Sailing across tranquil pine-fringed waters." },
+          { icon: "💆", title: "Khasi Herbal Wellness Spa", description: "Body massage using indigenous mountain herbs." }
+        ],
+        tip: "Sip hot Meghalaya green tea on the open deck.",
+        image: "/images/destinations/meghalaya_3.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Private Helicopter Flight Over Cherrapunji Valleys",
+        tag: "HELICOPTER FLIGHT",
+        tagline: "Aerial views of Nohkalikai Falls and deep Khasi gorges.",
+        activities: [
+          { icon: "🚁", title: "Private Helicopter Flight", description: "Scenic flight over Seven Sisters & Nohkalikai waterfalls." }
+        ],
+        tip: "The aerial view of the 340m drop of Nohkalikai is breathtaking.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Dawki Luxury Riverside Glamping",
+        tag: "GLAMPING",
+        tagline: "VIP canvas safari tents on the banks of Umngot River.",
+        activities: [
+          { icon: "⛺", title: "Luxury Riverside Glamping", description: "Stay in air-conditioned luxury tents with private deck." },
+          { icon: "🚣", title: "Private Sunset Boat Ride", description: "Glass boat ride along the border waters." }
+        ],
+        tip: "Barbecue dinner under starlit skies by the river.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Private Living Root Bridge Guided Walk",
+        tag: "ROOT BRIDGES VIP",
+        tagline: "Private botanical guide through ancient root architecture.",
+        activities: [
+          { icon: "🌁", title: "Living Root Bridge Tour", description: "Exclusive guided walk to living rubber tree bridges." }
+        ],
+        tip: "Learn how Khasi tribes weave tree roots across rivers over generations.",
+        image: "/images/destinations/meghalaya_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Laitlum Canyons Champagne Picnic",
+        tag: "CANONS PICNIC",
+        tagline: "Gourmet picnic high above the mist valley.",
+        activities: [
+          { icon: "🥂", title: "Laitlum Cliffside Champagne Lunch", description: "Private dining set up at Laitlum Canyons." }
+        ],
+        tip: "Unmatched photography conditions when the afternoon clouds roll in.",
+        image: "/images/destinations/meghalaya_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure to Guwahati",
+        tag: "DEPARTURE",
+        tagline: "Luxury transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Private transfer to Guwahati airport." }
+        ],
+        tip: "Enjoy VIP lounge access at GAH airport.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Ri Kynjai - They Serenity by the Lake", rating: "★★★★★", type: "Luxury Pine Resort", location: "Umiam Lake", image: "/images/destinations/meghalaya_3.jpg" }
+    ]
+  },
+  "bhutan-5n6d": {
+    slug: "bhutan-5n6d",
+    destination: "Bhutan",
+    title: "Bhutan Thunder Dragon Highlights (Paro, Thimphu & Punakha)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/bhutan_1.jpg",
+    tagline: "Tiger's Nest Cliff Trek, Punakha Golden Dzong & Buddha Dordenma Statue",
+    basePrice: 38500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Paro & Drive to Thimphu",
+        tag: "THIMPHU",
+        tagline: "Land at Paro international airport and drive to Bhutan's capital.",
+        activities: [
+          { icon: "✈️", title: "Paro Airport Pick-up", description: "Welcome scarf (Khadhar) ceremony by Bhutanese guide." },
+          { icon: "🏛️", title: "Tashichho Dzong Visit", description: "Evening visit to the fortress of the glorious religion." }
+        ],
+        tip: "Thimphu is the only world capital without traffic lights.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Thimphu Cultural Sights & Buddha Dordenma",
+        tag: "BUDDHA DORDENMA",
+        tagline: "Visit the giant 169ft bronze Buddha overlooking Thimphu valley.",
+        activities: [
+          { icon: "🗿", title: "Buddha Dordenma Statue", description: "Gigantic bronze statue housing 125,000 smaller Buddhas." },
+          { icon: "🦬", title: "Motithang Takin Preserve", description: "See Bhutan's national animal, the unique Takin." }
+        ],
+        tip: "Spin prayer wheels at the Memorial Chorten with local elders.",
+        image: "/images/destinations/bhutan_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Dochula Pass & Punakha Golden Valley",
+        tag: "PUNAKHA DZONG",
+        tagline: "Cross 108 memorial stupas at Dochula Pass to Punakha Dzong.",
+        activities: [
+          { icon: "🏔️", title: "Dochula Pass (3,100m)", description: "Panoramic snow-capped Himalayan peak views." },
+          { icon: "🏯", title: "Punakha Dzong Tour", description: "Majestic fortress at the confluence of Pho Chhu & Mo Chhu rivers." }
+        ],
+        tip: "Walk across Bhutan's longest suspension bridge behind Punakha Dzong.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Punakha to Paro & Traditional Archery",
+        tag: "PARO VALLEY",
+        tagline: "Drive back to Paro and try national sport archery.",
+        activities: [
+          { icon: "🏹", title: "Traditional Bhutanese Archery", description: "Try shooting wooden bows with local archers." },
+          { icon: "🏰", title: "Paro Rinpung Dzong", description: "Historic fortress showcased in Little Buddha film." }
+        ],
+        tip: "Wear traditional Gho or Kira attire for fun photos.",
+        image: "/images/destinations/bhutan_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Taktsang Monastery (Tiger's Nest) Cliff Hike",
+        tag: "TIGER'S NEST",
+        tagline: "Hike up to the sacred monastery clinging to a 900m cliff.",
+        activities: [
+          { icon: "🧗", title: "Tiger's Nest (Taktsang) Trek", description: "4-hour round trip hike to Guru Rinpoche's sacred cave." },
+          { icon: "☕", title: "Taktsang Cafeteria Viewpoint", description: "Rest stop with hot butter tea and monastery views." }
+        ],
+        tip: "Start early at 7 AM to beat the mid-day heat and crowds.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure from Paro",
+        tag: "DEPARTURE",
+        tagline: "Transfer to Paro Airport.",
+        activities: [
+          { icon: "✈️", title: "Paro Airport Transfer", description: "Farewell from your Bhutanese guide and transfer to airport." }
+        ],
+        tip: "Sit on the left side of the aircraft for Mt. Everest views when flying out.",
+        image: "/images/destinations/bhutan_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Le Méridien Paro Riverfront", rating: "★★★★★", type: "Luxury Valley Resort", location: "Paro", image: "/images/destinations/bhutan_1.jpg" }
+    ]
+  },
+  "bhutan-luxury": {
+    slug: "bhutan-luxury",
+    destination: "Bhutan",
+    title: "Bhutan Ultra-Luxury Amankora & Six Senses Sanctuary",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/bhutan_2.jpg",
+    tagline: "Amankora Paro & Thimphu Luxury Lodges, Monastic Blessings & Hot Stone Baths",
+    basePrice: 115000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Paro & Private Amankora Transfer",
+        tag: "AMANKORA PARO",
+        tagline: "Chauffeur transfer to pine forest sanctuary.",
+        activities: [
+          { icon: "🚘", title: "Private SUV Airport Transfer", description: "Escorted transfer to Amankora Paro Lodge." },
+          { icon: "🍵", title: "Pine Forest Welcome Tea", description: "Traditional herbal tea in serene pine grove." }
+        ],
+        tip: "Amankora lodges feature open fireplaces in every suite.",
+        image: "/images/destinations/bhutan_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Monastic Blessing & Thimphu Sanctuary",
+        tag: "MONASTIC BLESSING",
+        tagline: "Private prayer and butter lamp ceremony with head monks.",
+        activities: [
+          { icon: "🛕", title: "Private Monastic Blessing", description: "Chanting ceremony at Cheri Monastery." },
+          { icon: "🏨", title: "Six Senses Thimphu Check-in", description: "Stay at the 'Palace in the Sky'." }
+        ],
+        tip: "Participate in lighting 108 auspicious butter lamps.",
+        image: "/images/destinations/bhutan_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Dochula Pass Helicopter Flight & Punakha",
+        tag: "HELICOPTER FLIGHT",
+        tagline: "Private helicopter over snow-capped 7,000m Himalayan peaks.",
+        activities: [
+          { icon: "🚁", title: "Himalayan Helicopter Tour", description: "Scenic flight over Gangkhar Puensum peak." }
+        ],
+        tip: "Gangkhar Puensum is the world's highest unclimbed mountain.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Punakha Riverside Champagne Picnic",
+        tag: "RIVERSIDE LUXURY",
+        tagline: "Gourmet dining on the banks of Mo Chhu river.",
+        activities: [
+          { icon: "🥂", title: "Mo Chhu River Bank Dining", description: "Private chef cooked lunch with champagne." }
+        ],
+        tip: "Walk across the suspension bridge after lunch.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Tiger's Nest Private Guide & Dotsho Bath",
+        tag: "TIGER'S NEST VIP",
+        tagline: "Private guided trek followed by Dotsho herbal hot stone bath.",
+        activities: [
+          { icon: "🧗", title: "Private Taktsang Monastery Trek", description: "Trek with private guide, horses available on request." },
+          { icon: "🛁", title: "Dotsho Hot Stone Bath", description: "Traditional wooden tub bath heated by river stones cooked in fire." }
+        ],
+        tip: "Khempa (artemisia) leaves added to hot stone water soothe sore muscles.",
+        image: "/images/destinations/bhutan_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Phobjikha Valley Crane Sanctuary Tour",
+        tag: "PHOBJIKHA VALLEY",
+        tagline: "Explore glacial valley home to rare black-necked cranes.",
+        activities: [
+          { icon: "🦅", title: "Black-Necked Crane Sanctuary", description: "Guided wildlife walk through serene marshlands." }
+        ],
+        tip: "Cranes migrate here from Tibet between October and February.",
+        image: "/images/destinations/bhutan_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Paro",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport VIP Transfer", description: "Private luxury vehicle to Paro airport." }
+        ],
+        tip: "Receive personalized Bhutanese souvenir gift upon departure.",
+        image: "/images/destinations/bhutan_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Amankora Paro Lodge", rating: "★★★★★", type: "Ultra Luxury Sanctuary", location: "Paro Valley", image: "/images/destinations/bhutan_2.jpg" }
+    ]
+  },
+  "bhutan-trek": {
+    slug: "bhutan-trek",
+    destination: "Bhutan",
+    title: "Bhutan Himalayan Valley & Tiger's Nest Adventure",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/bhutan_3.jpg",
+    tagline: "Taktsang Monastery Trek, Dochula Pass 108 Stupas & Phobjikha Valley",
+    basePrice: 32000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Paro & Drive to Thimphu",
+        tag: "PARO TO THIMPHU",
+        tagline: "Land in Bhutan and drive through Paro river valley.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Pick up and transfer to Thimphu." },
+          { icon: "🏛️", title: "Tashichho Dzong", description: "Evening tour of Thimphu fortress." }
+        ],
+        tip: "Enjoy traditional Ema Datshi (chilli cheese) at dinner.",
+        image: "/images/destinations/bhutan_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Dochula Pass & Phobjikha Valley Hike",
+        tag: "PHOBJIKHA VALLEY",
+        tagline: "Trek through pine forests of the Gangtey glacial valley.",
+        activities: [
+          { icon: "🏔️", title: "Dochula Pass 108 Stupas", description: "Himalayan panoramic viewpoint." },
+          { icon: "🥾", title: "Gangtey Nature Trail Hike", description: "2-hour easy hike through Phobjikha valley." }
+        ],
+        tip: "Gangtey Monastery overlooks the entire green valley.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Punakha Dzong & Paro Return",
+        tag: "PUNAKHA",
+        tagline: "Visit Bhutan's most beautiful fortress before returning to Paro.",
+        activities: [
+          { icon: "🏯", title: "Punakha Dzong Tour", description: "Walk through grand courtyards and Jacaranda trees." }
+        ],
+        tip: "Spring time (Apr–May) features purple Jacaranda blossoms around the Dzong.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Tiger's Nest (Taktsang) Monastery Summit Hike",
+        tag: "TIGER'S NEST TREK",
+        tagline: "Conquer the famous cliffside monastery hike.",
+        activities: [
+          { icon: "🧗", title: "Taktsang Monastery Hike", description: "Climb 900m to Bhutan's most famous spiritual landmark." }
+        ],
+        tip: "Photography is not allowed inside monastery rooms — locker provided.",
+        image: "/images/destinations/bhutan_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Paro",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to Paro Airport." }
+        ],
+        tip: "Paro airport landing/takeoff is famous for stunning mountain views.",
+        image: "/images/destinations/bhutan_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Nak-Sel Ethnicity Boutique Resort", rating: "★★★★", type: "Eco Luxury Resort", location: "Paro", image: "/images/destinations/bhutan_3.jpg" }
+    ]
+  },
+  "meghalaya": {
+    slug: "meghalaya",
+    destination: "Meghalaya",
+    title: "Meghalaya Clouds, Waterfalls & Living Root Bridges",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/meghalaya_1.jpg",
+    tagline: "Living Root Bridges, Crystal Dawki River & Nohkalikai Waterfalls",
+    basePrice: 18500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Guwahati & Drive to Shillong",
+        tag: "SHILLONG",
+        tagline: "Drive past blue Umiam Lake into the Scotland of the East.",
+        activities: [
+          { icon: "✈️", title: "Guwahati Airport Transfer", description: "Private vehicle pick-up from LGBI Airport." },
+          { icon: "🌊", title: "Umiam Lake Viewpoint", description: "Stop at the vast water reservoir." }
+        ],
+        tip: "Enjoy momos at Police Bazar.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Shillong to Cherrapunji Waterfalls",
+        tag: "CHERRAPUNJI",
+        tagline: "Explore Nohkalikai, Seven Sisters Waterfalls & Mawsmai Cave.",
+        activities: [
+          { icon: "🌊", title: "Nohkalikai Falls View", description: "India's tallest plunge waterfall." }
+        ],
+        tip: "Visit Mawsmai cave nearby.",
+        image: "/images/destinations/meghalaya_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Nongriat Double Decker Living Root Bridge",
+        tag: "ROOT BRIDGES",
+        tagline: "Trek down to 200-year-old living root bridges.",
+        activities: [
+          { icon: "🌁", title: "Double Decker Root Bridge", description: "Walk across bio-engineered rubber tree root bridges." }
+        ],
+        tip: "Take a dip in Rainbow Falls pool.",
+        image: "/images/destinations/meghalaya_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Dawki Umngot River & Mawlynnong",
+        tag: "CRYSTAL DAWKI",
+        tagline: "Glass-like transparent water boating.",
+        activities: [
+          { icon: "🚣", title: "Umngot River Boat Ride", description: "Experience boats floating on clear glass waters." }
+        ],
+        tip: "Walk through Mawlynnong village.",
+        image: "/images/destinations/meghalaya_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure via Guwahati",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to Guwahati." }
+        ],
+        tip: "Safe travels home!",
+        image: "/images/destinations/meghalaya_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Ri Kynjai Resort", rating: "★★★★★", type: "Pine Lake Resort", location: "Shillong", image: "/images/destinations/meghalaya_3.jpg" }
+    ]
+  },
+  "bhutan": {
+    slug: "bhutan",
+    destination: "Bhutan",
+    title: "Bhutan Thunder Dragon & Tiger's Nest Monastery",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/bhutan_1.jpg",
+    tagline: "Tiger's Nest Cliff Trek, Punakha Golden Dzong & Himalayan Valleys",
+    basePrice: 38500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Paro & Drive to Thimphu",
+        tag: "THIMPHU",
+        tagline: "Land in Bhutan and drive to capital Thimphu.",
+        activities: [
+          { icon: "✈️", title: "Paro Airport Pick-up", description: "Welcome scarf Khadhar ceremony." }
+        ],
+        tip: "Visit Tashichho Dzong.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Thimphu & Buddha Dordenma",
+        tag: "BUDDHA DORDENMA",
+        tagline: "Visit giant Buddha Dordenma statue.",
+        activities: [
+          { icon: "🗿", title: "Buddha Dordenma Statue", description: "Gigantic 169ft bronze statue." }
+        ],
+        tip: "See Takin preserve.",
+        image: "/images/destinations/bhutan_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Dochula Pass & Punakha Dzong",
+        tag: "PUNAKHA",
+        tagline: "Cross 108 stupas to Punakha valley.",
+        activities: [
+          { icon: "🏯", title: "Punakha Dzong", description: "Golden palace at river confluence." }
+        ],
+        tip: "Cross the suspension bridge.",
+        image: "/images/destinations/bhutan_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Taktsang Monastery (Tiger's Nest) Hike",
+        tag: "TIGER'S NEST",
+        tagline: "Hike to cliffside monastery.",
+        activities: [
+          { icon: "🧗", title: "Tiger's Nest Trek", description: "Climb to Guru Rinpoche's sacred cave." }
+        ],
+        tip: "Start early at 7 AM.",
+        image: "/images/destinations/bhutan_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure from Paro",
+        tag: "DEPARTURE",
+        tagline: "Transfer to Paro airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Farewell transfer to airport." }
+        ],
+        tip: "Tashi Delek!",
+        image: "/images/destinations/bhutan_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Le Méridien Paro Riverfront", rating: "★★★★★", type: "Luxury Valley Resort", location: "Paro", image: "/images/destinations/bhutan_1.jpg" }
+    ]
+  },
+  "nepal-explorer": {
+    slug: "nepal-explorer",
+    destination: "Nepal",
+    title: "Nepal Himalayan Highlights (Kathmandu, Pokhara & Nagarkot)",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/nepal_1.jpg",
+    tagline: "Kathmandu Valley Stupas, Pokhara Phewa Lake & Sarangkot Sunrise",
+    basePrice: 28500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Kathmandu & Thamel Welcome",
+        tag: "KATHMANDU",
+        tagline: "Land in Tribhuvan International Airport and explore vibrant Thamel.",
+        activities: [
+          { icon: "✈️", title: "Kathmandu Airport Transfer", description: "Private car transfer to your hotel." },
+          { icon: "🛍️", title: "Thamel Evening Street Walk", description: "Browse prayer flags, singing bowls, and Himalayan woolens." }
+        ],
+        tip: "Enjoy authentic momos and Thakali thali for dinner.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Kathmandu UNESCO World Heritage Tour",
+        tag: "UNESCO HERITAGE",
+        tagline: "Boudhanath Stupa, Pashupatinath Temple & Swayambhunath.",
+        activities: [
+          { icon: "🛕", title: "Pashupatinath Sacred Temple", description: "Sacred Hindu temple complex on the Bagmati River." },
+          { icon: "☸️", title: "Boudhanath Stupa", description: "One of the world's largest spherical stupas with Buddha eyes." }
+        ],
+        tip: "Visit Swayambhunath (Monkey Temple) at sunset for views over Kathmandu Valley.",
+        image: "/images/destinations/nepal_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Kathmandu to Pokhara Scenic Drive / Flight",
+        tag: "POKHARA",
+        tagline: "Drive along Trishuli river valley to Pokhara lakeside.",
+        activities: [
+          { icon: "🚙", title: "Scenic Pokhara Highway Drive", description: "Drive past terraced hillsides and roaring rivers." },
+          { icon: "⛵", title: "Phewa Lake Sunset Boating", description: "Shikara boat ride to Tal Barahi temple island." }
+        ],
+        tip: "Reflections of Mount Machhapuchhre (Fishtail) on Phewa Lake are stunning.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Sarangkot Sunrise & Pokhara Waterfalls",
+        tag: "SARANGKOT SUNRISE",
+        tagline: "Watch sunrise over Annapurna & Dhaulagiri mountain ranges.",
+        activities: [
+          { icon: "🌅", title: "Sarangkot Sunrise Viewpoint", description: "Golden first light hitting 8,000m Annapurna peaks." },
+          { icon: "🌊", title: "Davis Falls & Gupteshwor Cave", description: "Underground waterfall and sacred cave temple." }
+        ],
+        tip: "Visit World Peace Pagoda across Phewa Lake in the afternoon.",
+        image: "/images/destinations/nepal_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Drive to Nagarkot Mountain Resort",
+        tag: "NAGARKOT",
+        tagline: "Hilltop resort village offering 360-degree Himalayan views.",
+        activities: [
+          { icon: "🏔️", title: "Nagarkot View Tower Walk", description: "Watch sunset over Himalayan ranges including Everest in clear weather." }
+        ],
+        tip: "Nagarkot offers the widest view of the Himalayas from Kathmandu valley.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Nagarkot Sunrise & Departure",
+        tag: "DEPARTURE",
+        tagline: "Sunrise over Himalayas and airport transfer.",
+        activities: [
+          { icon: "✈️", title: "Kathmandu Airport Transfer", description: "Private drive back to TIA airport." }
+        ],
+        tip: "Namaste and safe travels!",
+        image: "/images/destinations/nepal_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Fish Tail Lodge Pokhara", rating: "★★★★★", type: "Lakeside Heritage Resort", location: "Phewa Lake, Pokhara", image: "/images/destinations/nepal_1.jpg" }
+    ]
+  },
+  "nepal-adventure": {
+    slug: "nepal-adventure",
+    destination: "Nepal",
+    title: "Nepal Everest View & Annapurna Base Camp Trek",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/nepal_2.jpg",
+    tagline: "Mount Everest Flight, Poon Hill Sunrise Trek & Trishuli Rafting",
+    basePrice: 42000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Kathmandu & Trek Briefing",
+        tag: "KATHMANDU",
+        tagline: "Arrive in Kathmandu and prep trek equipment.",
+        activities: [
+          { icon: "✈️", title: "Airport Pick-up", description: "Transfer to Thamel hotel." },
+          { icon: "🏔️", title: "Trek Equipment Check", description: "Gear check with professional Himalayan trekking guide." }
+        ],
+        tip: "Rent extra down jackets or trekking poles easily in Thamel.",
+        image: "/images/destinations/nepal_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Everest Mountain Flight & Trishuli Rafting",
+        tag: "EVEREST FLIGHT",
+        tagline: "Early morning flight past Mount Everest followed by river rafting.",
+        activities: [
+          { icon: "✈️", title: "Himalayan Mountain Flight", description: "Guaranteed window seat flight along Everest, Lhotse & Makalu." },
+          { icon: "🚣", title: "Trishuli River Rafting", description: "White water rafting adventure on Trishuli River." }
+        ],
+        tip: "Window seats provide clear flight camera shots of Mount Everest summit.",
+        image: "/images/destinations/nepal_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Drive to Nayapul & Trek to Tikhedhunga",
+        tag: "ANNAPURNA TREK",
+        tagline: "Begin the famous Annapurna Poon Hill trek circuit.",
+        activities: [
+          { icon: "🥾", title: "Nayapul to Tikhedhunga Hike", description: "4-hour gentle trek past rhododendron forests and stone steps." }
+        ],
+        tip: "Cross suspension bridges over gushing mountain streams.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Trek to Ghorepani (2,860m)",
+        tag: "GHOREPANI",
+        tagline: "Climb Ulleri stone staircase into oak and pine sanctuary.",
+        activities: [
+          { icon: "⛰️", title: "Ulleri Staircase Climb", description: "Challenge yourself climbing 3,200 stone steps to Ghorepani village." }
+        ],
+        tip: "Rest overnight in traditional Gurung tea house lodge.",
+        image: "/images/destinations/nepal_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Poon Hill Sunrise (3,210m) & Descent to Pokhara",
+        tag: "POON HILL",
+        tagline: "Breathtaking 360-degree panorama of Annapurna & Dhaulagiri.",
+        activities: [
+          { icon: "🌅", title: "Poon Hill Sunrise Summit", description: "Watch morning sun illuminate Dhaulagiri I (8,167m) & Annapurna I." },
+          { icon: "🚗", title: "Descent & Transfer to Pokhara", description: "Trek down to Hile and jeep drive back to Pokhara." }
+        ],
+        tip: "Poon Hill offers one of the world's top 5 mountain sunrise views.",
+        image: "/images/destinations/nepal_2.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Pokhara Zipline & Fly back to Kathmandu",
+        tag: "POKHARA THRILLS",
+        tagline: "World's steepest zipline before flying back to Kathmandu.",
+        activities: [
+          { icon: "⚡", title: "ZipFlyer Nepal", description: "Fly 1.8km down Sarangkot cliff at 120 km/h speed." }
+        ],
+        tip: "Enjoy Pokhara lakeside cafes in the afternoon.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure from Kathmandu",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to TIA airport for international flight." }
+        ],
+        tip: "Buy Himalayan organic coffee at airport departure lounge.",
+        image: "/images/destinations/nepal_2.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Waterfront Resort Pokhara", rating: "★★★★", type: "Adventure Resort", location: "Phewa Lake", image: "/images/destinations/nepal_1.jpg" }
+    ]
+  },
+  "nepal-luxury": {
+    slug: "nepal-luxury",
+    destination: "Nepal",
+    title: "Nepal Luxury Himalayan Resort & Chitwan Wildlife Safari",
+    duration: "6 Nights / 7 Days",
+    heroImage: "/images/destinations/nepal_3.jpg",
+    tagline: "Dwarika's Heritage Hotel, Chitwan Rhino Safari & Everest Helicopter Flyover",
+    basePrice: 68000,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Private Chauffeur & Dwarika's Hotel Kathmandu",
+        tag: "HERITAGE LUXURY",
+        tagline: "Stay at Nepal's living museum luxury hotel.",
+        activities: [
+          { icon: "🚘", title: "Private Airport Transfer", description: "Private luxury vehicle to Dwarika's Hotel." },
+          { icon: "🏛️", title: "Dwarika's Palace Suite Check-in", description: "Award-winning hotel built with 15th-century hand-carved wood." }
+        ],
+        tip: "Dine at Krishnarpan 22-course traditional Nepali feast.",
+        image: "/images/destinations/nepal_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Helicopter Flight to Everest Base Camp",
+        tag: "EVEREST HELICOPTER",
+        tagline: "Fly to Kala Patthar (5,545m) and breakfast at Everest View Hotel.",
+        activities: [
+          { icon: "🚁", title: "Private Helicopter Everest Heli-Tour", description: "Landing at Kala Patthar facing Mt. Everest & Khumbu Icefall." },
+          { icon: "🍳", title: "Champagne Breakfast at Hotel Everest View", description: "World's highest hotel (3,880m) looking directly at Everest." }
+        ],
+        tip: "Oxygen bottles are equipped on board for high altitude comfort.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Fly to Chitwan National Park Safari Resort",
+        tag: "CHITWAN SAFARI",
+        tagline: "Fly to Nepal's premier jungle wildlife reserve.",
+        activities: [
+          { icon: "✈️", title: "Private Flight to Bharatpur", description: "30-minute flight to Chitwan national park." },
+          { icon: "🏨", title: "Meghauli Serai Taj Safari Lodge", description: "Luxury lodge on the Rapti River bank." }
+        ],
+        tip: "Watch wild rhinos come down to drink at the riverbank opposite your balcony.",
+        image: "/images/destinations/nepal_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Chitwan Jungle Safari & One-Horned Rhino Search",
+        tag: "WILDLIFE SAFARI",
+        tagline: "Jeep safari, canoe cruise and Tharu cultural evening.",
+        activities: [
+          { icon: "🦏", title: "Jeep Safari Rhino Search", description: "Search for rare One-Horned Rhinoceros & Royal Bengal Tiger." },
+          { icon: "🛶", title: "Rapti River Canoe Safari", description: "Spot gharial crocodiles and exotic migratory birds." }
+        ],
+        tip: "Chitwan is home to over 600 single-horned rhinos.",
+        image: "/images/destinations/nepal_2.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Fly to Pokhara Pavilion Luxury Lodge",
+        tag: "POKHARA LUXURY",
+        tagline: "Stay at Pavilions Himalayas luxury eco resort.",
+        activities: [
+          { icon: "🏡", title: "Pavilions Himalayas Villa Check-in", description: "Private infinity pool villa overlooking Annapurna peaks." }
+        ],
+        tip: "Enjoy organic farm-to-table dining sourced from the resort estate.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Private Lake Cruise & Spa Treatment",
+        tag: "WELLNESS & SPA",
+        tagline: "Private boat on Phewa Lake and Ayurvedic spa.",
+        activities: [
+          { icon: "⛵", title: "Private Phewa Lake Cruise", description: "Champagne boat ride across clear waters." },
+          { icon: "💆", title: "Himalayan Ayurvedic Massage", description: "Herbal oil massage therapy." }
+        ],
+        tip: "Sunset views over Fishtail mountain from the pool terrace.",
+        image: "/images/destinations/nepal_3.jpg"
+      },
+      {
+        dayNumber: 7,
+        title: "Departure via Kathmandu",
+        tag: "DEPARTURE",
+        tagline: "Private transfer for departure flight.",
+        activities: [
+          { icon: "✈️", title: "Private Airport Transfer", description: "Transfer to Tribhuvan International Airport." }
+        ],
+        tip: "VIP lounge access included.",
+        image: "/images/destinations/nepal_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "The Dwarika's Hotel Kathmandu", rating: "★★★★★", type: "Ultra Luxury Heritage", location: "Kathmandu", image: "/images/destinations/nepal_3.jpg" }
+    ]
+  },
+  "ooty-express": {
+    slug: "ooty-express",
+    destination: "Ooty",
+    title: "Ooty Queen of Hills & Nilgiri Toy Train",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/ooty_1.jpg",
+    tagline: "UNESCO Nilgiri Mountain Railway, Ooty Lake & Doddabetta Peak",
+    basePrice: 14500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Coimbatore / Mettupalayam & Drive to Ooty",
+        tag: "OOTY WELCOME",
+        tagline: "Drive up the 36 hairpin bends into the Nilgiri hills.",
+        activities: [
+          { icon: "✈️", title: "Coimbatore Airport Transfer", description: "Private car transfer up to Ooty (86 km)." },
+          { icon: "🌲", title: "Ooty Hotel Check-in", description: "Check into your hill-view hotel." }
+        ],
+        tip: "Stop at Kallar view point for wild monkey and valley views.",
+        image: "/images/destinations/ooty_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Nilgiri Mountain Railway Toy Train Ride",
+        tag: "UNESCO TOY TRAIN",
+        tagline: "Steam locomotive journey through tunnels, bridges & pine forests.",
+        activities: [
+          { icon: "🚂", title: "Nilgiri Mountain Toy Train", description: "Historic 19th-century rack and pinion steam train from Ooty to Coonoor." },
+          { icon: "🌺", title: "Sim's Park Coonoor", description: "Botanical garden featuring rare plants and Japanese gardens." }
+        ],
+        tip: "Book 1st class toy train tickets well in advance.",
+        image: "/images/destinations/ooty_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Doddabetta Peak & Government Botanical Gardens",
+        tag: "HILLTOP VIEWS",
+        tagline: "Highest peak in the Nilgiri Mountains (2,637 metres).",
+        activities: [
+          { icon: "🏔️", title: "Doddabetta Peak Viewpoint", description: "Telescope house panoramic views of Bandipur national park." },
+          { icon: "🌷", title: "Ooty Botanical Garden Walk", description: "55-acre garden featuring 20-million-year-old fossilized tree trunk." }
+        ],
+        tip: "Try fresh Nilgiri homemade dark chocolates near the garden entrance.",
+        image: "/images/destinations/ooty_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Ooty Lake Boating & Rose Garden",
+        tag: "OOTY LAKE",
+        tagline: "Row boating on Ooty lake and 20,000 varieties of roses.",
+        activities: [
+          { icon: "🚣", title: "Ooty Lake Boating", description: "Pedal and motor boat rides surrounded by eucalyptus trees." },
+          { icon: "🌹", title: "Government Rose Garden", description: "Largest rose garden in India laid out in terraced slopes." }
+        ],
+        tip: "Enjoy horse riding along the banks of Ooty Lake.",
+        image: "/images/destinations/ooty_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure to Coimbatore",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport / railway station.",
+        activities: [
+          { icon: "✈️", title: "Coimbatore Airport Transfer", description: "Private drive back down to Coimbatore." }
+        ],
+        tip: "Buy Nilgiri eucalyptus oil and tea bags as gifts.",
+        image: "/images/destinations/ooty_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Gem Park Ooty", rating: "★★★★", type: "Hill View Hotel", location: "Ooty", image: "/images/destinations/ooty_1.jpg" }
+    ]
+  },
+  "ooty-nature": {
+    slug: "ooty-nature",
+    destination: "Ooty",
+    title: "Ooty Tea Estates & Pykara Waterfalls Explorer",
+    duration: "3 Nights / 4 Days",
+    heroImage: "/images/destinations/ooty_2.jpg",
+    tagline: "Doddabetta Tea Factory, Pykara Speedboat & Pine Forest Sunset",
+    basePrice: 12500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Ooty & Tea Factory Tour",
+        tag: "TEA ESTATE",
+        tagline: "Learn how green tea leaves become fragrant Nilgiri tea.",
+        activities: [
+          { icon: "✈️", title: "Pick-up & Check-in", description: "Transfer to hotel." },
+          { icon: "🍃", title: "Doddabetta Tea Factory & Museum", description: "Guided tour showing CTC tea processing and chocolate making." }
+        ],
+        tip: "Sample hot cardamom tea at the factory outlet.",
+        image: "/images/destinations/ooty_2.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Pykara Waterfalls & Speedboating",
+        tag: "PYKARA LAKE",
+        tagline: "Cascading waterfalls and high-speed boating on Pykara lake.",
+        activities: [
+          { icon: "🌊", title: "Pykara Waterfalls Hike", description: "Short walk through pine woods to cascading waterfalls." },
+          { icon: "🚤", title: "Pykara Lake Speedboat Ride", description: "Thrilling speedboat ride across surrounded green hills." }
+        ],
+        tip: "Pykara lake is famous for Tamil movie songs shooting.",
+        image: "/images/destinations/ooty_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Pine Forest & Shooting Point Sunset",
+        tag: "PINE FOREST",
+        tagline: "Walk through tall pine trees and Wenlock Downs.",
+        activities: [
+          { icon: "🌲", title: "Ooty Pine Forest Walk", description: "Towering pine trees slopes featured in Bollywood movies." },
+          { icon: "🌅", title: "Wenlock Downs (9th Mile)", description: "Rolling green grasslands offering 360-degree sunset views." }
+        ],
+        tip: "Great spot for horseback riding across the green downs.",
+        image: "/images/destinations/ooty_3.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Departure to Coimbatore",
+        tag: "DEPARTURE",
+        tagline: "Transfer back to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to Coimbatore." }
+        ],
+        tip: "Safe travels home!",
+        image: "/images/destinations/ooty_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Sterling Ooty Fern Hill", rating: "★★★★", type: "Heritage Hill Resort", location: "Fern Hill, Ooty", image: "/images/destinations/ooty_2.jpg" }
+    ]
+  },
+  "ooty-luxury": {
+    slug: "ooty-luxury",
+    destination: "Ooty",
+    title: "Ooty Heritage Bungalow & Coonoor Luxury Escape",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/ooty_3.jpg",
+    tagline: "Savoy IHCL Heritage Hotel, Colonial High Tea & Private Coonoor Estate",
+    basePrice: 29500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Private Chauffeur & Savoy IHCL Check-in",
+        tag: "COLONIAL LUXURY",
+        tagline: "19th-century Victorian hotel with manicured lawns.",
+        activities: [
+          { icon: "🚘", title: "Private SUV Pick-up", description: "Private luxury chauffeur drive to Savoy Hotel." },
+          { icon: "☕", title: "Colonial Afternoon High Tea", description: "Fresh scones, clotted cream and Nilgiri silver needle tea." }
+        ],
+        tip: "Savoy hotel was built in 1829 during the British Raj.",
+        image: "/images/destinations/ooty_3.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Private Coonoor Tea Plantation Tour & Tasting",
+        tag: "COONOOR ESTATES",
+        tagline: "Private visit to high-altitude organic tea estate.",
+        activities: [
+          { icon: "🍃", title: "Private Tea Plucking & Tasting", description: "Walk through private tea gardens with master blender." }
+        ],
+        tip: "Dolphin's Nose viewpoint offers views of Catherine Falls.",
+        image: "/images/destinations/ooty_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Private Toy Train Charter & Sim's Park",
+        tag: "TOY TRAIN VIP",
+        tagline: "First-class cabin ride on Nilgiri Mountain Railway.",
+        activities: [
+          { icon: "🚂", title: "First Class Toy Train Ride", description: "Reserved 1st class compartment down to Coonoor." }
+        ],
+        tip: "Open windows provide incredible mountain breeze.",
+        image: "/images/destinations/ooty_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Private Lake Yacht & Botanical Garden VIP Tour",
+        tag: "OOTY LAKE VIP",
+        tagline: "Exclusive boat cruise and private horticulturist guide.",
+        activities: [
+          { icon: "⛵", title: "Private Ooty Lake Cruise", description: "Champagne boat ride on Ooty Lake." },
+          { icon: "🌺", title: "Botanical Garden Private Walk", description: "Guided tour of rare orchid house and glasshouse." }
+        ],
+        tip: "The Italian Garden section was designed by Italian prisoners of war.",
+        image: "/images/destinations/ooty_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Ayurvedic Spa & Private Candlelight Cottage Dinner",
+        tag: "SPA & DINING",
+        tagline: "Revitalizing wellness treatment and private dining.",
+        activities: [
+          { icon: "💆", title: "Nilgiri Herbal Spa", description: "Aromatherapy massage using local pine & eucalyptus oils." },
+          { icon: "🍽️", title: "Private Garden Candlelight Dinner", description: "Curated 4-course dinner by the fireplace." }
+        ],
+        tip: "Enjoy bonfire beneath starlit hill skies.",
+        image: "/images/destinations/ooty_3.jpg"
+      },
+      {
+        dayNumber: 6,
+        title: "Departure to Coimbatore",
+        tag: "DEPARTURE",
+        tagline: "Private transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Private Airport Transfer", description: "Luxury vehicle drive back to Coimbatore." }
+        ],
+        tip: "Complimentary Nilgiri tea set gift provided at checkout.",
+        image: "/images/destinations/ooty_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Savoy - IHCL SeleQtions Ooty", rating: "★★★★★", type: "Colonial Heritage Hotel", location: "Ooty", image: "/images/destinations/ooty_3.jpg" }
+    ]
+  },
+  "nepal": {
+    slug: "nepal",
+    destination: "Nepal",
+    title: "Nepal Himalayan Peaks & Kathmandu Stupas",
+    duration: "5 Nights / 6 Days",
+    heroImage: "/images/destinations/nepal_1.jpg",
+    tagline: "Kathmandu Valley Stupas, Pokhara Phewa Lake & Sarangkot Sunrise",
+    basePrice: 28500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Kathmandu",
+        tag: "KATHMANDU",
+        tagline: "Land in Kathmandu and explore Thamel.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Transfer to Kathmandu hotel." }
+        ],
+        tip: "Try authentic momos.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Kathmandu UNESCO Stupas",
+        tag: "UNESCO",
+        tagline: "Boudhanath & Pashupatinath temple.",
+        activities: [
+          { icon: "🛕", title: "Pashupatinath Temple", description: "Sacred Hindu temple complex." }
+        ],
+        tip: "Visit Swayambhunath.",
+        image: "/images/destinations/nepal_2.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Drive to Pokhara",
+        tag: "POKHARA",
+        tagline: "Drive to Pokhara lakeside.",
+        activities: [
+          { icon: "⛵", title: "Phewa Lake Boating", description: "Boat ride on Phewa lake." }
+        ],
+        tip: "Sunset reflections of Fishtail mountain.",
+        image: "/images/destinations/nepal_1.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Sarangkot Sunrise",
+        tag: "SUNRISE",
+        tagline: "Sunrise over Annapurna peaks.",
+        activities: [
+          { icon: "🌅", title: "Sarangkot View", description: "Golden sunrise over snow peaks." }
+        ],
+        tip: "Visit Davis falls.",
+        image: "/images/destinations/nepal_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure via Kathmandu",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to TIA airport." }
+        ],
+        tip: "Namaste!",
+        image: "/images/destinations/nepal_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Fish Tail Lodge Pokhara", rating: "★★★★★", type: "Lakeside Resort", location: "Pokhara", image: "/images/destinations/nepal_1.jpg" }
+    ]
+  },
+  "ooty": {
+    slug: "ooty",
+    destination: "Ooty",
+    title: "Ooty Queen of Nilgiri Hill Stations",
+    duration: "4 Nights / 5 Days",
+    heroImage: "/images/destinations/ooty_1.jpg",
+    tagline: "Nilgiri Mountain Toy Train, Ooty Lake & Tea Estates",
+    basePrice: 14500,
+    days: [
+      {
+        dayNumber: 1,
+        title: "Arrive Ooty",
+        tag: "OOTY",
+        tagline: "Drive up the hairpin bends to Ooty.",
+        activities: [
+          { icon: "✈️", title: "Coimbatore Pick-up", description: "Transfer from Coimbatore to Ooty." }
+        ],
+        tip: "Enjoy hill station breeze.",
+        image: "/images/destinations/ooty_1.jpg"
+      },
+      {
+        dayNumber: 2,
+        title: "Nilgiri Toy Train & Coonoor",
+        tag: "TOY TRAIN",
+        tagline: "Ride UNESCO heritage steam train.",
+        activities: [
+          { icon: "🚂", title: "Nilgiri Mountain Railway", description: "Toy train ride through tunnels and pine forests." }
+        ],
+        tip: "Visit Sim's Park.",
+        image: "/images/destinations/ooty_1.jpg"
+      },
+      {
+        dayNumber: 3,
+        title: "Doddabetta Peak & Botanical Gardens",
+        tag: "HILLTOP",
+        tagline: "Visit Doddabetta peak 2,637m.",
+        activities: [
+          { icon: "🏔️", title: "Doddabetta Viewpoint", description: "Panoramic view of Nilgiri hills." }
+        ],
+        tip: "Walk through Botanical Garden.",
+        image: "/images/destinations/ooty_2.jpg"
+      },
+      {
+        dayNumber: 4,
+        title: "Ooty Lake & Rose Garden",
+        tag: "OOTY LAKE",
+        tagline: "Boating on Ooty lake.",
+        activities: [
+          { icon: "🚣", title: "Ooty Lake Boating", description: "Pedal boat ride on the lake." }
+        ],
+        tip: "Buy homemade dark chocolates.",
+        image: "/images/destinations/ooty_3.jpg"
+      },
+      {
+        dayNumber: 5,
+        title: "Departure to Coimbatore",
+        tag: "DEPARTURE",
+        tagline: "Transfer to airport.",
+        activities: [
+          { icon: "✈️", title: "Airport Transfer", description: "Drive back to Coimbatore airport." }
+        ],
+        tip: "Safe travels!",
+        image: "/images/destinations/ooty_1.jpg"
+      }
+    ],
+    hotels: [
+      { name: "Gem Park Ooty", rating: "★★★★", type: "Hill View Hotel", location: "Ooty", image: "/images/destinations/ooty_1.jpg" }
+    ]
+  }
 };
 
 
