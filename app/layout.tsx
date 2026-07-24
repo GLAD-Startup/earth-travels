@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: "Earth Travels — Crafting Journeys From Mathura to the World",
   description:
     "Premium tour agency in Mathura, UP. 4.7★ rated. Kashmir, Maldives, Dubai, Europe & more. 89418 81111.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

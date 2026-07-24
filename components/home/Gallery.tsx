@@ -3,12 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { RevealWrapper } from "@/components/ui";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 interface GalleryImage {
   src: string;
@@ -23,13 +18,28 @@ const row1Images: GalleryImage[] = [
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/IATA.jpeg",
+    widthClass: "w-[260px] md:w-[360px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/trophy.jpg",
     widthClass: "w-[200px] md:w-[280px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/Indigo 2016-17.jpeg",
+    widthClass: "w-[260px] md:w-[360px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel2.png",
     widthClass: "w-[340px] md:w-[480px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
+    src: "/images/Indigo 2018-19.jpeg",
+    widthClass: "w-[260px] md:w-[360px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
@@ -76,13 +86,28 @@ const row2Images: GalleryImage[] = [
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/SOTC.jpeg",
+    widthClass: "w-[260px] md:w-[360px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/certificate.jpg",
     widthClass: "w-[300px] md:w-[420px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/Centara.jpeg",
+    widthClass: "w-[260px] md:w-[360px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/NITESH_EARTH TRAVEL/Nitesh_Earth Travel9.png",
     widthClass: "w-[260px] md:w-[350px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
+    src: "/images/tbo.jpeg",
+    widthClass: "w-[260px] md:w-[360px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
@@ -124,49 +149,47 @@ export default function Gallery() {
   const [activeTab, setActiveTab] = useState<"all" | "destinations" | "office">("all");
 
   useEffect(() => {
-    if (!containerRef.current || !row1Ref.current || !row2Ref.current) return;
+    if (!row1Ref.current || !row2Ref.current) return;
 
-    // Refresh ScrollTrigger to account for element size changes
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100);
+    // Reset positions before starting tweens
+    gsap.set(row1Ref.current, { xPercent: 0 });
+    gsap.set(row2Ref.current, { xPercent: -50 });
 
-    // Row 1: Left to Right
-    const anim1 = gsap.fromTo(
-      row1Ref.current,
-      { xPercent: -20 },
-      {
-        xPercent: 10,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.2,
-        },
-      }
-    );
+    // Row 1: Continuous auto-scroll (Leftwards -50%)
+    const anim1 = gsap.to(row1Ref.current, {
+      xPercent: -50,
+      duration: 30,
+      ease: "none",
+      repeat: -1,
+    });
 
-    // Row 2: Right to Left
-    const anim2 = gsap.fromTo(
-      row2Ref.current,
-      { xPercent: 10 },
-      {
-        xPercent: -20,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.2,
-        },
-      }
-    );
+    // Row 2: Continuous auto-scroll in reverse (Rightwards -50% -> 0%)
+    const anim2 = gsap.to(row2Ref.current, {
+      xPercent: 0,
+      duration: 32,
+      ease: "none",
+      repeat: -1,
+    });
+
+    const el1 = row1Ref.current;
+    const el2 = row2Ref.current;
+
+    const pause1 = () => anim1.pause();
+    const resume1 = () => anim1.play();
+    const pause2 = () => anim2.pause();
+    const resume2 = () => anim2.play();
+
+    el1?.addEventListener("mouseenter", pause1);
+    el1?.addEventListener("mouseleave", resume1);
+    el2?.addEventListener("mouseenter", pause2);
+    el2?.addEventListener("mouseleave", resume2);
 
     return () => {
-      anim1.scrollTrigger?.kill();
+      el1?.removeEventListener("mouseenter", pause1);
+      el1?.removeEventListener("mouseleave", resume1);
+      el2?.removeEventListener("mouseenter", pause2);
+      el2?.removeEventListener("mouseleave", resume2);
       anim1.kill();
-      anim2.scrollTrigger?.kill();
       anim2.kill();
     };
   }, [activeTab]);
@@ -188,21 +211,16 @@ export default function Gallery() {
     return true;
   });
 
-  // Duplicate items if too few to ensure smooth infinite loop effect
-  const displayRow1 = filteredRow1.length > 0 && filteredRow1.length < 6 
-    ? [...filteredRow1, ...filteredRow1, ...filteredRow1] 
-    : filteredRow1;
-
-  const displayRow2 = filteredRow2.length > 0 && filteredRow2.length < 6 
-    ? [...filteredRow2, ...filteredRow2, ...filteredRow2] 
-    : filteredRow2;
+  // Duplicate items to form a seamless 100% -> 50% loop
+  const loopRow1 = [...filteredRow1, ...filteredRow1];
+  const loopRow2 = [...filteredRow2, ...filteredRow2];
 
   return (
     <section
       ref={containerRef}
       className="relative overflow-hidden py-24 bg-[#fdf8f2] select-none"
     >
-      {/* Background elegant 'gallery' text - positioned higher and darker */}
+      {/* Background elegant 'gallery' text */}
       <div className="absolute top-[30px] md:top-[40px] left-0 right-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
         <span className="text-[9rem] md:text-[18rem] font-display font-semibold text-[#1a120a]/[0.12] tracking-wider leading-none">
           gallery
@@ -210,7 +228,7 @@ export default function Gallery() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16 flex flex-col">
-        {/* Section Header (Above the carousels) */}
+        {/* Section Header */}
         <RevealWrapper delay={0}>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div>
@@ -256,13 +274,13 @@ export default function Gallery() {
       {/* Carousels Container */}
       <div className="relative w-full py-8 overflow-hidden flex flex-col gap-6 md:gap-8">
 
-        {/* Row 1: Left to Right */}
-        <div className="relative w-full overflow-visible z-10">
+        {/* Row 1: Continuous Auto-Scroll */}
+        <div className="relative w-full overflow-hidden z-10">
           <div
             ref={row1Ref}
-            className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pl-[10vw]"
+            className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap"
           >
-            {displayRow1.map((img, idx) => (
+            {loopRow1.map((img, idx) => (
               <div
                 key={`row1-${idx}`}
                 className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
@@ -280,13 +298,13 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Row 2: Right to Left */}
-        <div className="relative w-full overflow-visible z-10">
+        {/* Row 2: Continuous Auto-Scroll in Reverse */}
+        <div className="relative w-full overflow-hidden z-10">
           <div
             ref={row2Ref}
-            className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap pr-[10vw]"
+            className="flex gap-4 md:gap-6 items-center w-max whitespace-nowrap"
           >
-            {displayRow2.map((img, idx) => (
+            {loopRow2.map((img, idx) => (
               <div
                 key={`row2-${idx}`}
                 className={`relative flex-shrink-0 overflow-hidden rounded-[20px] md:rounded-[32px] border border-[#1a120a]/8 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group ${img.widthClass} ${img.heightClass}`}
@@ -306,7 +324,7 @@ export default function Gallery() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16 flex flex-col">
-        {/* Bottom narrative line (Below the carousels) */}
+        {/* Bottom narrative line */}
         <RevealWrapper delay={0.3}>
           <div className="mt-16 pt-10 border-t border-[#1a120a]/8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">

@@ -128,10 +128,30 @@ export default function FounderSection() {
           </div>
 
           {/* Right: Premium Overlapping Photo Collage (Rotated scatter style) */}
-          <div className="w-full lg:w-7/12 relative h-[550px] sm:h-[650px] lg:h-[700px] mt-12 lg:mt-0 select-none">
+          <div className="w-full lg:w-7/12 relative h-[560px] sm:h-[660px] lg:h-[720px] mt-12 lg:mt-0 select-none">
             
-            {/* 1. Main Award Photo (TBO.com) - Background center-left */}
-            <div className="absolute top-10 left-[5%] w-[52%] h-[350px] lg:h-[450px] z-10 rotate-[-2deg] rounded-2xl overflow-hidden border-4 border-[#221810] shadow-2xl hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+            {/* 1. Top-Left: IATA Certificate */}
+            <div className="absolute top-[10px] left-[0%] w-[32%] h-[140px] sm:h-[160px] lg:h-[200px] z-20 rotate-[4deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/30 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
+              <div className="relative w-full h-full overflow-hidden rounded-xl bg-white p-1">
+                <Image
+                  src="/images/IATA.jpeg"
+                  alt="Official IATA Passenger Sales Agency Certificate"
+                  fill
+                  sizes="(max-width: 1024px) 30vw, 20vw"
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  quality={90}
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2 py-0.5 rounded-lg border border-white/10 w-[88%] text-center">
+                <span className="font-mono text-[7px] sm:text-[8px] text-[#e8a820] uppercase tracking-[0.1em] whitespace-nowrap font-bold block">
+                  IATA ACCREDITED
+                </span>
+              </div>
+            </div>
+
+            {/* 2. Main Stage Award Photo (TBO.com) - Background center-left */}
+            <div className="absolute top-12 left-[10%] w-[48%] h-[320px] sm:h-[380px] lg:h-[450px] z-10 rotate-[-2deg] rounded-2xl overflow-hidden border-4 border-[#221810] shadow-2xl hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
               <div className="relative w-full h-full">
                 <Image
                   src="/images/founder/nitesh-tbo-excellence-award.png"
@@ -151,28 +171,8 @@ export default function FounderSection() {
               </div>
             </div>
 
-            {/* 2. SGC Leisures Award Photo - Foreground bottom-right */}
-            <div className="absolute bottom-4 right-[2%] w-[46%] h-[240px] lg:h-[320px] z-20 rotate-[3deg] rounded-2xl overflow-hidden border-4 border-[#221810] shadow-2xl hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
-              <div className="relative w-full h-full">
-                <Image
-                  src="/images/founder/nitesh-sgc-leisures-award.png"
-                  alt="Nitesh Khandelwal receiving SGC Leisures Award"
-                  fill
-                  sizes="(max-width: 1024px) 45vw, 30vw"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
-                  quality={90}
-                  loading="lazy"
-                />
-              </div>
-              <div className="absolute bottom-4 right-4 bg-[#1a120a]/80 backdrop-blur-sm px-4 py-2 border border-white/10 rounded-lg">
-                <span className="font-mono text-[8px] text-white uppercase tracking-[0.2em] whitespace-nowrap">
-                  SGC Industry Honor
-                </span>
-              </div>
-            </div>
-
-            {/* 3. Trophy Photo (Full Trophy, object-contain) - Foreground top-right */}
-            <div className="absolute top-0 right-[4%] w-[32%] h-[200px] lg:h-[270px] z-20 rotate-[-4deg] bg-[#221810] p-2.5 rounded-2xl shadow-2xl border-2 border-[#e8a820]/40 flex items-center justify-center hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+            {/* 3. Top-Right: MSME Regional Trophy */}
+            <div className="absolute top-0 right-[2%] w-[32%] h-[180px] sm:h-[220px] lg:h-[260px] z-20 rotate-[-4deg] bg-[#221810] p-2 rounded-2xl shadow-2xl border-2 border-[#e8a820]/40 flex items-center justify-center hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
               <div className="relative w-full h-full">
                 <Image
                   src="/images/trophy.jpg"
@@ -185,28 +185,88 @@ export default function FounderSection() {
                 />
               </div>
               <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-white/10 w-[85%] text-center">
-                <span className="font-mono text-[7px] text-white uppercase tracking-[0.1em] whitespace-nowrap font-semibold block">
+                <span className="font-mono text-[7px] sm:text-[8px] text-white uppercase tracking-[0.1em] whitespace-nowrap font-semibold block">
                   MSME Regional Award
                 </span>
               </div>
             </div>
 
-            {/* 4. Certificate Photo (Travel License) - Foreground bottom-left */}
-            <div className="absolute bottom-6 left-0 w-[42%] h-[150px] lg:h-[200px] z-20 rotate-[4deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border-2 border-white/20 hover:rotate-0 hover:z-30 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+            {/* 4. Middle-Right: IndiGo Outstanding Award */}
+            <div className="absolute top-[200px] sm:top-[230px] right-[0%] w-[30%] h-[140px] sm:h-[165px] lg:h-[200px] z-25 rotate-[5deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/30 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
+              <div className="relative w-full h-full overflow-hidden rounded-xl bg-white p-1">
+                <Image
+                  src="/images/Indigo 2018-19.jpeg"
+                  alt="IndiGo Outstanding Performance Award Certificate"
+                  fill
+                  sizes="(max-width: 1024px) 30vw, 20vw"
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  quality={90}
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2 py-0.5 rounded-lg border border-white/10 w-[88%] text-center">
+                <span className="font-mono text-[7px] sm:text-[8px] text-[#e8a820] uppercase tracking-[0.1em] whitespace-nowrap font-bold block">
+                  INDIGO TOP AGENT
+                </span>
+              </div>
+            </div>
+
+            {/* 5. Bottom-Left: MSME State Certificate */}
+            <div className="absolute bottom-4 left-[0%] w-[36%] h-[140px] sm:h-[165px] lg:h-[200px] z-20 rotate-[4deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border-2 border-white/20 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
               <div className="relative w-full h-full overflow-hidden rounded-xl">
                 <Image
                   src="/images/certificate.jpg"
                   alt="Official MSME Tourism Certificate of Appreciation"
                   fill
-                  sizes="(max-width: 1024px) 40vw, 25vw"
+                  sizes="(max-width: 1024px) 35vw, 22vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   quality={90}
                   loading="lazy"
                 />
               </div>
               <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-white/10 w-[85%] text-center">
-                <span className="font-mono text-[7px] text-white uppercase tracking-[0.1em] whitespace-nowrap font-semibold block">
+                <span className="font-mono text-[7px] sm:text-[8px] text-white uppercase tracking-[0.1em] whitespace-nowrap font-semibold block">
                   MSME State Certificate
+                </span>
+              </div>
+            </div>
+
+            {/* 6. Bottom-Center: SOTC Preferred Sales Agent Certificate */}
+            <div className="absolute bottom-0 left-[30%] w-[34%] h-[140px] sm:h-[165px] lg:h-[200px] z-25 rotate-[-3deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/40 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
+              <div className="relative w-full h-full overflow-hidden rounded-xl bg-white p-1">
+                <Image
+                  src="/images/SOTC.jpeg"
+                  alt="SOTC Preferred Sales Agent Certificate"
+                  fill
+                  sizes="(max-width: 1024px) 34vw, 20vw"
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  quality={90}
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2 py-0.5 rounded-lg border border-white/10 w-[88%] text-center">
+                <span className="font-mono text-[7px] sm:text-[8px] text-[#e8a820] uppercase tracking-[0.1em] whitespace-nowrap font-bold block">
+                  SOTC PREFERRED PSA
+                </span>
+              </div>
+            </div>
+
+            {/* 7. Bottom-Right: SGC Industry Honor Stage Photo */}
+            <div className="absolute bottom-2 right-[0%] w-[38%] h-[200px] sm:h-[250px] lg:h-[300px] z-30 rotate-[3deg] rounded-2xl overflow-hidden border-4 border-[#221810] shadow-2xl hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/founder/nitesh-sgc-leisures-award.png"
+                  alt="Nitesh Khandelwal receiving SGC Leisures Award"
+                  fill
+                  sizes="(max-width: 1024px) 40vw, 25vw"
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
+                  quality={90}
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-3 right-3 bg-[#1a120a]/80 backdrop-blur-sm px-3 py-1.5 border border-white/10 rounded-lg">
+                <span className="font-mono text-[7px] sm:text-[8px] text-white uppercase tracking-[0.2em] whitespace-nowrap">
+                  SGC Industry Honor
                 </span>
               </div>
             </div>
