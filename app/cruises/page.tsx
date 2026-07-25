@@ -45,7 +45,7 @@ export default function CruisesPage() {
 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>Cruise Packages — Sail the World | Earth Travels</title>
+      <title>Cruise Packages — Sail the World | Earth Travels India</title>
       <meta name="description" content="Explore luxury cruise packages from Earth Travels Mathura. Cordelia, MSC, Royal Caribbean & more. Domestic and international voyages." />
 
       {/* 1. Page Hero */}

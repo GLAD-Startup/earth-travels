@@ -167,7 +167,7 @@ function PackagesContent() {
 export default function PackagesPage() {
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>Best Tour Packages — Kashmir, Maldives & SE Asia | Earth Travels</title>
+      <title>Best Tour Packages — Kashmir, Maldives &amp; SE Asia | Earth Travels India</title>
       <meta name="description" content="Browse premium, custom tour packages by Earth Travels. Honest pricing, fully curated and supported from Mathura." />
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center font-mono text-[#D4A017]">Loading packages...</div>}>
         <PackagesContent />

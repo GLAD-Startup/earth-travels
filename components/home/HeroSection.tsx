@@ -74,7 +74,7 @@ export default function HeroSection() {
 
       {/* Main Content Area */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-start gap-6">
-        
+
         {/* Interactive 3D Center Logo (One line, spacious clearance below header) */}
         <div className="w-full flex justify-center mt-12 md:mt-20 mb-4 md:mb-6">
           <InteractiveHero3DLogo />
@@ -115,7 +115,7 @@ export default function HeroSection() {
         <div className="hero-ctas mt-8 w-full flex flex-col md:flex-row items-start md:items-center justify-between border-t border-white/20 pt-8 gap-8">
           {/* Subtext */}
           <p className="font-sans text-sm md:text-base text-white/60 max-w-md leading-relaxed font-light">
-            Curating bespoke itineraries and extraordinary experiences for families and visionaries. 
+            Curating bespoke itineraries and extraordinary experiences for families and visionaries.
           </p>
 
           {/* CTA Buttons */}
@@ -127,7 +127,7 @@ export default function HeroSection() {
               <span className="relative z-10">Discover Collections</span>
               <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#e8a820] transform scale-x-100 origin-left transition-transform duration-500 group-hover:scale-x-0" />
             </Link>
-            
+
             <Link
               href="/quote"
               className="inline-flex items-center justify-center text-[#1a120a] bg-white text-[11px] md:text-xs font-sans tracking-wider font-semibold rounded-full px-8 py-3.5 md:py-4 transition-all duration-500 hover:bg-[#e8a820] hover:text-white w-full sm:w-auto"
@@ -138,7 +138,7 @@ export default function HeroSection() {
         </div>
 
       </div>
-      
+
       {/* Floating Trust Badges */}
       <div className="absolute top-24 md:top-28 right-6 lg:right-16 flex flex-col gap-4 items-center z-20 pointer-events-auto">
         {/* No. 1 in Mathura Badge */}

@@ -21,7 +21,7 @@ export default function ItinerariesPage() {
 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>Signature Itineraries — Day-by-Day Journeys | Earth Travels</title>
+      <title>Signature Itineraries — Day-by-Day Journeys | Earth Travels India</title>
       <meta
         name="description"
         content="Explore detailed day-by-day itineraries handcrafted by Earth Travels Mathura. Kashmir, Maldives, Dubai, Bali, Thailand, Kerala and more."

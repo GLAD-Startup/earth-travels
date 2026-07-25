@@ -128,7 +128,7 @@ export default function DestinationsPage() {
  
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>Explore Our World — Signature Escapes | Earth Travels</title>
+      <title>Explore Our World — Signature Escapes | Earth Travels India</title>
       <meta name="description" content="View signature tour destinations by Earth Travels Mathura. From Kashmir valleys to Maldives overwater resorts, we plan it all." />
       
       {/* 1. Page Hero */}

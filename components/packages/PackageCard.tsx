@@ -97,8 +97,8 @@ export default function PackageCard({ pkg }: PackageCardProps) {
     },
   ];
  
-  const whatsAppLink = `https://wa.me/918941881111?text=${encodeURIComponent(
-    `Hi Earth Travels, I am interested in the "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D) package starting at ₹${pkg.pricePerPerson.toLocaleString("en-IN")}. Please share details.`
+  const whatsAppLink = `https://wa.me/919410857835?text=${encodeURIComponent(
+    `Hi Earth Travels India, I am interested in the "${pkg.name}" (${pkg.duration.nights}N/${pkg.duration.days}D) package starting at ₹${pkg.pricePerPerson.toLocaleString("en-IN")}. Please share details.`
   )}`;
  
   return (

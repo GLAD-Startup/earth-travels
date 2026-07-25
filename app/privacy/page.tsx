@@ -2,8 +2,8 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Earth Travels",
-  description: "Learn how Earth Travels collects, uses, and protects your personal and booking data.",
+  title: "Privacy Policy — Earth Travels India",
+  description: "Learn how Earth Travels India collects, uses, and protects your personal and booking data.",
 };
 
 export default function PrivacyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
               1. Information We Collect
             </h2>
             <p>
-              At Earth Travels, we are committed to protecting the privacy of our clients and website visitors. We collect personal data when you interact with our forms, including:
+              At Earth Travels India, we are committed to protecting the privacy of our clients and website visitors. We collect personal data when you interact with our forms, including:
             </p>
             <ul className="list-disc pl-5 space-y-1.5">
               <li><strong>Contact Inquiry Form:</strong> Name, Email Address, Phone Number, and details of your inquiry.</li>
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
               If you have any questions, concerns, or requests regarding this Privacy Policy, please contact our support desk:
             </p>
             <div className="mt-4 p-4 bg-white border border-[#1a120a]/5 rounded-xl inline-block text-black/85">
-              <p className="font-semibold text-black">Earth Travels Mathura</p>
+              <p className="font-semibold text-black">Earth Travels India Mathura</p>
               <p className="text-xs text-black/60">Krishna Nagar Market, Mathura, UP, India</p>
               <p className="text-xs text-black/60 mt-1">Email: <a href="mailto:info@earthtravelsindia.com" className="text-[#e8a820] hover:underline font-semibold">info@earthtravelsindia.com</a></p>
               <p className="text-xs text-black/60">Phone: 89418 81111 / 94108 57835</p>

@@ -129,7 +129,7 @@ export default function QuoteForm() {
   };
 
 
-  const whatsAppLink = `https://wa.me/918941881111?text=${encodeURIComponent(
+  const whatsAppLink = `https://wa.me/919410857835?text=${encodeURIComponent(
     `Hi, I'm interested in booking a custom tour for ${travelType} trip to ${selectedDestinations.join(
       ", "
     )} departing from ${departureCity || "Mathura"} around ${dateFrom || "soon"}.`
@@ -137,7 +137,7 @@ export default function QuoteForm() {
 
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-background text-charcoal">
-      <title>Request a Custom Quote — Plan My Trip | Earth Travels</title>
+      <title>Request a Custom Quote — Plan My Trip | Earth Travels India</title>
       <meta name="description" content="Design custom travel itineraries using our multi-step planner. Budget ranges, travel style tags, and direct consultations from Mathura." />
       
       {/* LEFT PANEL: Branding & Badge details (desktop only) */}
@@ -152,7 +152,7 @@ export default function QuoteForm() {
         {/* Brand wordmark logo */}
         <Link href="/" className="relative z-10 block self-start">
           <span className="font-display text-2xl font-black text-charcoal tracking-wide">
-            Earth Travels
+            Earth Travels India
           </span>
         </Link>
 
@@ -162,7 +162,7 @@ export default function QuoteForm() {
             &ldquo;Every journey begins with a single decision.&rdquo;
           </blockquote>
           <cite className="font-mono text-xs text-[#D4A017] uppercase tracking-widest font-semibold not-italic">
-            — Earth Travels
+            — Earth Travels India
           </cite>
         </div>
 

@@ -19,7 +19,7 @@ import { RevealWrapper } from "@/components/ui";
 export default function Home() {
   return (
     <div className="bg-[#fdf8f2] w-full min-h-screen text-[#1a120a] overflow-x-hidden">
-      <title>Earth Travels — Crafting Journeys From Mathura to the World</title>
+      <title>Earth Travels India — Crafting Journeys From Mathura to the World</title>
       <meta name="description" content="Premium tour agency in Mathura, UP. 4.7★ rated. Kashmir, Maldives, Dubai, Europe & more. Custom packages, visa support, call 89418 81111." />
       
       {/* Global Scroll Flight Experience Overlay */}

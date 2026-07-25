@@ -148,7 +148,7 @@ const VISA_DESTINATIONS: VisaCountry[] = [
     price: "₹1,500+",
     region: "Asia",
     currency: "Singapore Dollar (SGD)",
-    description: "Paper e-Visa processed through authorized visa agents like Earth Travels.",
+    description: "Paper e-Visa processed through authorized visa agents like Earth Travels India.",
     documents: [
       "Passport valid 6 months",
       "2 white background photos (35x45mm, 80% face)",
@@ -351,7 +351,7 @@ const VISA_DESTINATIONS: VisaCountry[] = [
     price: "₹1,200+",
     region: "Middle East",
     currency: "UAE Dirham (AED)",
-    description: "30-day and 60-day tourist e-Visas issued rapidly within 24-48 hours through Earth Travels.",
+    description: "30-day and 60-day tourist e-Visas issued rapidly within 24-48 hours through Earth Travels India.",
     documents: [
       "Passport valid minimum 6 months",
       "Clear colour passport copy & photograph",
@@ -1083,7 +1083,7 @@ export default function VisaPage() {
 
   return (
     <div className="bg-[#fdf8f2] min-h-screen text-[#1a120a] pt-28 pb-24 select-none">
-      <title>Visa Requirements for Indians — Global Concierge & Document Guide | Earth Travels</title>
+      <title>Visa Requirements for Indians — Global Concierge &amp; Document Guide | Earth Travels India</title>
       <meta
         name="description"
         content="Instantly check visa requirements for Indians across 50+ worldwide destinations. Interactive details popup modal, document checklists, and expert visa filing assistance."
@@ -1339,7 +1339,7 @@ export default function VisaPage() {
                 HASSLE-FREE CONCIERGE
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-extrabold text-[#1a120a]">
-                How Earth Travels Visa Service Works
+                How Earth Travels India Visa Service Works
               </h2>
             </div>
 
@@ -1403,7 +1403,7 @@ export default function VisaPage() {
                 📞 Call Office (+91 89410 88111)
               </a>
               <a
-                href="https://wa.me/918941881111?text=Hi%20Earth%20Travels,%20I%20need%20Visa%20Assistance"
+                href="https://wa.me/919410857835?text=Hi%20Earth%20Travels,%20I%20need%20Visa%20Assistance"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-3.5 px-6 rounded-full bg-[#25D366] text-white font-sans text-xs font-semibold hover:bg-[#1EBE5D] transition-transform hover:scale-105 shadow-md flex items-center gap-2"
@@ -1560,7 +1560,7 @@ export default function VisaPage() {
             {/* Modal Bottom CTA Footer */}
             <div className="p-4 bg-gray-50 border-t border-gray-200 flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href={`https://wa.me/918941881111?text=Hi%20Earth%20Travels,%20I%20want%20to%20apply%20for%20a%20Visa%20for%20${encodeURIComponent(activeModalCountry.name)}`}
+                href={`https://wa.me/919410857835?text=Hi%20Earth%20Travels,%20I%20want%20to%20apply%20for%20a%20Visa%20for%20${encodeURIComponent(activeModalCountry.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-3.5 px-6 rounded-xl font-sans text-xs font-bold text-[#1a120a] text-center transition-transform hover:scale-102 shadow-md flex items-center justify-center gap-2"

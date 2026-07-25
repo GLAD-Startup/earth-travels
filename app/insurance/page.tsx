@@ -56,7 +56,7 @@ const PLANS = [
     idealFor: "Budget travelers & short trips",
     popular: false,
     badge: "ESSENTIAL",
-    whatsappMsg: "Hi Earth Travels, I want to inquire about the Basic Travel Insurance Plan (₹299-499).",
+    whatsappMsg: "Hi Earth Travels India, I want to inquire about the Basic Travel Insurance Plan (₹299-499).",
     features: [
       "Medical emergency (₹5 lakhs)",
       "Trip cancellation (₹50,000)",
@@ -74,7 +74,7 @@ const PLANS = [
     idealFor: "Most international & Schengen travelers",
     popular: true,
     badge: "MOST POPULAR ★",
-    whatsappMsg: "Hi Earth Travels, I want to get a policy quote for the Standard Travel Insurance Plan (₹599-899).",
+    whatsappMsg: "Hi Earth Travels India, I want to get a policy quote for the Standard Travel Insurance Plan (₹599-899).",
     features: [
       "Medical emergency (₹15 lakhs)",
       "Trip cancellation (₹1,50,000)",
@@ -94,7 +94,7 @@ const PLANS = [
     idealFor: "Extended vacations & adventure travel",
     popular: false,
     badge: "MAX COVER",
-    whatsappMsg: "Hi Earth Travels, I want to get a policy quote for the Premium Travel Insurance Plan (₹1299-1899).",
+    whatsappMsg: "Hi Earth Travels India, I want to get a policy quote for the Premium Travel Insurance Plan (₹1299-1899).",
     features: [
       "Medical emergency (₹50 lakhs)",
       "Trip cancellation (₹30,00,000)",
@@ -117,7 +117,7 @@ const PLANS = [
     idealFor: "Frequent flyers & business executives",
     popular: false,
     badge: "BEST VALUE",
-    whatsappMsg: "Hi Earth Travels, I want to inquire about the Annual Multi-Trip Insurance Plan (₹3,999).",
+    whatsappMsg: "Hi Earth Travels India, I want to inquire about the Annual Multi-Trip Insurance Plan (₹3,999).",
     features: [
       "All Premium features included",
       "Unlimited trips per year (up to 45 days/trip)",
@@ -233,7 +233,7 @@ const FAQS = [
     a: "Yes! All our international policies include COVID-19 emergency medical treatment, hospital room charges, and quarantine costs required by local health authorities.",
   },
   {
-    q: "What is Earth Travels' claim settlement ratio?",
+    q: "What is Earth Travels India's claim settlement ratio?",
     a: "We partner exclusively with top IRDA-regulated insurance providers (Bajaj Allianz, ICICI Lombard, HDFC ERGO) featuring an average claim settlement ratio of 95%+",
   },
   {
@@ -307,10 +307,10 @@ export default function InsurancePage() {
 
   return (
     <div className="bg-[#fdf8f2] min-h-screen text-[#1a120a] pt-24 pb-24 select-none">
-      <title>International Travel Insurance — Schengen & Worldwide Cover | Earth Travels</title>
+      <title>International Travel Insurance — Schengen & Worldwide Cover | Earth Travels India</title>
       <meta
         name="description"
-        content="Get 100% embassy-approved travel insurance for Schengen, USA, UK, and worldwide destinations. Instant policy quote & 24/7 assistance by Earth Travels."
+        content="Get 100% embassy-approved travel insurance for Schengen, USA, UK, and worldwide destinations. Instant policy quote & 24/7 assistance by Earth Travels India."
       />
 
       {/* ================= 1. HERO SECTION ================= */}
@@ -356,7 +356,7 @@ export default function InsurancePage() {
           {/* Action CTAs */}
           <RevealWrapper delay={0.4} className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <a
-              href="https://wa.me/918941881111?text=Hi%20Earth%20Travels,%20I%20want%20to%20get%20an%20International%20Travel%20Insurance%20Quote"
+              href="https://wa.me/919410857835?text=Hi%20Earth%20Travels,%20I%20want%20to%20get%20an%20International%20Travel%20Insurance%20Quote"
               target="_blank"
               rel="noopener noreferrer"
               className="py-4 px-8 rounded-full font-sans text-sm font-bold text-[#1a120a] transition-all duration-300 hover:scale-105 shadow-xl flex items-center gap-2.5"
@@ -508,7 +508,7 @@ export default function InsurancePage() {
                 </div>
 
                 <a
-                  href={`https://wa.me/918941881111?text=${encodeURIComponent(plan.whatsappMsg)}`}
+                  href={`https://wa.me/919410857835?text=${encodeURIComponent(plan.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-3.5 rounded-xl font-sans text-xs font-bold text-center transition-all shadow-md flex items-center justify-center gap-2 mt-8 shrink-0 ${
@@ -569,7 +569,7 @@ export default function InsurancePage() {
               All insurance partners are IRDAI-approved with strong claim settlement ratios (95%+). Earth Travels helps you pick the most cost-effective policy tailored for your visa destination.
             </p>
             <a
-              href="https://wa.me/918941881111?text=Hi%20Earth%20Travels,%20help%20me%20choose%20the%20best%20travel%20insurance%20partner"
+              href="https://wa.me/919410857835?text=Hi%20Earth%20Travels,%20help%20me%20choose%20the%20best%20travel%20insurance%20partner"
               target="_blank"
               rel="noopener noreferrer"
               className="py-3 px-6 rounded-full font-sans text-xs font-bold text-[#1a120a] bg-[#e8a820] hover:bg-[#c4900f] transition-all shadow-md inline-flex items-center gap-2"
@@ -674,7 +674,7 @@ export default function InsurancePage() {
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://wa.me/918941881111?text=Hi%20Earth%20Travels,%20I%20need%20to%20file%20an%20Insurance%20Claim"
+              href="https://wa.me/919410857835?text=Hi%20Earth%20Travels,%20I%20need%20to%20file%20an%20Insurance%20Claim"
               target="_blank"
               rel="noopener noreferrer"
               className="py-3.5 px-8 rounded-full font-sans text-xs font-bold text-[#1a120a] bg-gradient-to-r from-[#e8a820] to-[#c4900f] hover:scale-105 transition-all shadow-md flex items-center gap-2"
@@ -791,7 +791,7 @@ export default function InsurancePage() {
 
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <a
-                  href="https://wa.me/918941881111?text=Hi%20Earth%20Travels,%20I%20need%20Personal%20Travel%20Insurance%20Assistance"
+                  href="https://wa.me/919410857835?text=Hi%20Earth%20Travels,%20I%20need%20Personal%20Travel%20Insurance%20Assistance"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="py-4 px-8 rounded-full font-sans text-xs sm:text-sm font-bold text-white bg-[#25D366] hover:bg-[#1EBE5D] transition-transform hover:scale-105 shadow-xl flex items-center gap-2.5"

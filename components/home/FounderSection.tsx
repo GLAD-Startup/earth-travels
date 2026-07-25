@@ -264,11 +264,7 @@ export default function FounderSection() {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute bottom-3 right-3 bg-[#1a120a]/80 backdrop-blur-sm px-3 py-1.5 border border-white/10 rounded-lg">
-                <span className="font-mono text-[7px] sm:text-[8px] text-white uppercase tracking-[0.2em] whitespace-nowrap">
-                  SGC Industry Honor
-                </span>
-              </div>
+
             </div>
 
           </div>

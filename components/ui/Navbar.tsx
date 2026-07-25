@@ -80,19 +80,18 @@ export default function Navbar() {
             : "bg-transparent py-4 md:py-5"
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        <div className="max-w-[1440px] mx-auto pl-1 sm:pl-2 lg:pl-4 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between gap-4">
           {/* Left: Logo & Brand Name */}
           <Link href="/" className="flex items-center gap-3 sm:gap-3.5 group shrink-0">
             <img
               src="/images/logo_transparent.png"
               alt="Earth Travels Logo"
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-[90px] lg:h-[90px] object-contain transition-transform duration-300 group-hover:scale-105"
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <span
-              className="font-display text-3xl sm:text-4xl lg:text-4xl font-extrabold tracking-wide text-[#1aaff2] whitespace-nowrap leading-none"
-              style={{ textShadow: "0 0 25px rgba(26, 175, 242, 0.35)" }}
+              className="font-display text-lg sm:text-xl lg:text-2xl font-extrabold tracking-wide text-white whitespace-nowrap leading-none"
             >
-              Earth Travels
+              Earth Travels India
             </span>
           </Link>
 

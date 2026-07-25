@@ -2,8 +2,8 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions — Earth Travels",
-  description: "Review the booking, cancellation, and operational terms of Earth Travels.",
+  title: "Terms and Conditions — Earth Travels India",
+  description: "Review the booking, cancellation, and operational terms of Earth Travels India.",
 };
 
 export default function TermsPage() {
@@ -23,7 +23,7 @@ export default function TermsPage() {
               1. Scope of Services
             </h2>
             <p>
-              Earth Travels operates as a professional travel agency based in Mathura, UP, providing custom tour planning, flight tickets, cruise reservations, railway booking, visa assistance, and hotel coordination.
+              Earth Travels India operates as a professional travel agency based in Mathura, UP, providing custom tour planning, flight tickets, cruise reservations, railway booking, visa assistance, and hotel coordination.
             </p>
           </section>
 
@@ -59,11 +59,11 @@ export default function TermsPage() {
               4. Cancellations & Refund Policies
             </h2>
             <p>
-              In the event of cancellation, refunds are computed based on the refund policy of third-party vendors (airlines, cruises, hotels) and Earth Travels&apos; service processing fee:
+              In the event of cancellation, refunds are computed based on the refund policy of third-party vendors (airlines, cruises, hotels) and Earth Travels India&apos;s service processing fee:
             </p>
             <ul className="list-disc pl-5 space-y-1.5">
               <li>Non-refundable bookings (such as promo flight tickets or peak-season resort reservations) cannot be refunded under any circumstances.</li>
-              <li>Earth Travels charges a flat processing fee per person for handling cancellations.</li>
+              <li>Earth Travels India charges a flat processing fee per person for handling cancellations.</li>
               <li>Refund processing times vary depending on the hotel or airline policies, usually ranging between 15 and 45 business days from confirmation.</li>
             </ul>
           </section>
@@ -73,7 +73,7 @@ export default function TermsPage() {
               5. Limitation of Liability
             </h2>
             <p>
-              Earth Travels acts solely as an intermediary broker between passengers and transport/accommodation operators:
+              Earth Travels India acts solely as an intermediary broker between passengers and transport/accommodation operators:
             </p>
             <ul className="list-disc pl-5 space-y-1.5">
               <li>We are not liable for flight delays, missed connections, loss or theft of baggage, hotel service levels, or cancellations caused by natural disasters, strikes, or government mandates.</li>
@@ -86,7 +86,7 @@ export default function TermsPage() {
               6. Governing Law
             </h2>
             <p>
-              Any disputes, claims, or legal proceedings arising from bookings or services coordinated by Earth Travels shall be subject exclusively to the jurisdiction of the courts located in Mathura, Uttar Pradesh, India.
+              Any disputes, claims, or legal proceedings arising from bookings or services coordinated by Earth Travels India shall be subject exclusively to the jurisdiction of the courts located in Mathura, Uttar Pradesh, India.
             </p>
           </section>
         </div>

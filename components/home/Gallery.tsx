@@ -233,7 +233,7 @@ export default function Gallery() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div>
               <span className="font-mono text-[10px] text-[#c4900f] uppercase tracking-[0.3em] font-semibold block mb-4">
-                Behind Earth Travels
+                Behind Earth Travels India
               </span>
               <h2 className="font-display text-4xl md:text-6xl font-normal text-[#1a120a] leading-[1.05] tracking-[-0.02em]">
                 The Work Behind<br />
@@ -287,7 +287,7 @@ export default function Gallery() {
               >
                 <Image
                   src={img.src}
-                  alt="Earth Travels Gallery 1"
+                  alt="Earth Travels India Gallery 1"
                   fill
                   sizes="(max-width: 768px) 300px, 500px"
                   className={`${img.src.includes('trophy.jpg') ? 'object-contain bg-white p-4' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
@@ -311,7 +311,7 @@ export default function Gallery() {
               >
                 <Image
                   src={img.src}
-                  alt="Earth Travels Gallery 2"
+                  alt="Earth Travels India Gallery 2"
                   fill
                   sizes="(max-width: 768px) 300px, 500px"
                   className={`${img.src.includes('certificate.jpg') ? 'object-contain bg-white p-4' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
@@ -332,7 +332,7 @@ export default function Gallery() {
               <div className="relative w-20 h-20 rounded-full overflow-hidden border border-[#c4900f]/30 shrink-0">
                 <Image
                   src="/images/profile.jpeg"
-                  alt="Nitesh Khandelwal, founder of Earth Travels"
+                  alt="Nitesh Khandelwal, founder of Earth Travels India"
                   fill
                   sizes="80px"
                   className="object-cover"
@@ -343,7 +343,7 @@ export default function Gallery() {
               <div>
                 <p className="font-sans text-sm font-semibold text-[#1a120a]">Nitesh Khandelwal</p>
                 <p className="font-mono text-[9px] text-[#1a120a]/40 uppercase tracking-widest font-semibold">
-                  Founder, Earth Travels · Mathura
+                   Founder, Earth Travels India · Mathura
                 </p>
               </div>
             </div>

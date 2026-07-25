@@ -37,8 +37,8 @@ export default function Footer() {
                 alt="Earth Travels Logo"
                 className="w-16 h-16 object-contain"
               />
-              <span className="font-display text-3xl font-black text-[#1aaff2] tracking-wide">
-                Earth Travels
+              <span className="font-display text-3xl font-black text-white tracking-wide">
+                Earth Travels India
               </span>
             </Link>
             <p className="font-sans text-[#e8a820] text-xs font-semibold uppercase tracking-wider -mt-2">
@@ -49,13 +49,13 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-1.5 mt-1">
               <a
-                href="tel:+918941088111"
+                href="tel:+919410857835"
                 className="flex items-center gap-2 font-mono text-sm font-semibold text-[#e8a820] hover:text-[#f0c040] transition-colors"
               >
                 <svg className="w-4 h-4 text-[#e8a820] shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
-                +91 89410 88111 (Office)
+                +91 94108 57835
               </a>
               <a
                 href="tel:+918941881111"
@@ -67,13 +67,13 @@ export default function Footer() {
                 +91 89418 81111
               </a>
               <a
-                href="tel:+919410857835"
+                href="tel:+918941088111"
                 className="flex items-center gap-2 font-mono text-sm font-semibold text-[#e8a820] hover:text-[#f0c040] transition-colors"
               >
                 <svg className="w-4 h-4 text-[#e8a820] shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
-                +91 94108 57835
+                +91 89410 88111 (Office)
               </a>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <p className="font-sans">&copy; {currentYear} Earth Travels. All rights reserved.</p>
+          <p className="font-sans">&copy; {currentYear} Earth Travels India. All rights reserved.</p>
           <p className="font-sans flex items-center gap-1.5">
             Designed by
             <a href="https://gladstudio.net" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity flex items-center">

@@ -206,7 +206,7 @@ export default function ItineraryPage() {
     (p) => p.destinationId !== slugStr
   ).slice(0, 3);
 
-  const whatsAppLink = `https://wa.me/918941881111?text=${encodeURIComponent(
+  const whatsAppLink = `https://wa.me/919410857835?text=${encodeURIComponent(
     `Hi, I'm interested in the ${itinerary.title} package for ${adults} adults departing ${departureDate || "soon"}.`
   )}`;
 
@@ -214,7 +214,7 @@ export default function ItineraryPage() {
 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>{itinerary.title} — {itinerary.duration} | Earth Travels</title>
+      <title>{itinerary.title} — {itinerary.duration} | Earth Travels India</title>
       <meta
         name="description"
         content={`Day-by-day ${itinerary.title} itinerary by Earth Travels Mathura. Expert-curated ${itinerary.duration} package.`}

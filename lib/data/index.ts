@@ -12,7 +12,7 @@ export const SITE_CONFIG = {
     { label: "Mobile", number: "+91 89418 81111", tel: "+918941881111" },
     { label: "Mobile", number: "+91 94108 57835", tel: "+919410857835" },
   ],
-  whatsapp: "918941881111",
+  whatsapp: "919410857835",
   email: "info@earthtravelsindia.com",
   address: "Shop No. 143, 144, 145, 1st Floor, Krishna Plaza, Krishna Nagar, Mathura - 281004, Uttar Pradesh, India",
   hours: "Mon–Sat: 10AM – 7:30PM",

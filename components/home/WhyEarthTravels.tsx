@@ -35,7 +35,7 @@ export default function WhyEarthTravels() {
           <div className="lg:col-span-5 relative">
             <div className="sticky top-40 flex flex-col items-start">
               <span className="font-mono text-[10px] text-[#c4900f] uppercase tracking-[0.3em] font-semibold block mb-6">
-                The Earth Travels Standard
+                The Earth Travels India Standard
               </span>
               <h2 className="font-display text-5xl md:text-7xl lg:text-[90px] font-normal text-[#1a120a] leading-[0.9] tracking-[-0.02em] mb-8">
                 Not Just<br />

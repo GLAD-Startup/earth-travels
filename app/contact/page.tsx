@@ -118,7 +118,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>Contact Us — Office Details & Map | Earth Travels</title>
+      <title>Contact Us — Office Details & Map | Earth Travels India</title>
       <meta name="description" content="Get in touch with Earth Travels in Mathura. View our office address, phone numbers, WhatsApp links, Google maps, and FAQ guides." />
       
       {/* 1. Page Header */}
@@ -148,10 +148,10 @@ export default function ContactPage() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <a
-                      href="tel:+918941088111"
-                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide flex items-center gap-2"
+                      href="tel:+919410857835"
+                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide"
                     >
-                      +91 89410 88111 <span className="text-xs text-charcoal/50 font-normal">(Office)</span>
+                      +91 94108 57835
                     </a>
                     <a
                       href="tel:+918941881111"
@@ -160,10 +160,10 @@ export default function ContactPage() {
                       +91 89418 81111
                     </a>
                     <a
-                      href="tel:+919410857835"
-                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide"
+                      href="tel:+918941088111"
+                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide flex items-center gap-2"
                     >
-                      +91 94108 57835
+                      +91 89410 88111 <span className="text-xs text-charcoal/50 font-normal">(Office)</span>
                     </a>
                   </div>
                 </div>
@@ -174,12 +174,12 @@ export default function ContactPage() {
                     <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 21.056c-1.637 0-3.238-.432-4.654-1.246l-.334-.194-3.456.906.924-3.37-.213-.339a9.588 9.588 0 01-1.463-5.068c0-5.283 4.295-9.58 9.58-9.58 2.562 0 4.968.997 6.78 2.809A9.529 9.529 0 0121.61 11.47c0 5.285-4.297 9.586-9.579 9.586zM7.228 18.067a7.518 7.518 0 004.802 1.705c4.152 0 7.534-3.382 7.534-7.535 0-2.016-.784-3.911-2.209-5.337a7.48 7.48 0 00-5.326-2.198c-4.15 0-7.53 3.38-7.53 7.53 0 1.58.411 3.12 1.196 4.484l.275.478-.549 2.002 2.052-.538.455.267zM16.143 14.61c-.244-.122-1.442-.71-1.666-.792-.224-.081-.387-.122-.549.122-.162.244-.63.792-.773.955-.142.163-.284.183-.528.061-.244-.122-1.03-.38-1.96-1.206-.723-.644-1.21-1.439-1.353-1.683-.142-.244-.015-.376.107-.498.11-.11.244-.284.366-.427.122-.142.162-.244.244-.407.081-.163.041-.305-.02-.427-.061-.122-.549-1.321-.752-1.81-.198-.475-.4-.411-.549-.419-.142-.008-.305-.01-.468-.01-.162 0-.427.061-.65.305-.224.244-.854.834-.854 2.034 0 1.2.875 2.36 1 2.522.122.163 1.72 2.625 4.168 3.682.583.252 1.038.403 1.393.516.586.186 1.12.16 1.542.097.472-.07 1.442-.589 1.645-1.159.203-.57.203-1.058.142-1.159-.061-.102-.224-.163-.468-.285z"/></svg>
                   </div>
                   <a
-                    href="https://wa.me/918941881111"
+                    href="https://wa.me/919410857835"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-mono text-base md:text-lg font-bold text-emerald-500 hover:text-emerald-400 transition-colors tracking-wide"
                   >
-                    +91 89418 81111
+                    +91 94108 57835
                   </a>
                 </div>
 
@@ -258,7 +258,7 @@ export default function ContactPage() {
                           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                       </div>
-                      <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#1877F2] transition-colors">Earth Travels</span>
+                      <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#1877F2] transition-colors">Earth Travels India</span>
                     </a>
                   </div>
                 </div>

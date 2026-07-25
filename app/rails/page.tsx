@@ -52,7 +52,7 @@ export default function RailsPage() {
 
   return (
     <div className="bg-background min-h-screen text-charcoal select-none">
-      <title>Rail Journeys — Scenic Routes & Euro Passes | Earth Travels</title>
+      <title>Rail Journeys — Scenic Routes & Euro Passes | Earth Travels India</title>
       <meta name="description" content="Explore scenic rail journeys and rail passes from Earth Travels. Eurail Global Pass, Swiss Travel Pass, Glacier Express, Bernina Express, and scenic European rail routes." />
 
       {/* 1. Page Hero */}
