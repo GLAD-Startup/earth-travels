@@ -86,10 +86,10 @@ export default function Navbar() {
             <img
               src="/images/logo_transparent.png"
               alt="Earth Travels Logo"
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-105"
+              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <span
-              className="font-display text-lg sm:text-xl lg:text-2xl font-extrabold tracking-wide text-white whitespace-nowrap leading-none"
+              className="font-display text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-extrabold tracking-wide text-[#037ad4] whitespace-nowrap leading-none"
             >
               Earth Travels India
             </span>

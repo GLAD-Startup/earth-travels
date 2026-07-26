@@ -37,7 +37,7 @@ export default function Footer() {
                 alt="Earth Travels Logo"
                 className="w-16 h-16 object-contain"
               />
-              <span className="font-display text-3xl font-black text-white tracking-wide">
+              <span className="font-display text-3xl font-black text-[#037ad4] tracking-wide">
                 Earth Travels India
               </span>
             </Link>

@@ -131,7 +131,7 @@ export default function FounderSection() {
           <div className="w-full lg:w-7/12 relative h-[560px] sm:h-[660px] lg:h-[720px] mt-12 lg:mt-0 select-none">
             
             {/* 1. Top-Left: IATA Certificate */}
-            <div className="absolute top-[10px] left-[0%] w-[32%] h-[140px] sm:h-[160px] lg:h-[200px] z-20 rotate-[4deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/30 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
+            <div className="absolute top-[190px] sm:top-[230px] lg:top-[270px] left-[-6%] sm:left-[-6%] lg:left-[-7%] w-[34%] h-[140px] sm:h-[165px] lg:h-[205px] z-30 rotate-[-4deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/30 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
               <div className="relative w-full h-full overflow-hidden rounded-xl bg-white p-1">
                 <Image
                   src="/images/IATA.jpeg"
@@ -192,7 +192,7 @@ export default function FounderSection() {
             </div>
 
             {/* 4. Middle-Right: IndiGo Outstanding Award */}
-            <div className="absolute top-[200px] sm:top-[230px] right-[0%] w-[30%] h-[140px] sm:h-[165px] lg:h-[200px] z-25 rotate-[5deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/30 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
+            <div className="absolute top-[200px] sm:top-[230px] right-[0%] w-[30%] h-[140px] sm:h-[165px] lg:h-[200px] z-30 rotate-[5deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/30 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
               <div className="relative w-full h-full overflow-hidden rounded-xl bg-white p-1">
                 <Image
                   src="/images/Indigo 2018-19.jpeg"
@@ -232,7 +232,7 @@ export default function FounderSection() {
             </div>
 
             {/* 6. Bottom-Center: SOTC Preferred Sales Agent Certificate */}
-            <div className="absolute bottom-0 left-[30%] w-[34%] h-[140px] sm:h-[165px] lg:h-[200px] z-25 rotate-[-3deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/40 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
+            <div className="absolute bottom-0 left-[30%] w-[34%] h-[140px] sm:h-[165px] lg:h-[200px] z-20 rotate-[-3deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/40 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
               <div className="relative w-full h-full overflow-hidden rounded-xl bg-white p-1">
                 <Image
                   src="/images/SOTC.jpeg"

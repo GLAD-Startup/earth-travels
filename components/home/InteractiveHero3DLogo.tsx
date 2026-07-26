@@ -17,7 +17,7 @@ export default function InteractiveHero3DLogo() {
             alt="Earth Travels Logo"
             fill
             sizes="(max-width: 768px) 80px, 96px"
-            className="object-contain filter drop-shadow-[0_10px_25px_rgba(26,175,242,0.65)]"
+            className="object-contain filter drop-shadow-[0_10px_25px_rgba(3,122,212,0.65)]"
             priority
           />
         </div>
