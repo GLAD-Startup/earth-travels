@@ -51,17 +51,17 @@ export default function FounderSection() {
 
   return (
     <section className="founder-section-container relative w-full bg-[#1a120a] text-white pt-32 pb-40 overflow-hidden select-none">
-      
+
       {/* Background Texture/Noise for Premium Feel */}
-      <div className="absolute inset-0 opacity-[0.015] pointer-events-none mix-blend-screen" 
-           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
+      <div className="absolute inset-0 opacity-[0.015] pointer-events-none mix-blend-screen"
+        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16 relative z-10">
-        
+
         {/* Magazine Style Spread Layout */}
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-8">
-          
+
           {/* Left: Oversized Typography & Story */}
           <div className="w-full lg:w-5/12 flex flex-col gap-10">
             <div>
@@ -96,10 +96,10 @@ export default function FounderSection() {
 
             <div className="flex flex-col gap-8 max-w-sm">
               <p className="font-sans text-sm md:text-base text-white/70 leading-[1.8] font-light">
-                What began in Krishna Market has grown into Mathura&apos;s most trusted name in bespoke travel. 
+                What began in Krishna Market has grown into Mathura&apos;s most trusted name in bespoke travel.
                 With over a decade of unyielding dedication, Nitesh and his team have redefined luxury travel for families.
               </p>
-              
+
               <blockquote className="relative">
                 <div className="absolute -left-6 -top-4 text-[#e8a820]/20 font-display text-7xl font-bold leading-none select-none">
                   &ldquo;
@@ -110,7 +110,7 @@ export default function FounderSection() {
               </blockquote>
             </div>
 
-             {/* Editorial Stats Line */}
+            {/* Editorial Stats Line */}
             <div className="flex items-center gap-12 mt-4 pt-8 border-t border-white/10">
               <div className="flex flex-col">
                 <span className="font-mono text-3xl font-light text-[#e8a820]">15<span className="text-sm">+</span></span>
@@ -129,7 +129,7 @@ export default function FounderSection() {
 
           {/* Right: Premium Overlapping Photo Collage (Rotated scatter style) */}
           <div className="w-full lg:w-7/12 relative h-[560px] sm:h-[660px] lg:h-[720px] mt-12 lg:mt-0 select-none">
-            
+
             {/* 1. Top-Left: IATA Certificate */}
             <div className="absolute top-[190px] sm:top-[230px] lg:top-[270px] left-[-6%] sm:left-[-6%] lg:left-[-7%] w-[34%] h-[140px] sm:h-[165px] lg:h-[205px] z-30 rotate-[-4deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border border-[#e8a820]/30 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
               <div className="relative w-full h-full overflow-hidden rounded-xl bg-white p-1">
@@ -146,6 +146,26 @@ export default function FounderSection() {
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2 py-0.5 rounded-lg border border-white/10 w-[88%] text-center">
                 <span className="font-mono text-[7px] sm:text-[8px] text-[#e8a820] uppercase tracking-[0.1em] whitespace-nowrap font-bold block">
                   IATA ACCREDITED
+                </span>
+              </div>
+            </div>
+
+            {/* 2b. Top-Center: TBO Gold Trophy & Certificate */}
+            <div className="absolute -top-28 left-[30%] w-[23%] h-[120px] sm:h-[145px] lg:h-[170px] z-30 rotate-[2deg] bg-[#221810] p-1.5 rounded-2xl shadow-2xl border-2 border-[#e8a820]/50 hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
+              <div className="relative w-full h-full overflow-hidden rounded-xl">
+                <Image
+                  src="/images/tbo-gold-trophy.jpg"
+                  alt="TBO.com Gold Certificate of Achievement and Trophy awarded to Earth Travels India Mathura"
+                  fill
+                  sizes="(max-width: 1024px) 30vw, 20vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  quality={90}
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2 py-0.5 rounded-lg border border-white/10 w-[88%] text-center">
+                <span className="font-mono text-[7px] sm:text-[8px] text-[#e8a820] uppercase tracking-[0.1em] whitespace-nowrap font-bold block">
+                  TBO GOLD AWARD 2025–26
                 </span>
               </div>
             </div>
@@ -171,22 +191,22 @@ export default function FounderSection() {
               </div>
             </div>
 
-            {/* 3. Top-Right: MSME Regional Trophy */}
-            <div className="absolute top-0 right-[2%] w-[32%] h-[180px] sm:h-[220px] lg:h-[260px] z-20 rotate-[-4deg] bg-[#221810] p-2 rounded-2xl shadow-2xl border-2 border-[#e8a820]/40 flex items-center justify-center hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer">
+            {/* 3. Top-Right: TBO Award Ceremony */}
+            <div className="absolute top-0 right-[2%] w-[38%] h-[210px] sm:h-[255px] lg:h-[300px] z-20 rotate-[4deg] rounded-2xl overflow-hidden border-2 border-[#e8a820]/40 shadow-2xl hover:rotate-0 hover:z-40 hover:scale-105 transition-all duration-500 ease-out cursor-pointer group">
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/trophy.jpg"
-                  alt="Dr. Ram Manohar Lohia MSME Tourism Award Trophy"
+                  src="/images/tbo-award-ceremony.jpg"
+                  alt="Earth Travels India team receiving TBO.com Gold Award at their Mathura office"
                   fill
                   sizes="(max-width: 1024px) 30vw, 20vw"
-                  className="object-contain transition-transform duration-700 hover:scale-105"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   quality={90}
                   loading="lazy"
                 />
               </div>
               <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-espresso/90 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-white/10 w-[85%] text-center">
-                <span className="font-mono text-[7px] sm:text-[8px] text-white uppercase tracking-[0.1em] whitespace-nowrap font-semibold block">
-                  MSME Regional Award
+                <span className="font-mono text-[7px] sm:text-[8px] text-[#e8a820] uppercase tracking-[0.1em] whitespace-nowrap font-bold block">
+                  TBO GOLD AWARD CEREMONY
                 </span>
               </div>
             </div>

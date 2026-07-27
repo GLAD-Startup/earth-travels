@@ -28,6 +28,11 @@ const row1Images: GalleryImage[] = [
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
+    src: "/images/tbo-gold-trophy.jpg",
+    widthClass: "w-[220px] md:w-[300px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
     src: "/images/Indigo 2016-17.jpeg",
     widthClass: "w-[260px] md:w-[360px]",
     heightClass: "h-[180px] md:h-[260px]",
@@ -108,6 +113,11 @@ const row2Images: GalleryImage[] = [
   {
     src: "/images/tbo.jpeg",
     widthClass: "w-[260px] md:w-[360px]",
+    heightClass: "h-[180px] md:h-[260px]",
+  },
+  {
+    src: "/images/tbo-award-ceremony.jpg",
+    widthClass: "w-[320px] md:w-[440px]",
     heightClass: "h-[180px] md:h-[260px]",
   },
   {
@@ -196,7 +206,7 @@ export default function Gallery() {
 
   // Dynamic filter logic
   const filteredRow1 = row1Images.filter(img => {
-    const isOfficeOrAward = img.src.includes('office') || img.src.includes('trophy.jpg') || img.src.includes('certificate.jpg');
+    const isOfficeOrAward = img.src.includes('office') || img.src.includes('trophy.jpg') || img.src.includes('tbo-gold-trophy') || img.src.includes('tbo-award-ceremony') || img.src.includes('certificate.jpg');
     if (activeTab === "all") return true;
     if (activeTab === "destinations") return !isOfficeOrAward;
     if (activeTab === "office") return isOfficeOrAward;
@@ -204,7 +214,7 @@ export default function Gallery() {
   });
 
   const filteredRow2 = row2Images.filter(img => {
-    const isOfficeOrAward = img.src.includes('office') || img.src.includes('trophy.jpg') || img.src.includes('certificate.jpg');
+    const isOfficeOrAward = img.src.includes('office') || img.src.includes('trophy.jpg') || img.src.includes('tbo-gold-trophy') || img.src.includes('tbo-award-ceremony') || img.src.includes('certificate.jpg');
     if (activeTab === "all") return true;
     if (activeTab === "destinations") return !isOfficeOrAward;
     if (activeTab === "office") return isOfficeOrAward;

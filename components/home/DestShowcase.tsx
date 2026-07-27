@@ -29,7 +29,7 @@ export default function DestShowcase() {
   return (
     <section className="relative w-full bg-[#fdf8f2] py-32 overflow-hidden select-none">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-xl">
@@ -95,7 +95,7 @@ export default function DestShowcase() {
                   <p className="font-sans text-sm text-white/80 max-w-sm font-light leading-relaxed mt-2 line-clamp-2">
                     {dest.tagline}
                   </p>
-                  
+
                   <Link
                     href={`/packages?destination=${dest.name.toLowerCase()}`}
                     className="mt-6 inline-block bg-white text-[#1a120a] text-[11px] font-sans font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-[#e8a820] hover:text-white transition-colors duration-300 shadow-md"
@@ -107,7 +107,7 @@ export default function DestShowcase() {
             </div>
           ))}
         </div>
-        
+
       </div>
     </section>
   );
