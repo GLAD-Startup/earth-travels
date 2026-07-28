@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/data";
 import { useIsOpen } from "@/lib/hooks";
+import { openCookiePreferences } from "@/lib/consentManager";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -172,7 +173,20 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <p className="font-sans">&copy; {currentYear} Earth Travels India. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className="font-sans">&copy; {currentYear} Earth Travels India. All rights reserved.</p>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <Link href="/cookie-policy" className="hover:text-[#e8a820] transition-colors">
+              Cookie Policy
+            </Link>
+            <span className="text-white/20">•</span>
+            <button
+              onClick={() => openCookiePreferences()}
+              className="hover:text-[#e8a820] transition-colors bg-transparent border-none p-0 cursor-pointer text-xs underline underline-offset-2"
+            >
+              Cookie Settings
+            </button>
+          </div>
           <p className="font-sans flex items-center gap-1.5">
             Designed by
             <a href="https://gladstudio.net" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity flex items-center">

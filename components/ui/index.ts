@@ -6,3 +6,6 @@ export { default as ScrollProgress } from "./ScrollProgress";
 export { default as CustomCursor } from "./CustomCursor";
 export { default as WhatsAppFAB } from "./WhatsAppFAB";
 export { default as ClientShell } from "./ClientShell";
+export { default as CookieConsentBanner } from "./CookieConsentBanner";
+export { default as CookiePreferencesModal } from "./CookiePreferencesModal";
+export { default as TermsModal } from "./TermsModal";

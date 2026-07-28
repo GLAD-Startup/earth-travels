@@ -10,6 +10,8 @@ import {
   Navbar,
   Footer,
   WhatsAppFAB,
+  CookieConsentBanner,
+  TermsModal,
 } from "@/components/ui";
 
 export default function ClientShell({
@@ -63,6 +65,9 @@ export default function ClientShell({
       </main>
       <Footer />
       <WhatsAppFAB />
+      {/* Global Terms & Cookie Consent Components */}
+      <TermsModal />
+      <CookieConsentBanner />
     </>
   );
 }
