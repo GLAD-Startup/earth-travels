@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import Link from "next/link";
 import { hasAcceptedTerms, acceptTerms, TERMS_VERSION } from "@/lib/consentManager";
 import { SITE_CONFIG } from "@/lib/data";
 
