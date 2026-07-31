@@ -1,0 +1,18 @@
+"use client";
+
+import React, { Suspense } from "react";
+import QuoteForm from "@/components/quote/QuoteForm";
+
+export default function QuoteClient() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-background flex items-center justify-center text-[#D4A017] font-mono text-sm">
+          Loading Planner Wizard...
+        </div>
+      }
+    >
+      <QuoteForm />
+    </Suspense>
+  );
+}

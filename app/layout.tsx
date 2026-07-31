@@ -3,6 +3,7 @@ import { Inter, Playfair_Display, DM_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientShell from "@/components/ui/ClientShell";
+import { OrganizationSchema, WebSiteSchema } from "@/components/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,11 +31,45 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Earth Travels India — Crafting Journeys From Mathura to the World",
+  metadataBase: new URL("https://earthtravels.example"),
+  title: {
+    default: "Earth Travels India — Crafting Journeys From Mathura to the World",
+    template: "%s | Earth Travels India",
+  },
   description:
-    "Premium tour agency in Mathura, UP. 4.7★ rated. Kashmir, Maldives, Dubai, Europe & more. 89418 81111.",
+    "Premium tour agency in Mathura, UP. 4.7★ rated. Kashmir, Maldives, Dubai, Europe & more. Custom packages, visa support. Call 89418 81111.",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: "Earth Travels India",
+    images: [
+      {
+        url: "/images/full logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Earth Travels India — Crafting Journeys the World Remembers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
@@ -49,6 +84,8 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} ${dmMono.variable}`}
     >
       <body className="bg-[#fdf8f2] text-[#1a120a] font-sans antialiased flex flex-col min-h-screen">
+        <OrganizationSchema />
+        <WebSiteSchema />
         <ClientShell>{children}</ClientShell>
       </body>
     </html>
