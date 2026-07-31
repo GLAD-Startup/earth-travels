@@ -1,18 +1,26 @@
-"use client";
+import type { Metadata } from "next";
+import QuoteClient from "./QuoteClient";
+import { BreadcrumbSchema } from "@/components/seo";
 
-import React, { Suspense } from "react";
-import QuoteForm from "@/components/quote/QuoteForm";
+export const metadata: Metadata = {
+  title: "Get a Free Quote — Custom Trip Planning",
+  description:
+    "Request a free, no-obligation quote for your dream trip. Tell us your destination, dates, and budget — our Mathura travel experts will craft a personalised itinerary.",
+  alternates: {
+    canonical: "/quote",
+  },
+  openGraph: {
+    title: "Get a Free Quote | Earth Travels India",
+    description: "Free travel consultation and personalised itinerary planning. No obligation. Contact our Mathura experts today.",
+    url: "/quote",
+  },
+};
 
 export default function QuotePage() {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-background flex items-center justify-center text-[#D4A017] font-mono text-sm">
-          Loading Planner Wizard...
-        </div>
-      }
-    >
-      <QuoteForm />
-    </Suspense>
+    <>
+      <BreadcrumbSchema items={[{ name: "Get a Quote", href: "/quote" }]} />
+      <QuoteClient />
+    </>
   );
 }

@@ -126,10 +126,10 @@ export default function DestinationGrid({ destinations }: DestinationGridProps) 
                   </span>
                 </div>
                 <Link
-                  href={`/packages?destination=${dest.id}`}
+                  href={`/destinations/${dest.id}`}
                   className="self-start text-accent font-sans text-xs font-semibold hover:underline flex items-center gap-1 group/btn"
                 >
-                  View Packages{" "}
+                  Explore Destination{" "}
                   <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>

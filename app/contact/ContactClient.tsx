@@ -1,0 +1,544 @@
+"use client";
+
+import React, { useState } from "react";
+import { GlassCard, RevealWrapper } from "@/components/ui";
+import { useIsOpen } from "@/lib/hooks";
+
+import { DESTINATIONS as DESTINATIONS_DATA } from "@/lib/data/destinations";
+import { CRUISES } from "@/lib/data/cruises";
+import { RAIL_JOURNEYS } from "@/lib/data/rails";
+import { SITE_CONFIG } from "@/lib/data";
+
+
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+  "Flexible",
+];
+
+export default function ContactClient() {
+  const { isOpen, nextOpening } = useIsOpen();
+
+  // Form State
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [serviceType, setServiceType] = useState("Custom Tour Package");
+  const [interestDetail, setInterestDetail] = useState("Custom/Not Sure");
+  const [month, setMonth] = useState("Flexible");
+  const [message, setMessage] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // FAQ states
+  const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({
+    0: false,
+    1: false,
+    2: false,
+  });
+
+  const toggleFaq = (idx: number) => {
+    setFaqOpen((prev) => ({
+      ...prev,
+      [idx]: !prev[idx],
+    }));
+  };
+
+  const getInterestOptions = () => {
+    switch (serviceType) {
+      case "Custom Tour Package":
+        return [...DESTINATIONS_DATA.map((d) => d.name), "Custom/Not Sure"];
+      case "Luxury & Scenic Cruise":
+        return [...CRUISES.map((c) => c.name), "Other Cruise Route"];
+      case "Luxury & Scenic Rail Journey":
+        return [...RAIL_JOURNEYS.map((r) => r.name), "Other Train Route"];
+      default:
+        return ["General Inquiry"];
+    }
+  };
+
+  const handleInquirySubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const finalInquiry = {
+      formType: "Contact Inquiry",
+      name,
+      phone: `+91 ${phone}`,
+      email,
+      meta: {
+        destination: serviceType === "General / Other Inquiry" ? "General Inquiry" : `[${serviceType}] ${interestDetail}`,
+        month,
+        message,
+      }
+    };
+    console.log("Earth Travels - Tour Inquiry Received:", finalInquiry);
+    setIsSubmitted(true);
+
+
+    const sheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+    if (sheetsUrl) {
+      try {
+        await fetch(sheetsUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(finalInquiry),
+        });
+      } catch (err) {
+        console.error("Error submitting to Google Sheets:", err);
+      }
+    }
+  };
+
+
+  const faqs = [
+    {
+      q: "Do I need to pay anything to get a quote?",
+      a: "No. Our consultation and itinerary planning is completely free. You only pay once you're happy with the plan and proceed to book.",
+    },
+    {
+      q: "How quickly do you respond to inquiries?",
+      a: "Within 2 hours during business hours (Mon–Sat, 10AM–7:30PM IST). For urgent travel assistance, contacting us directly via WhatsApp is the fastest way.",
+    },
+    {
+      q: "Can you handle international visa applications?",
+      a: "Yes. We assist with visa applications for all countries we cover — including UAE, Thailand, Malaysia, Singapore, Sri Lanka, Schengen states, and more.",
+    },
+  ];
+
+  return (
+    <div className="bg-background min-h-screen text-charcoal select-none">
+      {/* 1. Page Header */}
+      <section className="pt-28 pb-10 text-center px-6">
+        <RevealWrapper delay={0.1}>
+          <h1 className="font-display text-4xl md:text-[64px] font-bold text-charcoal tracking-tight leading-tight">
+            Let&apos;s Plan Your Journey
+          </h1>
+        </RevealWrapper>
+      </section>
+
+      {/* 2. Two-Column Split Layout */}
+      <section className="max-w-7xl mx-auto px-6 py-10 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          {/* LEFT: Contact details & Map (60% width equivalent) */}
+          <div className="lg:col-span-7 flex flex-col gap-8 w-full">
+            <GlassCard hover={false} className="p-8 bg-background/40 border border-charcoal/10 rounded-[20px] flex flex-col gap-6">
+              <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-6">
+                Get in Touch
+              </h2>
+              <div className="flex flex-col gap-6 text-sm text-charcoal/80 mt-4">
+                {/* Phone */}
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-[#D4A017]/10 border border-[#D4A017]/20 flex items-center justify-center shrink-0 group-hover:bg-[#D4A017]/20 transition-colors mt-0.5">
+                    <svg className="w-5 h-5 text-[#D4A017]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href="tel:+919410857835"
+                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide"
+                    >
+                      +91 94108 57835
+                    </a>
+                    <a
+                      href="tel:+918941881111"
+                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide"
+                    >
+                      +91 89418 81111
+                    </a>
+                    <a
+                      href="tel:+918941088111"
+                      className="font-mono text-base md:text-lg font-bold text-[#D4A017] hover:text-[#F0C040] transition-colors tracking-wide flex items-center gap-2"
+                    >
+                      +91 89410 88111 <span className="text-xs text-charcoal/50 font-normal">(Office)</span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
+                <div className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 21.056c-1.637 0-3.238-.432-4.654-1.246l-.334-.194-3.456.906.924-3.37-.213-.339a9.588 9.588 0 01-1.463-5.068c0-5.283 4.295-9.58 9.58-9.58 2.562 0 4.968.997 6.78 2.809A9.529 9.529 0 0121.61 11.47c0 5.285-4.297 9.586-9.579 9.586zM7.228 18.067a7.518 7.518 0 004.802 1.705c4.152 0 7.534-3.382 7.534-7.535 0-2.016-.784-3.911-2.209-5.337a7.48 7.48 0 00-5.326-2.198c-4.15 0-7.53 3.38-7.53 7.53 0 1.58.411 3.12 1.196 4.484l.275.478-.549 2.002 2.052-.538.455.267zM16.143 14.61c-.244-.122-1.442-.71-1.666-.792-.224-.081-.387-.122-.549.122-.162.244-.63.792-.773.955-.142.163-.284.183-.528.061-.244-.122-1.03-.38-1.96-1.206-.723-.644-1.21-1.439-1.353-1.683-.142-.244-.015-.376.107-.498.11-.11.244-.284.366-.427.122-.142.162-.244.244-.407.081-.163.041-.305-.02-.427-.061-.122-.549-1.321-.752-1.81-.198-.475-.4-.411-.549-.419-.142-.008-.305-.01-.468-.01-.162 0-.427.061-.65.305-.224.244-.854.834-.854 2.034 0 1.2.875 2.36 1 2.522.122.163 1.72 2.625 4.168 3.682.583.252 1.038.403 1.393.516.586.186 1.12.16 1.542.097.472-.07 1.442-.589 1.645-1.159.203-.57.203-1.058.142-1.159-.061-.102-.224-.163-.468-.285z"/></svg>
+                  </div>
+                  <a
+                    href="https://wa.me/919410857835"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-base md:text-lg font-bold text-emerald-500 hover:text-emerald-400 transition-colors tracking-wide"
+                  >
+                    +91 94108 57835
+                  </a>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  </div>
+                  <a
+                    href={`mailto:${SITE_CONFIG.email}`}
+                    className="font-mono text-xs md:text-sm font-semibold hover:text-[#D4A017] transition-colors"
+                  >
+                    {SITE_CONFIG.email}
+                  </a>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-red-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  </div>
+                  <p className="font-sans text-xs md:text-sm leading-relaxed pt-1.5 font-medium">
+                    {SITE_CONFIG.address}
+                  </p>
+                </div>
+
+                {/* Hours */}
+                <div className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition-colors">
+                    <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  </div>
+                  <p className="font-mono text-[10px] md:text-xs text-charcoal/70 font-semibold tracking-wide">
+                    Mon–Sat 10:00 AM – 7:30 PM IST (Sunday Closed)
+                  </p>
+                </div>
+
+                {/* Social Media (Instagram + Facebook) */}
+                <div className="flex items-start gap-4 pt-2 border-t border-charcoal/10">
+                  <div className="flex flex-col gap-4 w-full">
+                    <div className="flex flex-col gap-3">
+                      <a
+                        href="https://instagram.com/niteshkhandelwal8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 group"
+                      >
+                        <div className="w-10 h-10 rounded-full bg-[#E1306C]/10 border border-[#E1306C]/20 flex items-center justify-center shrink-0 group-hover:bg-[#E1306C]/20 transition-colors">
+                          <svg className="w-5 h-5 text-[#E1306C]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                          </svg>
+                        </div>
+                        <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#E1306C] transition-colors">@niteshkhandelwal8</span>
+                      </a>
+                      <a
+                        href="https://instagram.com/earthtravelsmathura"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 group"
+                      >
+                        <div className="w-10 h-10 rounded-full bg-[#E1306C]/10 border border-[#E1306C]/20 flex items-center justify-center shrink-0 group-hover:bg-[#E1306C]/20 transition-colors">
+                          <svg className="w-5 h-5 text-[#E1306C]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                          </svg>
+                        </div>
+                        <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#E1306C] transition-colors">@earthtravelsmathura</span>
+                      </a>
+                    </div>
+                    <a
+                      href="https://www.facebook.com/share/1983aNQbfY/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-[#1877F2]/10 border border-[#1877F2]/20 flex items-center justify-center shrink-0 group-hover:bg-[#1877F2]/20 transition-colors">
+                        <svg className="w-5 h-5 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                      </div>
+                      <span className="font-mono text-xs md:text-sm font-bold text-charcoal group-hover:text-[#1877F2] transition-colors">Earth Travels India</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Status Badge */}
+              <div className="flex items-center gap-2 pt-4 border-t border-charcoal/10 text-xs font-sans mt-2">
+                <span
+                  className={`w-2.5 h-2.5 rounded-full inline-block shrink-0 ${
+                    isOpen ? "bg-green-500 animate-pulse" : "bg-red-500"
+                  }`}
+                />
+                <span className="font-mono text-charcoal/80 font-medium">
+                  {isOpen
+                    ? `Open Now · We'll respond within 2 hours`
+                    : `Closed · We'll respond first thing ${nextOpening} 10 AM`}
+                </span>
+              </div>
+            </GlassCard>
+
+            {/* Google Map iframe */}
+            <div className="w-full h-[280px] rounded-2xl overflow-hidden border border-charcoal/10 shadow-2xl relative">
+              {/* NOTE: Google Maps embed placeholder queries are populated securely */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.990207533686!2d77.6531641!3d27.50068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39737162ce216137%3A0xbc512273dac12e8!2sEarth%20Travels!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Earth Travels Office Location, Krishna Plaza Mathura"
+                className="absolute inset-0 w-full h-full"
+              />
+
+            </div>
+          </div>
+
+          {/* RIGHT: Inquiry Form Card (40% width equivalent) */}
+          <div className="lg:col-span-5 w-full">
+            <GlassCard hover={false} className="p-8 bg-background/40 border border-charcoal/10 rounded-[20px] shadow-2xl">
+              {!isSubmitted ? (
+                <form onSubmit={handleInquirySubmit} className="flex flex-col gap-5">
+                  <h2 className="font-display text-2xl md:text-3xl font-normal text-charcoal pl-4 border-l-2 border-[#D4A017] leading-none mb-2">
+                    Inquire About a Journey
+                  </h2>
+
+                  {/* Name */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Enter full name"
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
+                      required
+                    />
+                  </div>
+
+                  {/* WhatsApp Number with prefix */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      WhatsApp Number
+                    </label>
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-charcoal/40 font-mono text-sm select-none">
+                        +91
+                      </span>
+                      <input
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 10))}
+                        placeholder="XXXXX XXXXX"
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl pl-14 pr-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-mono h-[46px]"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="name@domain.com"
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] focus:ring-3 focus:ring-[#D4A017]/15 font-sans h-[46px]"
+                      required
+                    />
+                  </div>
+
+                  {/* Service Type Selection */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      Service Interest
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={serviceType}
+                        onChange={(e) => {
+                          const newType = e.target.value;
+                          setServiceType(newType);
+                          // Reset the interest detail to default when service type changes
+                          if (newType === "Custom Tour Package") {
+                            setInterestDetail("Custom/Not Sure");
+                          } else if (newType === "Luxury & Scenic Cruise") {
+                            setInterestDetail("Other Cruise Route");
+                          } else if (newType === "Luxury & Scenic Rail Journey") {
+                            setInterestDetail("Other Train Route");
+                          } else {
+                            setInterestDetail("General Inquiry");
+                          }
+                        }}
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                      >
+                        <option value="Custom Tour Package" className="bg-background">Custom Tour Package</option>
+                        <option value="Luxury & Scenic Cruise" className="bg-background">Luxury & Scenic Cruise Route</option>
+                        <option value="Luxury & Scenic Rail Journey" className="bg-background">Luxury & Scenic Rail Journey</option>
+                        <option value="General / Other Inquiry" className="bg-background">General / Other Inquiry</option>
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
+                        ▼
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Dynamic Destination / Route Detail */}
+                  {serviceType !== "General / Other Inquiry" && (
+                    <div className="flex flex-col gap-2">
+                      <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                        Select Destination / Route
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={interestDetail}
+                          onChange={(e) => setInterestDetail(e.target.value)}
+                          className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                        >
+                          {getInterestOptions().map((opt) => (
+                            <option key={opt} value={opt} className="bg-background">
+                              {opt}
+                            </option>
+                          ))}
+                        </select>
+                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
+                          ▼
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+
+                  {/* Month */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      Travel Month
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={month}
+                        onChange={(e) => setMonth(e.target.value)}
+                        className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017]/50 appearance-none font-sans h-[46px]"
+                      >
+                        {MONTHS.map((m) => (
+                          <option key={m} value={m} className="bg-background">
+                            {m}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-charcoal/40 text-xs">
+                        ▼
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Message */}
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-[10px] text-charcoal/50 uppercase tracking-widest pl-1">
+                      Your Message
+                    </label>
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder="Tell us about your dream trip — destination, group size, budget, any special requirements..."
+                      rows={5}
+                      className="w-full bg-white/5 border border-charcoal/10 rounded-xl px-4 py-3 text-xs text-charcoal focus:outline-none focus:border-[#D4A017] font-sans resize-none"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full h-[46px] font-sans text-xs font-bold text-midnight rounded-xl flex items-center justify-center transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,160,23,0.35)] gold-glow uppercase"
+                    style={{
+                      background: "linear-gradient(135deg, #D4A017 0%, #F0C040 100%)",
+                    }}
+                  >
+                    Send Inquiry
+                  </button>
+                </form>
+              ) : (
+                <div className="text-center py-16 flex flex-col items-center animate-fade-in select-none">
+                  <div className="w-16 h-16 bg-[#D4A017]/10 border border-[#D4A017] rounded-full flex items-center justify-center text-[#D4A017] text-3xl mb-6 shadow-2xl shadow-gold/5">
+                    ✓
+                  </div>
+                  <h3 className="font-display text-2xl font-bold text-charcoal mb-2 leading-none">
+                    Inquiry Received!
+                  </h3>
+                  <p className="font-sans text-xs text-charcoal/60 max-w-xs mb-6 leading-relaxed">
+                    Thank you, <span className="font-bold text-[#D4A017]">{name}</span>. Our Mathura team has registered your interest in {serviceType === "General / Other Inquiry" ? "our services" : interestDetail} and will reach out to you within 2 hours.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setName("");
+                      setPhone("");
+                      setEmail("");
+                      setServiceType("Custom Tour Package");
+                      setInterestDetail("Custom/Not Sure");
+                      setMonth("Flexible");
+                      setMessage("");
+                    }}
+                    className="btn-outline font-sans text-xs font-semibold py-2.5 px-6"
+                  >
+                    Send Another Inquiry
+
+                  </button>
+                </div>
+              )}
+            </GlassCard>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. Bottom Section: Walk-in Welcomes */}
+      <section className="max-w-7xl mx-auto px-6 py-12 relative z-10 text-center select-none border-t border-charcoal/5">
+        <h3 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-3">
+          Find Us in Mathura
+        </h3>
+        <p className="font-sans text-xs md:text-sm text-charcoal/60 max-w-xl mx-auto leading-relaxed">
+          {SITE_CONFIG.address} <br className="hidden sm:inline" />
+          <span className="text-[#D4A017] font-semibold">Walk-in welcome during business hours.</span> We&apos;re on the 1st floor of Krishna Plaza, above the Krishna Market entrance.
+        </p>
+      </section>
+
+      {/* 4. FAQ Accordions */}
+      <section className="max-w-3xl mx-auto px-6 py-16 relative z-10 flex flex-col gap-6">
+        <h3 className="font-display text-2xl font-bold text-charcoal mb-2 pl-4 border-l-2 border-[#D4A017]">
+          Frequently Asked Questions
+        </h3>
+
+        <div className="flex flex-col gap-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = faqOpen[idx];
+            return (
+              <GlassCard
+                key={idx}
+                hover={false}
+                className="p-5 bg-background/40 border border-charcoal/8 rounded-xl flex flex-col gap-3 transition-colors cursor-pointer"
+                onClick={() => toggleFaq(idx)}
+              >
+                <div className="flex items-center justify-between font-sans text-sm font-bold text-charcoal">
+                  <span>{faq.q}</span>
+                  <span className="text-[10px] text-charcoal/40">{isOpen ? "▲" : "▼"}</span>
+                </div>
+                {isOpen && (
+                  <p className="font-sans text-xs text-charcoal/60 leading-relaxed pt-2 border-t border-charcoal/5 animate-fade-in">
+                    {faq.a}
+                  </p>
+                )}
+              </GlassCard>
+            );
+          })}
+        </div>
+      </section>
+
+    </div>
+  );
+}

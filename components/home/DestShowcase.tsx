@@ -97,10 +97,10 @@ export default function DestShowcase() {
                   </p>
                   
                   <Link
-                    href={`/packages?destination=${dest.name.toLowerCase()}`}
+                    href={`/destinations/${dest.id}`}
                     className="mt-6 inline-block bg-white text-[#1a120a] text-[11px] font-sans font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-[#e8a820] hover:text-white transition-colors duration-300 shadow-md"
                   >
-                    View Itineraries
+                    Explore Destination
                   </Link>
                 </div>
               </div>
