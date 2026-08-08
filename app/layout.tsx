@@ -31,7 +31,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://earthtravels.example"),
+  metadataBase: new URL("https://earthtravelsindia.in"),
   title: {
     default: "Earth Travels India — Crafting Journeys From Mathura to the World",
     template: "%s | Earth Travels India",
