@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Schengen visa document checklist for Indians`  
 **Secondary Keywords**: `Europe tour package price from Delhi`, `Switzerland France 10 day itinerary`  
-**Target Page URL**: `https://earthtravels.example/visa`  
+**Target Page URL**: `https://earthtravelsindia.in/visa`  
 
 ---
 

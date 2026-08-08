@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CruisesClient from "./CruisesClient";
-import { BreadcrumbSchema } from "@/components/seo";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/seo";
 
 export const metadata: Metadata = {
   title: "Luxury Cruise Packages — Mediterranean, Caribbean & Asia",
@@ -20,7 +20,14 @@ export default function CruisesPage() {
   return (
     <>
       <BreadcrumbSchema items={[{ name: "Cruises", href: "/cruises" }]} />
+      <ServiceSchema
+        name="Cruise Booking Services"
+        description="Premium cruise holiday packages on Cordelia, Costa, Royal Caribbean, and international cruise lines. Mediterranean, Caribbean, Southeast Asian, and Arabian Gulf routes. All-inclusive packages with transfers, port excursions, and visa assistance from Earth Travels India."
+        url="/cruises"
+        serviceType="Cruise Booking"
+      />
       <CruisesClient />
     </>
   );
 }
+

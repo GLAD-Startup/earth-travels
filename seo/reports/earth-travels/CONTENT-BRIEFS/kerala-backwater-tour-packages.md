@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Kerala houseboat tour package price`  
 **Secondary Keywords**: `Munnar Alleppey Kovalam 6 day itinerary`, `Kerala family trip from UP`  
-**Target Page URL**: `https://earthtravels.example/destinations/kerala`  
+**Target Page URL**: `https://earthtravelsindia.in/destinations/kerala`  
 
 ---
 

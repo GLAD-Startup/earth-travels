@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Mathura Vrindavan tour packages`  
 **Secondary Keywords**: `Char Dham Yatra package from Mathura`, `Varanasi Kashi Vishwanath tour`  
-**Target Page URL**: `https://earthtravels.example/destinations/mathura-vrindavan`  
+**Target Page URL**: `https://earthtravelsindia.in/destinations/mathura-vrindavan`  
 
 ---
 

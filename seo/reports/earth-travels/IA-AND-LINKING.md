@@ -3,7 +3,7 @@
 ## 1. URL Taxonomy & Directory Structure
 
 ```
-https://earthtravels.example/
+https://earthtravelsindia.in/
 ├── /destinations                     (Listing Page)
 │   ├── /destinations/kashmir         (Hub Page - NEW)
 │   ├── /destinations/maldives        (Hub Page - NEW)

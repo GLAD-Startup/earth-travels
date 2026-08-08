@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { DESTINATIONS } from "@/lib/data/destinations";
 import { PACKAGES } from "@/lib/data/packages";
 
-const PRODUCTION_DOMAIN = "https://earthtravels.example";
+const PRODUCTION_DOMAIN = "https://earthtravelsindia.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

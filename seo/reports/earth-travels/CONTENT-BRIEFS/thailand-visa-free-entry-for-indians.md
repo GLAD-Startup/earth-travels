@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Thailand visa free entry for Indians`  
 **Secondary Keywords**: `Bangkok Pattaya tour package price`, `Phuket Krabi itinerary 5 days`  
-**Target Page URL**: `https://earthtravels.example/destinations/thailand`  
+**Target Page URL**: `https://earthtravelsindia.in/destinations/thailand`  
 
 ---
 

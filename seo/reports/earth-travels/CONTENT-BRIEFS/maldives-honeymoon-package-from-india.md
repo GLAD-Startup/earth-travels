@@ -4,7 +4,7 @@
 **Secondary Keywords**: `Maldives water villa price INR`, `Maldives visa free for Indians`, `best resort in Maldives for honeymoon`  
 **Search Intent**: Commercial / Transactional  
 **Target Word Count**: 1,600 – 2,000 words  
-**Target Page URL**: `https://earthtravels.example/itinerary/maldives-4n5d`  
+**Target Page URL**: `https://earthtravelsindia.in/itinerary/maldives-4n5d`  
 
 ---
 

@@ -2,7 +2,7 @@ import React from "react";
 import JsonLd from "./JsonLd";
 import { SITE_CONFIG } from "@/lib/data";
 
-const PRODUCTION_DOMAIN = "https://earthtravels.example";
+const PRODUCTION_DOMAIN = "https://earthtravelsindia.in";
 
 /**
  * Organization + TravelAgency JSON-LD schema.
@@ -71,6 +71,15 @@ export default function OrganizationSchema() {
       // TODO: Add Google Business Profile URL once created
       // TODO: Add TripAdvisor URL once listed
     ],
+    knowsLanguage: ["en", "hi"],
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "IATA Accreditation",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "International Air Transport Association (IATA)",
+      },
+    },
     // TODO: Client must provide these values — listed in seo/DATA-NEEDED.md
     // "taxID": "GSTIN_NUMBER_HERE",
     // "legalName": "REGISTERED_LEGAL_NAME_HERE",

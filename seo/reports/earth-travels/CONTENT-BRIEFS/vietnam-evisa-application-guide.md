@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Vietnam e visa for Indian passport holders`  
 **Secondary Keywords**: `Hanoi Ha Long Bay Da Nang package price`, `Vietnam trip cost from India`  
-**Target Page URL**: `https://earthtravels.example/destinations/vietnam`  
+**Target Page URL**: `https://earthtravelsindia.in/destinations/vietnam`  
 
 ---
 

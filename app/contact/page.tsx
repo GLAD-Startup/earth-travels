@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
-import { BreadcrumbSchema } from "@/components/seo";
+import { BreadcrumbSchema, LocalBusinessSchema } from "@/components/seo";
 
 export const metadata: Metadata = {
   title: "Contact Us — Office Details & Map",
@@ -21,7 +21,9 @@ export default function ContactPage() {
   return (
     <>
       <BreadcrumbSchema items={[{ name: "Contact", href: "/contact" }]} />
+      <LocalBusinessSchema />
       <ContactClient />
     </>
   );
 }
+

@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Bali tour package cost from India`  
 **Secondary Keywords**: `Bali private pool villa package`, `Bali visa on arrival for Indians`  
-**Target Page URL**: `https://earthtravels.example/destinations/bali`  
+**Target Page URL**: `https://earthtravelsindia.in/destinations/bali`  
 
 ---
 

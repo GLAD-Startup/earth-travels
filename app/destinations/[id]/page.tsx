@@ -59,10 +59,10 @@ export default async function DestinationDetailPage({ params }: DestinationPageP
   const destinationSchema = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
-    "@id": `https://earthtravels.example/destinations/${dest.id}/#destination`,
+    "@id": `https://earthtravelsindia.in/destinations/${dest.id}/#destination`,
     name: dest.name,
     description: dest.tagline,
-    image: dest.image.startsWith("/") ? `https://earthtravels.example${dest.image}` : dest.image,
+    image: dest.image.startsWith("/") ? `https://earthtravelsindia.in${dest.image}` : dest.image,
     touristType: ["Family", "Honeymoon", "Adventure", "Group"],
     includesAttraction: [
       {

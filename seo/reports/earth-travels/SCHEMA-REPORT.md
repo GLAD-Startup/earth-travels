@@ -31,11 +31,11 @@ All structured data in Earth Travels India is implemented using **JSON-LD script
 {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
-  "@id": "https://earthtravels.example/#organization",
+  "@id": "https://earthtravelsindia.in/#organization",
   "name": "Earth Travels",
   "alternateName": "अर्थ ट्रैवल्स",
-  "url": "https://earthtravels.example",
-  "logo": "https://earthtravels.example/images/logo_transparent.png",
+  "url": "https://earthtravelsindia.in",
+  "logo": "https://earthtravelsindia.in/images/logo_transparent.png",
   "telephone": ["+918941088111", "+918941881111", "+919410857835"],
   "address": {
     "@type": "PostalAddress",
@@ -59,16 +59,16 @@ All structured data in Earth Travels India is implemented using **JSON-LD script
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "@id": "https://earthtravels.example/itinerary/kashmir-7n8d/#trip",
+  "@id": "https://earthtravelsindia.in/itinerary/kashmir-7n8d/#trip",
   "name": "Kashmir Special (Mughal Gardens, Gulmarg & Pahalgam)",
   "offers": {
     "@type": "Offer",
-    "url": "https://earthtravels.example/itinerary/kashmir-7n8d",
+    "url": "https://earthtravelsindia.in/itinerary/kashmir-7n8d",
     "priceCurrency": "INR",
     "price": 24500,
     "availability": "https://schema.org/InStock",
     "seller": {
-      "@id": "https://earthtravels.example/#organization"
+      "@id": "https://earthtravelsindia.in/#organization"
     }
   }
 }

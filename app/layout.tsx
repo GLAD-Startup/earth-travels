@@ -38,6 +38,20 @@ export const metadata: Metadata = {
   },
   description:
     "Premium tour agency in Mathura, UP. 4.7★ rated. Kashmir, Maldives, Dubai, Europe & more. Custom packages, visa support. Call 89418 81111.",
+  category: "travel",
+  keywords: [
+    "tour packages from Mathura",
+    "travel agency Mathura",
+    "Kashmir tour packages",
+    "Maldives honeymoon packages",
+    "Dubai tour packages from India",
+    "Europe tour packages",
+    "visa assistance India",
+    "travel insurance",
+    "cruise bookings India",
+    "luxury train India",
+    "Earth Travels",
+  ],
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

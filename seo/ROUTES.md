@@ -1,6 +1,6 @@
 # Earth Travels India — Enumerated Route Matrix
 
-All audits run against production-build URLs (`https://earthtravels.example`), never dev servers.
+All audits run against production-build URLs (`https://earthtravelsindia.in`), never dev servers.
 
 | Route | Template Type | Data Source | Money Page? | Static / Dynamic |
 | font | -- | -- | -- | -- |
@@ -25,10 +25,10 @@ All audits run against production-build URLs (`https://earthtravels.example`), n
 | `/sitemap.xml` | Route Handler | `app/sitemap.ts` (100+ URLs) | Technical | Dynamic Route Handler |
 
 ## Representative URLs Picked for Audit:
-1. **Home**: `https://earthtravels.example/`
-2. **Destination Hub**: `https://earthtravels.example/destinations/kashmir`
-3. **Package Listing**: `https://earthtravels.example/packages`
-4. **Itinerary Detail**: `https://earthtravels.example/itinerary/kashmir-7n8d`
-5. **Visa Hub**: `https://earthtravels.example/visa`
-6. **Trust / E-E-A-T**: `https://earthtravels.example/about`
-7. **Conversion / Contact**: `https://earthtravels.example/contact`
+1. **Home**: `https://earthtravelsindia.in/`
+2. **Destination Hub**: `https://earthtravelsindia.in/destinations/kashmir`
+3. **Package Listing**: `https://earthtravelsindia.in/packages`
+4. **Itinerary Detail**: `https://earthtravelsindia.in/itinerary/kashmir-7n8d`
+5. **Visa Hub**: `https://earthtravelsindia.in/visa`
+6. **Trust / E-E-A-T**: `https://earthtravelsindia.in/about`
+7. **Conversion / Contact**: `https://earthtravelsindia.in/contact`

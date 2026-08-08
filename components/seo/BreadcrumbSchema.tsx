@@ -1,7 +1,7 @@
 import React from "react";
 import JsonLd from "./JsonLd";
 
-const PRODUCTION_DOMAIN = "https://earthtravels.example";
+const PRODUCTION_DOMAIN = "https://earthtravelsindia.in";
 
 interface BreadcrumbItem {
   name: string;

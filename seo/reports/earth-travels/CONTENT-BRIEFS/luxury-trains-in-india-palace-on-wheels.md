@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Palace on Wheels booking and itinerary`  
 **Secondary Keywords**: `Maharajas Express train ticket price INR`, `luxury train tours India`  
-**Target Page URL**: `https://earthtravels.example/rails`  
+**Target Page URL**: `https://earthtravelsindia.in/rails`  
 
 ---
 

@@ -2,7 +2,7 @@ import React from "react";
 import JsonLd from "./JsonLd";
 import type { Package } from "@/lib/data/packages";
 
-const PRODUCTION_DOMAIN = "https://earthtravels.example";
+const PRODUCTION_DOMAIN = "https://earthtravelsindia.in";
 
 interface TouristTripSchemaProps {
   pkg: Package;

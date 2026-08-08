@@ -2,7 +2,7 @@
 
 **Target Primary Keyword**: `Dubai family tour package from India`  
 **Secondary Keywords**: `Dubai visa for Indians cost`, `Burj Khalifa Desert Safari package price`  
-**Target Page URL**: `https://earthtravels.example/destinations/dubai`  
+**Target Page URL**: `https://earthtravelsindia.in/destinations/dubai`  
 
 ---
 

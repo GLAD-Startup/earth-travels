@@ -4,7 +4,7 @@
 **Secondary Keywords**: `Kashmir tour package 7 nights 8 days`, `Srinagar Gulmarg Pahalgam itinerary`, `Kashmir trip cost from Delhi`  
 **Search Intent**: Commercial / Informational  
 **Target Word Count**: 1,800 – 2,200 words  
-**Target Page URL**: `https://earthtravels.example/itinerary/kashmir-7n8d`  
+**Target Page URL**: `https://earthtravelsindia.in/itinerary/kashmir-7n8d`  
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Target Site**: Earth Travels India  
 **Status**: PRE-LAUNCH (Not indexed, localhost pre-build audit)  
-**Intended Production Domain**: `https://earthtravels.example`  
+**Intended Production Domain**: `https://earthtravelsindia.in`  
 **Primary Market**: India domestic + inbound travelers from US/UK/UAE  
 **Business Category**: Tour & Travel Operator (Packages, Custom Itineraries, Ticketing, Visa Assistance)  
 **Audit Date**: July 31, 2026  
@@ -82,7 +82,7 @@
 
 ## Strategic Recommendations Summary
 
-1. **Deploy Production Domain**: Cut over to `https://earthtravels.example` with SSL enforcement.
+1. **Deploy Production Domain**: Cut over to `https://earthtravelsindia.in` with SSL enforcement.
 2. **Submit Sitemap**: Immediately register `sitemap.xml` in GSC and Bing Webmaster Tools upon launch.
 3. **Fulfill Client Data**: Provide GSTIN, founder bio, and GBP link per `seo/DATA-NEEDED.md`.
 4. **Day 7 Re-Audit**: Execute post-launch runbook commands to collect real CrUX field metrics.
