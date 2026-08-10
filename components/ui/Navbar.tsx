@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -82,17 +83,37 @@ export default function Navbar() {
       >
         <div className="max-w-[1440px] mx-auto pl-1 sm:pl-2 lg:pl-4 pr-4 sm:pr-6 lg:pr-8 flex items-center justify-between gap-4">
           {/* Left: Logo & Brand Name */}
-          <Link href="/" className="flex items-center gap-3 sm:gap-3.5 group shrink-0">
-            <img
-              src="/images/logo_transparent.png"
-              alt="Earth Travels Logo"
-              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-            <span
-              className="font-display text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-extrabold tracking-wide text-[#037ad4] whitespace-nowrap leading-none"
-            >
-              Earth Travels India
-            </span>
+          <Link
+            href="/"
+            className="relative flex items-center gap-3 sm:gap-3.5 md:gap-4 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-2.5 rounded-full group shrink-0 select-none"
+          >
+            {/* Frosted Glass Backdrop */}
+            <div className="absolute inset-0 rounded-full backdrop-blur-xl bg-[#1a120a]/40 border border-white/15 shadow-[0_12px_40px_rgba(0,0,0,0.5)] pointer-events-none transition-transform duration-300 group-hover:scale-[1.02]" />
+
+            {/* Logo Icon */}
+            <div className="relative w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 lg:w-14 lg:h-14 shrink-0 z-10">
+              <Image
+                src="/images/logo_transparent.png"
+                alt="Earth Travels Logo"
+                fill
+                sizes="(max-width: 768px) 44px, 56px"
+                className="object-contain filter drop-shadow-[0_10px_25px_rgba(3,122,212,0.65)] transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
+            </div>
+
+            {/* Brand Name */}
+            <div className="flex items-center z-10">
+              <span
+                className="font-display text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extrabold tracking-wide text-white leading-none whitespace-nowrap"
+                style={{
+                  textShadow:
+                    "0 2px 20px rgba(255,255,255,0.15), 0 8px 20px rgba(0, 0, 0, 0.8)",
+                }}
+              >
+                Earth Travels India
+              </span>
+            </div>
           </Link>
 
           {/* Center: Desktop Navigation Links (Visible on Large Screens) */}
