@@ -6,67 +6,62 @@ import { RevealWrapper } from "@/components/ui";
 const VALUE_PROPS = [
   {
     num: "01",
-    title: "Personally Curated",
+    title: "Personally Crafted",
     description:
-      "Every itinerary is hand-crafted by our founders. No templates, no generic packages. Just bespoke journeys designed meticulously around your family's unique rhythm and desires.",
+      "Every itinerary is hand-crafted by our founders — bespoke journeys designed around your family's unique rhythm and desires.",
   },
   {
     num: "02",
-    title: "Unwavering Support",
+    title: "Meaningful Support",
     description:
-      "From your first inquiry to your return flight, you have a dedicated travel designer available. True luxury means knowing someone is handling the details, 24/7.",
+      "Dedicated travel designers available 24/7 from your first inquiry to your return flight, handling every detail with care.",
   },
   {
     num: "03",
-    title: "Absolute Transparency",
+    title: "Authentic Experiences",
     description:
-      "What we quote is the final word. Visa fees, private transfers, and luxury taxes — every detail is laid out upfront. No surprises, only peace of mind.",
+      "Transparent pricing with zero hidden fees. Pure, seamless travel experiences crafted for lasting memories.",
   },
 ];
 
 export default function WhyEarthTravels() {
   return (
-    <section className="relative w-full bg-[#fdf8f2] pt-32 pb-40 overflow-hidden select-none">
+    <section className="relative w-full bg-[#fdf8f2] py-12 md:py-16 lg:py-20 overflow-hidden select-none border-b border-[#1a120a]/5">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
-          {/* Left Column: Huge Sticky Title */}
-          <div className="lg:col-span-5 relative">
-            <div className="sticky top-40 flex flex-col items-start">
-              <span className="font-mono text-[10px] text-[#c4900f] uppercase tracking-[0.3em] font-semibold block mb-6">
-                The Earth Travels India Standard
-              </span>
-              <h2 className="font-display text-5xl md:text-7xl lg:text-[90px] font-normal text-[#1a120a] leading-[0.9] tracking-[-0.02em] mb-8">
-                Not Just<br />
-                <span className="italic text-[#c4900f]">Another</span><br />
-                Agency.
-              </h2>
-              <div className="w-16 h-[1px] bg-[#1a120a]/20" />
-            </div>
+          {/* Left Column: Compact Heading */}
+          <div className="lg:col-span-5 flex flex-col items-start">
+            <span className="font-mono text-[10px] md:text-xs text-[#c4900f] uppercase tracking-[0.3em] font-semibold block mb-3">
+              The Earth Travels India Standard
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-[#1a120a] leading-[1.05] tracking-[-0.02em] mb-4">
+              Not Just<br />
+              <span className="italic text-[#c4900f]">Another</span><br />
+              Agency.
+            </h2>
+            <div className="w-12 h-[1px] bg-[#1a120a]/20 mt-2" />
           </div>
 
-          {/* Right Column: Editorial List */}
-          <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-24 lg:pt-32">
+          {/* Right Column: Compact Editorial List */}
+          <div className="lg:col-span-7 flex flex-col gap-6 md:gap-8">
             {VALUE_PROPS.map((prop, idx) => (
               <RevealWrapper key={idx} delay={idx * 0.1}>
-                <div className="group relative flex flex-col md:flex-row gap-6 md:gap-12 items-start">
-                  
-                  {/* Huge Number */}
-                  <div className="font-display text-7xl md:text-[100px] leading-none text-[#1a120a]/5 font-light -mt-4 transition-colors duration-700 group-hover:text-[#c4900f]/20">
+                <div className="group relative flex flex-row items-start gap-4 md:gap-6 pb-6 border-b border-[#1a120a]/10 last:border-b-0 last:pb-0">
+                  {/* Number */}
+                  <div className="font-display text-4xl md:text-5xl leading-none text-[#1a120a]/15 font-light shrink-0 w-10 md:w-14 transition-colors duration-500 group-hover:text-[#c4900f]">
                     {prop.num}
                   </div>
 
                   {/* Content */}
-                  <div className="flex flex-col gap-4 max-w-sm mt-2 md:mt-6 relative z-10">
-                    <h3 className="font-display text-2xl md:text-3xl font-normal text-[#1a120a]">
+                  <div className="flex flex-col gap-1.5 pt-0.5">
+                    <h3 className="font-display text-xl md:text-2xl font-normal text-[#1a120a]">
                       {prop.title}
                     </h3>
-                    <p className="font-sans text-[15px] text-[#1a120a]/60 leading-[1.8] font-light">
+                    <p className="font-sans text-xs sm:text-sm md:text-[15px] text-[#1a120a]/70 leading-relaxed font-light">
                       {prop.description}
                     </p>
                   </div>
-
                 </div>
               </RevealWrapper>
             ))}
